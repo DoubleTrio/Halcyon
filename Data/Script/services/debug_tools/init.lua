@@ -99,20 +99,20 @@ function DebugTools:OnNewGame()
 	  mon_id = RogueEssence.Dungeon.MonsterID("tropius", 0, "normal", Gender.Male)
 	  _DATA.Save.ActiveTeam.Players:Add(_DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, mon_id, 50, "", 0))
 	  
-	  
-		_DATA.Save.ActiveTeam.Players[0].MaxHPBonus = 3
-		_DATA.Save.ActiveTeam.Players[0].AtkBonus = 1
-		_DATA.Save.ActiveTeam.Players[0].DefBonus = 1
-		_DATA.Save.ActiveTeam.Players[0].MAtkBonus = 1
-		_DATA.Save.ActiveTeam.Players[0].MDefBonus = 1
-		_DATA.Save.ActiveTeam.Players[0].SpeedBonus = 1
+	  --This is a scrapped feature where you would have started with some bonuses to your stats.
+		--_DATA.Save.ActiveTeam.Players[0].MaxHPBonus = 3
+		--_DATA.Save.ActiveTeam.Players[0].AtkBonus = 1
+		--_DATA.Save.ActiveTeam.Players[0].DefBonus = 1
+		--_DATA.Save.ActiveTeam.Players[0].MAtkBonus = 1
+		--_DATA.Save.ActiveTeam.Players[0].MDefBonus = 1
+		--_DATA.Save.ActiveTeam.Players[0].SpeedBonus = 1
 
-		_DATA.Save.ActiveTeam.Players[1].MaxHPBonus = 3
-		_DATA.Save.ActiveTeam.Players[1].AtkBonus = 1
-		_DATA.Save.ActiveTeam.Players[1].DefBonus = 1
-		_DATA.Save.ActiveTeam.Players[1].MAtkBonus = 1
-		_DATA.Save.ActiveTeam.Players[1].MDefBonus = 1
-		_DATA.Save.ActiveTeam.Players[1].SpeedBonus = 1
+		--_DATA.Save.ActiveTeam.Players[1].MaxHPBonus = 3
+		--_DATA.Save.ActiveTeam.Players[1].AtkBonus = 1
+		--_DATA.Save.ActiveTeam.Players[1].DefBonus = 1
+		--_DATA.Save.ActiveTeam.Players[1].MAtkBonus = 1
+		--_DATA.Save.ActiveTeam.Players[1].MDefBonus = 1
+		--_DATA.Save.ActiveTeam.Players[1].SpeedBonus = 1
 		
 	  --audino 
 	   -- mon_id = RogueEssence.Dungeon.MonsterID("audino", 0, "normal", Gender.Female)
@@ -246,7 +246,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},
 		{
 			Client = "",
@@ -261,7 +262,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -276,7 +278,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -291,7 +294,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -306,7 +310,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -321,7 +326,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},
 		{
 			Client = "",
@@ -336,7 +342,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -351,7 +358,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		}
 
 	}
@@ -373,7 +381,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},
 		{
 			Client = "",
@@ -388,7 +397,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -403,7 +413,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -418,7 +429,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -433,7 +445,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -448,7 +461,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},
 		{
 			Client = "",
@@ -463,7 +477,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -478,7 +493,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		}
 
 	}
@@ -500,7 +516,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},
 		{
 			Client = "",
@@ -515,7 +532,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -530,7 +548,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -545,7 +564,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -560,7 +580,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -575,7 +596,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},
 		{
 			Client = "",
@@ -590,7 +612,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		},	
 		{
 			Client = "",
@@ -605,7 +628,8 @@ end
 			Completion = -1,
 			Taken = false,
 			Difficulty = "",
-			Item = ""
+			Item = "",
+			Special = ""
 		}
 	}
 	end
@@ -613,6 +637,41 @@ end
   PrintInfo("=>> Loaded version")
 end
 
+--[[---------------------------------------------------------------
+    DebugTools:OnLossPenalty()
+      Called when the player fails a dungeon in main progress
+  ---------------------------------------------------------------]]
+function DebugTools:OnLossPenalty(save) 
+  assert(self, 'DebugTools:OnLossPenalty() : self is null!')
+ 
+  --remove money. You'll keep 15-25% of what you had 
+  local remainder = math.random(1500, 2500) 
+  save.ActiveTeam.Money = math.floor((save.ActiveTeam.Money * remainder) / 10000)
+ 
+
+  local inv_count = save.ActiveTeam:GetInvCount() - 1
+  --remove bag items
+  for i = inv_count, 0, -1 do
+    local entry = _DATA:GetItem(save.ActiveTeam:GetInv(i).ID)
+    if not entry.CannotDrop then
+		if math.random(1, 4) > 1 then --1/4 chance an individual item will be kept 
+			save.ActiveTeam:RemoveFromInv(i)
+		end
+    end
+  end
+  
+  --DO NOT remove equips
+  --local player_count = save.ActiveTeam.Players.Count
+  --for i = 0, player_count - 1, 1 do 
+  --  local player = save.ActiveTeam.Players[i]
+  --  if player.EquippedItem.ID ~= '' and player.EquippedItem.ID ~= nil then 
+  --    local entry = _DATA:GetItem(player.EquippedItem.ID)
+  --    if not entry.CannotDrop then
+  --       player:SilentDequipItem()
+  --    end
+  --  end
+  --end
+end
 
 
 
@@ -623,8 +682,9 @@ function DebugTools:Subscribe(med)
   med:Subscribe("DebugTools", EngineServiceEvents.Deinit,              function() self.OnDeinit(self) end )
   med:Subscribe("DebugTools", EngineServiceEvents.NewGame,        function() self.OnNewGame(self) end )
   med:Subscribe("DebugTools", EngineServiceEvents.UpgradeSave,        function() self.OnUpgrade(self) end )
---  med:Subscribe("DebugTools", EngineServiceEvents.GraphicsUnload,      function() self.OnGraphicsUnload(self) end )
---  med:Subscribe("DebugTools", EngineServiceEvents.Restart,             function() self.OnRestart(self) end )
+  med:Subscribe("DebugTools", EngineServiceEvents.LossPenalty,        function(_, args) self.OnLossPenalty(self, args[0]) end )
+  --  med:Subscribe("DebugTools", EngineServiceEvents.GraphicsUnload,      function() self.OnGraphicsUnload(self) end )
+  --  med:Subscribe("DebugTools", EngineServiceEvents.Restart,             function() self.OnRestart(self) end )
 end
 
 ---Summary
