@@ -28,7 +28,8 @@ PresetPickerType = luanet.import_type('RogueElements.PresetPicker`1')
 MapItemType = luanet.import_type('RogueEssence.Dungeon.MapItem')
 
 function ZONE_GEN_SCRIPT.SpawnMissionNpcFromSV(zoneContext, context, queue, seed, args)
-  local destinationFloor = false
+  local destinationFloor = false 
+  
   local outlawFloor = false
   for name, mission in pairs(SV.TakenBoard) do
     if mission.Taken and mission.Completion == COMMON.MISSION_INCOMPLETE and zoneContext.CurrentZone == mission.Zone
