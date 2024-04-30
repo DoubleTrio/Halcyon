@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.25.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[RogueEssence.Data.EntrySummary, RogueEssence]], System.Private.CoreLib",
 "apricorn_grove": {
@@ -43,7 +43,7 @@
 },
 "backup_master_zone": {
 "$type": "RogueEssence.Data.ZoneEntrySummary, RogueEssence",
-"ExpPercent": 0,
+"ExpPercent": 100,
 "Level": -1,
 "LevelCap": false,
 "KeepSkills": false,
@@ -197,6 +197,31 @@
 },
 "Released": true,
 "Comment": "In the fourth set of training mazes. Unlocked in Chapter 5.",
+"SortOrder": 0
+},
+"cloven_ruins": {
+"$type": "RogueEssence.Data.ZoneEntrySummary, RogueEssence",
+"ExpPercent": 100,
+"Level": -1,
+"LevelCap": false,
+"KeepSkills": false,
+"TeamRestrict": false,
+"TeamSize": -1,
+"MoneyRestrict": false,
+"BagRestrict": -1,
+"KeepTreasure": false,
+"BagSize": -1,
+"Rescues": 0,
+"CountedFloors": 0,
+"Rogue": 0,
+"Grounds": [],
+"Maps": [],
+"Name": {
+"DefaultText": "Cloven Ruins",
+"LocalTexts": {}
+},
+"Released": false,
+"Comment": "",
 "SortOrder": 0
 },
 "crooked_cavern": {
@@ -812,31 +837,6 @@
 },
 "Released": true,
 "Comment": "In the second set of training mazes. Unlocked in Chapter 3.",
-"SortOrder": 0
-},
-"cloven_ruins": {
-"$type": "RogueEssence.Data.ZoneEntrySummary, RogueEssence",
-"ExpPercent": 100,
-"Level": -1,
-"LevelCap": false,
-"KeepSkills": false,
-"TeamRestrict": false,
-"TeamSize": -1,
-"MoneyRestrict": false,
-"BagRestrict": -1,
-"KeepTreasure": false,
-"BagSize": -1,
-"Rescues": 0,
-"CountedFloors": 0,
-"Rogue": 0,
-"Grounds": [],
-"Maps": [],
-"Name": {
-"DefaultText": "Cloven Ruins",
-"LocalTexts": {}
-},
-"Released": false,
-"Comment": "",
 "SortOrder": 0
 }
 }

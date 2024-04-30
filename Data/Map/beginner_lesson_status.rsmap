@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.15.1",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Dungeon.Map, RogueEssence",
 "Name": {
@@ -17,6 +17,9 @@
 {
 "Element1": "grass",
 "Element2": "poison",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -104,9 +107,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -122,6 +122,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -131,6 +133,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -138,6 +142,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -189,19 +195,23 @@
 "BaseSkills": [
 {
 "SkillNum": "poison_powder",
-"Charges": 16
+"Charges": 16,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -248,6 +258,9 @@
 {
 "Element1": "grass",
 "Element2": "poison",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -335,9 +348,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -353,6 +363,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -362,6 +374,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -369,6 +383,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -420,19 +436,23 @@
 "BaseSkills": [
 {
 "SkillNum": "toxic",
-"Charges": 14
+"Charges": 14,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -479,6 +499,9 @@
 {
 "Element1": "electric",
 "Element2": "none",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -566,9 +589,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -584,6 +604,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -593,6 +615,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -600,6 +624,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -651,19 +677,23 @@
 "BaseSkills": [
 {
 "SkillNum": "thunder_wave",
-"Charges": 14
+"Charges": 14,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -710,6 +740,9 @@
 {
 "Element1": "fire",
 "Element2": "none",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -797,9 +830,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -815,6 +845,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -824,6 +856,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -831,6 +865,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -882,19 +918,23 @@
 "BaseSkills": [
 {
 "SkillNum": "will_o_wisp",
-"Charges": 16
+"Charges": 16,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -941,6 +981,9 @@
 {
 "Element1": "ice",
 "Element2": "psychic",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -1028,9 +1071,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1046,6 +1086,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1055,6 +1097,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1062,6 +1106,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1113,19 +1159,23 @@
 "BaseSkills": [
 {
 "SkillNum": "ice_punch",
-"Charges": 18
+"Charges": 18,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -1172,6 +1222,9 @@
 {
 "Element1": "psychic",
 "Element2": "none",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -1259,9 +1312,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1277,6 +1327,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1286,6 +1338,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1293,6 +1347,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1344,19 +1400,23 @@
 "BaseSkills": [
 {
 "SkillNum": "hypnosis",
-"Charges": 16
+"Charges": 16,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -1403,6 +1463,9 @@
 {
 "Element1": "poison",
 "Element2": "flying",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -1490,9 +1553,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1508,6 +1568,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1517,6 +1579,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1524,6 +1588,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1575,19 +1641,23 @@
 "BaseSkills": [
 {
 "SkillNum": "confuse_ray",
-"Charges": 10
+"Charges": 10,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -1634,6 +1704,9 @@
 {
 "Element1": "grass",
 "Element2": "none",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -1721,9 +1794,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1739,6 +1809,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1748,6 +1820,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1755,6 +1829,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1806,19 +1882,23 @@
 "BaseSkills": [
 {
 "SkillNum": "leech_seed",
-"Charges": 12
+"Charges": 12,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -1865,6 +1945,9 @@
 {
 "Element1": "ghost",
 "Element2": "poison",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -1952,9 +2035,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1970,6 +2050,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1979,6 +2061,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -1986,6 +2070,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2037,19 +2123,23 @@
 "BaseSkills": [
 {
 "SkillNum": "mean_look",
-"Charges": 18
+"Charges": 18,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -2096,6 +2186,9 @@
 {
 "Element1": "electric",
 "Element2": "steel",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -2183,9 +2276,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -2201,6 +2291,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2210,6 +2302,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2217,6 +2311,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2268,19 +2364,23 @@
 "BaseSkills": [
 {
 "SkillNum": "magnet_rise",
-"Charges": 16
+"Charges": 16,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -2327,6 +2427,9 @@
 {
 "Element1": "water",
 "Element2": "none",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -2414,9 +2517,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -2432,6 +2532,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2441,6 +2543,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2448,6 +2552,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2499,19 +2605,23 @@
 "BaseSkills": [
 {
 "SkillNum": "protect",
-"Charges": 10
+"Charges": 10,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -2558,6 +2668,9 @@
 {
 "Element1": "psychic",
 "Element2": "fairy",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -2645,9 +2758,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -2663,6 +2773,8 @@
 "$type": "PMDC.Dungeon.WaitUntilAttackedPlan, PMDC",
 "StatusIndex": "was_hurt_last_turn",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2672,6 +2784,8 @@
 "AttackPattern": 2,
 "PositionPattern": 1,
 "IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2679,6 +2793,8 @@
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
 "IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
 "SelfStatusRange": 4
@@ -2730,19 +2846,23 @@
 "BaseSkills": [
 {
 "SkillNum": "reflect",
-"Charges": 18
+"Charges": 18,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -2893,8 +3013,7 @@
 "CurrentOrder": {
 "TurnTier": 0,
 "Faction": 0,
-"TurnIndex": 0,
-"SkipAll": false
+"TurnIndex": 0
 },
 "TurnToChar": []
 },
@@ -7038,6 +7157,14 @@
 }
 ]
 ]
+}
+],
+"Decorations": [
+{
+"Name": "New Deco",
+"Layer": 0,
+"Visible": true,
+"Anims": []
 }
 ],
 "Tiles": [

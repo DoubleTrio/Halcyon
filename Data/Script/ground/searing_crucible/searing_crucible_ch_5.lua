@@ -613,7 +613,7 @@ function searing_crucible_ch_5.FirstPreBossScene()
 	SV.Chapter5.EncounteredBoss = true
 	--enter fight
 	GAME:ContinueDungeon("searing_tunnel", 2, 0, 0, RogueEssence.Data.GameProgress.DungeonStakes.Risk, true, false)
-		
+	
 end
 
 function searing_crucible_ch_5.SecondPreBossScene()
@@ -1104,7 +1104,7 @@ function searing_crucible_ch_5.DefeatedBoss()
 	GAME:WaitFrames(20)
 	
 	UI:SetSpeaker(growlithe)
-	UI:WaitShowDialogue("Same! We woulda been boned if you guys werent here, ruff!")
+	UI:WaitShowDialogue("Same! We woulda been in trouble if you guys werent here, ruff!")
 	GAME:WaitFrames(20)
 	
 	UI:SetSpeaker(zigzagoon)
@@ -1119,7 +1119,7 @@ function searing_crucible_ch_5.DefeatedBoss()
 	GAME:WaitFrames(20)
 	
 	GeneralFunctions.EmoteAndPausePrecise(partner, "Exclaim", true)
-	UI:WaitShowDialogue("Oh man it's gotta be late by now! We should get moving!")
+	UI:WaitShowDialogue("Oh man it's gotta be late by now![pause=0] We should get moving!")
 	GAME:WaitFrames(10)
 	
 	--they leave

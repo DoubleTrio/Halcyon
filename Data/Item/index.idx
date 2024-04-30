@@ -1,13 +1,14 @@
 ﻿{
-"Version": "0.7.25.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[RogueEssence.Data.EntrySummary, RogueEssence]], System.Private.CoreLib",
 "ammo_cacnea_spike": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 1,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.AmmoState"
 }
 ],
@@ -27,10 +28,11 @@
 },
 "ammo_corsola_twig": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 1,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.AmmoState"
 }
 ],
@@ -50,10 +52,11 @@
 },
 "ammo_geo_pebble": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 0,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.AmmoState"
 }
 ],
@@ -73,10 +76,11 @@
 },
 "ammo_iron_thorn": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 1,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.AmmoState"
 }
 ],
@@ -96,10 +100,11 @@
 },
 "ammo_stick": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 1,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.AmmoState"
 }
 ],
@@ -119,10 +124,11 @@
 },
 "apricorn_big": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -140,10 +146,11 @@
 },
 "apricorn_black": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -161,10 +168,11 @@
 },
 "apricorn_blue": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -184,10 +192,11 @@
 },
 "apricorn_brown": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -207,10 +216,11 @@
 },
 "apricorn_green": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -230,10 +240,11 @@
 },
 "apricorn_plain": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -253,10 +264,11 @@
 },
 "apricorn_purple": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -276,10 +288,11 @@
 },
 "apricorn_red": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -299,10 +312,11 @@
 },
 "apricorn_white": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -322,10 +336,11 @@
 },
 "apricorn_yellow": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 11,
 "UsageType": 3,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.RecruitState"
 }
 ],
@@ -345,14 +360,15 @@
 },
 "berry_aspear": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -377,14 +393,15 @@
 },
 "berry_cheri": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -409,14 +426,15 @@
 },
 "berry_chesto": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -441,14 +459,15 @@
 },
 "berry_leppa": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -473,14 +492,15 @@
 },
 "berry_lum": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -505,14 +525,15 @@
 },
 "berry_oran": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -537,14 +558,15 @@
 },
 "berry_pecha": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -569,14 +591,15 @@
 },
 "berry_persim": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -601,14 +624,15 @@
 },
 "berry_rawst": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 3,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.BerryState"
 }
 ],
@@ -633,14 +657,15 @@
 },
 "boost_calcium": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
 "UsageType": 5,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.DrinkState"
 }
 ],
@@ -665,14 +690,15 @@
 },
 "boost_carbos": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
 "UsageType": 5,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.DrinkState"
 }
 ],
@@ -697,14 +723,15 @@
 },
 "boost_hp_up": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
 "UsageType": 5,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.DrinkState"
 }
 ],
@@ -729,14 +756,15 @@
 },
 "boost_iron": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
 "UsageType": 5,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.DrinkState"
 }
 ],
@@ -761,14 +789,15 @@
 },
 "boost_nectar": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
 "UsageType": 5,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.DrinkState"
 }
 ],
@@ -789,14 +818,15 @@
 },
 "boost_protein": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
 "UsageType": 5,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.DrinkState"
 }
 ],
@@ -821,14 +851,15 @@
 },
 "boost_zinc": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
 "UsageType": 5,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.DrinkState"
 }
 ],
@@ -853,6 +884,7 @@
 },
 "box_dainty": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 17,
 "UsageType": 7,
 "States": [],
 "Name": {
@@ -869,6 +901,7 @@
 },
 "box_deluxe": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 17,
 "UsageType": 7,
 "States": [],
 "Name": {
@@ -885,6 +918,7 @@
 },
 "box_glittery": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 17,
 "UsageType": 7,
 "States": [],
 "Name": {
@@ -901,6 +935,7 @@
 },
 "box_heavy": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 17,
 "UsageType": 7,
 "States": [],
 "Name": {
@@ -917,6 +952,7 @@
 },
 "box_light": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 17,
 "UsageType": 7,
 "States": [],
 "Name": {
@@ -933,6 +969,7 @@
 },
 "box_nifty": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 17,
 "UsageType": 7,
 "States": [],
 "Name": {
@@ -947,16 +984,91 @@
 "Comment": "",
 "SortOrder": 16
 },
+"cafe_apple_cider": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
+"UsageType": 5,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.DrinkState"
+}
+],
+"Name": {
+"DefaultText": "Apple Cider",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "Cafe food item.",
+"SortOrder": 4
+},
+"cafe_cheri_bomb": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 0,
+"UsageType": 3,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.AmmoState"
+}
+],
+"Name": {
+"DefaultText": "Cheri Bomb",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "Cafe ammo item.",
+"SortOrder": 2
+},
+"cafe_domi_blend": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
+"UsageType": 5,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.DrinkState"
+}
+],
+"Name": {
+"DefaultText": "Domi Blend",
+"LocalTexts": {
+"": ""
+}
+},
+"Released": true,
+"Comment": "Cafe food item.",
+"SortOrder": 6
+},
+"cafe_endurance_tonic": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 7,
+"UsageType": 5,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.DrinkState"
+}
+],
+"Name": {
+"DefaultText": "Endurance Tonic",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "Cafe food item.",
+"SortOrder": 6
+},
 "food_apple": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 2,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.FoodState"
 }
 ],
@@ -977,14 +1089,15 @@
 },
 "food_apple_big": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 2,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.FoodState"
 }
 ],
@@ -1006,14 +1119,15 @@
 },
 "food_apple_huge": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 2,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.FoodState"
 }
 ],
@@ -1035,14 +1149,15 @@
 },
 "food_chestnut": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 2,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.FoodState"
 }
 ],
@@ -1064,14 +1179,15 @@
 },
 "gummi_black": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1091,14 +1207,15 @@
 },
 "gummi_blue": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1118,14 +1235,15 @@
 },
 "gummi_brown": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1145,14 +1263,15 @@
 },
 "gummi_clear": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1172,14 +1291,15 @@
 },
 "gummi_gold": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1199,14 +1319,15 @@
 },
 "gummi_grass": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1226,14 +1347,15 @@
 },
 "gummi_gray": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1253,14 +1375,15 @@
 },
 "gummi_green": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1280,14 +1403,15 @@
 },
 "gummi_magenta": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1307,14 +1431,15 @@
 },
 "gummi_orange": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1334,14 +1459,15 @@
 },
 "gummi_pink": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1361,14 +1487,15 @@
 },
 "gummi_purple": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1388,14 +1515,15 @@
 },
 "gummi_red": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1415,14 +1543,15 @@
 },
 "gummi_royal": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1442,14 +1571,15 @@
 },
 "gummi_silver": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1469,14 +1599,15 @@
 },
 "gummi_sky": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1496,14 +1627,15 @@
 },
 "gummi_white": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1523,14 +1655,15 @@
 },
 "gummi_wonder": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1548,14 +1681,15 @@
 },
 "gummi_yellow": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 6,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.GummiState"
 }
 ],
@@ -1573,16 +1707,53 @@
 "Comment": "",
 "SortOrder": 5
 },
-"held_black_belt": {
+"held_aspear_scarf": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.HeldState"
+}
+],
+"Name": {
+"DefaultText": "Aspear Scarf",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 1
+},
+"held_band_of_passage": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
+"UsageType": 0,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.HeldState"
+}
+],
+"Name": {
+"DefaultText": "Band of Passage",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "For use within the beginner lesson tutorial.",
+"SortOrder": 1
+},
+"held_black_belt": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
+"UsageType": 0,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1606,14 +1777,15 @@
 },
 "held_black_glasses": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1637,14 +1809,15 @@
 },
 "held_blank_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1668,14 +1841,15 @@
 },
 "held_charcoal": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1697,12 +1871,31 @@
 "Comment": "",
 "SortOrder": 1
 },
-"held_defense_scarf": {
+"held_cheri_scarf": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.HeldState"
+}
+],
+"Name": {
+"DefaultText": "Cheri Scarf",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 1
+},
+"held_defense_scarf": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
+"UsageType": 0,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1719,14 +1912,15 @@
 },
 "held_draco_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1750,14 +1944,15 @@
 },
 "held_dragon_scale": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1781,14 +1976,15 @@
 },
 "held_dread_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1812,14 +2008,15 @@
 },
 "held_earth_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1843,14 +2040,15 @@
 },
 "held_fist_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1874,14 +2072,15 @@
 },
 "held_flame_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1905,14 +2104,15 @@
 },
 "held_hard_stone": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1936,14 +2136,15 @@
 },
 "held_icicle_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1967,14 +2168,15 @@
 },
 "held_insect_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -1996,16 +2198,35 @@
 "Comment": "",
 "SortOrder": 1
 },
-"held_iron_plate": {
+"held_insomniascope": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 15,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.HeldState"
+}
+],
+"Name": {
+"DefaultText": "Insomniascope",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 1
+},
+"held_iron_plate": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
+"UsageType": 0,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2029,14 +2250,15 @@
 },
 "held_magnet": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2060,14 +2282,15 @@
 },
 "held_meadow_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2091,14 +2314,15 @@
 },
 "held_metal_coat": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2122,14 +2346,15 @@
 },
 "held_mind_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2153,14 +2378,15 @@
 },
 "held_miracle_seed": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2184,14 +2410,15 @@
 },
 "held_mystic_water": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2215,14 +2442,15 @@
 },
 "held_never_melt_ice": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2244,16 +2472,53 @@
 "Comment": "",
 "SortOrder": 1
 },
-"held_pink_bow": {
+"held_pecha_scarf": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.HeldState"
+}
+],
+"Name": {
+"DefaultText": "Pecha Scarf",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 1
+},
+"held_persim_band": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
+"UsageType": 0,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.HeldState"
+}
+],
+"Name": {
+"DefaultText": "Persim Band",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 1
+},
+"held_pink_bow": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
+"UsageType": 0,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2272,14 +2537,15 @@
 },
 "held_pixie_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2303,14 +2569,15 @@
 },
 "held_poison_barb": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2334,10 +2601,11 @@
 },
 "held_power_band": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2352,12 +2620,31 @@
 "Comment": "",
 "SortOrder": 1
 },
-"held_reunion_cape": {
+"held_rawst_scarf": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.HeldState"
+}
+],
+"Name": {
+"DefaultText": "Rawst Scarf",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 1
+},
+"held_reunion_cape": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
+"UsageType": 0,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2375,14 +2662,15 @@
 },
 "held_sharp_beak": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2406,14 +2694,15 @@
 },
 "held_silk_scarf": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2437,14 +2726,15 @@
 },
 "held_silver_powder": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2468,14 +2758,15 @@
 },
 "held_sky_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2499,14 +2790,15 @@
 },
 "held_soft_sand": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2530,10 +2822,11 @@
 },
 "held_special_band": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2550,14 +2843,15 @@
 },
 "held_spell_tag": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2581,14 +2875,15 @@
 },
 "held_splash_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2612,14 +2907,15 @@
 },
 "held_spooky_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2643,14 +2939,15 @@
 },
 "held_stone_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2672,16 +2969,35 @@
 "Comment": "",
 "SortOrder": 1
 },
-"held_toxic_plate": {
+"held_synergy_scarf": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.HeldState"
+}
+],
+"Name": {
+"DefaultText": "Synergy Scarf",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "Only works when another synergy scarf is worn by a nearby ally.\r\nBoosts all stats by 10%.\r\nActs as a pass scarf in a pinch.\r\n\r\n",
+"SortOrder": 1
+},
+"held_toxic_plate": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
+"UsageType": 0,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2705,14 +3021,15 @@
 },
 "held_twisted_spoon": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2736,14 +3053,15 @@
 },
 "held_warp_scarf": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2762,14 +3080,15 @@
 },
 "held_zap_plate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": -1,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EquipState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2793,10 +3112,11 @@
 },
 "held_zinc_band": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
 "UsageType": 0,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.HeldState"
 }
 ],
@@ -2812,10 +3132,11 @@
 },
 "machine_recall_box": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 12,
 "UsageType": 2,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.MachineState"
 }
 ],
@@ -2831,12 +3152,91 @@
 "Comment": "",
 "SortOrder": 12
 },
+"mission_lost_band": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
+"UsageType": 0,
+"States": [],
+"Name": {
+"DefaultText": "Lost Band",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 0
+},
+"mission_lost_scarf": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
+"UsageType": 0,
+"States": [],
+"Name": {
+"DefaultText": "Lost Scarf",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 0
+},
+"mission_lost_specs": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 15,
+"UsageType": 0,
+"States": [],
+"Name": {
+"DefaultText": "Lost Specs",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 0
+},
+"mission_stolen_band": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
+"UsageType": 0,
+"States": [],
+"Name": {
+"DefaultText": "Stolen Band",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 0
+},
+"mission_stolen_scarf": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 14,
+"UsageType": 0,
+"States": [],
+"Name": {
+"DefaultText": "Stolen Scarf",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 0
+},
+"mission_stolen_specs": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 15,
+"UsageType": 0,
+"States": [],
+"Name": {
+"DefaultText": "Stolen Specs",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 0
+},
 "orb_all_aim": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -2854,10 +3254,11 @@
 },
 "orb_all_dodge": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -2877,10 +3278,11 @@
 },
 "orb_cleanse": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -2898,10 +3300,11 @@
 },
 "orb_endure": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -2921,10 +3324,11 @@
 },
 "orb_escape": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -2942,10 +3346,11 @@
 },
 "orb_fill_in": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -2965,10 +3370,11 @@
 },
 "orb_foe_hold": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -2986,10 +3392,11 @@
 },
 "orb_foe_seal": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3007,10 +3414,11 @@
 },
 "orb_freeze": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3030,10 +3438,11 @@
 },
 "orb_halving": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3053,10 +3462,11 @@
 },
 "orb_invert": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3074,10 +3484,11 @@
 },
 "orb_luminous": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3095,10 +3506,11 @@
 },
 "orb_mirror": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3118,10 +3530,11 @@
 },
 "orb_mug": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3141,10 +3554,11 @@
 },
 "orb_nullify": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3164,10 +3578,11 @@
 },
 "orb_petrify": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3185,10 +3600,11 @@
 },
 "orb_pierce": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3208,10 +3624,11 @@
 },
 "orb_rebound": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3231,10 +3648,11 @@
 },
 "orb_revival": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3254,10 +3672,11 @@
 },
 "orb_rollcall": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3275,10 +3694,11 @@
 },
 "orb_scanner": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3296,10 +3716,11 @@
 },
 "orb_slow": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3319,10 +3740,11 @@
 },
 "orb_slumber": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3340,10 +3762,11 @@
 },
 "orb_spurn": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3361,10 +3784,11 @@
 },
 "orb_stayaway": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3383,10 +3807,11 @@
 },
 "orb_totter": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3404,10 +3829,11 @@
 },
 "orb_trapbust": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3427,10 +3853,11 @@
 },
 "orb_trap_see": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3450,10 +3877,11 @@
 },
 "orb_trawl": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3471,10 +3899,11 @@
 },
 "orb_weather": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 9,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.OrbState"
 }
 ],
@@ -3494,14 +3923,15 @@
 },
 "seed_blast": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3520,14 +3950,15 @@
 },
 "seed_blinker": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3547,14 +3978,15 @@
 },
 "seed_hunger": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3574,14 +4006,15 @@
 },
 "seed_ice": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3600,14 +4033,15 @@
 },
 "seed_plain": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3623,16 +4057,39 @@
 "Comment": "",
 "SortOrder": 7
 },
-"seed_reviver": {
+"seed_quick": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.25.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.25.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.SeedState"
+}
+],
+"Name": {
+"DefaultText": "Quick Seed",
+"LocalTexts": {}
+},
+"Released": true,
+"Comment": "",
+"SortOrder": 7
+},
+"seed_reviver": {
+"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
+"UsageType": 4,
+"States": [
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
+"type": "PMDC.Dungeon.EdibleState"
+},
+{
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3650,14 +4107,15 @@
 },
 "seed_sleep": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3675,14 +4133,15 @@
 },
 "seed_vile": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3699,14 +4158,15 @@
 },
 "seed_warp": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 4,
 "UsageType": 4,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.EdibleState"
 },
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.SeedState"
 }
 ],
@@ -3724,6 +4184,7 @@
 },
 "tm_attract": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3751,6 +4212,7 @@
 },
 "tm_captivate": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3778,6 +4240,7 @@
 },
 "tm_cut": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3805,6 +4268,7 @@
 },
 "tm_defog": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3832,6 +4296,7 @@
 },
 "tm_embargo": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3859,6 +4324,7 @@
 },
 "tm_endure": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3886,6 +4352,7 @@
 },
 "tm_false_swipe": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3913,6 +4380,7 @@
 },
 "tm_flash": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3940,6 +4408,7 @@
 },
 "tm_infestation": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3967,6 +4436,7 @@
 },
 "tm_psych_up": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -3994,6 +4464,7 @@
 },
 "tm_quash": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -4021,6 +4492,7 @@
 },
 "tm_recycle": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -4048,6 +4520,7 @@
 },
 "tm_snatch": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -4075,6 +4548,7 @@
 },
 "tm_swagger": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -4102,6 +4576,7 @@
 },
 "tm_telekinesis": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -4129,6 +4604,7 @@
 },
 "tm_torment": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -4156,6 +4632,7 @@
 },
 "tm_whirlpool": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 13,
 "UsageType": 6,
 "States": [
 {
@@ -4183,10 +4660,11 @@
 },
 "wand_totter": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 8,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.WandState"
 }
 ],
@@ -4204,10 +4682,11 @@
 },
 "wand_transfer": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 8,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.WandState"
 }
 ],
@@ -4226,10 +4705,11 @@
 },
 "wand_vanish": {
 "$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
+"Icon": 8,
 "UsageType": 1,
 "States": [
 {
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
+"assembly": "PMDC, Version=0.8.0.0, Culture=neutral, PublicKeyToken=null",
 "type": "PMDC.Dungeon.WandState"
 }
 ],
@@ -4245,305 +4725,6 @@
 "Released": true,
 "Comment": "",
 "SortOrder": 3
-},
-"cafe_apple_cider": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 5,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.25.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.DrinkState"
-}
-],
-"Name": {
-"DefaultText": "Apple Cider",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "Cafe food item.",
-"SortOrder": 4
-},
-"cafe_cheri_bomb": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 3,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.AmmoState"
-}
-],
-"Name": {
-"DefaultText": "Cheri Bomb",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "Cafe ammo item.",
-"SortOrder": 2
-},
-"cafe_domi_blend": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 5,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.25.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.DrinkState"
-}
-],
-"Name": {
-"DefaultText": "Domi Blend",
-"LocalTexts": {
-"": ""
-}
-},
-"Released": true,
-"Comment": "Cafe food item.",
-"SortOrder": 6
-},
-"cafe_endurance_tonic": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 5,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.25.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.DrinkState"
-}
-],
-"Name": {
-"DefaultText": "Endurance Tonic",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "Cafe food item.",
-"SortOrder": 6
-},
-"held_aspear_scarf": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.HeldState"
-}
-],
-"Name": {
-"DefaultText": "Aspear Scarf",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 1
-},
-"held_band_of_passage": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.HeldState"
-}
-],
-"Name": {
-"DefaultText": "Band of Passage",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "For use within the beginner lesson tutorial.",
-"SortOrder": 1
-},
-"held_cheri_scarf": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.HeldState"
-}
-],
-"Name": {
-"DefaultText": "Cheri Scarf",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 1
-},
-"held_insomniascope": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.HeldState"
-}
-],
-"Name": {
-"DefaultText": "Insomniascope",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 1
-},
-"held_pecha_scarf": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.HeldState"
-}
-],
-"Name": {
-"DefaultText": "Pecha Scarf",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 1
-},
-"held_persim_band": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.HeldState"
-}
-],
-"Name": {
-"DefaultText": "Persim Band",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 1
-},
-"held_rawst_scarf": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.HeldState"
-}
-],
-"Name": {
-"DefaultText": "Rawst Scarf",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 1
-},
-"held_synergy_scarf": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.HeldState"
-}
-],
-"Name": {
-"DefaultText": "Synergy Scarf",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "Only works when another synergy scarf is worn by a nearby ally.\r\nBoosts all stats by 10%.\r\nActs as a pass scarf in a pinch.\r\n\r\n",
-"SortOrder": 1
-},
-"mission_lost_band": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [],
-"Name": {
-"DefaultText": "Lost Band",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 0
-},
-"mission_lost_scarf": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [],
-"Name": {
-"DefaultText": "Lost Scarf",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 0
-},
-"mission_lost_specs": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [],
-"Name": {
-"DefaultText": "Lost Specs",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 0
-},
-"mission_stolen_band": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [],
-"Name": {
-"DefaultText": "Stolen Band",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 0
-},
-"mission_stolen_scarf": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [],
-"Name": {
-"DefaultText": "Stolen Scarf",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 0
-},
-"mission_stolen_specs": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 0,
-"States": [],
-"Name": {
-"DefaultText": "Stolen Specs",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 0
-},
-"seed_quick": {
-"$type": "RogueEssence.Data.ItemEntrySummary, RogueEssence",
-"UsageType": 4,
-"States": [
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.EdibleState"
-},
-{
-"assembly": "PMDC, Version=0.7.24.0, Culture=neutral, PublicKeyToken=null",
-"type": "PMDC.Dungeon.SeedState"
-}
-],
-"Name": {
-"DefaultText": "Quick Seed",
-"LocalTexts": {}
-},
-"Released": true,
-"Comment": "",
-"SortOrder": 7
 }
 }
 }

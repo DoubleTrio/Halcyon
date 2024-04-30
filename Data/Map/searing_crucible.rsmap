@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.25.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Dungeon.Map, RogueEssence",
 "Name": {
@@ -27,10 +27,6 @@
 "Y": 7
 },
 "serializationDir": 0,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Morkot",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -187,6 +183,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Morkot",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -248,9 +245,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -276,10 +276,6 @@
 "Y": 8
 },
 "serializationDir": 0,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Slugma",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -436,6 +432,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Slugma",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -497,9 +494,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -525,10 +525,6 @@
 "Y": 10
 },
 "serializationDir": 2,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Slugma",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -685,6 +681,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Slugma",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -746,9 +743,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -774,10 +774,6 @@
 "Y": 11
 },
 "serializationDir": 2,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Slugma",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -934,6 +930,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Slugma",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -995,9 +992,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -1023,10 +1023,6 @@
 "Y": 13
 },
 "serializationDir": 4,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Slugma",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -1183,6 +1179,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Slugma",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -1244,9 +1241,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -1272,10 +1272,6 @@
 "Y": 11
 },
 "serializationDir": 6,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Slugma",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -1432,6 +1428,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Slugma",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -1493,9 +1490,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -1521,10 +1521,6 @@
 "Y": 13
 },
 "serializationDir": 4,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Slugma",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -1681,6 +1677,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Slugma",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -1742,9 +1739,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -1770,10 +1770,6 @@
 "Y": 10
 },
 "serializationDir": 6,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Slugma",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -1930,6 +1926,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Slugma",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -1991,9 +1988,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -2019,10 +2019,6 @@
 "Y": 8
 },
 "serializationDir": 0,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Slugma",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -2179,6 +2175,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Slugma",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -2240,9 +2237,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],

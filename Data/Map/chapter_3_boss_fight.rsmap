@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.25.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Dungeon.Map, RogueEssence",
 "Name": {
@@ -27,10 +27,6 @@
 "Y": 5
 },
 "serializationDir": 0,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Suilux",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -187,6 +183,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Suilux",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -248,9 +245,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -276,10 +276,6 @@
 "Y": 4
 },
 "serializationDir": 0,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Priscilla",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -418,6 +414,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Priscilla",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -479,9 +476,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -507,10 +507,6 @@
 "Y": 4
 },
 "serializationDir": 0,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "Lummsy",
-"ActionEvents": [],
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -671,6 +667,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "Lummsy",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -732,9 +729,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],

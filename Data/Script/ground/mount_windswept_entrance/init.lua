@@ -6,6 +6,7 @@
 -- Commonly included lua functions and data
 require 'common'
 require 'PartnerEssentials'
+require 'ground.mount_windswept_entrance.mount_windswept_entrance_ch_5'
 
 -- Package name
 local mount_windswept_entrance = {}
@@ -25,7 +26,7 @@ function mount_windswept_entrance.Init(map)
   DEBUG.EnableDbgCoro()
   print('=>> Init_mount_windswept_entrance <<=')
   MapStrings = COMMON.AutoLoadLocalizedStrings()
-  COMMON.RespawnAllies(true)
+  COMMON.RespawnAllies()
   GROUND:AddMapStatus("blowing_wind")
   PartnerEssentials.InitializePartnerSpawn()
 

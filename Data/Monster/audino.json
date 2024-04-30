@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.4.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Data.MonsterData, RogueEssence",
 "Name": {
@@ -342,6 +342,7 @@
 }
 },
 "Temporary": false,
+"PromoteForm": 0,
 "Element1": "normal",
 "Element2": "none",
 "Intrinsic1": "healer",
@@ -685,6 +686,7 @@
 }
 },
 "Temporary": true,
+"PromoteForm": 0,
 "Element1": "normal",
 "Element2": "fairy",
 "Intrinsic1": "healer",
