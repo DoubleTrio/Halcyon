@@ -9,6 +9,8 @@ require 'ground.metano_town.metano_town_ch_3'
 require 'ground.metano_town.metano_town_ch_4'
 require 'ground.metano_town.metano_town_ch_5'
 require 'menu.single_deal_menu'
+require 'menu.skill.SkillTutorMenu'
+
 
 local MapStrings = {}
 
@@ -1939,6 +1941,7 @@ function metano_town.Tutor_Sequence(member, moveEntry)
 	GAME:WaitFrames(30)
 end
 
+BasePowerType = luanet.import_type('RogueEssence.Dungeon.BasePowerState')
 function metano_town.Tutor_Action(obj, activator)
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine
   
@@ -1947,6 +1950,7 @@ function metano_town.Tutor_Action(obj, activator)
   local repeated = false
   local member = nil
   local move = ""
+  local egg_moves = nil
   local hero = CH('PLAYER')
   local partner = CH('Teammate1')
   local chara = CH('Tutor_Owner')
@@ -1972,7 +1976,13 @@ function metano_town.Tutor_Action(obj, activator)
 			RogueEssence.StringKey("MENU_FORGET_SKILL"):ToLocal(),
 			STRINGS:FormatKey("MENU_INFO"),
 			STRINGS:FormatKey("MENU_EXIT")}
-			UI:BeginChoiceMenu(msg, tutor_choices, 1, 4)
+			
+			--starting in chapter 6, slowpoke will be able to teach Egg moves for a fee.
+			if SV.ChapterProgression.Chapter >= 6 then 
+				table.insert(tutor_choices, 3, STRINGS:Format(MapStrings['Tutor_Option_Tutor']))
+			end 
+			
+			UI:BeginChoiceMenu(msg, tutor_choices, 1, #tutor_choices)
 			UI:WaitForChoice()
 			local result = UI:ChoiceResult()
 			repeated = true
@@ -1984,10 +1994,15 @@ function metano_town.Tutor_Action(obj, activator)
 				end
 			elseif result == 2 then
 				state = 4
-			elseif result == 3 then
+			elseif result == 3 and SV.ChapterProgression.Chapter >= 6 then --egg move tutoring
+				state = 6
+			elseif result == #tutor_choices - 1 then
 				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Info_001']))
 				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Info_002']))
 				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Info_003']))
+				if SV.ChapterProgression.Chapter >= 6 then--chapter 6 and on, he now has the egg move tutor to explain.
+					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Info_004']))
+				end
 			else
 				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Goodbye']))
 				state = -1
@@ -2077,6 +2092,84 @@ function metano_town.Tutor_Action(obj, activator)
 				state = 0
 			else
 				state = 4
+			end
+		elseif state == 6 then--egg move tutoring
+			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Who']))
+			UI:TutorTeamMenu()
+			UI:WaitForChoice()
+			local result = UI:ChoiceResult()
+			if result > -1 then
+				member = GAME:GetPlayerPartyMember(result)
+				egg_moves = _DATA:GetMonster(member.BaseForm.Species).Forms[member.BaseForm.Form].SharedSkills
+				print(egg_moves.Count)	
+				
+				if egg_moves.Count <= 0 then
+					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_No_Egg_Moves'], member:GetDisplayName(false)))
+				else
+					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_What'], member:GetDisplayName(false)))
+					state = 7
+				end
+			else
+				state = 0		
+			end
+		elseif state == 7 then 
+			--Determine pricings for egg moves based on status/non status, and power of the move.
+			--Pricing is: 4500 for status moves, 1500 + 50*BP for attacks, 5000 if move is variable power.
+			local move_list = {}
+			local chosen_move = ""
+			local egg_move_price = 0
+			for i = 0, egg_moves.Count - 1, 1 do 
+				local skill = _DATA:GetSkill(egg_moves[i].Skill)
+				local power = skill.Data.SkillStates:Get(luanet.ctype(BasePowerType)).Power
+				print(power)
+				if skill.Data.Category ~= RogueEssence.Data.BattleData.SkillCategory.Physical and skill.Data.Category ~= RogueEssence.Data.BattleData.SkillCategory.Magical then
+					egg_move_price = 4500
+				else
+					if power == nil then
+						egg_move_price = 5000
+					else 
+						egg_move_price = 1500 + (50 * power)
+					end		
+				end
+				move_list[egg_moves[i].Skill] = {Cost = egg_move_price, Currency = ""}
+			end
+			local result = SkillTutorMenu.runTutorMenu(move_list, "")
+			if result ~= "" then 
+				move = result
+				local moveEntry = RogueEssence.Data.DataManager.Instance:GetSkill(move)
+				egg_move_price = move_list[move][1]
+				print(egg_move_price)
+				if egg_move_price > GAME:GetPlayerMoney() then
+					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_No_Money']))
+				elseif GAME:CanLearn(member) then
+					SOUND:PlayBattleSE("DUN_Money") 
+					GAME:RemoveFromPlayerMoney(egg_move_price)
+					GAME:LearnSkill(member, move)
+					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Begin']))
+					metano_town.Tutor_Sequence()	
+					SOUND:PlayBattleSE("DUN_Learn_Move")
+					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))
+					state = 0
+				else
+					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Replace'], member:GetDisplayName(false)))
+					local result = UI:LearnMenu(member, move)
+					UI:WaitForChoice()
+					local result = UI:ChoiceResult()
+					if result > -1 and result < 4 then
+						SOUND:PlayBattleSE("DUN_Money")
+						GAME:RemoveFromPlayerMoney(egg_move_price)
+						GAME:SetCharacterSkill(member, move, result)
+						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Begin']))
+						metano_town.Tutor_Sequence()	
+						SOUND:PlayBattleSE("DUN_Learn_Move")
+						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))
+						state = 0
+					else
+						state = 6
+					end
+				end
+			else
+				state = 6
 			end
 		end
 	end

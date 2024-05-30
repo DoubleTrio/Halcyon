@@ -92,3 +92,5 @@ V0.5.0
 -Updated the description of the Synergy Scarves to be a bit more clear on their main effect.
 -Fixed Team Style having less HP than they should due to a PMDO update reducing the effectiveness of hidden EVs.
 -Replaced Stunky in Crooked Cavern with Purrloin. Avoids an issue with Stunky being a town mon, and also avoids an issue with aftermath breaking your items after defeating stunky to get your item back.
+-Partner's name now stays yellow instead of turning dark blue while alone in Relic Forest during the opening.
+-Improved partner following AI in the overworld.

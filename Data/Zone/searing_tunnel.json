@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.8.0.0",
+"Version": "0.8.1.0",
 "Object": {
 "$type": "RogueEssence.Data.ZoneData, RogueEssence",
 "Name": {
@@ -9348,7 +9348,7 @@
 "Spawn": {
 "Spawn": {
 "BaseForm": {
-"Species": "shelgon",
+"Species": "turtonator",
 "Form": 0,
 "Skin": "",
 "Gender": -1
@@ -9358,10 +9358,10 @@
 "Max": 18
 },
 "SpecifiedSkills": [
-"bite",
-"headbutt",
-"dragon_breath",
-"leer"
+"ember",
+"smog",
+"protect",
+"iron_defense"
 ],
 "Intrinsic": "",
 "Tactic": "wander_dumb",

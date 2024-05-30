@@ -170,7 +170,7 @@ function guild_bottom_left_bedroom_ch_1.Breloom_Action(chara, activator)
 		UI:SetSpeakerEmotion("Happy")
 		GROUND:CharSetEmote(breloom, "glowing", 0)
 		UI:WaitShowDialogue("Hehe,[pause=10] don't worry about it.[pause=0] Not like anyone else in the guild respects privacy.")
-		UI:WaitShowDialogue("So don't be surprised later when I'm in your room later rummaging through your stuff.")
+		UI:WaitShowDialogue("So don't be surprised later when I'm in your room rummaging through your stuff.")
 		GAME:WaitFrames(20)
 		
 		UI:SetSpeaker(partner)

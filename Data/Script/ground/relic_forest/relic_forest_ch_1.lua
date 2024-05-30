@@ -92,6 +92,9 @@ function relic_forest_ch_1.PartnerFindsHeroCutscene()
 	local marker = MRKR("WakeupLocation")
 	GROUND:CharSetAnim(hero, 'Laying', true)
 	GROUND:TeleportTo(hero, marker.Position.X, marker.Position.Y, Direction.Right)
+	
+	--remove yellow color coding put on partner's nickname before Relic Forest 
+	GAME:SetCharacterNickname(GAME:GetPlayerPartyMember(1), string.sub(GAME:GetCharacterNickname(GAME:GetPlayerPartyMember(1)), 16, string.len(GAME:GetCharacterNickname(GAME:GetPlayerPartyMember(1))) - 7))
 
 	SOUND:StopBGM()
 	GAME:CutsceneMode(true)

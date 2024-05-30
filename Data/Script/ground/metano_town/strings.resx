@@ -302,7 +302,7 @@
     <value>Hey...[pause=0] You don't have enough \uE024...</value>
   </data>
   <data name="Tutor_Option_Tutor" xml:space="preserve">
-    <value>Tutor</value>
+    <value>Tutor Move</value>
   </data>
   <data name="Tutor_Remember_Begin" xml:space="preserve">
     <value>Ok... What was that move like again...?</value>
@@ -900,5 +900,26 @@
   </data>
   <data name="Storage_Stored_All_Items" xml:space="preserve">
     <value>All your unequipped items are stored away! They're safe with me, dearie.</value>
+  </data>
+  <data name="Tutor_Learn_Who" xml:space="preserve">
+    <value>Uh... Who should I help learn a special move...?</value>
+  </data>
+  <data name="Tutor_No_Egg_Moves" xml:space="preserve">
+    <value>Hey...[pause=0] {0} has no special moves to learn...</value>
+  </data>
+  <data name="Tutor_Learn_Begin" xml:space="preserve">
+    <value>Ok... I think that move went like this...</value>
+  </data>
+  <data name="Tutor_Learn_Success" xml:space="preserve">
+    <value>Ok... {0} learned how to use {1}...</value>
+  </data>
+  <data name="Tutor_Learn_Replace" xml:space="preserve">
+    <value>Uh... {0} has too many moves...[pause=0]\nPick one to replace...</value>
+  </data>
+  <data name="Tutor_Info_004&#xD;&#xA;" xml:space="preserve">
+    <value>For a fee, I can even teach you special moves you can't learn anywhere else...</value>
+  </data>
+  <data name="Tutor_Learn_What" xml:space="preserve">
+    <value>Uh... What move does {0} want to learn...?</value>
   </data>
 </root>

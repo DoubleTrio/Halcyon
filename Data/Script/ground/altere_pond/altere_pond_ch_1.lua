@@ -175,6 +175,9 @@ function altere_pond_ch_1.PrologueGoToRelicForest()
 	GAME:RemovePlayerTeam(0)
 	GAME:AddPlayerAssembly(p)
 	
+	--Append [color=#FFFF00] [color] to partner name so their name stays yellow while they're the leader; this will be removed at the start of the relic forest arrival script
+	GAME:SetCharacterNickname(GAME:GetPlayerPartyMember(0), "[color=#FFFF00]" .. GAME:GetCharacterNickname(GAME:GetPlayerPartyMember(0)) .. "[color]")
+	
 	--enter dungeon
 	GAME:CutsceneMode(false)
 	GAME:UnlockDungeon("relic_forest")
