@@ -10,6 +10,6 @@
 -- Service Packages
 --------------------------------------------------------------------------------------------------------------
 require 'services.debug_tools'
-require 'services.music_service'
+require 'services.upgrade_tools'
 
 math.randomseed(os.time())

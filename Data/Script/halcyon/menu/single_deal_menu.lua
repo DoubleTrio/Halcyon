@@ -1,4 +1,4 @@
-require 'common'
+require 'origin.common'
 
 function SingleItemDealMenu()
     local SingleItemDealMenu = Class('MerchantMenu')

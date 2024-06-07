@@ -1,4 +1,4 @@
-require 'common'
+require 'origin.common'
 
 beginner_lesson_evt = {}
 

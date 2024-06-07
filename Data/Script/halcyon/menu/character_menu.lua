@@ -2,8 +2,8 @@
     character_menu.lua
     Implements the character menu used in New Leaf's character selection sequence
 ]]--
-require 'common'
-require 'menu.ChooseAmountMenu'
+require 'origin.common'
+require 'halcyon.menu.ChooseAmountMenu'
 
 function CharacterSelectionMenu()
     Graphics = {
