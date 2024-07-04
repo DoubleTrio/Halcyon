@@ -76,6 +76,8 @@ function metano_water_home.PlotScripting()
 		metano_water_home_ch_3.SetupGround()		
 	elseif SV.ChapterProgression.Chapter == 4 then 
 		metano_water_home_ch_4.SetupGround()
+	elseif SV.ChapterProgression.Chapter == 5 then 
+		metano_water_home_ch_5.SetupGround()
 	else
 		GAME:FadeIn(20)
 	end

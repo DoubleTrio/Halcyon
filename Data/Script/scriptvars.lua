@@ -735,6 +735,8 @@ SV.Chapter4 =
 SV.Chapter5 = 
 {
 	ShowedTitleCard = false,--Did the generic wakeup for the first day? Need a variable for this due to chapter 5 title card.
+	TalkedToSnubbull = false,--Did player talk to Snubbull at the Kec Shop?
+	SawZigzagoonFamilyCutscene = false,--Did Almotz's family see him off?
 	FinishedExpeditionAddress = false,--Did the address about the expedition starting today?
 	ReadyForExpedition = false,--Talked to Penticus to ready up for the expedition?
 	

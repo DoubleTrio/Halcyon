@@ -2706,7 +2706,17 @@ function DungeonJobList:DrawMenu()
 	elseif SV.ChapterProgression.Chapter == 4 and self.dungeon == 'apricorn_grove' and not SV.Chapter4.ReachedGlade and not SV.Chapter4.FinishedGrove then
 		message = 'Try to find something of interest.'
 	elseif SV.ChapterProgression.Chapter == 4 and self.dungeon == 'apricorn_grove' and SV.Chapter4.ReachedGlade and not SV.Chapter4.FinishedGrove then
-		message = 'Return to the large Apricorn tree with enough\nPokémon to reach a big Apricorn.'
+		message = 'Return to the large Apricorn tree with enough\nPokémon to reach the big Apricorn.'
+	elseif SV.ChapterProgression.Chapter == 5 and self.dungeon == 'vast_steppe' then 
+		message = 'Proceed through the steppe towards the\nfirst base camp.'
+	elseif SV.ChapterProgression.Chapter == 5 and self.dungeon == 'searing_tunnel' and _ZONE.CurrentMapID.Segment == 0 and not SV.Chapter5.EncounteredBoss then
+		message = 'Proceed through the tunnel towards the second base camp.'
+	elseif SV.ChapterProgression.Chapter == 5 and self.dungeon == 'searing_tunnel' and _ZONE.CurrentMapID.Segment == 0 and SV.Chapter5.EncounteredBoss then
+		message = 'Make it past ' .. CharacterEssentials.GetCharacterName("Magcargo") .. "'s clan."
+	elseif SV.ChapterProgression.Chapter == 5 and self.dungeon == 'searing_tunnel' and _ZONE.CurrentMapID.Segment == 1 then
+		message = "Defeat " .. CharacterEssentials.GetCharacterName("Magcargo") .. "'s clan!"
+	elseif SV.ChapterProgression.Chapter == 5 and self.dungeon == 'mount_windswept' then
+		message = "Proceed through the mountain to the final base camp at [color=#FFC663]Cloven Ruins[color]."	
 	else
 		message = "Go as far as you can."
 	end 

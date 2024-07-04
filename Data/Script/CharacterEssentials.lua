@@ -760,6 +760,15 @@ local characters = {
 			skin = "normal"
 		},
 		
+		Arcanine = {
+			species = 'Arcanine',
+			nickname = 'Devina', --she was dev all along...
+			instance = 'Arcanine',
+			gender = Gender.Female,
+			form = 0,
+			skin = "normal"
+		},
+		
 		--Inn Passersby
 		Makuhita = {
 			species = "makuhita",
