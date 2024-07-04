@@ -1,12 +1,10 @@
-require 'common'
+require 'origin.common'
 
 --Import Serpent library.
 Serpent = require 'lib.serpent'
 
 ListType = luanet.import_type('System.Collections.Generic.List`1')
 MobSpawnType = luanet.import_type('RogueEssence.LevelGen.MobSpawn')
-
-SINGLE_CHAR_SCRIPT = {}
 
 local function in_array(value, array)
     for index = 1, #array do
@@ -18,10 +16,6 @@ local function in_array(value, array)
     return false -- We could ommit this part, as nil is like false
 end
 
-
-function SINGLE_CHAR_SCRIPT.Test(owner, ownerChar, context, args)
-  PrintInfo("Test")
-end
 
 function SINGLE_CHAR_SCRIPT.ResetTurnCounter(owner, ownerChar, context, args)
 	if context.User == _DUNGEON.ActiveTeam.Leader then
@@ -36,63 +30,6 @@ end
 ShopSecurityType = luanet.import_type('PMDC.Dungeon.ShopSecurityState')
 MapIndexType = luanet.import_type('RogueEssence.Dungeon.MapIndexState')
 
-
-function SINGLE_CHAR_SCRIPT.ThiefCheck(owner, ownerChar, context, args)
-  local baseLoc = _DUNGEON.ActiveTeam.Leader.CharLoc
-  local tile = _ZONE.CurrentMap.Tiles[baseLoc.X][baseLoc.Y]
-  
-  local thief_idx = "thief"
-  
-  local price = COMMON.GetDungeonCartPrice()
-  local security_price = COMMON.GetShopPriceState()
-  if price < 0 then
-    --lost merchandise was placed back in shop, readjust the security price and clear the current price
-    security_price.Amount = security_price.Amount - price
-  elseif price < security_price.Cart then
-    --merchandise was returned.  doesn't matter who did it.
-    security_price.Cart = price
-  elseif price > security_price.Cart then
-    local char_index = _ZONE.CurrentMap:GetCharIndex(context.User)
-    if char_index.Faction ~= RogueEssence.Dungeon.Faction.Player then
-      --non-player was responsible for taking/destroying merchandise, just readjust the security price and clear the current price
-      security_price.Amount = security_price.Amount - price + security_price.Cart
-	else
-	  --player was responsible for taking/destroying merchandise, add to the cart
-      security_price.Cart = price
-    end
-  end
-
-  
-  if tile.Effect.ID ~= "area_shop" then
-	if security_price.Cart > 0 then
-	  _GAME:BGM("", false)
-      COMMON.ClearAllPrices()
-	  
-	  SV.adventure.Thief = true
-	  local index_from = owner.StatusStates:Get(luanet.ctype(MapIndexType))
-	  _DUNGEON:LogMsg(STRINGS:Format(RogueEssence.StringKey(string.format("TALK_SHOP_THIEF_%04d", index_from.Index)):ToLocal()))
-		
-	  -- create thief status
-	  local thief_status = RogueEssence.Dungeon.MapStatus(thief_idx)
-      thief_status:LoadFromData()
-	  -- put spawner from security status in thief status
-	  local security_to = thief_status.StatusStates:Get(luanet.ctype(ShopSecurityType))
-	  local security_from = owner.StatusStates:Get(luanet.ctype(ShopSecurityType))
-	  security_to.Security = security_from.Security
-      TASK:WaitTask(_DUNGEON:RemoveMapStatus(owner.ID))
-      TASK:WaitTask(_DUNGEON:AddMapStatus(thief_status))
-	  GAME:WaitFrames(60)
-	end
-  else
-    local shop_idx = "shopping"
-	if not _ZONE.CurrentMap.Status:ContainsKey(thief_idx) and not _ZONE.CurrentMap.Status:ContainsKey(shop_idx) then
-	  
-	  local shop_status = RogueEssence.Dungeon.MapStatus(shop_idx)
-      shop_status:LoadFromData()
-      TASK:WaitTask(_DUNGEON:AddMapStatus(shop_status))
-	end
-  end
-end
 
 function SINGLE_CHAR_SCRIPT.ShopCheckout(owner, ownerChar, context, args)
   local baseLoc = _DUNGEON.ActiveTeam.Leader.CharLoc

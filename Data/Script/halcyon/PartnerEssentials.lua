@@ -1,4 +1,4 @@
-require 'CharacterEssentials'
+require 'halcyon.CharacterEssentials'
 PartnerEssentials = {}
 
 --helper function, used if a dialogue bit will be used on multiple maps...

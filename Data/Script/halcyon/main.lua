@@ -9,7 +9,8 @@
 --------------------------------------------------------------------------------------------------------------
 -- Service Packages
 --------------------------------------------------------------------------------------------------------------
-require 'services.debug_tools'
-require 'services.upgrade_tools'
+require 'halcyon.services.debug_tools'
+require 'halcyon.services.menu_tools'
+require 'halcyon.services.upgrade_tools'
 
 math.randomseed(os.time())

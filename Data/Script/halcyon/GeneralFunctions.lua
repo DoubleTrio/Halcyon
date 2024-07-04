@@ -1,4 +1,4 @@
-require 'common'
+require 'origin.common'
 GeneralFunctions = {}
 
 --[[These are functions/procedures that are useful in a multitude of different maps or situations. Things such as

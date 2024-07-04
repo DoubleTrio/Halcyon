@@ -1,4 +1,4 @@
-require 'common'
+require 'origin.common'
 
 local function FirstToUpper(str)
 	return (str:gsub("^%l", string.upper))

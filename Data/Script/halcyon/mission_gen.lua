@@ -1,6 +1,6 @@
-require 'common'
-require 'GeneralFunctions'
-require 'CharacterEssentials'
+require 'origin.common'
+require 'halcyon.GeneralFunctions'
+require 'halcyon.CharacterEssentials'
 
 --Halcyon Custom work:
 --Code in this folder is used to generate, display, and handle randomized missions
