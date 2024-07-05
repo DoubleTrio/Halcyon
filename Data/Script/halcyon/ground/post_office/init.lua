@@ -1,6 +1,6 @@
-require 'common'
-require 'GeneralFunctions'
-require 'PartnerEssentials'
+require 'origin.common'
+require 'halcyon.GeneralFunctions'
+require 'halcyon.PartnerEssentials'
 
 local post_office = {}
 local MapStrings = {}

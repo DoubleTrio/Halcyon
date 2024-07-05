@@ -5,9 +5,9 @@
 ]]--
 -- Commonly included lua functions and data
 -- Commonly included lua functions and data
-require 'common'
-require 'PartnerEssentials'
-require 'ground.crooked_den.crooked_den_ch_3'
+require 'origin.common'
+require 'halcyon.PartnerEssentials'
+require 'halcyon.ground.crooked_den.crooked_den_ch_3'
 
 -- Package name
 local crooked_den = {}

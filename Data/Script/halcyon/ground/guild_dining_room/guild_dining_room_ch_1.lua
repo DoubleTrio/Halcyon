@@ -1,8 +1,8 @@
 
-require 'common'
-require 'PartnerEssentials'
-require 'CharacterEssentials'
-require 'GeneralFunctions'
+require 'origin.common'
+require 'halcyon.PartnerEssentials'
+require 'halcyon.CharacterEssentials'
+require 'halcyon.GeneralFunctions'
 
 guild_dining_room_ch_1 = {}
 

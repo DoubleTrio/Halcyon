@@ -1,7 +1,7 @@
-require 'common'
-require 'PartnerEssentials'
-require 'GeneralFunctions'
-require 'CharacterEssentials'
+require 'origin.common'
+require 'halcyon.PartnerEssentials'
+require 'halcyon.GeneralFunctions'
+require 'halcyon.CharacterEssentials'
 
 guild_guildmasters_room_ch_4 = {}
 

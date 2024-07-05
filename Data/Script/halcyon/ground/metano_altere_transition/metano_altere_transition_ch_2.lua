@@ -1,6 +1,6 @@
-require 'common'
-require 'PartnerEssentials'
-require 'GeneralFunctions'
+require 'origin.common'
+require 'halcyon.PartnerEssentials'
+require 'halcyon.GeneralFunctions'
 
 metano_altere_transition_ch_2 = {}
 

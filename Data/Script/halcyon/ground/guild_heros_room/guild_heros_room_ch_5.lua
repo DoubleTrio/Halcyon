@@ -1,8 +1,8 @@
-require 'common'
-require 'PartnerEssentials'
-require 'GeneralFunctions'
-require 'CharacterEssentials'
-require 'ground.guild_heros_room.guild_heros_room_helper'
+require 'origin.common'
+require 'halcyon.PartnerEssentials'
+require 'halcyon.GeneralFunctions'
+require 'halcyon.CharacterEssentials'
+require 'halcyon.ground.guild_heros_room.guild_heros_room_helper'
 
 guild_heros_room_ch_5 = {}
 

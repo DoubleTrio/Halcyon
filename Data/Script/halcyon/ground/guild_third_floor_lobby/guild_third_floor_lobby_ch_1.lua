@@ -1,7 +1,7 @@
-require 'common'
-require 'PartnerEssentials'
-require 'GeneralFunctions'
-require 'CharacterEssentials'
+require 'origin.common'
+require 'halcyon.PartnerEssentials'
+require 'halcyon.GeneralFunctions'
+require 'halcyon.CharacterEssentials'
 
 guild_third_floor_lobby_ch_1 = {}
 

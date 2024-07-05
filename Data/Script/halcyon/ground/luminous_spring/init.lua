@@ -1,6 +1,6 @@
-require 'common'
-require 'PartnerEssentials'
-require 'ground.luminous_spring.luminous_spring_ch_2'
+require 'origin.common'
+require 'halcyon.PartnerEssentials'
+require 'halcyon.ground.luminous_spring.luminous_spring_ch_2'
 
 -- Package name
 local luminous_spring = {}

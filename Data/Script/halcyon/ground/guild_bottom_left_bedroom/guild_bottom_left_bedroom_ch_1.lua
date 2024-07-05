@@ -1,7 +1,7 @@
-require 'common'
-require 'PartnerEssentials'
-require 'CharacterEssentials'
-require 'GeneralFunctions'
+require 'origin.common'
+require 'halcyon.PartnerEssentials'
+require 'halcyon.CharacterEssentials'
+require 'halcyon.GeneralFunctions'
 
 guild_bottom_left_bedroom_ch_1 = {}
 
