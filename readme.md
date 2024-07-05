@@ -45,7 +45,7 @@ If you're having trouble installing the game, or have any questions, comments, f
 * D4yz — guild interior tilesets and original guild decorations pixel art
 * Jaifain — Eating and Posing sprites for Growlithe, Breloom, Noctowl, Tropius, Snubbull, Cranidos, Girafarig, and Zigzagoon; <br>
 River animations for Illuminant Riverbed's Entrance, Metano Town, Metano Outskirts, and Altere Pond. <br>
-Anima core and anima root animations. Scarfed Sandile Portraits.
+Anima core and anima root animations. Scarfed Sandile Portraits. Giving up animations for Magcargo/Slugma.
 * Baroness Faron — Audino upwards eating + posing sprites
 * Happysmily — Shuckle's cafe animations, sandile scarf sprites
 * Cait_Sith — Luxio fainting animation

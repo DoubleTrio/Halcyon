@@ -72,7 +72,14 @@ function metano_normal_home.PlotScripting()
 	if SV.ChapterProgression.Chapter == 2 then 
 		metano_normal_home_ch_2.SetupGround()	
 	elseif SV.ChapterProgression.Chapter == 4 then 
-		metano_normal_home_ch_4.SetupGround()
+		metano_normal_home_ch_4.SetupGround()	
+	elseif SV.ChapterProgression.Chapter == 5 then 
+		metano_normal_home_ch_5.SetupGround()
+		if not SV.Chapter5.SawZigzagoonFamilyCutscene then 
+			metano_normal_home_ch_5.Farewell_Cutscene()
+		else
+			GAME:FadeIn(20)
+		end
 	else
 		GAME:FadeIn(20)
 	end
