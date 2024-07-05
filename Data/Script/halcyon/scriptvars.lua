@@ -18,6 +18,8 @@ print('Loading default script variable values..')
 -----------------------------------------------
 -- Services Defaults
 -----------------------------------------------
+SV = {}
+
 SV.Services =
 {
   --Anything that applies to services should be put in here, or assigned to this or a subtable of this in the service's definition script

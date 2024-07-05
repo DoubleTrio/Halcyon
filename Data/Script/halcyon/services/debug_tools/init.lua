@@ -5,11 +5,11 @@
     
     **NOTE:** After declaring you service, you have to include your package inside the main.lua file!
 ]]--
-require 'common'
-require 'services.baseservice'
-require 'mission_gen'
-require 'recruit_list'
-require 'config'
+require 'origin.common'
+require 'origin.services.baseservice'
+require 'halcyon.mission_gen'
+require 'origin.recruit_list'
+require 'halcyon.config'
 
 --Declare class DebugTools
 local DebugTools = Class('DebugTools', BaseService)
