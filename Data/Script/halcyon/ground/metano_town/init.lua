@@ -9,7 +9,7 @@ require 'halcyon.ground.metano_town.metano_town_ch_3'
 require 'halcyon.ground.metano_town.metano_town_ch_4'
 require 'halcyon.ground.metano_town.metano_town_ch_5'
 require 'halcyon.menu.single_deal_menu'
-require 'halcyon.menu.skill.SkillTutorMenu'
+require 'origin.menu.skill.SkillTutorMenu'
 
 
 local MapStrings = {}

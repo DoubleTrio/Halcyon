@@ -1,5 +1,5 @@
-require 'common'
-require 'GeneralFunctions'
+require 'origin.common'
+require 'halcyon.GeneralFunctions'
 
 
 
