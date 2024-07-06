@@ -18,9 +18,9 @@ function metano_inn_ch_2.SetupGround()
 				{'Makuhita', 128, 248, Direction.DownRight}
 			})
 		
-		AI:SetCharacterAI(nidoqueen, "ai.ground_default", RogueElements.Loc(152, 128), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
-		AI:SetCharacterAI(nidoran_m, "ai.ground_default", RogueElements.Loc(248, 136), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
-		AI:SetCharacterAI(makuhita, "ai.ground_default", RogueElements.Loc(112, 232), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(nidoqueen, "halcyon.ai.ground_default", RogueElements.Loc(152, 128), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(nidoran_m, "halcyon.ai.ground_default", RogueElements.Loc(248, 136), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(makuhita, "halcyon.ai.ground_default", RogueElements.Loc(112, 232), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
 		
 
 	else
@@ -33,7 +33,7 @@ function metano_inn_ch_2.SetupGround()
 			{'Makuhita', 293, 273, Direction.Up}
 		})
 		
-		AI:SetCharacterAI(nidorina, "ai.ground_default", RogueElements.Loc(248, 136), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(nidorina, "halcyon.ai.ground_default", RogueElements.Loc(248, 136), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
 		GROUND:CharSetAnim(nidoran_m, "Sleep", true)
 	end
 	

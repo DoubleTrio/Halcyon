@@ -48,7 +48,7 @@ function PartnerEssentials.InitializePartnerSpawn(dir, customPosition)
 	end	
 	
 
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
     partner.CollisionDisabled = true
 	
 end
@@ -57,7 +57,7 @@ end
 function PartnerEssentials.LoadGamePartnerPosition(partner)
 	print("loading partner in, activating their AI")
 	GROUND:TeleportTo(partner, SV.partner.LoadPositionX, SV.partner.LoadPositionY, PartnerEssentials.NumToDir(SV.partner.LoadDirection))--sv doesn't seem to like storing custom classes
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	AI:EnableCharacterAI(partner)
 end
 

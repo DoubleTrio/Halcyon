@@ -310,7 +310,7 @@ function COMMON.RespawnAllies(reviveAll)
   --custom Halcyon addition: Move partner to their original Position and direction
   if partner ~= nil and partnerPosition ~= nil and partnerDirection ~= nil then 
 	GROUND:TeleportTo(partner, partnerPosition.X, partnerPosition.Y, partnerDirection)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
     partner.CollisionDisabled = true 
   end
 	

@@ -52,7 +52,7 @@ function guild_third_floor_lobby_ch_4.NotEnteredGrove()
 	GeneralFunctions.PanCamera()
 	GAME:CutsceneMode(false)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 end
 
 --player died before making it to the glade
@@ -70,7 +70,7 @@ function guild_third_floor_lobby_ch_4.FailedGroveBeforeEnd()
 	GeneralFunctions.PanCamera()
 	GAME:CutsceneMode(false)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 end 
 
 --player failed to grab the apricorn, but did reach the glade.
@@ -89,7 +89,7 @@ function guild_third_floor_lobby_ch_4.FailedToGrabApricorn()
 	GeneralFunctions.PanCamera()
 	GAME:CutsceneMode(false)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 end
 
 
@@ -468,7 +468,7 @@ function guild_third_floor_lobby_ch_4.ExpeditionAnnouncementAddress()
 	GeneralFunctions.PanCamera()
 	GROUND:CharAnimateTurnTo(noctowl, Direction.Down, 4)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)
 		
 

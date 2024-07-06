@@ -342,7 +342,7 @@ function guild_bottom_left_bedroom_ch_1.Breloom_Action(chara, activator)
 			UI:WaitShowDialogue("Let's head there whenever you're ready,[pause=10] " .. hero:GetDisplayName() .. ".")
 		end
 		AI:EnableCharacterAI(partner)
-		AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+		AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 		GAME:CutsceneMode(false)
 	else 
 		GeneralFunctions.StartConversation(chara, "By the way,[pause=10] if you gatecrashers ever need help with anything,[pause=10] especially exploring,[pause=10] come see me or " .. girafarig:GetDisplayName() .. "!", "Happy")

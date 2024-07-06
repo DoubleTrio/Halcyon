@@ -23,8 +23,8 @@ function guild_second_floor_ch_2.SetupGround()
 		GROUND:CharSetAnim(seviper, 'Idle', true)
 
 
-		AI:SetCharacterAI(zangoose, "ai.ground_talking", false, 240, 60, 210, false, 'Angry', {seviper})
-		AI:SetCharacterAI(seviper, "ai.ground_talking", false, 240, 180, 110, false, 'Angry', {zangoose})
+		AI:SetCharacterAI(zangoose, "halcyon.ai.ground_talking", false, 240, 60, 210, false, 'Angry', {seviper})
+		AI:SetCharacterAI(seviper, "halcyon.ai.ground_talking", false, 240, 180, 110, false, 'Angry', {zangoose})
 
 	elseif SV.Chapter2.FinishedNumelTantrum and not SV.Chapter2.FinishedFirstDay then 
 		--day 1: after training
@@ -35,10 +35,10 @@ function guild_second_floor_ch_2.SetupGround()
 				{'Audino', 'Generic_Spawn_6'}
 			})
 
-		AI:SetCharacterAI(bagon, "ai.ground_talking", false, 240, 60, 210, true, 'Default', {doduo})
-		AI:SetCharacterAI(doduo, "ai.ground_talking", false, 240, 180, 110, true, 'Default', {bagon})
+		AI:SetCharacterAI(bagon, "halcyon.ai.ground_talking", false, 240, 60, 210, true, 'Default', {doduo})
+		AI:SetCharacterAI(doduo, "halcyon.ai.ground_talking", false, 240, 180, 110, true, 'Default', {bagon})
 		
-		AI:SetCharacterAI(audino, "ai.ground_default", RogueElements.Loc(432, 288), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(audino, "origin.ai.ground_default", RogueElements.Loc(432, 288), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 
 	elseif SV.Chapter2.FinishedFirstDay then 
 	--day 2 after getting the first job but before wiping in the dungeon
@@ -49,8 +49,8 @@ function guild_second_floor_ch_2.SetupGround()
 				{'Aggron', 'Right_Duo_2'}
 			})
 		
-		AI:SetCharacterAI(cleffa, "ai.ground_talking", true, 240, 60, 210, false, 'Angry', {aggron})
-		AI:SetCharacterAI(aggron, "ai.ground_talking", false, 240, 120, 110, false, 'Scared', {cleffa})
+		AI:SetCharacterAI(cleffa, "halcyon.ai.ground_talking", true, 240, 60, 210, false, 'Angry', {aggron})
+		AI:SetCharacterAI(aggron, "halcyon.ai.ground_talking", false, 240, 120, 110, false, 'Scared', {cleffa})
 	
 	--(noctowl and camerupt would be moved to upstairs and her house respectively if you wipe)
 		if SV.Chapter2.FinishedCameruptRequestScene and not SV.Chapter2.EnteredRiver then 
@@ -86,8 +86,8 @@ function guild_second_floor_ch_2.CameruptRequestCutscene()
 		})
 	
 	--set up cleffa and aggron like we do in setup ground so that they act properly after the cutscene and without leaving and coming back to refresh the
-	AI:SetCharacterAI(cleffa, "ai.ground_talking", true, 240, 60, 210, false, 'Angry', {aggron})
-	AI:SetCharacterAI(aggron, "ai.ground_talking", false, 240, 120, 110, false, 'Scared', {cleffa})
+	AI:SetCharacterAI(cleffa, "halcyon.ai.ground_talking", true, 240, 60, 210, false, 'Angry', {aggron})
+	AI:SetCharacterAI(aggron, "halcyon.ai.ground_talking", false, 240, 120, 110, false, 'Scared', {cleffa})
 		
 	GROUND:TeleportTo(partner, 340, 280, Direction.Left)
 	GROUND:TeleportTo(hero, 340, 280, Direction.Left)
@@ -432,7 +432,7 @@ function guild_second_floor_ch_2.CameruptRequestCutscene()
 	GAME:WaitFrames(20)
 	GROUND:CharEndAnim(hero)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GeneralFunctions.PanCamera()
 	SV.Chapter2.FinishedCameruptRequestScene = true
 	GAME:CutsceneMode(false)

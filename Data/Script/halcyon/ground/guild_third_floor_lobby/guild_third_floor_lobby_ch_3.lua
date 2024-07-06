@@ -51,7 +51,7 @@ function guild_third_floor_lobby_ch_3.NotEnteredCavern()
 	GeneralFunctions.PanCamera()
 	GAME:CutsceneMode(false)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 end
 
 --player died before making it to boss fight
@@ -69,7 +69,7 @@ function guild_third_floor_lobby_ch_3.FailedCavernBeforeBoss()
 	GeneralFunctions.PanCamera()
 	GAME:CutsceneMode(false)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 end 
 
 --player died after making it to boss fight
@@ -89,7 +89,7 @@ function guild_third_floor_lobby_ch_3.FailedCavernAfterBoss()
 	GeneralFunctions.PanCamera()
 	GAME:CutsceneMode(false)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 end
 
 ------------------------

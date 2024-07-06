@@ -90,15 +90,15 @@ function guild_second_floor_ch_1.MeetNoctowl()
 
 	GAME:FadeIn(40)
 	
-	AI:SetCharacterAI(jigglypuff, "ai.ground_talking", true, 240, 60, 130, false, 'Default', {marill, spheal})
-	AI:SetCharacterAI(marill, "ai.ground_talking", true, 240, 60, 0, false, 'Default', {jigglypuff})
+	AI:SetCharacterAI(jigglypuff, "halcyon.ai.ground_talking", true, 240, 60, 130, false, 'Default', {marill, spheal})
+	AI:SetCharacterAI(marill, "halcyon.ai.ground_talking", true, 240, 60, 0, false, 'Default', {jigglypuff})
 	
-	AI:SetCharacterAI(cleffa, "ai.ground_talking", false, 240, 60, 210, false, 'Angry', {aggron})
-	--AI:SetCharacterAI(aggron, "ai.ground_talking", true, 240, 120, 110, false, 'Scared', {cleffa})
+	AI:SetCharacterAI(cleffa, "halcyon.ai.ground_talking", false, 240, 60, 210, false, 'Angry', {aggron})
+	--AI:SetCharacterAI(aggron, "halcyon.ai.ground_talking", true, 240, 120, 110, false, 'Scared', {cleffa})
 	
-	AI:SetCharacterAI(mareep, "ai.ground_talking", true, 240, 60, 90, false, 'Default', {cranidos})
+	AI:SetCharacterAI(mareep, "halcyon.ai.ground_talking", true, 240, 60, 90, false, 'Default', {cranidos})
 	
-	AI:SetCharacterAI(zigzagoon, "ai.ground_default", RogueElements.Loc(320, 320), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+	AI:SetCharacterAI(zigzagoon, "halcyon.ai.ground_default", RogueElements.Loc(320, 320), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 	
 
 	GAME:WaitFrames(20)
@@ -335,11 +335,11 @@ function guild_second_floor_ch_1.MeetNoctowl()
 	--[[
 	coro2 = TASK:BranchCoroutine(function() GAME:WaitFrames(40) 
 								AI:EnableCharacterAI(partner)
-								AI:SetCharacterAI(partner, "ai.ground_partner", noctowl, partner.Position) end)
+								AI:SetCharacterAI(partner, "halcyon.ai.ground_partner", noctowl, partner.Position) end)
 	coro3 = TASK:BranchCoroutine(function() GAME:WaitFrames(40) 
 								GROUND:CharSetEmote(hero, "shock", 1)
 								GeneralFunctions.FaceMovingCharacter(hero, partner, 4, Direction.UpRight)
-								AI:SetCharacterAI(hero, "ai.ground_partner", partner, partner.Position) end)
+								AI:SetCharacterAI(hero, "halcyon.ai.ground_partner", partner, partner.Position) end)
 	--]]
 	
 	
@@ -410,16 +410,16 @@ function guild_second_floor_ch_1.SetupGround()
 
 	GROUND:CharSetAnim(zigzagoon, 'Idle', true)
 	
-	AI:SetCharacterAI(jigglypuff, "ai.ground_talking", true, 240, 60, 130, false, 'Default', {marill, spheal})
-	AI:SetCharacterAI(marill, "ai.ground_talking", true, 240, 60, 0, false, 'Default', {jigglypuff, spheal})
-	AI:SetCharacterAI(spheal, "ai.ground_talking", true, 240, 60, 50, false, 'Default', {jigglypuff, marill})
+	AI:SetCharacterAI(jigglypuff, "halcyon.ai.ground_talking", true, 240, 60, 130, false, 'Default', {marill, spheal})
+	AI:SetCharacterAI(marill, "halcyon.ai.ground_talking", true, 240, 60, 0, false, 'Default', {jigglypuff, spheal})
+	AI:SetCharacterAI(spheal, "halcyon.ai.ground_talking", true, 240, 60, 50, false, 'Default', {jigglypuff, marill})
 
-	AI:SetCharacterAI(cleffa, "ai.ground_talking", false, 240, 60, 210, false, 'Angry', {aggron})
-	--AI:SetCharacterAI(aggron, "ai.ground_talking", true, 240, 120, 110, false, 'Scared', {cleffa})
+	AI:SetCharacterAI(cleffa, "halcyon.ai.ground_talking", false, 240, 60, 210, false, 'Angry', {aggron})
+	--AI:SetCharacterAI(aggron, "halcyon.ai.ground_talking", true, 240, 120, 110, false, 'Scared', {cleffa})
 	
-	AI:SetCharacterAI(mareep, "ai.ground_talking", true, 240, 60, 90, false, 'Default', {cranidos})
+	AI:SetCharacterAI(mareep, "halcyon.ai.ground_talking", true, 240, 60, 90, false, 'Default', {cranidos})
 	
-	AI:SetCharacterAI(zigzagoon, "ai.ground_default", RogueElements.Loc(320, 320), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+	AI:SetCharacterAI(zigzagoon, "origin.ai.ground_default", RogueElements.Loc(320, 320), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 
 	GAME:FadeIn(20)
 end
@@ -921,7 +921,7 @@ function guild_second_floor_ch_1.Cranidos_Action(chara, activator)
 		GROUND:CharEndAnim(CH('Zigzagoon'))
 		partner.IsInteracting = false
 		AI:EnableCharacterAI(partner)
-		AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+		AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 		
 
 		GAME:CutsceneMode(false)

@@ -284,7 +284,7 @@ function guild_storage_hallway_ch_1.MeetAudino()
 
 
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 
 	GAME:CutsceneMode(false)
 	

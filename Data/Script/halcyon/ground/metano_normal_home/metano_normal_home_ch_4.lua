@@ -12,7 +12,7 @@ function metano_normal_home_ch_4.SetupGround()
 				{'Furret', 104, 152, Direction.Right}
 			})
 			
-		AI:SetCharacterAI(furret, "ai.ground_default", RogueElements.Loc(88, 136), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(furret, "halcyon.ai.ground_default", RogueElements.Loc(88, 136), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 
 	else 
 

@@ -18,7 +18,7 @@ function metano_grass_home_ch_3.SetupGround()
 				{'Vileplume', 200, 176, Direction.DownLeft}
 			})
 	
-		AI:SetCharacterAI(vileplume, "ai.ground_default", RogueElements.Loc(168, 144), RogueElements.Loc(64, 64), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(vileplume, "halcyon.ai.ground_default", RogueElements.Loc(168, 144), RogueElements.Loc(64, 64), 1, 16, 32, 40, 180)
 	end
 
 	

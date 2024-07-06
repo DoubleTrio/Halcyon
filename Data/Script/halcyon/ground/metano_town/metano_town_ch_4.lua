@@ -50,11 +50,11 @@ function metano_town_ch_4.SetupGround()
 		
 			})
 			
-		AI:SetCharacterAI(manectric, "ai.ground_default", RogueElements.Loc(1248, 344), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(mawile, "ai.ground_default", RogueElements.Loc(304, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(luxray, "ai.ground_default", RogueElements.Loc(304, 1000), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(zigzagoon, "ai.ground_default", RogueElements.Loc(184, 672), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(quagsire, "ai.ground_default", RogueElements.Loc(1088, 1024), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(manectric, "halcyon.ai.ground_default", RogueElements.Loc(1248, 344), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(mawile, "halcyon.ai.ground_default", RogueElements.Loc(304, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(luxray, "halcyon.ai.ground_default", RogueElements.Loc(304, 1000), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(zigzagoon, "halcyon.ai.ground_default", RogueElements.Loc(184, 672), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(quagsire, "halcyon.ai.ground_default", RogueElements.Loc(1088, 1024), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 
 	else
 		local quagsire, furret, meditite, wooper_boy, wooper_girl, machamp, medicham, manectric, nidoking,
@@ -79,12 +79,12 @@ function metano_town_ch_4.SetupGround()
 				{'Bagon', 1230, 1156, Direction.Left}
 			})
 		
-		AI:SetCharacterAI(manectric, "ai.ground_default", RogueElements.Loc(1248, 320), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(nidoking, "ai.ground_default", RogueElements.Loc(1136, 896), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(gloom, "ai.ground_default", RogueElements.Loc(848, 344), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(mawile, "ai.ground_default", RogueElements.Loc(1016, 1216), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(electrike, "ai.ground_default", RogueElements.Loc(272, 976), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(snubbull, "ai.ground_default", RogueElements.Loc(616, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(manectric, "halcyon.ai.ground_default", RogueElements.Loc(1248, 320), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(nidoking, "halcyon.ai.ground_default", RogueElements.Loc(1136, 896), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(gloom, "halcyon.ai.ground_default", RogueElements.Loc(848, 344), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(mawile, "halcyon.ai.ground_default", RogueElements.Loc(1016, 1216), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(electrike, "halcyon.ai.ground_default", RogueElements.Loc(272, 976), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(snubbull, "halcyon.ai.ground_default", RogueElements.Loc(616, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 
 		GROUND:CharSetAnim(furret, 'Sleep', true)
 
@@ -244,7 +244,7 @@ function metano_town_ch_4.SignpostIntroductionCutscene()
 	TASK:JoinCoroutines({coro1, coro2, coro3})
 	
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GeneralFunctions.PanCamera()
 	SV.Chapter4.FinishedSignpostCutscene = true
 	GAME:CutsceneMode(false)	

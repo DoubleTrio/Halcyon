@@ -19,7 +19,7 @@ function metano_electric_home_ch_2.SetupGround()
 				{'Electrike', 144, 168, Direction.Right}
 			})
 			
-		AI:SetCharacterAI(electrike, "ai.ground_default", RogueElements.Loc(112, 136), RogueElements.Loc(64, 64), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(electrike, "halcyon.ai.ground_default", RogueElements.Loc(112, 136), RogueElements.Loc(64, 64), 1, 16, 32, 40, 180)
 
 	end
 	

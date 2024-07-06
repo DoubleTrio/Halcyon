@@ -108,7 +108,7 @@ function metano_town.CreateWalkArea(chara, x, y, w, h)
 
   --Set the area to wander in
   AI:SetCharacterAI(chara,                                      --[[Entity that will use the AI]]--
-                    "ai.ground_default",                         --[[Class path to the AI class to use]]--
+                    "halcyon.ai.ground_default",                         --[[Class path to the AI class to use]]--
                     RogueElements.Loc(x, y), --[[Top left corner pos of the allowed idle wander area]]--
                     RogueElements.Loc(w, h), --[[Width and Height of the allowed idle wander area]]--
                     1,                                         --[[Wandering speed]]--
@@ -2918,7 +2918,7 @@ function metano_town.Assembly_Action(obj, activator)
    UI:SetCenter(false)
    partner.IsInteracting = false
    AI:EnableCharacterAI(partner)
-   AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+   AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
    GROUND:CharEndAnim(partner)
    GROUND:CharEndAnim(hero)	
 

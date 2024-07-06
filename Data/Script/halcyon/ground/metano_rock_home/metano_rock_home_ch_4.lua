@@ -13,7 +13,7 @@ function metano_rock_home_ch_4.SetupGround()
 
 			})
 			
-		AI:SetCharacterAI(meditite, "ai.ground_default", RogueElements.Loc(216, 168), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(meditite, "halcyon.ai.ground_default", RogueElements.Loc(216, 168), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
 
 	end
 

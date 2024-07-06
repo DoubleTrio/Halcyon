@@ -148,7 +148,7 @@ function guild_third_floor_lobby.PostAddressScripting()
 		GeneralFunctions.PanCamera()
 		GAME:CutsceneMode(false)
 		AI:EnableCharacterAI(CH('Teammate1'))
-		AI:SetCharacterAI(CH('Teammate1'), "ai.ground_partner", CH('PLAYER'), CH('Teammate1').Position)
+		AI:SetCharacterAI(CH('Teammate1'), "origin.ai.ground_partner", CH('PLAYER'), CH('Teammate1').Position)
 	end
 end
 
@@ -176,7 +176,7 @@ function guild_third_floor_lobby.GenericMissions()
 	GeneralFunctions.PanCamera()
 	GAME:CutsceneMode(false)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 end
 
 function guild_third_floor_lobby.MorningAddress(generic)
@@ -302,7 +302,7 @@ function guild_third_floor_lobby.MorningAddress(generic)
 		GeneralFunctions.PanCamera()
 		GAME:CutsceneMode(false)
 		AI:EnableCharacterAI(partner)
-		AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)	]]--
+		AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)	]]--
 	end
 
 	

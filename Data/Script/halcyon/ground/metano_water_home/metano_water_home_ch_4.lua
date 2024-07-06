@@ -15,7 +15,7 @@ function metano_water_home_ch_4.SetupGround()
 				{'Floatzel', 120, 128, Direction.Down}
 			})
 		
-		AI:SetCharacterAI(floatzel, "ai.ground_default", RogueElements.Loc(104, 112), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(floatzel, "halcyon.ai.ground_default", RogueElements.Loc(104, 112), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 
 	end
 			

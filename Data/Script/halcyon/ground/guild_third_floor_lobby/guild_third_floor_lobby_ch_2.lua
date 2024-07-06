@@ -383,7 +383,7 @@ function guild_third_floor_lobby_ch_2.FirstMorningMeeting()
 	GeneralFunctions.PanCamera(448, 268)
 	SV.Chapter2.FirstMorningMeetingDone = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 
 	GAME:CutsceneMode(false)
 		
@@ -692,7 +692,7 @@ function guild_third_floor_lobby_ch_2.FailedRiver()
 	GeneralFunctions.PanCamera()
 	GAME:CutsceneMode(false)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 
 end
 

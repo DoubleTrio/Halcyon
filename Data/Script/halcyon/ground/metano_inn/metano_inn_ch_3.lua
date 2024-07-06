@@ -16,7 +16,7 @@ function metano_inn_ch_3.SetupGround()
 
 		})
 		
-		AI:SetCharacterAI(nidoran_m, "ai.ground_default", RogueElements.Loc(264, 168), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(nidoran_m, "halcyon.ai.ground_default", RogueElements.Loc(264, 168), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
 
 	else 
 		GROUND:Hide('Innkeeper_Desk_Left')
@@ -30,7 +30,7 @@ function metano_inn_ch_3.SetupGround()
 
 			})
 		
-		AI:SetCharacterAI(nidoran_m, "ai.ground_default", RogueElements.Loc(152, 176), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(nidoran_m, "halcyon.ai.ground_default", RogueElements.Loc(152, 176), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
 	end
 
 	GAME:FadeIn(20)

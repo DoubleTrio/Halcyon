@@ -835,7 +835,7 @@ function vast_steppe_entrance_ch_5.ArrivalCutscene()
 	partner.CollisionDisabled = true--redisable partner's collision. Something is causing this to be set to false earlier in the script...
 	SV.Chapter5.FinishedSteppeIntro = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)
 	
 end 
@@ -1152,7 +1152,7 @@ function vast_steppe_entrance_ch_5.FailedCutscene()
 	SV.Chapter5.NeedGiveSupplies = true
 
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GROUND:CharTurnToChar(partner, hero)
 	GAME:CutsceneMode(false)
 	

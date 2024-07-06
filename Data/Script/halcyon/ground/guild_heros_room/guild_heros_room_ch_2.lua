@@ -158,7 +158,7 @@ function guild_heros_room_ch_2.FirstMorning()
 	GROUND:Unhide("Save_Point")
 	SV.Chapter1.TeamJoinedGuild = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 
 	GAME:CutsceneMode(false)
 		

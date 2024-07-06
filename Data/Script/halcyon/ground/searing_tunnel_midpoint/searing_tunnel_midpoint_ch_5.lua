@@ -263,7 +263,7 @@ function searing_tunnel_midpoint_ch_5.FirstArrival()
 	SV.Chapter5.PlayedMidpointIntro = true
 	GeneralFunctions.PanCamera()	
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)
 	
 end 
@@ -393,7 +393,7 @@ function searing_tunnel_midpoint_ch_5.WipedCutscene()
 	SV.SearingTunnel.DiedPastCheckpoint = false
 	GeneralFunctions.PanCamera()	
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)
 
 end

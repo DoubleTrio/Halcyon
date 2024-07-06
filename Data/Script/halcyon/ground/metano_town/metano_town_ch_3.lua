@@ -43,11 +43,11 @@ function metano_town_ch_3.SetupGround()
 		GROUND:CharSetAnim(furret, 'Sleep', true)
 		GROUND:CharSetAnim(sentret, 'Sleep', true)
 		
-		AI:SetCharacterAI(wooper_girl, "ai.ground_default", RogueElements.Loc(336, 936), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(zigzagoon, "ai.ground_default", RogueElements.Loc(1216, 344), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(mawile, "ai.ground_default", RogueElements.Loc(1024, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(machamp, "ai.ground_default", RogueElements.Loc(744, 584), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(manectric, "ai.ground_default", RogueElements.Loc(1176, 1112), RogueElements.Loc(64, 64), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(wooper_girl, "halcyon.ai.ground_default", RogueElements.Loc(336, 936), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(zigzagoon, "halcyon.ai.ground_default", RogueElements.Loc(1216, 344), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(mawile, "halcyon.ai.ground_default", RogueElements.Loc(1024, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(machamp, "halcyon.ai.ground_default", RogueElements.Loc(744, 584), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(manectric, "halcyon.ai.ground_default", RogueElements.Loc(1176, 1112), RogueElements.Loc(64, 64), 1, 16, 32, 40, 180)
 
 		
 		--let the cutscene handle the fade in if it hasnt played yet		
@@ -105,10 +105,10 @@ function metano_town_ch_3.SetupGround()
 		
 		
 		GROUND:CharSetAnim(furret, 'Sleep', true)
-		AI:SetCharacterAI(luxray, "ai.ground_default", RogueElements.Loc(608, 584), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(mawile, "ai.ground_default", RogueElements.Loc(1188, 1140), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(nidoking, "ai.ground_default", RogueElements.Loc(1144, 896), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(audino, "ai.ground_default", RogueElements.Loc(1248, 576), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(luxray, "halcyon.ai.ground_default", RogueElements.Loc(608, 584), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(mawile, "halcyon.ai.ground_default", RogueElements.Loc(1188, 1140), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(nidoking, "halcyon.ai.ground_default", RogueElements.Loc(1144, 896), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(audino, "halcyon.ai.ground_default", RogueElements.Loc(1248, 576), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 
 		
 		
@@ -609,7 +609,7 @@ function metano_town_ch_3.MeetTeamStyle()
 	GeneralFunctions.PanCamera()
 	SV.Chapter3.MetTeamStyle = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)
 
 	
@@ -860,7 +860,7 @@ function metano_town_ch_3.MerchantIntro()
 	GeneralFunctions.PanCamera()
 	SV.Chapter3.FinishedMerchantIntro = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)
 	
 	

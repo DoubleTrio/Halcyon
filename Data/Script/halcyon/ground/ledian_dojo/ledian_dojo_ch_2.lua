@@ -571,7 +571,7 @@ function ledian_dojo_ch_2.PostTrainingCutscene()
 		GROUND:Unhide("Dungeon_Entrance")
 		SV.Chapter2.FinishedDojoCutscenes = true
 		AI:EnableCharacterAI(partner)
-		AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+		AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 		GAME:CutsceneMode(false)
 	else 
 		GROUND:TeleportTo(ledian, 196, 176, Direction.Down)
@@ -658,7 +658,7 @@ function ledian_dojo_ch_2.PostTrainingCutscene()
 		GROUND:Unhide("Dungeon_Entrance")
 		SV.Chapter2.FinishedDojoCutscenes = true
 		AI:EnableCharacterAI(partner)
-		AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+		AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 		GAME:CutsceneMode(false)
 
 

@@ -849,7 +849,7 @@ function GeneralFunctions.DefaultParty(spawn, others)
 	
 	if spawn then 	
 		COMMON.RespawnAllies(true)
-		--AI:SetCharacterAI(CH('Teammate1'), "ai.ground_partner", CH('PLAYER'),CH('Teammate1').Position)
+		--AI:SetCharacterAI(CH('Teammate1'), "origin.ai.ground_partner", CH('PLAYER'),CH('Teammate1').Position)
 	end
 	_DATA.Save:UpdateTeamProfile(true)
 
@@ -942,7 +942,7 @@ function GeneralFunctions.DefaultParty(spawn, destructive)
 	
 	if spawn then 	
 		COMMON.RespawnAllies(true)
-		--AI:SetCharacterAI(CH('Teammate1'), "ai.ground_partner", CH('PLAYER'),CH('Teammate1').Position)
+		--AI:SetCharacterAI(CH('Teammate1'), "origin.ai.ground_partner", CH('PLAYER'),CH('Teammate1').Position)
 	end
 	_DATA.Save:UpdateTeamProfile(true)
 

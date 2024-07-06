@@ -105,13 +105,13 @@ function searing_tunnel_entrance_ch_5.ArrivalDinnerNightAndAddressCutscene()
 		GROUND:TeleportTo(cranidos, 120, 96, Direction.UpRight)
 		GROUND:TeleportTo(mareep, 144, 72, Direction.DownLeft)
 		GROUND:CharSetAnim(mareep, "Idle", true)
-		AI:SetCharacterAI(mareep, "ai.ground_talking", false, 60, 60, 0, false, 'Default', {cranidos})	
+		AI:SetCharacterAI(mareep, "halcyon.ai.ground_talking", false, 60, 60, 0, false, 'Default', {cranidos})	
 		
 		GROUND:TeleportTo(zigzagoon, 224, 200, Direction.UpRight)
 		GROUND:TeleportTo(growlithe, 248, 176, Direction.DownLeft)
 		GROUND:CharSetAnim(zigzagoon, "Idle", true)
 		GROUND:CharSetAnim(growlithe, "Idle", true)
-		AI:SetCharacterAI(growlithe, "ai.ground_talking", false, 60, 60, 0, false, 'Default', {zigzagoon})	
+		AI:SetCharacterAI(growlithe, "halcyon.ai.ground_talking", false, 60, 60, 0, false, 'Default', {zigzagoon})	
 	end
 	
 	--This is done like this so I can copy and paste this code into other scenes that have a similar set up and only change one value
@@ -1478,7 +1478,7 @@ function searing_tunnel_entrance_ch_5.ArrivalDinnerNightAndAddressCutscene()
 
 	SV.Chapter5.FinishedTunnelIntro = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)
 end
 
@@ -1573,7 +1573,7 @@ function searing_tunnel_entrance_ch_5.Tropius_Action(chara, activator)
 			GROUND:CharEndAnim(chara)
 			GROUND:EntTurn(chara, Direction.Down)
 			GROUND:CharTurnToCharAnimated(partner, growlithe, 4)
-			AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+			AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 			AI:EnableCharacterAI(partner)
 			GAME:WaitFrames(20)
 			GAME:FadeIn(20)
@@ -1959,7 +1959,7 @@ function searing_tunnel_entrance_ch_5.DiedCutscene()
 	SV.Chapter5.PlayTempTunnelScene = false
 
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GROUND:CharTurnToChar(partner, hero)
 	GAME:CutsceneMode(false)
 	
@@ -2042,7 +2042,7 @@ function searing_tunnel_entrance_ch_5.EscapedCutscene()
 	SV.Chapter5.PlayTempTunnelScene = false
 
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GROUND:CharTurnToChar(partner, hero)
 	GAME:CutsceneMode(false)
 end
@@ -2169,7 +2169,7 @@ function searing_tunnel_entrance_ch_5.RetreatedCutscene()
 	--he needs to face back down
 	GROUND:EntTurn(tropius, Direction.Down)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GROUND:CharTurnToChar(partner, hero)
 	GAME:CutsceneMode(false)		
 end

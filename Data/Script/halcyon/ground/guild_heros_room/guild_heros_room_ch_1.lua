@@ -164,7 +164,7 @@ function guild_heros_room_ch_1.Bedtalk()
 	GROUND:
 	GAME:FadeIn(40)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)]]--
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)]]--
 		
 end
 
@@ -371,7 +371,7 @@ function guild_heros_room_ch_1.RoomIntro()
 	GROUND:Unhide("Save_Point")
 	SV.Chapter1.TeamJoinedGuild = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 
 	GAME:CutsceneMode(false)
 

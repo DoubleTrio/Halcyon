@@ -129,7 +129,7 @@ function guild_heros_room_helper.Morning(generic)
 		GROUND:Unhide("Save_Point")
 		GAME:CutsceneMode(false)
 		AI:EnableCharacterAI(partner)
-		AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+		AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 		
 		SV.TemporaryFlags.JustWokeUp = true
 		SV.TemporaryFlags.MorningWakeup = false

@@ -17,7 +17,7 @@ function metano_grass_home_ch_2.SetupGround()
 				{'Gloom', 200, 192, Direction.DownLeft}
 			})
 			
-		AI:SetCharacterAI(gloom, "ai.ground_default", RogueElements.Loc(168, 160), RogueElements.Loc(64, 64), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(gloom, "halcyon.ai.ground_default", RogueElements.Loc(168, 160), RogueElements.Loc(64, 64), 1, 16, 32, 40, 180)
 	
 	end
 	

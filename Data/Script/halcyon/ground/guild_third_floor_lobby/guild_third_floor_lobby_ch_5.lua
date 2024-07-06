@@ -787,7 +787,7 @@ function guild_third_floor_lobby_ch_5.ExpeditionAddress()
 	GeneralFunctions.PanCamera()
 	SV.Chapter5.FinishedExpeditionAddress = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)						
 
 end

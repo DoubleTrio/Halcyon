@@ -341,7 +341,7 @@ function ledian_dojo.GenericTrainingSuccess()
 	SV.Dojo.TrainingCompletedGeneric = false -- reset the flag
 
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	--GAME:CutsceneMode(false)	
 	GROUND:CharEndAnim(partner)
 	GROUND:CharEndAnim(hero)	
@@ -397,7 +397,7 @@ function ledian_dojo.GenericTrainingFailure()
 	SV.Dojo.TrainingFailedGeneric = false -- reset the flag
 
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	--GAME:CutsceneMode(false)
 	GROUND:CharEndAnim(partner)
 	GROUND:CharEndAnim(hero)

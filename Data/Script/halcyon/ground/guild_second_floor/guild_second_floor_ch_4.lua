@@ -18,14 +18,14 @@ function guild_second_floor_ch_4.SetupGround()
 			})
 		
 		
-		AI:SetCharacterAI(jigglypuff, "ai.ground_talking", true, 240, 60, 60, false, 'Default', {marill, spheal})
-		AI:SetCharacterAI(marill, "ai.ground_talking", true, 240, 60, 110, false, 'Default', {jigglypuff, spheal})
-		AI:SetCharacterAI(spheal, "ai.ground_talking", true, 240, 60, 10, false, 'Default', {jigglypuff, marill})
+		AI:SetCharacterAI(jigglypuff, "halcyon.ai.ground_talking", true, 240, 60, 60, false, 'Default', {marill, spheal})
+		AI:SetCharacterAI(marill, "halcyon.ai.ground_talking", true, 240, 60, 110, false, 'Default', {jigglypuff, spheal})
+		AI:SetCharacterAI(spheal, "halcyon.ai.ground_talking", true, 240, 60, 10, false, 'Default', {jigglypuff, marill})
 
 		
-		AI:SetCharacterAI(mareep, "ai.ground_talking", true, 240, 60, 90, false, 'Default', {cranidos})
+		AI:SetCharacterAI(mareep, "halcyon.ai.ground_talking", true, 240, 60, 90, false, 'Default', {cranidos})
 		
-		AI:SetCharacterAI(snubbull, "ai.ground_default", RogueElements.Loc(snubbull.Position.X - 16, snubbull.Position.Y - 16), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(snubbull, "halcyon.ai.ground_default", RogueElements.Loc(snubbull.Position.X - 16, snubbull.Position.Y - 16), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 
 	else
 		local silcoon, metapod = 
@@ -344,7 +344,7 @@ function guild_second_floor_ch_4.AudinoAssemblyIntro()
 	
 	GAME:WaitFrames(20)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	partner.CollisionDisabled = true--redisable partner's collision. Something is causing this to be set to false earlier in the script...
 	GeneralFunctions.PanCamera()
 	GROUND:Unhide('Upwards_Stairs_Exit')

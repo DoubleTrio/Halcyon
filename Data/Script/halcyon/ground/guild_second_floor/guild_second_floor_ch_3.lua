@@ -30,14 +30,14 @@ function guild_second_floor_ch_3.SetupGround()
 				{'Audino', 'Generic_Spawn_1'}
 			})
 			
-		AI:SetCharacterAI(jigglypuff, "ai.ground_talking", true, 240, 60, 130, false, 'Default', {marill, spheal})
-		AI:SetCharacterAI(marill, "ai.ground_talking", true, 240, 60, 0, false, 'Default', {jigglypuff, spheal})
-		AI:SetCharacterAI(spheal, "ai.ground_talking", true, 240, 60, 50, false, 'Default', {jigglypuff, marill})
+		AI:SetCharacterAI(jigglypuff, "halcyon.ai.ground_talking", true, 240, 60, 130, false, 'Default', {marill, spheal})
+		AI:SetCharacterAI(marill, "halcyon.ai.ground_talking", true, 240, 60, 0, false, 'Default', {jigglypuff, spheal})
+		AI:SetCharacterAI(spheal, "halcyon.ai.ground_talking", true, 240, 60, 50, false, 'Default', {jigglypuff, marill})
 		
-		AI:SetCharacterAI(bagon, "ai.ground_talking", true, 240, 60, 80, false, 'Default', {doduo})
-		AI:SetCharacterAI(doduo, "ai.ground_talking", true, 240, 60, 0, false, 'Default', {bagon})
+		AI:SetCharacterAI(bagon, "halcyon.ai.ground_talking", true, 240, 60, 80, false, 'Default', {doduo})
+		AI:SetCharacterAI(doduo, "halcyon.ai.ground_talking", true, 240, 60, 0, false, 'Default', {bagon})
 
-		AI:SetCharacterAI(audino, "ai.ground_default", RogueElements.Loc(176, 264), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(audino, "origin.ai.ground_default", RogueElements.Loc(176, 264), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 	
 		
 	end
@@ -789,7 +789,7 @@ function guild_second_floor_ch_3.OutlawTutorialScene()
 	
 	GAME:WaitFrames(20)
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	partner.CollisionDisabled = true--redisable partner's collision. Something is causing this to be set to false earlier in the script...
 	GeneralFunctions.PanCamera()
 	GROUND:Unhide('Upwards_Stairs_Exit')

@@ -14,7 +14,7 @@ function metano_fire_home_ch_2.SetupGround()
 
 			})
 		
-		AI:SetCharacterAI(camerupt, "ai.ground_default", RogueElements.Loc(112, 120), RogueElements.Loc(64, 64), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(camerupt, "halcyon.ai.ground_default", RogueElements.Loc(112, 120), RogueElements.Loc(64, 64), 1, 16, 64, 40, 180)
 	end 
 	
 	GAME:FadeIn(20)

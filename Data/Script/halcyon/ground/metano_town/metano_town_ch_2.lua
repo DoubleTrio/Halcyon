@@ -72,12 +72,12 @@ function metano_town_ch_2.SetupGround()
 		})
 		
 		GROUND:CharSetAnim(furret, 'Sleep', true)
-		AI:SetCharacterAI(mawile, "ai.ground_default", RogueElements.Loc(752, 584), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(azumarill, "ai.ground_default", RogueElements.Loc(256, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(mawile, "halcyon.ai.ground_default", RogueElements.Loc(752, 584), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(azumarill, "halcyon.ai.ground_default", RogueElements.Loc(256, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 		
-		AI:SetCharacterAI(roselia, "ai.ground_talking", false, 240, 60, 0, false, 'Default', {ludicolo, spinda})
-		AI:SetCharacterAI(ludicolo, "ai.ground_talking", false, 240, 60, 60, false, 'Default', {roselia, spinda})
-		AI:SetCharacterAI(spinda, "ai.ground_talking", false, 240, 60, 120, false, 'Default', {ludicolo, roselia})
+		AI:SetCharacterAI(roselia, "halcyon.ai.ground_talking", false, 240, 60, 0, false, 'Default', {ludicolo, spinda})
+		AI:SetCharacterAI(ludicolo, "halcyon.ai.ground_talking", false, 240, 60, 60, false, 'Default', {roselia, spinda})
+		AI:SetCharacterAI(spinda, "halcyon.ai.ground_talking", false, 240, 60, 120, false, 'Default', {ludicolo, roselia})
 
 		
 		--place event trigger for numel's tantrum if he hasn't thrown it yet
@@ -160,11 +160,11 @@ function metano_town_ch_2.SetupGround()
 				{'Luxray', 304, 1024, Direction.Down}
 		})
 		
-		AI:SetCharacterAI(machamp, "ai.ground_default", RogueElements.Loc(1248, 336), RogueElements.Loc(48, 48), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(mawile, "ai.ground_default", RogueElements.Loc(624, 1248), RogueElements.Loc(48, 48), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(manetric, "ai.ground_default", RogueElements.Loc(1104, 888), RogueElements.Loc(80, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(azumarill, "ai.ground_default", RogueElements.Loc(256, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
-		AI:SetCharacterAI(luxray, "ai.ground_default", RogueElements.Loc(272, 1008), RogueElements.Loc(80, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(machamp, "halcyon.ai.ground_default", RogueElements.Loc(1248, 336), RogueElements.Loc(48, 48), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(mawile, "halcyon.ai.ground_default", RogueElements.Loc(624, 1248), RogueElements.Loc(48, 48), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(manetric, "halcyon.ai.ground_default", RogueElements.Loc(1104, 888), RogueElements.Loc(80, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(azumarill, "halcyon.ai.ground_default", RogueElements.Loc(256, 1192), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+		AI:SetCharacterAI(luxray, "halcyon.ai.ground_default", RogueElements.Loc(272, 1008), RogueElements.Loc(80, 32), 1, 16, 32, 40, 180)
 
 		local eastBlock = RogueEssence.Ground.GroundObject(RogueEssence.Content.ObjAnimData("", 1), 
 										RogueElements.Rect(1496, 592, 8, 144),
@@ -510,7 +510,7 @@ function metano_town_ch_2.MarketIntro()
 	
 	SV.Chapter2.FinishedMarketIntro = true
 	AI:EnableCharacterAI(partner)
-	AI:SetCharacterAI(partner, "ai.ground_partner", CH('PLAYER'), partner.Position)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
 	GAME:CutsceneMode(false)
 	
 	

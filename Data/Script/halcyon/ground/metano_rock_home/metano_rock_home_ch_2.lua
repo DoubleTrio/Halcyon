@@ -13,7 +13,7 @@ function metano_rock_home_ch_2.SetupGround()
 
 			})
 		
-		AI:SetCharacterAI(medicham, "ai.ground_default", RogueElements.Loc(120, 120), RogueElements.Loc(64, 64), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(medicham, "halcyon.ai.ground_default", RogueElements.Loc(120, 120), RogueElements.Loc(64, 64), 1, 16, 64, 40, 180)
 	end
 	GAME:FadeIn(20)
 end

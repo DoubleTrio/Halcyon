@@ -13,7 +13,7 @@ function metano_cave_ch_4.SetupGround()
 				{'Oddish', 272, 136, Direction.Right}
 			})
 		
-		AI:SetCharacterAI(oddish, "ai.ground_talking", false, 60, 60, 0, false, 'Default', {CH('Sunflora')})
+		AI:SetCharacterAI(oddish, "halcyon.ai.ground_talking", false, 60, 60, 0, false, 'Default', {CH('Sunflora')})
 		
 		--She is trying to ignore oddish
 		GROUND:EntTurn(CH('Sunflora'), Direction.Down)

@@ -16,7 +16,7 @@ function metano_inn_ch_4.SetupGround()
 				{'Nidoking', 'Innkeeper_Left'}
 			})
 	
-		AI:SetCharacterAI(smeargle, "ai.ground_default", RogueElements.Loc(112, 112), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(smeargle, "halcyon.ai.ground_default", RogueElements.Loc(112, 112), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
 	else
 		local skorupi, nidorina, nidoqueen, nidoran_m = 
 			CharacterEssentials.MakeCharactersFromList({
@@ -26,7 +26,7 @@ function metano_inn_ch_4.SetupGround()
 				{'Nidoran_M', 176, 120, Direction.UpLeft}
 			})
 	
-		AI:SetCharacterAI(nidoran_m, "ai.ground_default", RogueElements.Loc(160, 104), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
+		AI:SetCharacterAI(nidoran_m, "halcyon.ai.ground_default", RogueElements.Loc(160, 104), RogueElements.Loc(32, 32), 1, 16, 64, 40, 180)
 
 	end
 
