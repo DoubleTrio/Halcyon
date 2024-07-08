@@ -16,8 +16,8 @@ local guild_bottom_right_bedroom = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -27,7 +27,7 @@ local MapStrings = {}
 function guild_bottom_right_bedroom.Init(map)
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_guild_bottom_right_bedroom<<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies()
 	PartnerEssentials.InitializePartnerSpawn()
 

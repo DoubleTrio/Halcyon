@@ -14,8 +14,8 @@ local illuminant_riverbed_entrance = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -26,7 +26,7 @@ function illuminant_riverbed_entrance.Init(map, time)
 
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_illuminant_riverbed_entrance <<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies()
 	PartnerEssentials.InitializePartnerSpawn()
 end

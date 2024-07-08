@@ -17,8 +17,8 @@ local ledian_dojo = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -28,7 +28,7 @@ local MapStrings = {}
 function ledian_dojo.Init(map)
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_ledian_dojo <<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies()
 	PartnerEssentials.InitializePartnerSpawn()
 	GROUND:AddMapStatus("darkness")--darkness
@@ -157,71 +157,71 @@ function ledian_dojo.Sensei_Action(chara, activator)
 	
 	--ledian mentions if new mazes are unlocked.
 	if SV.Dojo.NewMazeUnlocked then
-		UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_New_Maze_1']))
-		UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_New_Maze_2']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_New_Maze_1']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_New_Maze_2']))
 		SV.Dojo.NewMazeUnlocked = false
 		GAME:WaitFrames(20)
 	end
 	
 	while state > -1 do
-		local msg = STRINGS:Format(MapStrings['Dojo_Intro'])
+		local msg = STRINGS:Format(STRINGS.MapStrings['Dojo_Intro'])
 		if repeated == true then
-			msg = STRINGS:Format(MapStrings['Dojo_Intro_Return'])
+			msg = STRINGS:Format(STRINGS.MapStrings['Dojo_Intro_Return'])
 		end
 		local dojo_choices = {STRINGS:FormatKey("MENU_INFO"),
-							  STRINGS:Format(MapStrings['Dojo_Facilities_Info']),
+							  STRINGS:Format(STRINGS.MapStrings['Dojo_Facilities_Info']),
 							  STRINGS:FormatKey("MENU_EXIT")}
 		UI:BeginChoiceMenu(msg, dojo_choices, 1, 3)
 		UI:WaitForChoice()
 		local result = UI:ChoiceResult()
 		repeated = true
 		if result == 1 then 
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Info_001']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Info_002']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Info_003']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Info_001']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Info_002']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Info_003']))
 		
 		elseif result == 2 then 
 			repeated = false
 			while state > -1 do
-				dojo_choices = {STRINGS:Format(MapStrings['Dojo_Menu_Training']),
-									  STRINGS:Format(MapStrings['Dojo_Menu_Lesson']),
-									  STRINGS:Format(MapStrings['Dojo_Menu_Trials']),
-									  STRINGS:Format(MapStrings['Dojo_Menu_Back']),}
-				msg = STRINGS:Format(MapStrings['Dojo_Info_Prompt'])
+				dojo_choices = {STRINGS:Format(STRINGS.MapStrings['Dojo_Menu_Training']),
+									  STRINGS:Format(STRINGS.MapStrings['Dojo_Menu_Lesson']),
+									  STRINGS:Format(STRINGS.MapStrings['Dojo_Menu_Trials']),
+									  STRINGS:Format(STRINGS.MapStrings['Dojo_Menu_Back']),}
+				msg = STRINGS:Format(STRINGS.MapStrings['Dojo_Info_Prompt'])
 				if repeated == true then
-					msg = STRINGS:Format(MapStrings['Dojo_Info_Prompt_Return'])
+					msg = STRINGS:Format(STRINGS.MapStrings['Dojo_Info_Prompt_Return'])
 				end
 				UI:BeginChoiceMenu(msg, dojo_choices, 1, 4)
 				UI:WaitForChoice()
 				result = UI:ChoiceResult()
 				repeated = true
 				if result == 1 then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Training_Info_001']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Training_Info_002']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Training_Info_003']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Training_Info_004']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Training_Info_005']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Training_Info_006']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Training_Info_001']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Training_Info_002']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Training_Info_003']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Training_Info_004']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Training_Info_005']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Training_Info_006']))
 				elseif result == 2 then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_001']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_002']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_003']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_004']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_005']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_006']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_007']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_008']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Lesson_Info_009']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_001']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_002']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_003']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_004']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_005']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_006']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_007']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_008']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Lesson_Info_009']))
 				elseif result == 3 then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_001']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_002']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_003']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_004']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_005']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_006']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_007']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_008']))
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Trial_Info_009']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_001']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_002']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_003']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_004']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_005']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_006']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_007']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_008']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Trial_Info_009']))
 				else 
 					state = -1
 				end
@@ -229,7 +229,7 @@ function ledian_dojo.Sensei_Action(chara, activator)
 			state = 0
 				
 		else
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Dojo_Goodbye']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Dojo_Goodbye']))
 			state = -1
 		end
 	end

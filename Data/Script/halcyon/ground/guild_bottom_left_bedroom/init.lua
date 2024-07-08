@@ -13,7 +13,7 @@ local guild_bottom_left_bedroom = {}
 --This is Breloom and Girafarig's bedroom.
 
 
-local MapStrings = {}
+
 
 -------------------------------
 -- Map Callbacks
@@ -23,7 +23,7 @@ local MapStrings = {}
 function guild_bottom_left_bedroom.Init(map)
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_guild_bottom_left_bedroom<<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies()
 	PartnerEssentials.InitializePartnerSpawn()
 

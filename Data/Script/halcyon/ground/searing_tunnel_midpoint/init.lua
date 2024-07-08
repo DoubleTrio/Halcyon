@@ -14,8 +14,8 @@ local searing_tunnel_midpoint = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -25,7 +25,7 @@ local MapStrings = {}
 function searing_tunnel_midpoint.Init(map)
   DEBUG.EnableDbgCoro()
   print('=>> Init_searing_tunnel_midpoint <<=')
-  MapStrings = COMMON.AutoLoadLocalizedStrings()
+  
   COMMON.RespawnAllies(true)
   GROUND:AddMapStatus("steam")
   PartnerEssentials.InitializePartnerSpawn()

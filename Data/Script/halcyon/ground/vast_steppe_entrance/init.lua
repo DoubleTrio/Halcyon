@@ -15,8 +15,8 @@ local vast_steppe_entrance = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -26,7 +26,7 @@ local MapStrings = {}
 function vast_steppe_entrance.Init(map)
   DEBUG.EnableDbgCoro()
   print('=>> Init_vast_steppe_entrance <<=')
-  MapStrings = COMMON.AutoLoadLocalizedStrings()
+  
   COMMON.RespawnAllies()
   PartnerEssentials.InitializePartnerSpawn()
 

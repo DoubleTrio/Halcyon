@@ -14,8 +14,8 @@ local searing_crucible = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -25,7 +25,7 @@ local MapStrings = {}
 function searing_crucible.Init(map)
   DEBUG.EnableDbgCoro()
   print('=>> Init_searing_crucible <<=')
-  MapStrings = COMMON.AutoLoadLocalizedStrings()
+  
   COMMON.RespawnAllies(true)
   GROUND:AddMapStatus("steam")
   PartnerEssentials.InitializePartnerSpawn()

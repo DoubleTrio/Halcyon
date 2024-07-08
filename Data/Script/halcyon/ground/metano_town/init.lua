@@ -12,7 +12,7 @@ require 'halcyon.menu.single_deal_menu'
 require 'origin.menu.skill.SkillTutorMenu'
 
 
-local MapStrings = {}
+
 
 local metano_town = {}
 
@@ -20,7 +20,7 @@ local metano_town = {}
 function metano_town.Init(map)
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_metano_town <<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies()
 	PartnerEssentials.InitializePartnerSpawn()
 	GROUND:AddMapStatus("clouds_overhead")
@@ -746,11 +746,11 @@ function metano_town.Shop_Action(obj, activator)
   
 	while state > -1 do
 		if state == 0 then
-			local msg = STRINGS:Format(MapStrings['Shop_Intro'])
+			local msg = STRINGS:Format(STRINGS.MapStrings['Shop_Intro'])
 			if repeated then
-				msg = STRINGS:Format(MapStrings['Shop_Intro_Return'])
+				msg = STRINGS:Format(STRINGS.MapStrings['Shop_Intro_Return'])
 			end
-			local shop_choices = {STRINGS:Format(MapStrings['Shop_Option_Buy']), STRINGS:Format(MapStrings['Shop_Option_Sell']),
+			local shop_choices = {STRINGS:Format(STRINGS.MapStrings['Shop_Option_Buy']), STRINGS:Format(STRINGS.MapStrings['Shop_Option_Sell']),
 			STRINGS:FormatKey("MENU_INFO"),
 			STRINGS:FormatKey("MENU_EXIT")}
 			UI:BeginChoiceMenu(msg, shop_choices, 1, 4)
@@ -760,30 +760,30 @@ function metano_town.Shop_Action(obj, activator)
 			if result == 1 then
 				if #catalog > 0 then
 					--TODO: use the enum instead of a hardcoded number
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Buy'], STRINGS:LocalKeyString(26)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Buy'], STRINGS:LocalKeyString(26)))
 					state = 1
 				else
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Buy_Empty']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Buy_Empty']))
 				end
 			elseif result == 2 then
 				local bag_count = GAME:GetPlayerBagCount()
 				if bag_count > 0 then
 					--TODO: use the enum instead of a hardcoded number
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Sell'], STRINGS:LocalKeyString(26)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Sell'], STRINGS:LocalKeyString(26)))
 					state = 3
 				else
 					UI:SetSpeakerEmotion("Angry")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Bag_Empty']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Bag_Empty']))
 					UI:SetSpeakerEmotion("Normal")
 				end
 			elseif result == 3 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Info_001']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Info_002']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Info_003']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Info_004']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Info_005']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Info_001']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Info_002']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Info_003']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Info_004']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Info_005']))
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Goodbye']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Goodbye']))
 				state = -1
 			end
 		elseif state == 1 then
@@ -795,7 +795,7 @@ function metano_town.Shop_Action(obj, activator)
 				local bag_cap = GAME:GetPlayerBagLimit()
 				if bag_count == bag_cap then
 					UI:SetSpeakerEmotion("Angry")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Bag_Full']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Bag_Full']))
 					UI:SetSpeakerEmotion("Normal")
 				else
 					cart = result
@@ -812,15 +812,15 @@ function metano_town.Shop_Action(obj, activator)
 			local msg
 			if total > GAME:GetPlayerMoney() then
 				UI:SetSpeakerEmotion("Angry")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Buy_No_Money']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Buy_No_Money']))
 				UI:SetSpeakerEmotion("Normal")
 				state = 1
 			else
 				if #cart == 1 then
 					local name = catalog[cart[1]].Item:GetDisplayName()
-					msg = STRINGS:Format(MapStrings['Shop_Buy_One'], total, name)
+					msg = STRINGS:Format(STRINGS.MapStrings['Shop_Buy_One'], total, name)
 				else
-					msg = STRINGS:Format(MapStrings['Shop_Buy_Multi'], total)
+					msg = STRINGS:Format(STRINGS.MapStrings['Shop_Buy_Multi'], total)
 				end
 				UI:ChoiceMenuYesNo(msg, false)
 				UI:WaitForChoice()
@@ -839,7 +839,7 @@ function metano_town.Shop_Action(obj, activator)
 					
 					cart = {}
 					SOUND:PlayBattleSE("DUN_Money")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Buy_Complete']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Buy_Complete']))
 					state = 0
 				else
 					state = 1
@@ -875,9 +875,9 @@ function metano_town.Shop_Action(obj, activator)
 				else
 					item = GAME:GetPlayerBagItem(cart[1].Slot)
 				end
-				msg = STRINGS:Format(MapStrings['Shop_Sell_One'], total, item:GetDisplayName())
+				msg = STRINGS:Format(STRINGS.MapStrings['Shop_Sell_One'], total, item:GetDisplayName())
 			else
-				msg = STRINGS:Format(MapStrings['Shop_Sell_Multi'], total)
+				msg = STRINGS:Format(STRINGS.MapStrings['Shop_Sell_Multi'], total)
 			end
 			UI:ChoiceMenuYesNo(msg, false)
 			UI:WaitForChoice()
@@ -894,7 +894,7 @@ function metano_town.Shop_Action(obj, activator)
 				SOUND:PlayBattleSE("DUN_Money")
 				GAME:AddToPlayerMoney(total)
 				cart = {}
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Shop_Sell_Complete']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Shop_Sell_Complete']))
 				state = 0
 			else
 				state = 3
@@ -956,11 +956,11 @@ function metano_town.TM_Action(obj, activator)
   
 	while state > -1 do
 		if state == 0 then
-			local msg = STRINGS:Format(MapStrings['TM_Shop_Intro'])
+			local msg = STRINGS:Format(STRINGS.MapStrings['TM_Shop_Intro'])
 			if repeated then
-				msg = STRINGS:Format(MapStrings['TM_Shop_Intro_Return'])
+				msg = STRINGS:Format(STRINGS.MapStrings['TM_Shop_Intro_Return'])
 			end
-			local TM_Shop_choices = {STRINGS:Format(MapStrings['TM_Shop_Option_Buy']), STRINGS:Format(MapStrings['TM_Shop_Option_Sell']),
+			local TM_Shop_choices = {STRINGS:Format(STRINGS.MapStrings['TM_Shop_Option_Buy']), STRINGS:Format(STRINGS.MapStrings['TM_Shop_Option_Sell']),
 			STRINGS:FormatKey("MENU_INFO"),
 			STRINGS:FormatKey("MENU_EXIT")}
 			UI:BeginChoiceMenu(msg, TM_Shop_choices, 1, 4)
@@ -970,30 +970,30 @@ function metano_town.TM_Action(obj, activator)
 			if result == 1 then
 				if #catalog > 0 then
 					--TODO: use the enum instead of a hardcoded number
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Buy'], STRINGS:LocalKeyString(26)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Buy'], STRINGS:LocalKeyString(26)))
 					state = 1
 				else
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Buy_Empty']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Buy_Empty']))
 				end
 			elseif result == 2 then
 				local bag_count = GAME:GetPlayerBagCount()
 				if bag_count > 0 then
 					--TODO: use the enum instead of a hardcoded number
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Sell'], STRINGS:LocalKeyString(26)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Sell'], STRINGS:LocalKeyString(26)))
 					state = 3
 				else
 					UI:SetSpeakerEmotion("Angry")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Bag_Empty']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Bag_Empty']))
 					UI:SetSpeakerEmotion("Normal")
 				end
 			elseif result == 3 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Info_001']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Info_002']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Info_003']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Info_004']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Info_005']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Info_001']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Info_002']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Info_003']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Info_004']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Info_005']))
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Goodbye']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Goodbye']))
 				state = -1
 			end
 		elseif state == 1 then
@@ -1005,7 +1005,7 @@ function metano_town.TM_Action(obj, activator)
 				local bag_cap = GAME:GetPlayerBagLimit()
 				if bag_count == bag_cap then
 					UI:SetSpeakerEmotion("Angry")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Bag_Full']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Bag_Full']))
 					UI:SetSpeakerEmotion("Normal")
 				else
 					cart = result
@@ -1022,15 +1022,15 @@ function metano_town.TM_Action(obj, activator)
 			local msg
 			if total > GAME:GetPlayerMoney() then
 				UI:SetSpeakerEmotion("Angry")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Buy_No_Money']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Buy_No_Money']))
 				UI:SetSpeakerEmotion("Normal")
 				state = 1
 			else
 				if #cart == 1 then
 					local name = catalog[cart[1]].Item:GetDisplayName()
-					msg = STRINGS:Format(MapStrings['TM_Shop_Buy_One'], total, name)
+					msg = STRINGS:Format(STRINGS.MapStrings['TM_Shop_Buy_One'], total, name)
 				else
-					msg = STRINGS:Format(MapStrings['TM_Shop_Buy_Multi'], total)
+					msg = STRINGS:Format(STRINGS.MapStrings['TM_Shop_Buy_Multi'], total)
 				end
 				UI:ChoiceMenuYesNo(msg, false)
 				UI:WaitForChoice()
@@ -1049,7 +1049,7 @@ function metano_town.TM_Action(obj, activator)
 					
 					cart = {}
 					SOUND:PlayBattleSE("DUN_Money")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Buy_Complete']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Buy_Complete']))
 					state = 0
 				else
 					state = 1
@@ -1085,9 +1085,9 @@ function metano_town.TM_Action(obj, activator)
 				else
 					item = GAME:GetPlayerBagItem(cart[1].Slot)
 				end
-				msg = STRINGS:Format(MapStrings['TM_Shop_Sell_One'], total, item:GetDisplayName())
+				msg = STRINGS:Format(STRINGS.MapStrings['TM_Shop_Sell_One'], total, item:GetDisplayName())
 			else
-				msg = STRINGS:Format(MapStrings['TM_Shop_Sell_Multi'], total)
+				msg = STRINGS:Format(STRINGS.MapStrings['TM_Shop_Sell_Multi'], total)
 			end
 			UI:ChoiceMenuYesNo(msg, false)
 			UI:WaitForChoice()
@@ -1104,7 +1104,7 @@ function metano_town.TM_Action(obj, activator)
 				SOUND:PlayBattleSE("DUN_Money")
 				GAME:AddToPlayerMoney(total)
 				cart = {}
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['TM_Shop_Sell_Complete']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['TM_Shop_Sell_Complete']))
 				state = 0
 			else
 				state = 3
@@ -1138,9 +1138,9 @@ function metano_town.Musician_Action(obj, activator)
   
   --keep playing the metronome animation if it's playing (song is not treasure town)
   if SOUND:GetCurrentSong() == default_song or SOUND:GetCurrentSong() == '' then 
-	GeneralFunctions.StartConversation(chara, STRINGS:Format(MapStrings['Music_Intro']), 'Normal', false)
+	GeneralFunctions.StartConversation(chara, STRINGS:Format(STRINGS.MapStrings['Music_Intro']), 'Normal', false)
   else
-	GeneralFunctions.StartConversation(chara, STRINGS:Format(MapStrings['Music_Intro']), 'Normal', false, false)
+	GeneralFunctions.StartConversation(chara, STRINGS:Format(STRINGS.MapStrings['Music_Intro']), 'Normal', false, false)
   end
 
   UI:ShowMusicMenu({'MAIN_001'})
@@ -1153,18 +1153,18 @@ function metano_town.Musician_Action(obj, activator)
   
   --Set a metronome animation if we're playing a song that isn't the default or no music. Otherise turn it off.  
   if (SOUND:GetCurrentSong() == default_song or SOUND:GetCurrentSong() == '') and (old_song == default_song or old_song == '') then 
-  	UI:WaitShowDialogue(STRINGS:Format(MapStrings['Music_End']))
+  	UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Music_End']))
 	GeneralFunctions.EndConversation(chara)
   elseif (SOUND:GetCurrentSong() == default_song or SOUND:GetCurrentSong() == '') and (old_song ~= default_song and old_song ~= '') then  
 	GROUND:CharSetAnim(chara, "None", true)
-	UI:WaitShowDialogue(STRINGS:Format(MapStrings['Music_End']))
+	UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Music_End']))
 	GeneralFunctions.EndConversation(chara)
   elseif (SOUND:GetCurrentSong() ~= default_song and SOUND:GetCurrentSong() ~= '') and (old_song == default_song or old_song == '') then 
   	GROUND:CharSetAnim(chara, "Wiggle", true)
-  	UI:WaitShowDialogue(STRINGS:Format(MapStrings['Music_End']))
+  	UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Music_End']))
 	GeneralFunctions.EndConversation(chara, false)
   else
-	UI:WaitShowDialogue(STRINGS:Format(MapStrings['Music_End']))
+	UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Music_End']))
 	GeneralFunctions.EndConversation(chara, false)	
   end
 end
@@ -1205,9 +1205,9 @@ function metano_town.Storage_Action(obj, activator)
 		{ STRINGS:FormatKey('MENU_INFO'), true},
 		{ STRINGS:FormatKey("MENU_CANCEL"), true}}
 		
-		local msg = STRINGS:Format(MapStrings['Storage_Intro'])
+		local msg = STRINGS:Format(STRINGS.MapStrings['Storage_Intro'])
 		if repeated then 
-			msg = STRINGS:Format(MapStrings['Storage_Intro_Return']) 
+			msg = STRINGS:Format(STRINGS.MapStrings['Storage_Intro_Return']) 
 			UI:SetSpeakerEmotion('Normal')			
 		end
 		
@@ -1219,39 +1219,39 @@ function metano_town.Storage_Action(obj, activator)
 		
 		if result == 1 then
 			repeated = true
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Store'], STRINGS:LocalKeyString(26)))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Store'], STRINGS:LocalKeyString(26)))
 			UI:StorageMenu()
 			UI:WaitForChoice()
 			if item_count ~= GAME:GetPlayerBagCount() then 
 				UI:SetSpeakerEmotion('Happy')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Stored_Items']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Stored_Items']))
 			end
 		elseif result == 2 then
 			repeated = true
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Withdraw'], STRINGS:LocalKeyString(26)))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Withdraw'], STRINGS:LocalKeyString(26)))
 			UI:WithdrawMenu()
 			UI:WaitForChoice()
 			if item_count ~= GAME:GetPlayerBagCount() then 
 				UI:SetSpeakerEmotion('Happy')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Withdrew_Items']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Withdrew_Items']))
 			end 
 		elseif result == 3 then
 			repeated = true
 			GeneralFunctions.SendInvToStorage(true, false, true)
 			UI:SetSpeakerEmotion('Happy')
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Stored_All_Items']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Stored_All_Items']))
 		elseif result == 4 then
 			repeated = true
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Info_1']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Info_2']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Info_1']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Info_2']))
 			UI:SetSpeakerEmotion('Happy')
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Info_3']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Info_3']))
 			UI:SetSpeakerEmotion('Normal')
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Info_4']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Info_5']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Info_4']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Info_5']))
 		else 
 			UI:SetSpeakerEmotion('Happy')
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Storage_Goodbye']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Storage_Goodbye']))
 			state = -1
 		end
 	end
@@ -1302,8 +1302,8 @@ function metano_town.Bank_Action(obj, activator)
 		{ STRINGS:FormatKey('MENU_INFO'), true},
 		{ STRINGS:FormatKey("MENU_CANCEL"), true}}
 		
-		local msg = STRINGS:Format(MapStrings['Bank_Intro'], GAME:GetPlayerMoneyBank())
-		if repeated then msg = STRINGS:Format(MapStrings['Bank_Intro_Return']) end
+		local msg = STRINGS:Format(STRINGS.MapStrings['Bank_Intro'], GAME:GetPlayerMoneyBank())
+		if repeated then msg = STRINGS:Format(STRINGS.MapStrings['Bank_Intro_Return']) end
 		
 		UI:BeginChoiceMenu(msg, bank_choices, 1, 3)
 		UI:WaitForChoice()
@@ -1311,28 +1311,28 @@ function metano_town.Bank_Action(obj, activator)
 		
 		if result == 1 then
 			repeated = true
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Interact']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Interact']))
 			UI:BankMenu()
 			UI:WaitForChoice()
 			local difference = math.abs(player_money - GAME:GetPlayerMoney())
 			if player_money > GAME:GetPlayerMoney() then --deposited money
 				UI:SetSpeakerEmotion('Inspired')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Stored_Money'], difference))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Stored_Money'], difference))
 			elseif player_money < GAME:GetPlayerMoney() then --Withdrew money
 				UI:SetSpeakerEmotion('Sad')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Withdrew_Money'], difference))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Withdrew_Money'], difference))
 			else 
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Canceled']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Canceled']))
 			end
 			UI:SetSpeakerEmotion('Normal')
 		elseif result == 2 then
 			repeated = true
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Info_1']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Info_2']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Info_3']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Info_4']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Info_1']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Info_2']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Info_3']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Info_4']))
 		else 
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Bank_Goodbye']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Bank_Goodbye']))
 			state = -1
 		end
 	end
@@ -1379,7 +1379,7 @@ function metano_town.Red_Merchant_Action(obj, activator)
 	local itemName = item:GetDisplayName()
 	local itemPrice = item:GetSellValue() --Item is 1/5 the normal price!
 
-	local merchant_choices = {STRINGS:Format(MapStrings['Merchant_Option_Deal']), STRINGS:FormatKey('MENU_INFO'), STRINGS:FormatKey('MENU_EXIT')}
+	local merchant_choices = {STRINGS:Format(STRINGS.MapStrings['Merchant_Option_Deal']), STRINGS:FormatKey('MENU_INFO'), STRINGS:FormatKey('MENU_EXIT')}
 	UI:SetSpeaker(chara)
 	local olddir = chara.Direction
 	chara.IsInteracting = true
@@ -1401,25 +1401,25 @@ function metano_town.Red_Merchant_Action(obj, activator)
 		local happy = SV.DailyFlags.RedMerchantBought
 		
 		UI:SetSpeakerEmotion('Normal')
-		local msg = STRINGS:Format(MapStrings['Red_Merchant_Intro'], stunky_name)
+		local msg = STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Intro'], stunky_name)
 		
 		
 		if repeated then
 			if happy then 
-				msg = STRINGS:Format(MapStrings['Red_Merchant_Intro_Return_Happy'])
+				msg = STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Intro_Return_Happy'])
 				UI:SetSpeakerEmotion('Happy')
 			elseif angry then 
 				state = -1 --he won't loop back to the menu if he's angry, he's just done with you
 				break
 			else
-				msg = STRINGS:Format(MapStrings['Red_Merchant_Intro_Return'])
+				msg = STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Intro_Return'])
 			end
 		elseif happy then
 			UI:SetSpeakerEmotion('Happy')
-			msg = STRINGS:Format(MapStrings['Red_Merchant_Intro_Happy'], stunky_name)
+			msg = STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Intro_Happy'], stunky_name)
 		elseif angry then 
 			UI:SetSpeakerEmotion('Determined')
-			msg = STRINGS:Format(MapStrings['Red_Merchant_Intro_Angry'])
+			msg = STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Intro_Angry'])
 		end
 		
 		UI:BeginChoiceMenu(msg, merchant_choices, 1, 3)
@@ -1429,12 +1429,12 @@ function metano_town.Red_Merchant_Action(obj, activator)
 		if result == 1 then 
 			if happy then 
 				UI:SetSpeakerEmotion('Worried')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_No_Stock']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_No_Stock']))
 			elseif angry then 
 				UI:SetSpeakerEmotion('Angry')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Refuse_Service'], farfetchd_name))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Refuse_Service'], farfetchd_name))
 			else
-				--UI:ChoiceMenuYesNo(STRINGS:Format(MapStrings['Red_Merchant_Daily_Item'], itemName, itemPrice, GeneralFunctions.GetItemArticle(item)))	--deprecated
+				--UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Daily_Item'], itemName, itemPrice, GeneralFunctions.GetItemArticle(item)))	--deprecated
 				local SingleItemDealMenu = SingleItemDealMenu() 
 				local menu = SingleItemDealMenu:new(stunky_name.."'s Deal", item, itemPrice)
 				UI:SetCustomMenu(menu.menu)
@@ -1442,54 +1442,54 @@ function metano_town.Red_Merchant_Action(obj, activator)
 				if menu.result then
 					if itemPrice > GAME:GetPlayerMoney() then --With the new SingleItemDealMenu, this won't get hit anymore, but keep it anyway cause why not.
 						UI:SetSpeakerEmotion('Worried')
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_No_Money']))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_No_Money']))
 					elseif GAME:GetPlayerBagCount() + GAME:GetPlayerEquippedCount() >= GAME:GetPlayerBagLimit() then
 						UI:SetSpeakerEmotion('Worried')
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Bag_Full']))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Bag_Full']))
 					else
 						SV.DailyFlags.RedMerchantBought = true
 						GAME:RemoveFromPlayerMoney(itemPrice)
 						GAME:GivePlayerItem(item.ID, itemEntry.MaxStack)
 						SOUND:PlayBattleSE("DUN_Money")
 						UI:SetSpeakerEmotion("Joyous")
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Purchase_Made'], itemName))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Purchase_Made'], itemName))
 					end
 				end
 			end				
 		elseif result == 2 then 
 			if angry then 
 				UI:SetSpeakerEmotion('Angry')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_Angry'], farfetchd_name))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_Angry'], farfetchd_name))
 			elseif happy then 
 				UI:SetSpeakerEmotion('Normal')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_Happy_1']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_Happy_2']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_Happy_1']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_Happy_2']))
 				UI:SetSpeakerEmotion('Sad')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_Happy_3']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_Happy_3']))
 				UI:SetSpeakerEmotion('Inspired')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_Happy_4'], farfetchd_name))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_Happy_4'], farfetchd_name))
 				UI:SetSpeakerEmotion('Normal')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_Happy_5']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_Happy_5']))
 			else 
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_1'], stunky_name))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_1'], stunky_name))
 				UI:SetSpeakerEmotion('Sad')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_2']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_2']))
 				UI:SetSpeakerEmotion('Normal')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_3']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_3']))
 				UI:SetSpeakerEmotion('Determined')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_4'], farfetchd_name))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Info_5']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_4'], farfetchd_name))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Info_5']))
 				UI:SetSpeakerEmotion('Normal')
 			end 
 		else
 			if angry then
 				UI:SetSpeakerEmotion('Determined')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Goodbye_Angry']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Goodbye_Angry']))
 			elseif happy then
 				UI:SetSpeakerEmotion('Happy')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Goodbye_Happy']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Goodbye_Happy']))
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Red_Merchant_Goodbye']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Red_Merchant_Goodbye']))
 			end
 			state = -1
 		end 
@@ -1582,7 +1582,7 @@ function metano_town.Green_Merchant_Action(obj, activator)
 	item.Amount = itemEntry.MaxStack
 	local itemName = item:GetDisplayName()
 	local itemPrice = item:GetSellValue() * 5 --5x the sell price, like the kecs
-	local merchant_choices = {STRINGS:Format(MapStrings['Merchant_Option_Deal']), STRINGS:FormatKey('MENU_INFO'), STRINGS:FormatKey('MENU_EXIT')}
+	local merchant_choices = {STRINGS:Format(STRINGS.MapStrings['Merchant_Option_Deal']), STRINGS:FormatKey('MENU_INFO'), STRINGS:FormatKey('MENU_EXIT')}
 	UI:SetSpeaker(chara)
 	chara.IsInteracting = true
     partner.IsInteracting = true
@@ -1603,25 +1603,25 @@ function metano_town.Green_Merchant_Action(obj, activator)
 		local happy = SV.DailyFlags.GreenMerchantBought
 		
 		UI:SetSpeakerEmotion('Normal')
-		local msg = STRINGS:Format(MapStrings['Green_Merchant_Intro'], farfetchd_name)
+		local msg = STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Intro'], farfetchd_name)
 		
 		
 		if repeated then
 			if happy then 
-				msg = STRINGS:Format(MapStrings['Green_Merchant_Intro_Return_Happy'])
+				msg = STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Intro_Return_Happy'])
 				UI:SetSpeakerEmotion('Happy')
 			elseif angry then 
 				state = -1 --he won't loop back to the menu if he's angry, he's just done with you
 				break
 			else
-				msg = STRINGS:Format(MapStrings['Green_Merchant_Intro_Return'])
+				msg = STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Intro_Return'])
 			end
 		elseif happy then
 			UI:SetSpeakerEmotion('Happy')
-			msg = STRINGS:Format(MapStrings['Green_Merchant_Intro_Happy'], farfetchd_name)
+			msg = STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Intro_Happy'], farfetchd_name)
 		elseif angry then 
 			UI:SetSpeakerEmotion('Determined')
-			msg = STRINGS:Format(MapStrings['Green_Merchant_Intro_Angry'])
+			msg = STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Intro_Angry'])
 		end
 		
 		UI:BeginChoiceMenu(msg, merchant_choices, 1, 3)
@@ -1631,12 +1631,12 @@ function metano_town.Green_Merchant_Action(obj, activator)
 		if result == 1 then 
 			if happy then 
 				UI:SetSpeakerEmotion('Worried')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_No_Stock']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_No_Stock']))
 			elseif angry then
 				UI:SetSpeakerEmotion('Angry')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Refuse_Service']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Refuse_Service']))
 			else
-				--UI:ChoiceMenuYesNo(STRINGS:Format(MapStrings['Green_Merchant_Daily_Item'], itemName, itemPrice, GeneralFunctions.GetItemArticle(item))) -- deprecated
+				--UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Daily_Item'], itemName, itemPrice, GeneralFunctions.GetItemArticle(item))) -- deprecated
 				local SingleItemDealMenu = SingleItemDealMenu()
 				local menu = SingleItemDealMenu:new(farfetchd_name.."'s Deal", item, itemPrice)
 				UI:SetCustomMenu(menu.menu)
@@ -1644,49 +1644,49 @@ function metano_town.Green_Merchant_Action(obj, activator)
 				if menu.result then
 					if itemPrice > GAME:GetPlayerMoney() then --With the new SingleItemDealMenu, this won't get hit anymore, but keep it anyway cause why not.
 						UI:SetSpeakerEmotion('Worried')
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_No_Money']))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_No_Money']))
 					elseif GAME:GetPlayerBagCount() + GAME:GetPlayerEquippedCount() >= GAME:GetPlayerBagLimit() then
 						UI:SetSpeakerEmotion('Worried')
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Bag_Full']))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Bag_Full']))
 					else
 						SV.DailyFlags.GreenMerchantBought = true
 						GAME:RemoveFromPlayerMoney(itemPrice)
 						GAME:GivePlayerItem(item.ID, itemEntry.MaxStack)
 						SOUND:PlayBattleSE("DUN_Money")
 						UI:SetSpeakerEmotion("Happy")
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Purchase_Made'], itemName))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Purchase_Made'], itemName))
 					end
 				end
 			end				
 		elseif result == 2 then 
 			if angry then 
 				UI:SetSpeakerEmotion('Angry')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_Angry'], stunky_name))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_Angry'], stunky_name))
 			elseif happy then 
 				UI:SetSpeakerEmotion('Normal')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_Happy_1']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_Happy_2']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_Happy_3']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_Happy_1']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_Happy_2']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_Happy_3']))
 				UI:SetSpeakerEmotion('Happy')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_Happy_4']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_Happy_4']))
 				UI:SetSpeakerEmotion('Normal')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_Happy_5']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_Happy_5']))
 			else 
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_1'], farfetchd_name))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_2']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_3']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_4'], stunky_name))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Info_5']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_1'], farfetchd_name))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_2']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_3']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_4'], stunky_name))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Info_5']))
 			end 
 		else
 			if angry then
 				UI:SetSpeakerEmotion('Determined')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Goodbye_Angry']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Goodbye_Angry']))
 			elseif happy then
 				UI:SetSpeakerEmotion('Happy')
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Goodbye_Happy']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Goodbye_Happy']))
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Green_Merchant_Goodbye']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Green_Merchant_Goodbye']))
 			end
 			state = -1
 		end 
@@ -1785,11 +1785,11 @@ function metano_town.Swap_Action(obj, activator)
   
 	while state > -1 do
 		if state == 0 then
-			local msg = STRINGS:Format(MapStrings['Swap_Intro'])
+			local msg = STRINGS:Format(STRINGS.MapStrings['Swap_Intro'])
 			if repeated == true then
-				msg = STRINGS:Format(MapStrings['Swap_Intro_Return'])
+				msg = STRINGS:Format(STRINGS.MapStrings['Swap_Intro_Return'])
 			end
-			local shop_choices = {STRINGS:Format(MapStrings['Swap_Option_Swap']),
+			local shop_choices = {STRINGS:Format(STRINGS.MapStrings['Swap_Option_Swap']),
 			STRINGS:FormatKey("MENU_INFO"),
 			STRINGS:FormatKey("MENU_EXIT")}
 			UI:BeginChoiceMenu(msg, shop_choices, 1, 3)
@@ -1797,14 +1797,14 @@ function metano_town.Swap_Action(obj, activator)
 			local result = UI:ChoiceResult()
 			repeated = true
 			if result == 1 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Choose']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Choose']))
 				state = 1
 			elseif result == 2 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Info_001']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Info_002']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Info_003']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Info_001']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Info_002']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Info_003']))
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Goodbye']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Goodbye']))
 				state = -1
 			end
 		elseif state == 1 then
@@ -1833,7 +1833,7 @@ function metano_town.Swap_Action(obj, activator)
 			end
 			
 			if free_slots > 0 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Give_Choose'], receive_item:GetDisplayName()))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Give_Choose'], receive_item:GetDisplayName()))
 				--tribute simply aggregates all items period
 				--this means that choosing multiple of one item will be impossible
 				--must choose all DIFFERENT specific items
@@ -1863,8 +1863,8 @@ function metano_town.Swap_Action(obj, activator)
 			local itemEntry = RogueEssence.Data.DataManager.Instance:GetItem(trade.Item)
 			local total = Prices[itemEntry.Rarity]
 			
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Confirm_001'], STRINGS:CreateList(give_items), receive_item:GetDisplayName()))
-			UI:ChoiceMenuYesNo(STRINGS:Format(MapStrings['Swap_Confirm_002'], total), false)
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Confirm_001'], STRINGS:CreateList(give_items), receive_item:GetDisplayName()))
+			UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Swap_Confirm_002'], total), false)
 			UI:WaitForChoice()
 			local result = UI:ChoiceResult()
 			
@@ -1884,21 +1884,21 @@ function metano_town.Swap_Action(obj, activator)
 				GAME:RemoveFromPlayerMoney(total)
 				
 				UI:SetSpeakerEmotion("Angry")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Complete_001']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Complete_001']))
 				UI:SetSpeakerEmotion("Stunned")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Complete_002']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Complete_002']))
 				UI:SetSpeakerEmotion("Normal")
 				
 				UI:ResetSpeaker()
 				SOUND:PlayFanfare("Fanfare/Treasure")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Swap_Give'], player:GetDisplayName(), receive_item:GetDisplayName()))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Swap_Give'], player:GetDisplayName(), receive_item:GetDisplayName()))
 				
 				--local bag_count = GAME:GetPlayerBagCount()
 				--local bag_cap = GAME:GetPlayerBagLimit()
 				--if bag_count < bag_cap then
 				--	GAME:GivePlayerItem(trade.Item, 1)
 				--else--TODO: load universal strings alongside local strings
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Item_Give_Storage'], receive_item:GetDisplayName()))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Item_Give_Storage'], receive_item:GetDisplayName()))
 				GAME:GivePlayerStorageItem(trade.Item, 1)
 				--end
 				
@@ -1967,9 +1967,9 @@ function metano_town.Tutor_Action(obj, activator)
   
 	while state > -1 do
 		if state == 0 then
-			local msg = STRINGS:Format(MapStrings['Tutor_Intro'])
+			local msg = STRINGS:Format(STRINGS.MapStrings['Tutor_Intro'])
 			if repeated == true then
-				msg = STRINGS:Format(MapStrings['Tutor_Intro_Return'])
+				msg = STRINGS:Format(STRINGS.MapStrings['Tutor_Intro_Return'])
 			end
 			
 			local tutor_choices = {RogueEssence.StringKey("MENU_RECALL_SKILL"):ToLocal(),
@@ -1979,7 +1979,7 @@ function metano_town.Tutor_Action(obj, activator)
 			
 			--starting in chapter 6, slowpoke will be able to teach Egg moves for a fee.
 			if SV.ChapterProgression.Chapter >= 6 then 
-				table.insert(tutor_choices, 3, STRINGS:Format(MapStrings['Tutor_Option_Tutor']))
+				table.insert(tutor_choices, 3, STRINGS:Format(STRINGS.MapStrings['Tutor_Option_Tutor']))
 			end 
 			
 			UI:BeginChoiceMenu(msg, tutor_choices, 1, #tutor_choices)
@@ -1988,7 +1988,7 @@ function metano_town.Tutor_Action(obj, activator)
 			repeated = true
 			if result == 1 then
 				if price > GAME:GetPlayerMoney() then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_No_Money']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_No_Money']))
 				else
 					state = 1
 				end
@@ -1997,18 +1997,18 @@ function metano_town.Tutor_Action(obj, activator)
 			elseif result == 3 and SV.ChapterProgression.Chapter >= 6 then --egg move tutoring
 				state = 6
 			elseif result == #tutor_choices - 1 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Info_001']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Info_002']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Info_003']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Info_001']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Info_002']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Info_003']))
 				if SV.ChapterProgression.Chapter >= 6 then--chapter 6 and on, he now has the egg move tutor to explain.
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Info_004']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Info_004']))
 				end
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Goodbye']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Goodbye']))
 				state = -1
 			end
 		elseif state == 1 then
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Remember_Who']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Remember_Who']))
 			UI:TutorTeamMenu()
 			UI:WaitForChoice()
 			local result = UI:ChoiceResult()
@@ -2020,10 +2020,10 @@ function metano_town.Tutor_Action(obj, activator)
 			end
 		elseif state == 2 then
 			if not GAME:CanRelearn(member) then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Cant_Remember'], member:GetDisplayName(false)))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Cant_Remember'], member:GetDisplayName(false)))
 				state = 1
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Remember_What'], member:GetDisplayName(false)))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Remember_What'], member:GetDisplayName(false)))
 				UI:RelearnMenu(member)
 				UI:WaitForChoice()
 				local result = UI:ChoiceResult()
@@ -2040,12 +2040,12 @@ function metano_town.Tutor_Action(obj, activator)
 				--SOUND:PlayBattleSE("DUN_Money") price was removed so no money sound
 				GAME:RemoveFromPlayerMoney(price)
 				GAME:LearnSkill(member, move)
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Remember_Begin']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Remember_Begin']))
 				metano_town.Tutor_Sequence()	
 				SOUND:PlayBattleSE("DUN_Learn_Move")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Remember_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))				state = 0
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Remember_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))				state = 0
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Remember_Replace'], member:GetDisplayName(false)))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Remember_Replace'], member:GetDisplayName(false)))
 				local result = UI:LearnMenu(member, move)
 				UI:WaitForChoice()
 				local result = UI:ChoiceResult()
@@ -2053,25 +2053,25 @@ function metano_town.Tutor_Action(obj, activator)
 					--SOUND:PlayBattleSE("DUN_Money") price was removed so no money sound
 					GAME:RemoveFromPlayerMoney(price)
 					GAME:SetCharacterSkill(member, move, result)
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Remember_Begin']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Remember_Begin']))
 					metano_town.Tutor_Sequence()	
 					SOUND:PlayBattleSE("DUN_Learn_Move")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Remember_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))					state = 0
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Remember_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))					state = 0
 				else
 					state = 2
 				end
 			end
 		elseif state == 4 then
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Forget_Who']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Forget_Who']))
 			UI:TutorTeamMenu()
 			UI:WaitForChoice()
 			local result = UI:ChoiceResult()
 			if result > -1 then
 				member = GAME:GetPlayerPartyMember(result)
 				if not GAME:CanForget(member) then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Cant_Forget'], member:GetDisplayName(false)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Cant_Forget'], member:GetDisplayName(false)))
 				else
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Forget_What'], member:GetDisplayName(false)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Forget_What'], member:GetDisplayName(false)))
 					state = 5
 				end
 			else
@@ -2082,19 +2082,19 @@ function metano_town.Tutor_Action(obj, activator)
 			UI:WaitForChoice()
 			local result = UI:ChoiceResult()
 			if result > -1 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Forget_Begin']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Forget_Begin']))
 				metano_town.Tutor_Sequence()
 				move = GAME:GetCharacterSkill(member, result)
 				local moveEntry = RogueEssence.Data.DataManager.Instance:GetSkill(move)
 				GAME:ForgetSkill(member, result)
 				SOUND:PlayBattleSE("DUN_Learn_Move")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Forget_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Forget_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))
 				state = 0
 			else
 				state = 4
 			end
 		elseif state == 6 then--egg move tutoring
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Who']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Learn_Who']))
 			UI:TutorTeamMenu()
 			UI:WaitForChoice()
 			local result = UI:ChoiceResult()
@@ -2104,9 +2104,9 @@ function metano_town.Tutor_Action(obj, activator)
 				print(egg_moves.Count)	
 				
 				if egg_moves.Count <= 0 then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_No_Egg_Moves'], member:GetDisplayName(false)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_No_Egg_Moves'], member:GetDisplayName(false)))
 				else
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_What'], member:GetDisplayName(false)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Learn_What'], member:GetDisplayName(false)))
 					state = 7
 				end
 			else
@@ -2140,18 +2140,18 @@ function metano_town.Tutor_Action(obj, activator)
 				egg_move_price = move_list[move][1]
 				print(egg_move_price)
 				if egg_move_price > GAME:GetPlayerMoney() then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_No_Money']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_No_Money']))
 				elseif GAME:CanLearn(member) then
 					SOUND:PlayBattleSE("DUN_Money") 
 					GAME:RemoveFromPlayerMoney(egg_move_price)
 					GAME:LearnSkill(member, move)
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Begin']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Learn_Begin']))
 					metano_town.Tutor_Sequence()	
 					SOUND:PlayBattleSE("DUN_Learn_Move")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Learn_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))
 					state = 0
 				else
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Replace'], member:GetDisplayName(false)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Learn_Replace'], member:GetDisplayName(false)))
 					local result = UI:LearnMenu(member, move)
 					UI:WaitForChoice()
 					local result = UI:ChoiceResult()
@@ -2159,10 +2159,10 @@ function metano_town.Tutor_Action(obj, activator)
 						SOUND:PlayBattleSE("DUN_Money")
 						GAME:RemoveFromPlayerMoney(egg_move_price)
 						GAME:SetCharacterSkill(member, move, result)
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Begin']))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Learn_Begin']))
 						metano_town.Tutor_Sequence()	
 						SOUND:PlayBattleSE("DUN_Learn_Move")
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Tutor_Learn_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Tutor_Learn_Success'], member:GetDisplayName(false), moveEntry:GetColoredName()))
 						state = 0
 					else
 						state = 6
@@ -2207,11 +2207,11 @@ function metano_town.Appraisal_Action(obj, activator)
   UI:SetSpeaker(chara)
 	while state > -1 do
 		if state == 0 then
-			local msg = STRINGS:Format(MapStrings['Appraisal_Intro'], STRINGS:FormatKey("MONEY_AMOUNT", price))
+			local msg = STRINGS:Format(STRINGS.MapStrings['Appraisal_Intro'], STRINGS:FormatKey("MONEY_AMOUNT", price))
 			if repeated == true then
-				msg = STRINGS:Format(MapStrings['Appraisal_Return'])
+				msg = STRINGS:Format(STRINGS.MapStrings['Appraisal_Return'])
 			end
-			local shop_choices = {STRINGS:Format(MapStrings['Appraisal_Option_Open']),
+			local shop_choices = {STRINGS:Format(STRINGS.MapStrings['Appraisal_Option_Open']),
 			STRINGS:FormatKey("MENU_INFO"),
 			STRINGS:FormatKey("MENU_EXIT")}
 			UI:BeginChoiceMenu(msg, shop_choices, 1, 3)
@@ -2221,18 +2221,18 @@ function metano_town.Appraisal_Action(obj, activator)
 			if result == 1 then
 				local bag_count = GAME:GetPlayerBagCount() + GAME:GetPlayerEquippedCount()
 				if bag_count > 0 then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_Choose'], STRINGS:LocalKeyString(26)))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_Choose'], STRINGS:LocalKeyString(26)))
 					state = 1
 				else
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_Bag_Empty']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_Bag_Empty']))
 				end
 			elseif result == 2 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_Info_001']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_Info_002']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_Info_003']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_Info_004'], STRINGS:FormatKey("MONEY_AMOUNT", price)))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_Info_001']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_Info_002']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_Info_003']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_Info_004'], STRINGS:FormatKey("MONEY_AMOUNT", price)))
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_Goodbye']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_Goodbye']))
 				state = -1
 			end
 		elseif state == 1 then
@@ -2251,7 +2251,7 @@ function metano_town.Appraisal_Action(obj, activator)
 			
 			if total > GAME:GetPlayerMoney() then
 				UI:SetSpeakerEmotion("Determined")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_No_Money']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_No_Money']))
 				UI:SetSpeakerEmotion("Normal")
 				state = 1
 			else
@@ -2263,9 +2263,9 @@ function metano_town.Appraisal_Action(obj, activator)
 					else
 						item = GAME:GetPlayerBagItem(cart[1].Slot)
 					end
-					msg = STRINGS:Format(MapStrings['Appraisal_Choose_One'], total, item:GetDisplayName())
+					msg = STRINGS:Format(STRINGS.MapStrings['Appraisal_Choose_One'], total, item:GetDisplayName())
 				else
-					msg = STRINGS:Format(MapStrings['Appraisal_Choose_Multi'], total)
+					msg = STRINGS:Format(STRINGS.MapStrings['Appraisal_Choose_Multi'], total)
 				end
 				UI:ChoiceMenuYesNo(msg, false)
 				UI:WaitForChoice()
@@ -2299,7 +2299,7 @@ function metano_town.Appraisal_Action(obj, activator)
 					SOUND:PlayBattleSE("DUN_Money")
 					GAME:RemoveFromPlayerMoney(total)
 					cart = {}
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_Start']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_Start']))
 					
 					--Sneasel should ready herself, then scratch once for each box he has to open
 					GAME:WaitFrames(10)
@@ -2321,7 +2321,7 @@ function metano_town.Appraisal_Action(obj, activator)
 					GAME:WaitFrames(10)
 					
 					SOUND:PlayFanfare("Fanfare/Treasure")
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Appraisal_End']))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Appraisal_End']))
 					UI:SpoilsMenu(treasure)
 					UI:WaitForChoice()
 					
@@ -2684,7 +2684,7 @@ function metano_town.Guild_Bridge_Sign_Action(obj, activator)
   partner.IsInteracting = true
   GROUND:CharSetAnim(partner, 'None', true)
   GROUND:CharSetAnim(hero, 'None', true)	
-  UI:WaitShowDialogue(STRINGS:Format(MapStrings['Sign_Guild_Bridge_1']))
+  UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Sign_Guild_Bridge_1']))
   UI:SetAutoFinish(false)
   UI:SetCenter(false)
   partner.IsInteracting = false
@@ -2703,9 +2703,9 @@ function metano_town.Crossroads_Sign_Action(obj, activator)
   partner.IsInteracting = true
   GROUND:CharSetAnim(partner, 'None', true)
   GROUND:CharSetAnim(hero, 'None', true)	
-  UI:WaitShowDialogue(STRINGS:Format(MapStrings['Sign_Crossroads_1']))
-  UI:WaitShowDialogue(STRINGS:Format(MapStrings['Sign_Crossroads_2']))
-  UI:WaitShowDialogue(STRINGS:Format(MapStrings['Sign_Crossroads_3']))
+  UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Sign_Crossroads_1']))
+  UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Sign_Crossroads_2']))
+  UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Sign_Crossroads_3']))
   UI:SetAutoFinish(false)
   UI:SetCenter(false)
   partner.IsInteracting = false
@@ -2723,7 +2723,7 @@ function metano_town.Dojo_Sign_Action(obj, activator)
   partner.IsInteracting = true
   GROUND:CharSetAnim(partner, 'None', true)
   GROUND:CharSetAnim(hero, 'None', true)	
-  UI:WaitShowDialogue(STRINGS:Format(MapStrings['Sign_Dojo_1']))
+  UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Sign_Dojo_1']))
   UI:SetAutoFinish(false)
   UI:SetCenter(false)
   partner.IsInteracting = false
@@ -2741,7 +2741,7 @@ function metano_town.To_Dungeons_Sign_Action(obj, activator)
   partner.IsInteracting = true
   GROUND:CharSetAnim(partner, 'None', true)
   GROUND:CharSetAnim(hero, 'None', true)	
-  UI:WaitShowDialogue(STRINGS:Format(MapStrings['Sign_To_Dungeons_1']))
+  UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Sign_To_Dungeons_1']))
   UI:SetAutoFinish(false)
   UI:SetCenter(false)
   partner.IsInteracting = false
@@ -2759,7 +2759,7 @@ function metano_town.Wishing_Well_Sign_Action(obj, activator)
   partner.IsInteracting = true
   GROUND:CharSetAnim(partner, 'None', true)
   GROUND:CharSetAnim(hero, 'None', true)	
-  UI:WaitShowDialogue(STRINGS:Format(MapStrings['Sign_Wishing_Well_1']))
+  UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Sign_Wishing_Well_1']))
   UI:SetAutoFinish(false)
   UI:SetCenter(false)
   partner.IsInteracting = false
@@ -2777,7 +2777,7 @@ function metano_town.To_Spring_Sign_Action(obj, activator)
   partner.IsInteracting = true
   GROUND:CharSetAnim(partner, 'None', true)
   GROUND:CharSetAnim(hero, 'None', true)	
-  UI:WaitShowDialogue(STRINGS:Format(MapStrings['Sign_To_Spring_1']))
+  UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Sign_To_Spring_1']))
   UI:SetAutoFinish(false)
   UI:SetCenter(false)
   partner.IsInteracting = false

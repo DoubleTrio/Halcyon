@@ -19,7 +19,7 @@ require 'halcyon.ground.guild_second_floor.guild_second_floor_ch_4'
 -- Package name
 local guild_second_floor = {}
 
-local MapStrings = {}
+
 
 -------------------------------
 -- Map Callbacks
@@ -28,7 +28,7 @@ local MapStrings = {}
 function guild_second_floor.Init(map)
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_guild_second_floor<<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies()
 	PartnerEssentials.InitializePartnerSpawn()
 

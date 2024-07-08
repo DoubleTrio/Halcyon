@@ -16,8 +16,8 @@ local metano_rock_home = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -28,7 +28,7 @@ function metano_rock_home.Init(map, time)
 
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_metano_rock_home <<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies()
 	PartnerEssentials.InitializePartnerSpawn()
 	

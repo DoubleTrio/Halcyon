@@ -18,8 +18,8 @@ local metano_cafe = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -29,7 +29,7 @@ local MapStrings = {}
 function metano_cafe.Init(map, time)
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_metano_cafe <<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies(true)
 	PartnerEssentials.InitializePartnerSpawn()
 	
@@ -107,48 +107,48 @@ function metano_cafe.Cafe_Sign_Action(obj, activator)
     GeneralFunctions.TurnTowardsLocation(partner, obj.Position.X + obj.Width // 2, obj.Position.Y + obj.Height // 2)
 
 	local shuckle_name = CharacterEssentials.GetCharacterName("Shuckle")
-	UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Intro'], shuckle_name))
+	UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Intro'], shuckle_name))
 	
 	local item1
 	local item2
 	
 	while state > -1 do
-		local choices = {STRINGS:Format(MapStrings['Cafe_Option_Domi']),
-						STRINGS:Format(MapStrings['Cafe_Option_Cider']), 
-						STRINGS:Format(MapStrings['Cafe_Option_Bomb']), 
+		local choices = {STRINGS:Format(STRINGS.MapStrings['Cafe_Option_Domi']),
+						STRINGS:Format(STRINGS.MapStrings['Cafe_Option_Cider']), 
+						STRINGS:Format(STRINGS.MapStrings['Cafe_Option_Bomb']), 
 						STRINGS:FormatKey('MENU_EXIT')}
 						
 		--Endurance Tonic is added in Chapter 4.
 		--todo: better system for this?
 		if SV.ChapterProgression.Chapter >= 4 then 
-			table.insert(choices, 4, STRINGS:Format(MapStrings['Cafe_Option_Endurance']))
+			table.insert(choices, 4, STRINGS:Format(STRINGS.MapStrings['Cafe_Option_Endurance']))
 		end
 				
 				
-		UI:BeginChoiceMenu(STRINGS:Format(MapStrings['Cafe_Sign_Which_Drinks']), choices, 1, #choices)
+		UI:BeginChoiceMenu(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Which_Drinks']), choices, 1, #choices)
 		UI:WaitForChoice()
 		local result = UI:ChoiceResult()
 		if result == 1 then
 			item1 = RogueEssence.Dungeon.InvItem("berry_oran")--oran berry 
 			item2 = RogueEssence.Dungeon.InvItem("ammo_stick")--stick
 			item2.Amount = 5
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Domi_1']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Domi_2'], item1:GetDisplayName(), item2:GetDisplayName()))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Domi_1']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Domi_2'], item1:GetDisplayName(), item2:GetDisplayName()))
 		elseif result == 2 then
 			item1 = RogueEssence.Dungeon.InvItem("food_apple")--Apple 
 			item2 = RogueEssence.Dungeon.InvItem("berry_oran")--oran berry
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Cider_1']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Cider_2'], item1:GetDisplayName(), item2:GetDisplayName()))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Cider_1']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Cider_2'], item1:GetDisplayName(), item2:GetDisplayName()))
 		elseif result == 3 then 
 			item1 = RogueEssence.Dungeon.InvItem("berry_cheri")--cheri berry
 			item2 = RogueEssence.Dungeon.InvItem("seed_blast")--blast seed 
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Bomb_1']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Bomb_2'], item1:GetDisplayName(), item2:GetDisplayName()))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Bomb_1']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Bomb_2'], item1:GetDisplayName(), item2:GetDisplayName()))
 		elseif result == 4 and #choices > 4 then 
 			item1 = RogueEssence.Dungeon.InvItem("seed_reviver")
 			item2 = RogueEssence.Dungeon.InvItem("berry_chesto")
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Endurance_1']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Sign_Endurance_2'], item1:GetDisplayName(), item2:GetDisplayName()))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Endurance_1']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Sign_Endurance_2'], item1:GetDisplayName(), item2:GetDisplayName()))
 		else
 			state = -1
 		end
@@ -295,8 +295,8 @@ function metano_cafe.Cafe_Action(obj, activator)
 	--He has a new type of drink he can serve
 	if SV.metano_cafe.NewDrinkUnlocked then
 		UI:SetSpeakerEmotion("Happy")
-		UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_New_Drink_1']))
-		UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_New_Drink_2']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_New_Drink_1']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_New_Drink_2']))
 		SV.metano_cafe.NewDrinkUnlocked = false
 		GAME:WaitFrames(20)
 	end 
@@ -306,10 +306,10 @@ function metano_cafe.Cafe_Action(obj, activator)
 		local juiceEntry = RogueEssence.Data.DataManager.Instance:GetItem(SV.metano_cafe.FermentedItem)
 		local juice = RogueEssence.Dungeon.InvItem(SV.metano_cafe.FermentedItem, false, juiceEntry.MaxStack)
 		UI:SetSpeakerEmotion('Normal')
-		UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Fermented_Give_Item_1'], juice:GetDisplayName()))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Fermented_Give_Item_1'], juice:GetDisplayName()))
 		if GAME:GetPlayerBagCount() + GAME:GetPlayerEquippedCount() >= GAME:GetPlayerBagLimit() then
 			UI:SetSpeakerEmotion('Worried')
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Bag_Full'], CharacterEssentials.GetCharacterName('Kangaskhan')))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Bag_Full'], CharacterEssentials.GetCharacterName('Kangaskhan')))
 			state = -1 --don't go to normal dialogue if he cant give you the fermented item.
 		else
 			--he retreats into his shell and pulls it out.
@@ -320,7 +320,7 @@ function metano_cafe.Cafe_Action(obj, activator)
 			SOUND:PlayBattleSE('DUN_Worry_Seed')
 			GROUND:CharSetAction(owner, RogueEssence.Ground.PoseGroundAction(owner.Position, owner.Direction, RogueEssence.Content.GraphicsManager.GetAnimIndex("Special2")))
 			UI:SetSpeakerEmotion("Happy")
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Fermented_Give_Item_2'], juice:GetDisplayName()))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Fermented_Give_Item_2'], juice:GetDisplayName()))
 			GROUND:CharSetAnim(owner, "None", true)
 		
 			--gives it to the player.
@@ -330,7 +330,7 @@ function metano_cafe.Cafe_Action(obj, activator)
 			SOUND:PlayBattleSE("DUN_Drink")
 			UI:ResetSpeaker()
 			UI:SetCenter(true)
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Fermented_Item_Received'], juice:GetDisplayName(), owner:GetDisplayName()))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Fermented_Item_Received'], juice:GetDisplayName(), owner:GetDisplayName()))
 			UI:SetCenter(false)
 		end			
 	end
@@ -340,11 +340,11 @@ function metano_cafe.Cafe_Action(obj, activator)
 	while state > -1 do
 		UI:SetSpeaker(owner)
 		UI:SetSpeakerEmotion("Normal")
-		local msg = STRINGS:Format(MapStrings['Cafe_Intro'])
+		local msg = STRINGS:Format(STRINGS.MapStrings['Cafe_Intro'])
 		if repeated then 
-			msg = STRINGS:Format(MapStrings['Cafe_Intro_Return'])
+			msg = STRINGS:Format(STRINGS.MapStrings['Cafe_Intro_Return'])
 		end
-		local cafe_choices = {STRINGS:Format(MapStrings['Cafe_Option_Ferment']), STRINGS:Format(MapStrings['Cafe_Option_Special']),
+		local cafe_choices = {STRINGS:Format(STRINGS.MapStrings['Cafe_Option_Ferment']), STRINGS:Format(STRINGS.MapStrings['Cafe_Option_Special']),
 							  STRINGS:FormatKey('MENU_INFO'), STRINGS:FormatKey('MENU_EXIT')}
 		UI:BeginChoiceMenu(msg, cafe_choices, 1, 4)
 		UI:WaitForChoice()
@@ -356,10 +356,10 @@ function metano_cafe.Cafe_Action(obj, activator)
 				local ferment_item = RogueEssence.Dungeon.InvItem(SV.metano_cafe.FermentedItem)
 				local ferment_item_entry = RogueEssence.Data.DataManager.Instance:GetItem(SV.metano_cafe.FermentedItem)
 				if ferment_item_entry.MaxStack > 1 then ferment_item.Amount = ferment_item_entry.MaxStack end--for multi-use items, like the apple cider
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Already_Fermenting'], ferment_item:GetDisplayName()))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Already_Fermenting'], ferment_item:GetDisplayName()))
 			else		
 				UI:SetSpeakerEmotion("Normal")
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Ferment_Prompt']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Ferment_Prompt']))
 				
 				local CreateFermentMenu = CreateFermentMenu()
 				local items = {
@@ -400,14 +400,14 @@ function metano_cafe.Cafe_Action(obj, activator)
 				if (menu.item_list_index > -1) then
 					local menu_item = items[menu.item_list_index + 1]
 					local ferment_item = RogueEssence.Dungeon.InvItem(menu_item.item_to_ferment, false, menu_item.servings)
-					UI:ChoiceMenuYesNo(STRINGS:Format(MapStrings['Cafe_Confirm_Ferment_Choice'], ferment_item:GetDisplayName()), true)
+					UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Cafe_Confirm_Ferment_Choice'], ferment_item:GetDisplayName()), true)
 					UI:WaitForChoice()
 					local confirm = UI:ChoiceResult()
 					if confirm then
 						SV.metano_cafe.FermentedItem = menu_item.item_to_ferment
 						metano_cafe.RemoveItems(menu_item.recipe_list)
 						UI:SetSpeakerEmotion("Happy")
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Begin_Fermenting_1']))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Begin_Fermenting_1']))
 						--puts the items in his shell
 						SOUND:PlayBattleSE('DUN_Equip')
 						GROUND:CharSetAction(owner, RogueEssence.Ground.PoseGroundAction(owner.Position, owner.Direction, RogueEssence.Content.GraphicsManager.GetAnimIndex("Special0")))
@@ -424,18 +424,18 @@ function metano_cafe.Cafe_Action(obj, activator)
 						GROUND:CharWaitAnim(owner, "Special1")
 						GROUND:CharSetAnim(owner, "None", true)
 						UI:SetSpeakerEmotion("Inspired")
-						UI:WaitShowTimedDialogue(STRINGS:Format(MapStrings['Cafe_Begin_Fermenting_2']), 60)
+						UI:WaitShowTimedDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Begin_Fermenting_2']), 60)
 						GAME:WaitFrames(20)
 						UI:SetSpeakerEmotion("Happy")
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Begin_Fermenting_3'], ferment_item:GetDisplayName()))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Begin_Fermenting_3'], ferment_item:GetDisplayName()))
 					end
 				end
 			end
 		elseif result == 2 then --today's special
 			if SV.metano_cafe.BoughtSpecial then 
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Bought_Special']))	
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Bought_Special']))	
 			else 					
-				--UI:ChoiceMenuYesNo(STRINGS:Format(MapStrings['Cafe_Daily_Special'], specialName, specialPrice)) --deprecated
+				--UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Cafe_Daily_Special'], specialName, specialPrice)) --deprecated
 				local SingleItemDealMenu = SingleItemDealMenu()
 				local menu = SingleItemDealMenu:new("Café Special", special, specialPrice)
 				UI:SetCustomMenu(menu.menu)
@@ -443,11 +443,11 @@ function metano_cafe.Cafe_Action(obj, activator)
 				if menu.result then
 					if specialPrice > GAME:GetPlayerMoney() then --Menu coding prevents this from being hit (can't try to buy if no money), but keep this here in case.
 						UI:SetSpeakerEmotion('Worried')
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_No_Money']))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_No_Money']))
 						UI:SetSpeakerEmotion('Normal')
 					elseif GAME:GetPlayerBagCount() + GAME:GetPlayerEquippedCount() >= GAME:GetPlayerBagLimit() then
 						UI:SetSpeakerEmotion('Worried')
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Bag_Full'], CharacterEssentials.GetCharacterName('Kangaskhan')))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Bag_Full'], CharacterEssentials.GetCharacterName('Kangaskhan')))
 						UI:SetSpeakerEmotion('Normal')
 					else
 						SV.metano_cafe.BoughtSpecial = true
@@ -455,21 +455,21 @@ function metano_cafe.Cafe_Action(obj, activator)
 						GAME:GivePlayerItem(special.ID, 1)
 						SOUND:PlayBattleSE("DUN_Money")
 						UI:SetSpeakerEmotion("Happy")
-						UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Special_Complete'], specialName))
+						UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Special_Complete'], specialName))
 						UI:SetSpeakerEmotion("Normal")
 					end
 				end 
 			end
 		elseif result == 3 then --cafe info
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Info_1']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Info_2']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Info_3']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Info_4']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Info_5']))
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Info_6']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Info_1']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Info_2']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Info_3']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Info_4']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Info_5']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Info_6']))
 		else--exit
 			UI:SetSpeakerEmotion("Happy")
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Cafe_Goodbye']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Cafe_Goodbye']))
 			UI:SetSpeakerEmotion("Normal")
 			state = -1
 		end

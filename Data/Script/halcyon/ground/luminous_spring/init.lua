@@ -8,8 +8,8 @@ local luminous_spring = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -20,7 +20,7 @@ function luminous_spring.Init(map, time)
 
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_luminous_spring <<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies(true)
 	PartnerEssentials.InitializePartnerSpawn()
 end
@@ -167,33 +167,33 @@ function luminous_spring.Spring_Touch(obj, activator)
 	GAME:MoveCamera(300, 152, 90, false)
 	GROUND:TeleportTo(player, 292, 312, Direction.Down)
 	
-	UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Intro_1']))
-	UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Intro_2']))
+	UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Intro_1']))
+	UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Intro_2']))
 	while state > -1 do
 		if state == 0 then
-			local evo_choices = {STRINGS:Format(MapStrings['Evo_Option_Evolve']),
+			local evo_choices = {STRINGS:Format(STRINGS.MapStrings['Evo_Option_Evolve']),
 			STRINGS:FormatKey("MENU_INFO"),
 			STRINGS:FormatKey("MENU_EXIT")}
-			UI:BeginChoiceMenu(STRINGS:Format(MapStrings['Evo_Ask']), evo_choices, 1, 3)
+			UI:BeginChoiceMenu(STRINGS:Format(STRINGS.MapStrings['Evo_Ask']), evo_choices, 1, 3)
 			UI:WaitForChoice()
 			local result = UI:ChoiceResult()
 			repeated = true
 			if result == 1 then
 				state = 1
 			elseif result == 2 then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Info_001']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Info_002']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Info_003']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Info_004']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Info_005']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Info_006']))
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Info_007']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Info_001']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Info_002']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Info_003']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Info_004']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Info_005']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Info_006']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Info_007']))
 			else
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_End']))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_End']))
 				state = -1
 			end
 		elseif state == 1 then
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Ask_Who']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Ask_Who']))
 			UI:ShowPromoteMenu()
 			UI:WaitForChoice()
 			local result = UI:ChoiceResult()
@@ -205,12 +205,12 @@ function luminous_spring.Spring_Touch(obj, activator)
 			end
 		elseif state == 2 then
 			if not GAME:CanPromote(member) then
-				UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_None'], member.BaseName))
+				UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_None'], member.BaseName))
 				state = 1
 			else
 				local branches = GAME:GetAvailablePromotions(member, 349)
 				if #branches == 0 then
-					UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_None_Now'], member.BaseName))
+					UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_None_Now'], member.BaseName))
 					state = 1
 				elseif #branches == 1 then
 					local branch = branches[1]
@@ -229,9 +229,9 @@ function luminous_spring.Spring_Touch(obj, activator)
 					local mon = RogueEssence.Data.DataManager.Instance:GetMonster(branch.Result)
 					if evo_item > -1 then
 						local item = RogueEssence.Data.DataManager.Instance:GetItem(evo_item)
-						UI:ChoiceMenuYesNo(STRINGS:Format(MapStrings['Evo_Confirm_Item'], member.BaseName, item.Name:ToLocal(), mon.Name:ToLocal()), false)
+						UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Evo_Confirm_Item'], member.BaseName, item.Name:ToLocal(), mon.Name:ToLocal()), false)
 					else
-						UI:ChoiceMenuYesNo(STRINGS:Format(MapStrings['Evo_Confirm'], member.BaseName, mon.Name:ToLocal()), false)
+						UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Evo_Confirm'], member.BaseName, mon.Name:ToLocal()), false)
 					end
 					UI:WaitForChoice()
 					local result = UI:ChoiceResult()
@@ -248,7 +248,7 @@ function luminous_spring.Spring_Touch(obj, activator)
 						table.insert(evo_names, mon.Name:ToLocal())
 					end
 					table.insert(evo_names, STRINGS:FormatKey("MENU_CANCEL"))
-					UI:BeginChoiceMenu(STRINGS:Format(MapStrings['Evo_Choice'], member.BaseName), evo_names, 1, #evo_names)
+					UI:BeginChoiceMenu(STRINGS:Format(STRINGS.MapStrings['Evo_Choice'], member.BaseName), evo_names, 1, #evo_names)
 					UI:WaitForChoice()
 					local result = UI:ChoiceResult()
 					if result < #evo_names then
@@ -269,7 +269,7 @@ function luminous_spring.Spring_Touch(obj, activator)
 			GROUND:MoveInDirection(subject, Direction.Up, 60)
 			GROUND:EntTurn(subject, Direction.Down)
 			
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Begin']))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Begin']))
 			
 			SOUND:PlayBattleSE("EVT_Evolution_Start")
 			GAME:FadeOut(true, 20)
@@ -288,7 +288,7 @@ function luminous_spring.Spring_Touch(obj, activator)
 			SOUND:PlayFanfare("Fanfare/Promotion")
 			
 			
-			UI:WaitShowDialogue(STRINGS:Format(MapStrings['Evo_Complete'], member.BaseName, mon.Name:ToLocal()))
+			UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Evo_Complete'], member.BaseName, mon.Name:ToLocal()))
 			
 			
 			GROUND:MoveInDirection(subject, Direction.Down, 60)

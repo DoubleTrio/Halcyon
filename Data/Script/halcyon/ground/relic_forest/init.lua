@@ -15,8 +15,8 @@ local relic_forest = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -27,7 +27,7 @@ function relic_forest.Init(map)
 
   DEBUG.EnableDbgCoro()
   print('=>> Init_relic_forest <<=')
-  MapStrings = COMMON.AutoLoadLocalizedStrings()
+  
   COMMON.RespawnAllies(true)
   PartnerEssentials.InitializePartnerSpawn()
   

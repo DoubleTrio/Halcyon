@@ -16,8 +16,8 @@ local metano_inn = {}
 -- Local, localized strings table
 -- Use this to display the named strings you added in the strings files for the map!
 -- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-local MapStrings = {}
+--      local localizedstring = STRINGS.MapStrings['SomeStringName']
+
 
 -------------------------------
 -- Map Callbacks
@@ -27,7 +27,7 @@ local MapStrings = {}
 function metano_inn.Init(map, time)
 	DEBUG.EnableDbgCoro()
 	print('=>> Init_metano_inn <<=')
-	MapStrings = COMMON.AutoLoadLocalizedStrings()
+	
 	COMMON.RespawnAllies()
 	PartnerEssentials.InitializePartnerSpawn()
 	
