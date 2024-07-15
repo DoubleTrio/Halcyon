@@ -9,6 +9,7 @@ require 'PartnerEssentials'
 require 'ground.metano_water_home.metano_water_home_ch_2'
 require 'ground.metano_water_home.metano_water_home_ch_3'
 require 'ground.metano_water_home.metano_water_home_ch_4'
+require 'ground.metano_water_home.metano_water_home_ch_5'
 
 -- Package name
 local metano_water_home = {}
