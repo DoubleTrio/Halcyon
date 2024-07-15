@@ -9,6 +9,7 @@ require 'halcyon.PartnerEssentials'
 require 'halcyon.ground.metano_water_home.metano_water_home_ch_2'
 require 'halcyon.ground.metano_water_home.metano_water_home_ch_3'
 require 'halcyon.ground.metano_water_home.metano_water_home_ch_4'
+require 'halcyon.ground.metano_water_home.metano_water_home_ch_5'
 
 -- Package name
 local metano_water_home = {}

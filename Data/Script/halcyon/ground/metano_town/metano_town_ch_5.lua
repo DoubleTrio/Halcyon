@@ -17,25 +17,44 @@ function metano_town_ch_5.SetupGround()
 				{'Snubbull', 1056, 864, Direction.Up}
 			})
 	end
+
+	--Move Growlithe from his desk. If you saw Almotz say goodbye to his family, then he'll be at storage with Hyko.
+	if SV.Chapter5.SawZigzagoonFamilyCutscene then
+		local zigzagoon = 
+			CharacterEssentials.MakeCharactersFromList({
+				{'Zigzagoon', 1236, 888, Direction.UpLeft}
+			})
+		
+		GROUND:TeleportTo(growlithe, 1260, 912, Direction.UpLeft)
+	else
+		GROUND:TeleportTo(growlithe, 1216, 916, Direction.DownLeft)
+		AI:SetCharacterAI(growlithe, "halcyon.ai.ground_default", RogueElements.Loc(1200, 900), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+	end
+
+
 	
-	local mareep, cranidos, gloom, nidorina, electrike = 
+	local mareep, cranidos, gloom, nidorina, electrike, audino, numel, wooper_girl, wooper_boy,
+		  meditite, luxray, machamp, oddish = 
 		CharacterEssentials.MakeCharactersFromList({
 			{'Mareep', 1180, 1304, Direction.UpLeft},
 			{'Cranidos', 1204, 1304, Direction.Left},
 			{'Gloom', 512, 184, Direction.DownRight},
 			{'Nidorina', 536, 208, Direction.UpLeft},
-			{'Electrike', 464, 576, Direction.Up},
-			
+			{'Electrike', 256, 944, Direction.DownRight},
+			{'Audino', 1096, 1032, Direction.DownRight},
+			{'Numel', 184, 384, Direction.DownLeft},
+			{'Wooper_Girl', 328, 1000, Direction.DownLeft},
+			{'Wooper_Boy', 328, 1040, Direction.UpLeft},
+			{'Meditite', 296, 1020, Direction.Right},
+			{'Luxray', 304, 656, Direction.UpLeft},
+			{'Machamp', 464, 464, Direction.Left},
+			{'Oddish', 472, 648, Direction.Up}
 		})
-		
-
-
-
-	--Move Growlithe from his desk
-	GROUND:TeleportTo(growlithe, 1132, 928, Direction.DownLeft)
-
-	AI:SetCharacterAI(snubbull, "halcyon.ai.ground_default", RogueElements.Loc(1040, 848), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
 	
+	AI:SetCharacterAI(luxray, "halcyon.ai.ground_default", RogueElements.Loc(luxray.Position.X-16, luxray.Position.Y-16), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+	AI:SetCharacterAI(machamp, "halcyon.ai.ground_default", RogueElements.Loc(machamp.Position.X-16, machamp.Position.Y-16), RogueElements.Loc(32, 32), 1, 16, 32, 40, 180)
+
+
 	
 	GAME:FadeIn(20)
 	
