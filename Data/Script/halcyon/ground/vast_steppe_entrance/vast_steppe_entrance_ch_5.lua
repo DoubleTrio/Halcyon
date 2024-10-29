@@ -787,6 +787,12 @@ function vast_steppe_entrance_ch_5.ArrivalCutscene()
 	--prevent heal bell from being unlearned.
 	GAME:LockSkill(GAME:GetPlayerPartyMember(3), 1)
 
+	--Assign importances to identify who they are. Do this instead of just checking species just in case randomizers down the road or something.
+	local sTbl = LTBL(GAME:GetPlayerPartyMember(2))
+	local aTbl = LTBL(GAME:GetPlayerPartyMember(3))
+	
+	sTbl.Importance = snubbull_monster.Nickname
+	aTbl.Importance = audino_monster.Nickname
 
 	GAME:GetCurrentGround():RemoveTempChar(breloom)
 	GAME:GetCurrentGround():RemoveTempChar(girafarig)

@@ -4070,82 +4070,558 @@
 	
 	
 	
-  <data name="TALK_FULL_2000" xml:space="preserve">
-    <value>Let's do our best, [player]!</value>
+  <data name="TALK_FULL_3000" xml:space="preserve">
+    <value>Snubbull Expedition Comment 1</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2001" xml:space="preserve">
-    <value>I've got you covered with my [move]!</value>
-    <comment>Generic partner comment</comment>  </data>
-  <data name="TALK_FULL_2002" xml:space="preserve">
-    <value>We should get a move on!</value>
+   <data name="TALK_FULL_3001" xml:space="preserve">
+    <value>Snubbull Expedition Comment 2</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2003" xml:space="preserve">
-    <value>Let's be on the lookout for any [kind].</value>
+   <data name="TALK_FULL_3002" xml:space="preserve">
+    <value>Snubbull Expedition Comment 3</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2004" xml:space="preserve">
-    <value>I've got your back, [player]!</value>
+   <data name="TALK_FULL_3003" xml:space="preserve">
+    <value>Snubbull Expedition Comment 4</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2005" xml:space="preserve">
-    <value>We won't let any [kind] beat us, right [player]?</value>
+   <data name="TALK_FULL_3004" xml:space="preserve">
+    <value>Snubbull Expedition Comment 5</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2006" xml:space="preserve">
-    <value>Be sure to grab any [item] you find!</value>
+ 
+  <data name="TALK_HALF_3000" xml:space="preserve">
+    <value>Snubbull Half HP 1</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2007" xml:space="preserve">
-    <value>I'll go with you, [player]!</value>
+  <data name="TALK_HALF_3001" xml:space="preserve">
+    <value>Snubbull Half HP 2</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2008" xml:space="preserve">
-    <value>Let's keep going!</value>
-    <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2009" xml:space="preserve">
-    <value>We should be careful. There's no telling what could be ahead!</value>
-    <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_FULL_2010" xml:space="preserve">
-    <value>This is gonna be a great adventure, I just know it!</value>
+  <data name="TALK_HALF_3002" xml:space="preserve">
+    <value>Snubbull Half HP 3</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
 
-
-  <data name="TALK_HALF_2000" xml:space="preserve">
-    <value>This is getting tough...</value>
+  <data name="TALK_PINCH_3000" xml:space="preserve">
+    <value>Snubbull Pinch HP 1</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_HALF_2001" xml:space="preserve">
-    <value>Urf! This is rough, but I can keep going!</value>
+  <data name="TALK_PINCH_3001" xml:space="preserve">
+    <value>Snubbull Pinch HP 2</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_HALF_2002" xml:space="preserve">
-    <value>I'm starting to feel weak...</value>
-    <comment>Expedition - Snubbull comment</comment>  </data>
-
-
-
-  <data name="TALK_PINCH_2000" xml:space="preserve">
-    <value>No... Please, no more... Help me, [player]...</value>
-    <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_PINCH_2001" xml:space="preserve">
-    <value>Urgh... I can't take any more... I'm going to faint...</value>
-    <comment>Expedition - Snubbull comment</comment>  </data>
-  <data name="TALK_PINCH_2002" xml:space="preserve">
-    <value>I'm about to collapse... P-please, help me...</value>
+  <data name="TALK_PINCH_3002" xml:space="preserve">
+    <value>Snubbull Pinch HP 3</value>
     <comment>Expedition - Snubbull comment</comment>  </data>
 
+	
+	
+  <data name="TALK_FULL_3010" xml:space="preserve">
+    <value>Audino Expedition Comment 1</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+   <data name="TALK_FULL_3011" xml:space="preserve">
+    <value>Audino Expedition Comment 2</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+   <data name="TALK_FULL_3012" xml:space="preserve">
+    <value>Audino Expedition Comment 3</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+   <data name="TALK_FULL_3013" xml:space="preserve">
+    <value>Audino Expedition Comment 4</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+   <data name="TALK_FULL_3014" xml:space="preserve">
+    <value>Audino Expedition Comment 5</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3010" xml:space="preserve">
+    <value>Audino Half HP 1</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+  <data name="TALK_HALF_3011" xml:space="preserve">
+    <value>Audino Half HP 2</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+  <data name="TALK_HALF_3012" xml:space="preserve">
+    <value>Audino Half HP 3</value>
+    <comment>Expedition - Audino comment</comment>  </data>
 
-  <data name="TALK_WAIT_2000" xml:space="preserve">
-    <value>You probably should never see this wait message.</value>
-    <comment>Expedition - Snubbull comment</comment>  </data>
+  <data name="TALK_PINCH_3010" xml:space="preserve">
+    <value>Audino Pinch HP 1</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+  <data name="TALK_PINCH_3011" xml:space="preserve">
+    <value>Audino Pinch HP 2</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+  <data name="TALK_PINCH_3012" xml:space="preserve">
+    <value>Audino Pinch HP 3</value>
+    <comment>Expedition - Audino comment</comment>  </data>
+	
+	
+  <data name="TALK_FULL_3020" xml:space="preserve">
+    <value>Growlithe expedition - seg 0 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3021" xml:space="preserve">
+    <value>Growlithe expedition - seg 0 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3022" xml:space="preserve">
+    <value>Growlithe expedition - seg 0 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3023" xml:space="preserve">
+    <value>Growlithe expedition - seg 0 4</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3024" xml:space="preserve">
+    <value>Growlithe expedition - seg 0 5</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3020" xml:space="preserve">
+    <value>Growlithe Half HP seg 0 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_HALF_3021" xml:space="preserve">
+    <value>Growlithe Half HP seg 0 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_HALF_3022" xml:space="preserve">
+    <value>Growlithe Half HP seg 0 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+
+  <data name="TALK_PINCH_3020" xml:space="preserve">
+    <value>Growlithe Pinch HP seg 0 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_PINCH_3021" xml:space="preserve">
+    <value>Growlithe Pinch HP seg 0 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_PINCH_3022" xml:space="preserve">
+    <value>Growlithe Pinch HP seg 0 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
 	
 	
 	
+  <data name="TALK_FULL_3030" xml:space="preserve">
+    <value>Growlithe expedition - seg 1 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3031" xml:space="preserve">
+    <value>Growlithe expedition - seg 1 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3032" xml:space="preserve">
+    <value>Growlithe expedition - seg 1 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3033" xml:space="preserve">
+    <value>Growlithe expedition - seg 1 4</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3034" xml:space="preserve">
+    <value>Growlithe expedition - seg 1 5</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3030" xml:space="preserve">
+    <value>Growlithe Half HP seg 1 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_HALF_3031" xml:space="preserve">
+    <value>Growlithe Half HP seg 1 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_HALF_3032" xml:space="preserve">
+    <value>Growlithe Half HP seg 1 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+
+  <data name="TALK_PINCH_3030" xml:space="preserve">
+    <value>Growlithe Pinch HP seg 1 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_PINCH_3031" xml:space="preserve">
+    <value>Growlithe Pinch HP seg 1 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_PINCH_3032" xml:space="preserve">
+    <value>Growlithe Pinch HP seg 1 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+	
+	
+	 
+  <data name="TALK_FULL_3040" xml:space="preserve">
+    <value>Growlithe expedition - boss 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3041" xml:space="preserve">
+    <value>Growlithe expedition - boss 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3042" xml:space="preserve">
+    <value>Growlithe expedition - boss 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3043" xml:space="preserve">
+    <value>Growlithe expedition - boss 4</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3044" xml:space="preserve">
+    <value>Growlithe expedition - boss 5</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3040" xml:space="preserve">
+    <value>Growlithe Half HP boss 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_HALF_3041" xml:space="preserve">
+    <value>Growlithe Half HP boss 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_HALF_3042" xml:space="preserve">
+    <value>Growlithe Half HP boss 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+
+  <data name="TALK_PINCH_3040" xml:space="preserve">
+    <value>Growlithe Pinch HP boss 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_PINCH_3041" xml:space="preserve">
+    <value>Growlithe Pinch HP boss 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_PINCH_3042" xml:space="preserve">
+    <value>Growlithe Pinch HP boss 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+	
+	
+
+  <data name="TALK_FULL_3050" xml:space="preserve">
+    <value>Growlithe expedition - died to boss 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3051" xml:space="preserve">
+    <value>Growlithe expedition - died to boss 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3052" xml:space="preserve">
+    <value>Growlithe expedition - died to boss 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3053" xml:space="preserve">
+    <value>Growlithe expedition - died to boss 4</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+   <data name="TALK_FULL_3054" xml:space="preserve">
+    <value>Growlithe expedition - died to boss 5</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3050" xml:space="preserve">
+    <value>Growlithe Half HP died to boss 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_HALF_3051" xml:space="preserve">
+    <value>Growlithe Half HP died to boss 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_HALF_3052" xml:space="preserve">
+    <value>Growlithe Half HP died to boss 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+
+  <data name="TALK_PINCH_3050" xml:space="preserve">
+    <value>Growlithe Pinch HP died to boss 1</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_PINCH_3051" xml:space="preserve">
+    <value>Growlithe Pinch HP died to boss 2</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+  <data name="TALK_PINCH_3052" xml:space="preserve">
+    <value>Growlithe Pinch HP died to boss 3</value>
+    <comment>Expedition - Growlithe comment</comment>  </data>
+	
+	
+
+  <data name="TALK_FULL_3060" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 0 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3061" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 0 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3062" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 0 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3063" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 0 4</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3064" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 0 5</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3060" xml:space="preserve">
+    <value>Zigzagoon Half HP seg 0 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_HALF_3061" xml:space="preserve">
+    <value>Zigzagoon Half HP seg 0 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_HALF_3062" xml:space="preserve">
+    <value>Zigzagoon Half HP seg 0 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+
+  <data name="TALK_PINCH_3060" xml:space="preserve">
+    <value>Zigzagoon Pinch HP seg 0 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_PINCH_3061" xml:space="preserve">
+    <value>Zigzagoon Pinch HP seg 0 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_PINCH_3062" xml:space="preserve">
+    <value>Zigzagoon Pinch HP seg 0 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
 	
 	
 	
+  <data name="TALK_FULL_3070" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 1 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3071" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 1 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3072" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 1 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3073" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 1 4</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3074" xml:space="preserve">
+    <value>Zigzagoon expedition - seg 1 5</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3070" xml:space="preserve">
+    <value>Zigzagoon Half HP seg 1 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_HALF_3071" xml:space="preserve">
+    <value>Zigzagoon Half HP seg 1 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_HALF_3072" xml:space="preserve">
+    <value>Zigzagoon Half HP seg 1 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+
+  <data name="TALK_PINCH_3070" xml:space="preserve">
+    <value>Zigzagoon Pinch HP seg 1 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_PINCH_3071" xml:space="preserve">
+    <value>Zigzagoon Pinch HP seg 1 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_PINCH_3072" xml:space="preserve">
+    <value>Zigzagoon Pinch HP seg 1 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
 	
 	
+	 
+  <data name="TALK_FULL_3080" xml:space="preserve">
+    <value>Zigzagoon expedition - boss 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3081" xml:space="preserve">
+    <value>Zigzagoon expedition - boss 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3082" xml:space="preserve">
+    <value>Zigzagoon expedition - boss 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3083" xml:space="preserve">
+    <value>Zigzagoon expedition - boss 4</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3084" xml:space="preserve">
+    <value>Zigzagoon expedition - boss 5</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3080" xml:space="preserve">
+    <value>Zigzagoon Half HP boss 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_HALF_3081" xml:space="preserve">
+    <value>Zigzagoon Half HP boss 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_HALF_3082" xml:space="preserve">
+    <value>Zigzagoon Half HP boss 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+
+  <data name="TALK_PINCH_3080" xml:space="preserve">
+    <value>Zigzagoon Pinch HP boss 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_PINCH_3081" xml:space="preserve">
+    <value>Zigzagoon Pinch HP boss 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_PINCH_3082" xml:space="preserve">
+    <value>Zigzagoon Pinch HP boss 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
 	
 	
-	
-	
-	
-	
-	
+
+  <data name="TALK_FULL_3090" xml:space="preserve">
+    <value>Zigzagoon expedition - died to boss 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3091" xml:space="preserve">
+    <value>Zigzagoon expedition - died to boss 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3092" xml:space="preserve">
+    <value>Zigzagoon expedition - died to boss 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3093" xml:space="preserve">
+    <value>Zigzagoon expedition - died to boss 4</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+   <data name="TALK_FULL_3094" xml:space="preserve">
+    <value>Zigzagoon expedition - died to boss 5</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3090" xml:space="preserve">
+    <value>Zigzagoon Half HP died to boss 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_HALF_3091" xml:space="preserve">
+    <value>Zigzagoon Half HP died to boss 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_HALF_3092" xml:space="preserve">
+    <value>Zigzagoon Half HP died to boss 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+
+  <data name="TALK_PINCH_3090" xml:space="preserve">
+    <value>Zigzagoon Pinch HP died to boss 1</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_PINCH_3091" xml:space="preserve">
+    <value>Zigzagoon Pinch HP died to boss 2</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+  <data name="TALK_PINCH_3092" xml:space="preserve">
+    <value>Zigzagoon Pinch HP died to boss 3</value>
+    <comment>Expedition - Zigzagoon comment</comment>  </data>
+
+
+
+  <data name="TALK_FULL_3100" xml:space="preserve">
+    <value>Cranidos Jerk Expedition Comment 1</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+   <data name="TALK_FULL_3101" xml:space="preserve">
+    <value>Cranidos Jerk Expedition Comment 2</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+   <data name="TALK_FULL_3102" xml:space="preserve">
+    <value>Cranidos Jerk Expedition Comment 3</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+   <data name="TALK_FULL_3103" xml:space="preserve">
+    <value>Cranidos Jerk Expedition Comment 4</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+   <data name="TALK_FULL_3104" xml:space="preserve">
+    <value>Cranidos Jerk Expedition Comment 5</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3100" xml:space="preserve">
+    <value>Cranidos Jerk Half HP 1</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+  <data name="TALK_HALF_3101" xml:space="preserve">
+    <value>Cranidos Jerk Half HP 2</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+  <data name="TALK_HALF_3102" xml:space="preserve">
+    <value>Cranidos Jerk Half HP 3</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+
+  <data name="TALK_PINCH_3100" xml:space="preserve">
+    <value>Cranidos Jerk Pinch HP 1</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+  <data name="TALK_PINCH_3101" xml:space="preserve">
+    <value>Cranidos Jerk Pinch HP 2</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+  <data name="TALK_PINCH_3102" xml:space="preserve">
+    <value>Cranidos Jerk Pinch HP 3</value>
+    <comment>Expedition - Cranidos Jerk comment</comment>  </data>
+
+
+
+  <data name="TALK_FULL_3110" xml:space="preserve">
+    <value>Cranidos Timid Expedition Comment 1</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+   <data name="TALK_FULL_3111" xml:space="preserve">
+    <value>Cranidos Timid Expedition Comment 2</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+   <data name="TALK_FULL_3112" xml:space="preserve">
+    <value>Cranidos Timid Expedition Comment 3</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+   <data name="TALK_FULL_3113" xml:space="preserve">
+    <value>Cranidos Timid Expedition Comment 4</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+   <data name="TALK_FULL_3114" xml:space="preserve">
+    <value>Cranidos Timid Expedition Comment 5</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3110" xml:space="preserve">
+    <value>Cranidos Timid Half HP 1</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+  <data name="TALK_HALF_3111" xml:space="preserve">
+    <value>Cranidos Timid Half HP 2</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+  <data name="TALK_HALF_3112" xml:space="preserve">
+    <value>Cranidos Timid Half HP 3</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+
+  <data name="TALK_PINCH_3110" xml:space="preserve">
+    <value>Cranidos Timid Pinch HP 1</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+  <data name="TALK_PINCH_3111" xml:space="preserve">
+    <value>Cranidos Timid Pinch HP 2</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+  <data name="TALK_PINCH_3112" xml:space="preserve">
+    <value>Cranidos Timid Pinch HP 3</value>
+    <comment>Expedition - Cranidos Timid comment</comment>  </data>
+
+
+
+  <data name="TALK_FULL_3120" xml:space="preserve">
+    <value>Cranidos Blushing Expedition Comment 1</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+   <data name="TALK_FULL_3121" xml:space="preserve">
+    <value>Cranidos Blushing Expedition Comment 2</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+   <data name="TALK_FULL_3122" xml:space="preserve">
+    <value>Cranidos Blushing Expedition Comment 3</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+   <data name="TALK_FULL_3123" xml:space="preserve">
+    <value>Cranidos Blushing Expedition Comment 4</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+   <data name="TALK_FULL_3124" xml:space="preserve">
+    <value>Cranidos Blushing Expedition Comment 5</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3120" xml:space="preserve">
+    <value>Cranidos Blushing Half HP 1</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+  <data name="TALK_HALF_3121" xml:space="preserve">
+    <value>Cranidos Blushing Half HP 2</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+  <data name="TALK_HALF_3122" xml:space="preserve">
+    <value>Cranidos Blushing Half HP 3</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+
+  <data name="TALK_PINCH_3120" xml:space="preserve">
+    <value>Cranidos Blushing Pinch HP 1</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+  <data name="TALK_PINCH_3121" xml:space="preserve">
+    <value>Cranidos Blushing Pinch HP 2</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+  <data name="TALK_PINCH_3122" xml:space="preserve">
+    <value>Cranidos Blushing Pinch HP 3</value>
+    <comment>Expedition - Cranidos Blushing comment</comment>  </data>
+
+
+
+  <data name="TALK_FULL_3130" xml:space="preserve">
+    <value>Mareep Expedition Comment 1</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+   <data name="TALK_FULL_3131" xml:space="preserve">
+    <value>Mareep Expedition Comment 2</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+   <data name="TALK_FULL_3132" xml:space="preserve">
+    <value>Mareep Expedition Comment 3</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+   <data name="TALK_FULL_3133" xml:space="preserve">
+    <value>Mareep Expedition Comment 4</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+   <data name="TALK_FULL_3134" xml:space="preserve">
+    <value>Mareep Expedition Comment 5</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+ 
+  <data name="TALK_HALF_3130" xml:space="preserve">
+    <value>Mareep Half HP 1</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+  <data name="TALK_HALF_3131" xml:space="preserve">
+    <value>Mareep Half HP 2</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+  <data name="TALK_HALF_3132" xml:space="preserve">
+    <value>Mareep Half HP 3</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+
+  <data name="TALK_PINCH_3130" xml:space="preserve">
+    <value>Mareep Pinch HP 1</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+  <data name="TALK_PINCH_3131" xml:space="preserve">
+    <value>Mareep Pinch HP 2</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+  <data name="TALK_PINCH_3132" xml:space="preserve">
+    <value>Mareep Pinch HP 3</value>
+    <comment>Expedition - Mareep comment</comment>  </data>
+
+
+
+  <data name="TALK_FULL_9999" xml:space="preserve">
+    <value>This is a personality error message. Please tell Palika what happened leading up to this.</value>
+    <comment>Personality Error Message</comment>  </data>
+  <data name="TALK_HALF_9999" xml:space="preserve">
+    <value>This is a personality error message. Please tell Palika what happened leading up to this.</value>
+    <comment>Personality Error Message</comment>  </data>
+  <data name="TALK_PINCH_9999" xml:space="preserve">
+    <value>This is a personality error message. Please tell Palika what happened leading up to this.</value>
+    <comment>Personality Error Message</comment>  </data>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

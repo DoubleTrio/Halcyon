@@ -175,6 +175,131 @@ COMMON.PERSONALITY[66] = {
 	
 }
 
+
+
+--Expedition - Coco Ally Dialogue
+COMMON.PERSONALITY[300] = { 
+	FULL = {3000, 3001, 3002, 3003, 3004},
+	HALF = {3000, 3001, 3002},
+	PINCH = {3000, 3001, 3002},
+	WAIT = {1000}
+}
+
+--Expedition - Rin Ally Dialogue
+COMMON.PERSONALITY[301] = { 
+	FULL = {3010, 3011, 3012, 3013, 3014},
+	HALF = {3010, 3011, 3012},
+	PINCH = {3010, 3011, 3012},
+	WAIT = {1000}
+}
+
+--Expedition - Hyko Ally Dialogue - First segment of Searing Tunnel
+COMMON.PERSONALITY[302] = { 
+	FULL = {3020, 3021, 3022, 3023, 3024},
+	HALF = {3020, 3021, 3022},
+	PINCH = {3020, 3021, 3022},
+	WAIT = {1000}
+}
+
+--Expedition - Hyko Ally Dialogue - Second segment of Searing Tunnel
+COMMON.PERSONALITY[303] = { 
+	FULL = {3030, 3031, 3032, 3033, 3034},
+	HALF = {3030, 3031, 3032},
+	PINCH = {3030, 3031, 3032},
+	WAIT = {1000}
+}
+
+--Expedition - Hyko Ally Dialogue - Searing Tunnel Boss Fight
+COMMON.PERSONALITY[304] = { 
+	FULL = {3040, 3041, 3042, 3043, 3044},
+	HALF = {3040, 3041, 3042},
+	PINCH = {3040, 3041, 3042},
+	WAIT = {1000}
+}
+
+--Expedition - Hyko Ally Dialogue - Searing Tunnel Died to Boss
+COMMON.PERSONALITY[305] = { 
+	FULL = {3050, 3051, 3052, 3053, 3054},
+	HALF = {3050, 3051, 3052},
+	PINCH = {3050, 3051, 3052},
+	WAIT = {1000}
+}
+
+--Expedition - Almotz Ally Dialogue - First segment of Searing Tunnel
+COMMON.PERSONALITY[306] = { 
+	FULL = {3060, 3061, 3062, 3063, 3064},
+	HALF = {3060, 3061, 3062},
+	PINCH = {3060, 3061, 3062},
+	WAIT = {1000}
+}
+
+--Expedition - Almotz Ally Dialogue - Second segment of Searing Tunnel
+COMMON.PERSONALITY[307] = { 
+	FULL = {3070, 3071, 3072, 3073, 3074},
+	HALF = {3070, 3071, 3072},
+	PINCH = {3070, 3071, 3072},
+	WAIT = {1000}
+}
+
+--Expedition - Almotz Ally Dialogue - Searing Tunnel Boss Fight
+COMMON.PERSONALITY[308] = { 
+	FULL = {3080, 3081, 3082, 3083, 3084},
+	HALF = {3080, 3081, 3082},
+	PINCH = {3080, 3081, 3082},
+	WAIT = {1000}
+}
+
+--Expedition - Almotz Ally Dialogue - Searing Tunnel Died to Boss
+COMMON.PERSONALITY[309] = { 
+	FULL = {3090, 3091, 3092, 3093, 3094},
+	HALF = {3090, 3091, 3092},
+	PINCH = {3090, 3091, 3092},
+	WAIT = {1000}
+}
+
+--Expedition - Ganlon Ally Dialogue - Jerk
+COMMON.PERSONALITY[310] = { 
+	FULL = {3100, 3101, 3102, 3103, 3104},
+	HALF = {3100, 3101, 3102},
+	PINCH = {3100, 3101, 3102},
+	WAIT = {1000}
+}
+--Expedition - Ganlon Ally Dialogue - Next To Shuca
+COMMON.PERSONALITY[311] = { 
+	FULL = {3110, 3111, 3112, 3113, 3114},
+	HALF = {3110, 3111, 3112},
+	PINCH = {3110, 3111, 3112},
+	WAIT = {1000}
+}
+--Expedition - Ganlon Ally Dialogue - Blushing, talking to Shuca
+COMMON.PERSONALITY[312] = { 
+	FULL = {3120, 3121, 3122, 3123, 3124},
+	HALF = {3120, 3121, 3122},
+	PINCH = {3120, 3121, 3122},
+	WAIT = {1000}
+}
+
+--Expedition - Shuca Ally Dialogue
+COMMON.PERSONALITY[313] = { 
+	FULL = {3130, 3131, 3132, 3133, 3134},
+	HALF = {3130, 3131, 3132},
+	PINCH = {3130, 3131, 3132},
+	WAIT = {1000}
+}
+
+
+
+
+
+--Invalid, default personality. Lets you know there was an error and it defaulted to this as a result.
+COMMON.PERSONALITY[999] = {
+	FULL = {9999},
+	HALF = {9999},
+	PINCH = {9999},
+	WAIT = {1000}
+}
+
+
 COMMON.ESSENTIALS = {
   { Index = 1, Hidden = 0, Price = 50},
   { Index = 2, Hidden = 0, Price = 150},

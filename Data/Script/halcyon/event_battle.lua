@@ -688,11 +688,76 @@ function BATTLE_SCRIPT.GuildmateInteract(owner, ownerChar, context, args)
     local mon = _DATA:GetMonster(target.BaseForm.Species)
     local form = mon.Forms[target.BaseForm.Form]
     	
-    local personality = 51
+    local personality = 999--default error personality. 999 has one line, and it's to tell you it's invalid.
 	
 	local dungeon = GAME:GetCurrentDungeon().Name:ToLocal()
 	local segment = _ZONE.CurrentMapID.Segment
         
+		
+	local target_tbl = LTBL(target)
+	local target_importance = target_tbl.Importance
+	
+	--Check story flags and also the species of the char to figure out who's talking and what they'd say.
+	if SV.ChapterProgression.Chapter == 5 then
+		--Expedition arc. Check importance flag that identifies who they are to get personality. Start personalities at 300 for NPCs
+		if target_importance == CharacterEssentials.GetCharacterName('Snubbull', true) then 
+			personality = 300
+		elseif target_importance == CharacterEssentials.GetCharacterName('Audino', true) then 
+			personality = 301
+		elseif target_importance == CharacterEssentials.GetCharacterName('Growlithe', true) then 
+			if segment == 2 then--Boss fight. Dialogue same regardless of boss death status.
+				personality = 304
+			elseif SV.Chapter5.DiedToBoss then--If in segment 0 or 1, and you've died to the boss, different dialogue.
+				personality = 305
+			elseif segment == 1 then --second half, didnt die to boss 
+				personality = 303
+			elseif segment == 0 then -- didnt die to boss
+				personality = 302
+			end 
+		elseif target_importance == CharacterEssentials.GetCharacterName('Zigzagoon', true) then 
+			if segment == 2 then--Boss fight. Dialogue same regardless of boss death status.
+				personality = 308
+			elseif SV.Chapter5.DiedToBoss then--If in segment 0 or 1, and you've died to the boss, different dialogue.
+				personality = 309
+			elseif segment == 1 then --second half, didnt die to boss 
+				personality = 307
+			elseif segment == 0 then -- didnt die to boss
+				personality = 306
+			end 		
+		elseif target_importance == CharacterEssentials.GetCharacterName('Cranidos', true) then 
+			--Run a check to see if Shuca is nearby. If she's next to Ganlon, ganlon acts timid.
+			--Additionally, if you're smart enough to use team mode to talk to Ganlon as Shuca, get ANOTHER personality set where he's blushing.
+			--Otherwise, Ganlon's an asshole.
+			local tbl = LTBL(chara)
+			if tbl.Importance == CharacterEssentials.GetCharacterName('Mareep', true) then
+				UI:SetSpeakerEmotion("Special1")--Blushing 
+				personality = 312
+			else
+				--Check if he's next to shuca if you're not shuca.
+				local nextToShuca = false
+				for i = 0, GAME:GetPlayerPartyCount() - 1, 1 do 
+					local partymember = GAME:GetPlayerPartyMember(i)
+					tbl = LTBL(partymember)
+					if tbl.Importance == 'Shuca' and not partymember.Dead and (partymember.CharLoc - target.CharLoc):Dist8() <= 1 then 
+						nextToShuca = true 
+						break
+					end
+				end
+				
+				if nextToShuca then 
+					personality = 311
+				else 				
+					UI:SetSpeakerEmotion("Determined")
+					personality = 310
+				end
+			end
+			elseif target_importance == CharacterEssentials.GetCharacterName('Mareep', true) then 
+				personality = 313
+			end
+	else--For chapters down the road
+		
+	end
+				
     local personality_group = COMMON.PERSONALITY[personality]
     local pool = {}
     local key = ""

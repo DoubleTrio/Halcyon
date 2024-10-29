@@ -2716,7 +2716,7 @@ function DungeonJobList:DrawMenu()
 	elseif SV.ChapterProgression.Chapter == 5 and self.dungeon == 'searing_tunnel' and _ZONE.CurrentMapID.Segment == 1 then
 		message = "Defeat " .. CharacterEssentials.GetCharacterName("Magcargo") .. "'s clan!"
 	elseif SV.ChapterProgression.Chapter == 5 and self.dungeon == 'mount_windswept' then
-		message = "Proceed through the mountain to the final base camp at [color=#FFC663]Cloven Ruins[color]."	
+		message = "Proceed through the mountain to the final\nbase camp at [color=#FFC663]Cloven Ruins[color]."	
 	else
 		message = "Go as far as you can."
 	end 

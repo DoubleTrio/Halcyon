@@ -9,6 +9,71 @@ function mount_windswept_entrance_ch_5.SetupGround()
 
 end
 
+--for testing 
+function mount_windswept_entrance_ch_5.SetParty()
+	--Clean up the existing spawns, then call SetupGround to spawn them in.
+	--Record the level of Hyko and Almotz for later use. Check to make sure they exist before doing so (mostly just so I can run this scene without needing them in the party)
+	if GAME:GetPlayerPartyCount() > 2 then 
+		SV.GuildSidequests.GrowlitheLevel = GAME:GetPlayerPartyMember(2).Level
+		SV.GuildSidequests.ZigzagoonLevel = GAME:GetPlayerPartyMember(3).Level
+	end
+	
+	--Default the party DESTRUCTIVELY to delete Hyko and Almotz.
+	GeneralFunctions.DefaultParty(false, true)
+	--reinitialize the hero and partner variables after respawning the party.
+	--Failing to do this has later functions try to teleport the "old" versions of them, causing a phantom glitch. dunno why, since i thought i fixed default party...
+	hero = CH('PLAYER')
+	partner = CH('Teammate1')
+	partner.CollisionDisabled = true
+	
+	--Setup Ganlon and Shuca.
+	local cranidos_id = RogueEssence.Dungeon.MonsterID("cranidos", 0, "normal", Gender.Male)
+	local cranidos_monster = _DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, cranidos_id, SV.GuildSidequests.CranidosLevel, "mold_breaker", 0)
+	cranidos_monster.Discriminator = _DATA.Save.Rand:Next()--tbh idk what this is lol
+	cranidos_monster.Nickname = CharacterEssentials.GetCharacterName('Cranidos', true)
+	cranidos_monster.MetAt = "Adventurer's Guild"
+	cranidos_monster.IsPartner = true
+	cranidos_monster.IsFounder = true
+	
+	cranidos_monster:ReplaceSkill("headbutt", 0, true)
+	cranidos_monster:ReplaceSkill("pursuit", 1, false)
+	cranidos_monster:ReplaceSkill("iron_head", 2, true)
+	cranidos_monster:ReplaceSkill("smack_down", 3, true)
+		
+	GAME:AddPlayerTeam(cranidos_monster)
+	cranidos_monster:FullRestore()
+	local talk_evt = RogueEssence.Dungeon.BattleScriptEvent("GuildmateInteract")
+    cranidos_monster.ActionEvents:Add(talk_evt)
+	cranidos_monster:RefreshTraits()
+
+	local mareep_id = RogueEssence.Dungeon.MonsterID("mareep", 0, "normal", Gender.Female)
+	local mareep_monster = _DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, mareep_id, SV.GuildSidequests.MareepLevel, "static", 0)
+	mareep_monster.Discriminator = _DATA.Save.Rand:Next()--tbh idk what this is lol
+	mareep_monster.Nickname = CharacterEssentials.GetCharacterName('Mareep', true)
+	mareep_monster.MetAt = "Adventurer's Guild"
+	mareep_monster.IsPartner = true
+	mareep_monster.IsFounder = true
+	
+	mareep_monster:ReplaceSkill("thunder_shock", 0, true)
+	mareep_monster:ReplaceSkill("thunder_wave", 1, false)
+	mareep_monster:ReplaceSkill("take_down", 2, true)
+	mareep_monster:ReplaceSkill("flatter", 3, false)
+		
+	GAME:AddPlayerTeam(mareep_monster)
+	mareep_monster:FullRestore()
+	local talk_evt = RogueEssence.Dungeon.BattleScriptEvent("GuildmateInteract")
+    mareep_monster.ActionEvents:Add(talk_evt)
+	mareep_monster:RefreshTraits()
+	
+	
+	--Assign importances to identify who they are. Do this instead of just checking species just in case randomizers down the road or something.
+	local cTbl = LTBL(GAME:GetPlayerPartyMember(2))
+	local mTbl = LTBL(GAME:GetPlayerPartyMember(3))
+	
+	cTbl.Importance = cranidos_monster.Nickname
+	mTbl.Importance = mareep_monster.Nickname
+end
+
 
 function mount_windswept_entrance_ch_5.ArrivalCutscene()
 	--It's already night when you arrive. Penticus is pacing around nervously wondering where you are before he realizes you're here

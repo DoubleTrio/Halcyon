@@ -1432,6 +1432,13 @@ function searing_tunnel_entrance_ch_5.ArrivalDinnerNightAndAddressCutscene()
     zigzagoon_monster.ActionEvents:Add(talk_evt)
 	zigzagoon_monster:RefreshTraits()
 	
+	--Assign importances to identify who they are. Do this instead of just checking species just in case randomizers down the road or something.
+	local gTbl = LTBL(GAME:GetPlayerPartyMember(2))
+	local zTbl = LTBL(GAME:GetPlayerPartyMember(3))
+	
+	gTbl.Importance = growlithe_monster.Nickname
+	zTbl.Importance = zigzagoon_monster.Nickname
+	
 
 
 	GAME:GetCurrentGround():RemoveTempChar(breloom)
