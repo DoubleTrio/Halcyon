@@ -78,7 +78,9 @@ function CreateFermentMenu()
 
     -- DESCRIPTION --
     self.description_text = RogueEssence.Menu.DialogueText(
-      STRINGS:Format(MapStrings[current_item.description_key]),
+      
+   
+      STRINGS.MapStrings[current_item.description_key],
       RogueElements.Rect(
         RogueElements.Loc(RogueEssence.Content.GraphicsManager.MenuBG.TileWidth * 2, RogueEssence.Content.GraphicsManager.MenuBG.TileHeight),
         RogueElements.Loc(self.descriptions_menu.Bounds.Width - RogueEssence.Content.GraphicsManager.MenuBG.TileWidth * 4, self.descriptions_menu.Bounds.Height -  RogueEssence.Content.GraphicsManager.MenuBG.TileHeight * 4)
@@ -102,16 +104,16 @@ function CreateFermentMenu()
   end
 
   function CreateFermentMenu:setMenuList()
-    self.menu.MenuElements:Clear()
+    self.menu.Elements:Clear()
     self.cursor = RogueEssence.Menu.MenuCursor(self.menu)
-    self.menu.MenuElements:Add(self.cursor)
+    self.menu.Elements:Add(self.cursor)
     -- self.menu.MenuElements:Add(self.test)
 
-    self.menu.MenuElements:Add(RogueEssence.Menu.MenuText("Café Menu", RogueElements.Loc(16, 8)))
+    self.menu.Elements:Add(RogueEssence.Menu.MenuText("Café Menu", RogueElements.Loc(16, 8)))
     local page_len = RogueEssence.Content.GraphicsManager.TextFont:SubstringWidth("(1/1)")
     self.page_text = RogueEssence.Menu.MenuText("(" .. self.current_page + 1 .. "/" .. self.total_pages .. ")", RogueElements.Loc(self.width - page_len - 10, 8))
-    self.menu.MenuElements:Add(self.page_text)
-    self.menu.MenuElements:Add(RogueEssence.Menu.MenuDivider(RogueElements.Loc(12, 8 + 12), self.menu.Bounds.Width - 12 * 2))
+    self.menu.Elements:Add(self.page_text)
+    self.menu.Elements:Add(RogueEssence.Menu.MenuDivider(RogueElements.Loc(12, 8 + 12), self.menu.Bounds.Width - 12 * 2))
 
     local menu_offset = 16 + 8
     for _, cafe_item in ipairs(self.choices) do
@@ -125,9 +127,9 @@ function CreateFermentMenu()
 
       local display = inv_item:GetDisplayName()
       if cafe_item.can_ferment then
-        self.menu.MenuElements:Add(RogueEssence.Menu.MenuText(display, RogueElements.Loc(16, menu_offset)))
+        self.menu.Elements:Add(RogueEssence.Menu.MenuText(display, RogueElements.Loc(16, menu_offset)))
       else
-        self.menu.MenuElements:Add(RogueEssence.Menu.MenuText(display, RogueElements.Loc(16, menu_offset), Color.Red))
+        self.menu.Elements:Add(RogueEssence.Menu.MenuText(display, RogueElements.Loc(16, menu_offset), Color.Red))
       end
       menu_offset = menu_offset + 14
       item_entry.MaxStack = old_stack
@@ -166,7 +168,8 @@ function CreateFermentMenu()
   function CreateFermentMenu:setDescription()
     --print(table.tostring(self.pages))
     local item = self.pages[self.current_page + 1][self.current_item + 1]
-    self.description_text:SetAndFormatText(STRINGS:Format(self.MapStrings[item.description_key]))
+   
+    self.description_text:SetAndFormatText(STRINGS.MapStrings[item.description_key])
     self.servings_text:SetText("Servings: [color=#00FFFF]" ..  item.servings .. "[color]")
   end
 
