@@ -1,5 +1,9 @@
 ﻿{
+<<<<<<< HEAD
 "Version": "0.8.8.0",
+=======
+"Version": "0.8.7.0",
+>>>>>>> d579cbd (rescue wip)
 "Object": {
 "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[RogueEssence.Data.EntrySummary, RogueEssence]], System.Private.CoreLib",
 "apricorn_grove": {
@@ -412,7 +416,7 @@
 "BagRestrict": -1,
 "KeepTreasure": false,
 "BagSize": -1,
-"Rescues": 0,
+"Rescues": 2,
 "CountedFloors": 8,
 "Rogue": 0,
 "Grounds": [

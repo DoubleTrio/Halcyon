@@ -852,7 +852,7 @@ function COMMON.EnterDungeonMissionCheck(zoneId, segmentID)
   end 
 end
 
-
+  
 function COMMON.ExitDungeonMissionCheck(zoneId, segmentID)
   for name, mission in ipairs(SV.TakenBoard) do
     PrintInfo("Checking Mission: "..tostring(name))
