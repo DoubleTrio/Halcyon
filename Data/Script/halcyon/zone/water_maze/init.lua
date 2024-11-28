@@ -10,10 +10,9 @@ function water_maze.Init(zone)
   PrintInfo("=>> Init_water_maze")
 end
 
-function water_maze.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function water_maze.Rescued(zone, name, mail)
+  COMMON.Rescued(zone, name, mail)
 end
-
 
 function water_maze.ExitSegment(zone, result, rescue, segmentID, mapID)
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine

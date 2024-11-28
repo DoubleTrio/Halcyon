@@ -80,7 +80,7 @@ function CreateFermentMenu()
     self.description_text = RogueEssence.Menu.DialogueText(
       
    
-      STRINGS.MapStrings[current_item.description_key],
+      STRINGS:Format(STRINGS.MapStrings[current_item.description_key]),
       RogueElements.Rect(
         RogueElements.Loc(RogueEssence.Content.GraphicsManager.MenuBG.TileWidth * 2, RogueEssence.Content.GraphicsManager.MenuBG.TileHeight),
         RogueElements.Loc(self.descriptions_menu.Bounds.Width - RogueEssence.Content.GraphicsManager.MenuBG.TileWidth * 4, self.descriptions_menu.Bounds.Height -  RogueEssence.Content.GraphicsManager.MenuBG.TileHeight * 4)

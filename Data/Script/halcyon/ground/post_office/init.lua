@@ -32,57 +32,7 @@ end
 
 function post_office.Enter(map)
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine
-  
   post_office.PlotScripting()
-  --[[
-  local rescue = SV.General.Rescue
-
-  if rescue ~= nil then
-    local chara = CH('Rescue_Owner')
-	UI:SetSpeaker(chara)
-	local result = SV.General.Rescue
-	SV.General.Rescue = nil
-	if result == RogueEssence.Data.GameProgress.ResultType.Rescue then
-		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_001']))
-		local remark_choices =
-		{ 
-		  "It was fun!",
-		  "It was too difficult!",
-		  "All in a day's work.",
-		  "You can do it!",
-		  "You're welcome!",
-		  "Never again...",
-		  "Be careful.",
-		  "We've got your back.",
-		  "Don't forget my reward!"
-		}
-		local filtered_choices = { }
-		local filtered_idx = { }
-		for ii = 1, 4, 1 do
-			local idx = math.random(1, #remark_choices)
-			table.insert(filtered_choices, remark_choices[idx])
-			table.insert(filtered_idx, idx)
-			table.remove(remark_choices, idx)
-		end
-		
-		--UI:BeginChoiceMenu(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_002']), --remark_choices, 1, 1)
-		--UI:WaitForChoice()
-		--local choice = UI:ChoiceResult()
-		--GAME:AddAOKRemark(filtered_idx[choice]-1)
-		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_003']))
-		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_004']))
-	elseif result == RogueEssence.Data.GameProgress.ResultType.Cleared or result == RogueEssence.Data.GameProgress.ResultType.Escaped then
-		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_001']))
-		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_002']))
-		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_003']))
-	else
-		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Fail_001']))
-		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Fail_002']))
-	end
-	
-    GAME:WaitFrames(1);
-  end
-  ]]--
 end
 
 function post_office.Update(map, time)
@@ -99,6 +49,31 @@ end
 
 function post_office.PlotScripting()
 	GAME:FadeIn(20)
+	post_office.RescueMessage()
+end
+
+function post_office.RescueMessage() 
+	local rescue = SV.General.Rescue
+
+  if rescue ~= nil then
+    local chara = CH('Rescue_Owner')
+
+	local result = SV.General.Rescue
+	SV.General.Rescue = nil
+	if result == RogueEssence.Data.GameProgress.ResultType.Rescue then
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_001']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_003']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_004']))
+	elseif result == RogueEssence.Data.GameProgress.ResultType.Cleared or result == RogueEssence.Data.GameProgress.ResultType.Escaped then
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_001']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_002']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_003']))
+	else
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Fail_001']))
+		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Fail_002']))
+	end
+    GAME:WaitFrames(1)
+  end
 end
 --------------------------------------------------
 -- Map Begin Functions
@@ -116,10 +91,11 @@ end
 
 
 function post_office.Main_Desk_Action(obj, activator)
-	GeneralFunctions.StartConversation(chara, "We are still getting set up in here.[pause=0] Please come back again in a later version!")
+	local chara = CH('Connect_Owner')
+	GeneralFunctions.StartConversation(chara, "Testing!")
 	local state = 0
   local repeated = false
-  local chara = CH('Connect_Owner')
+  -- local chara = CH('Connect_Owner')
   UI:SetSpeaker(chara)
   
 	while state > -1 do

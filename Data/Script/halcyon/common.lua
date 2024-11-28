@@ -852,8 +852,21 @@ function COMMON.EnterDungeonMissionCheck(zoneId, segmentID)
   end 
 end
 
-  
-function COMMON.ExitDungeonMissionCheck(zoneId, segmentID)
+function COMMON.EndRescue(zone, result, rescue, segmentID)
+  COMMON.EndDayCycle()
+  local zoneId = 'master_zone'
+  local structureId = -1
+  local mapId = 21
+  local entryId = 1
+  GAME:EndDungeonRun(result, zoneId, structureId, mapId, entryId, true, true)
+  SV.General.Rescue = result
+  GAME:EnterZone(zoneId, structureId, mapId, entryId)
+end
+
+
+
+function COMMON.ExitDungeonMissionCheck(result, rescue, zoneId, segmentID)
+  local exited = false
   for name, mission in ipairs(SV.TakenBoard) do
     PrintInfo("Checking Mission: "..tostring(name))
     if mission.Taken and mission.Completion == COMMON.MISSION_INCOMPLETE and zoneId == mission.Zone and segmentID == mission.Segment then
@@ -861,8 +874,8 @@ function COMMON.ExitDungeonMissionCheck(zoneId, segmentID)
           -- remove the escort from the party
         local escort = COMMON.FindMissionEscort(name)
         if escort then
-		  --Set max team size to 4 as the guest is no longer "taking" up a party slot
-		  RogueEssence.Dungeon.ExplorerTeam.MAX_TEAM_SLOTS = 4
+          --Set max team size to 4 as the guest is no longer "taking" up a party slot
+          RogueEssence.Dungeon.ExplorerTeam.MAX_TEAM_SLOTS = 4
           _DUNGEON:RemoveChar(escort)
         end
       end
@@ -891,6 +904,13 @@ function COMMON.ExitDungeonMissionCheck(zoneId, segmentID)
 			GAME:TakePlayerEquippedItem(i-1, true)
 		end
 	end
+
+  if rescue == true then
+    COMMON.EndRescue(zone, result, segmentID)
+    exited = true
+  end
+  
+  return exited
 	
 end
 

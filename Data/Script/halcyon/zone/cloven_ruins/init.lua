@@ -36,8 +36,7 @@ end
 ---cloven_ruins.Rescued(zone, name, mail)
 --Engine callback function
 function cloven_ruins.Rescued(zone, name, mail)
-
-
+    COMMON.Rescued(zone, name, mail)
 end
 
 return cloven_ruins

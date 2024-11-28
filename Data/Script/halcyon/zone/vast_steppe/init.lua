@@ -25,10 +25,9 @@ function vast_steppe.EnterSegment(zone, rescuing, segmentID, mapID)
 	end
 end
 
-function vast_steppe.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function vast_steppe.Rescued(zone, name, mail)
+	COMMON.Rescued(zone, name, mail)
 end
-
 
 function vast_steppe.ExitSegment(zone, result, rescue, segmentID, mapID)
   GeneralFunctions.RestoreIdleAnim()

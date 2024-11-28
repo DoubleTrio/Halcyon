@@ -32,8 +32,8 @@ function searing_tunnel.EnterSegment(zone, rescuing, segmentID, mapID)
 	
 end
 
-function searing_tunnel.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function searing_tunnel.Rescued(zone, name, mail)
+	COMMON.Rescued(zone, name, mail)
 end
 
 
