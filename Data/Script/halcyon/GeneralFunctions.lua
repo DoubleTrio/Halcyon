@@ -2054,3 +2054,12 @@ function GeneralFunctions.Kangashkhan_Rock_Interact(obj, activator)
 	GROUND:CharEndAnim(hero)
 	
 end
+
+function GeneralFunctions.CheckAllowSetRescue() 
+	local should_rescue = false
+	-- TODO: Adjust conditions for setting rescues
+	if SV.ChapterProgression.Chapter >= 4 then
+		should_rescue = true
+	end
+	GAME:SetRescueAllowed(should_rescue)
+end 

@@ -32,18 +32,15 @@ function apricorn_grove.EnterSegment(zone, rescuing, segmentID, mapID)
 	end
 end
 
-function apricorn_grove.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function apricorn_grove.Rescued(zone, name, mail)
+	COMMON.Rescued(zone, name, mail)
 end
 
 
 function apricorn_grove.ExitSegment(zone, result, rescue, segmentID, mapID)
   GeneralFunctions.RestoreIdleAnim()
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine
-  PrintInfo("=>> ExitSegment_apricorn_grove (Apricorn Grove) result "..tostring(result).." segment "..tostring(segmentID))
-  
-	GAME:SetRescueAllowed(false)
-	
+  PrintInfo("=>> ExitSegment_apricorn_grove (Apricorn Grove) result "..tostring(result).." segment "..tostring(segmentID))  
 	--[[Different dungeon result typeS (cleared, died, etc)
 	       public enum ResultType
         {
@@ -57,8 +54,12 @@ function apricorn_grove.ExitSegment(zone, result, rescue, segmentID, mapID)
             Rescue
         }
 		]]--
-	COMMON.ExitDungeonMissionCheck(zone.ID, segmentID)
-	if result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
+	GeneralFunctions.CheckAllowSetRescue() 
+	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
+
+	if exited == true then
+		--do nothing
+	elseif result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
 
 
 		GAME:WaitFrames(20)
@@ -72,14 +73,14 @@ function apricorn_grove.ExitSegment(zone, result, rescue, segmentID, mapID)
 		SV.TemporaryFlags.MorningWakeup = true 
 		SV.TemporaryFlags.MorningAddress = true 
 		
-	    --Go to dinner if a mission wasn't completed, otherwise, go to 2nd floor
+			--Go to dinner if a mission wasn't completed, otherwise, go to 2nd floor
 		local exit_ground = 6
 		if SV.TemporaryFlags.MissionCompleted then exit_ground = 22 end 
 					
 		--I use the components of the general function version of this so I can have the textbox pop up after the results screen
 		--this saves the game, so it must be called 2nd to last.
 		GAME:EndDungeonRun(result, "master_zone", -1, exit_ground, 0, true, true)
-	
+
 		if not SV.Chapter4.FinishedGrove and result ~= RogueEssence.Data.GameProgress.ResultType.Escaped then --team died before making it to the end for the first time. 
 			UI:SetSpeaker(GAME:GetPlayerPartyMember(1))--set partner as speaker 
 			UI:SetSpeakerEmotion("Pain")

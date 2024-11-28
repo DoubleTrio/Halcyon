@@ -14,10 +14,9 @@ function relic_forest.Init(zone)
 
 end
 
-function relic_forest.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function relic_forest.Rescued(zone, name, mail)
+	COMMON.Rescued(zone, name, mail)
 end
-
 
 function relic_forest.ExitSegment(zone, result, rescue, segmentID, mapID)
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine

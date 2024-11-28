@@ -36,8 +36,7 @@ end
 ---mount_windswept.Rescued(zone, name, mail)
 --Engine callback function
 function mount_windswept.Rescued(zone, name, mail)
-
-
+    COMMON.Rescued(zone, name, mail)
 end
 
 return mount_windswept

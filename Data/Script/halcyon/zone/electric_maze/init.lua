@@ -16,8 +16,8 @@ function electric_maze.Init(zone)
   PrintInfo("=>> Init_electric_maze")
 end
 
-function electric_maze.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function electric_maze.Rescued(zone, name, mail)
+  COMMON.Rescued(zone, name, mail)
 end
 
 

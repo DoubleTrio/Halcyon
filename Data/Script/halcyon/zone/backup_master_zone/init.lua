@@ -15,9 +15,10 @@ function backup_master_zone.AllyInteract(chara, target, zone)
   COMMON.DungeonInteract(chara, target, zone)
 end
 
-function backup_master_zone.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function backup_master_zone.Rescued(zone, name, mail)
+  COMMON.Rescued(zone, name, mail)
 end
+
 
 function backup_master_zone.ExitSegment(zone, result, rescue, segmentID, mapID)
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine

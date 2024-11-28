@@ -16,10 +16,9 @@ function rock_maze.Init(zone)
   PrintInfo("=>> Init_rock_maze")
 end
 
-function rock_maze.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function rock_maze.Rescued(zone, name, mail)
+  COMMON.Rescued(zone, name, mail)
 end
-
 
 function rock_maze.ExitSegment(zone, result, rescue, segmentID, mapID)
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine

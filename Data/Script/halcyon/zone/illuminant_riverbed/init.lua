@@ -19,21 +19,14 @@ function illuminant_riverbed.EnterSegment(zone, rescuing, segmentID, mapID)
 	end
 end
 
-function illuminant_riverbed.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function illuminant_riverbed.Rescued(zone, name, mail)
+  COMMON.Rescued(zone, name, mail)
 end
-
 
 function illuminant_riverbed.ExitSegment(zone, result, rescue, segmentID, mapID)
 	GeneralFunctions.RestoreIdleAnim()
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine
   PrintInfo("=>> ExitSegment_illuminant_riverbed (Illuminant Riverbed) result "..tostring(result).." segment "..tostring(segmentID))
-  GAME:SetRescueAllowed(false)
-	print("================" + SV.ChapterProgression.Chapter + "================")
-	if SV.ChapterProgression.Chapter >= 4 then
-		GAME:SetRescueAllowed(true)
-	end
-
 	
 	--[[Different dungeon result typeS (cleared, died, etc)
 	       public enum ResultType
@@ -48,12 +41,12 @@ function illuminant_riverbed.ExitSegment(zone, result, rescue, segmentID, mapID)
             Rescue
         }
 		]]--
-	COMMON.ExitDungeonMissionCheck(zone.ID, segmentID)
+	GeneralFunctions.CheckAllowSetRescue() 
+	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
 
   if exited == true then
     --do nothing
-	end
-	if result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
+	elseif result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
 
 
 		GAME:WaitFrames(20)
