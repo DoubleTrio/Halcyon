@@ -94,3 +94,9 @@ V0.5.0
 -Replaced Stunky in Crooked Cavern with Purrloin. Avoids an issue with Stunky being a town mon, and also avoids an issue with aftermath breaking your items after defeating stunky to get your item back.
 -Partner's name now stays yellow instead of turning dark blue while alone in Relic Forest during the opening.
 -Improved partner following AI in the overworld.
+-Updated head shaking function to be more like Explorer's (the head shake has less turn frames, but does one more turn iteration than explorer's.)
+-Tuned up all cutscenes to improve the choreography a little bit here and there.
+-Removed a reference to the partner hatching from Chapter 1. 
+-Fixed a bug where Chapter 2's very first cutscene would play again if you saved the game and then quit without leaving the room to see the next cutscene.
+-Increased experience gain in dojo training mazes by 25% to make them better grind spots.
+-When the partner and an NPC overlap in the overworld, the NPC is now given priority when talking to the stack of them. This will help prevent talking to the partner when you mean to talk to an NPC.

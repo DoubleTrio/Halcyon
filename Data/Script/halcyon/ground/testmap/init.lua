@@ -83,6 +83,17 @@ end
 function testmap.EnterMountain_Action(chara, activator)
 GAME:EnterDungeon("mount_windswept", 0, 0, 0, RogueEssence.Data.GameProgress.DungeonStakes.Risk, true, false)
 end
+
+function testmap.FadingTextTest_Action(chara, activator)
+	local partner = CH('Teammate1')
+	UI:SetSpeaker(partner)
+	UI:SetSpeakerEmotion("Pain")
+	UI:WaitShowDialogue("We couldn't hack it...[pause=0][script=0][pause=60]", {function() return GAME:FadeOutFront(false, 60) end})
+	SOUND:PlaySE('Slugma Materialize')
+	GAME:FadeInFront(60)
+
+end
+
 function testmap.Make_Missions_Action(chara, activator)
 	print("Running mission generation!")  
 	MISSION_GEN.ResetBoards()

@@ -31,12 +31,12 @@ function guild_dining_room_ch_1.Snubbull_Action(chara, activator)
 		GROUND:CharTurnToChar(partner, snubbull)	
 		
 
-		GeneralFunctions.Hop(snubbull)
-		GROUND:CharSetEmote(snubbull, "angry", 1)
-		SOUND:PlayBattleSE('EVT_Emote_Complain_2')
+		
+		GeneralFunctions.Complain(snubbull, true)
 		GeneralFunctions.StartConversation(snubbull, "Ugh![pause=0] How many times do I have tell you!?[pause=0] Stop sneaking in here for snacks after dinner!", "Angry", true, true, false)
 		GAME:WaitFrames(20)
 		
+		GROUND:CharSetEmote(snubbull, '', 0)
 		UI:SetSpeakerEmotion("Worried")
 		UI:WaitShowDialogue("Hold on...[pause=0] You're not " .. CharacterEssentials.GetCharacterName("Breloom") .. "...")
 		UI:WaitShowDialogue("Who are you?[pause=0] Only guild members are supposed to be up here on the top floor.")
@@ -44,11 +44,14 @@ function guild_dining_room_ch_1.Snubbull_Action(chara, activator)
 		
 		UI:SetSpeaker(partner)
 		UI:SetSpeakerEmotion('Normal')
-		GROUND:CharTurnToChar(snubbull, partner)
-		UI:WaitShowDialogue("Oh,[pause=10] really?[pause=0] We didn't know that.")
-		UI:WaitShowDialogue("But either way,[pause=10] we're allowed to be up here!")
-		UI:WaitShowDialogue("We just joined the guild earlier today!")
-		UI:WaitShowDialogue("We're exploring different rooms to say hello to everyone.")
+		
+		local coro1 = TASK:BranchCoroutine(function() GAME:WaitFrames(10)
+												GROUND:CharTurnToCharAnimated(snubbull, partner, 4) end)
+		local coro2 = TASK:BranchCoroutine(function() UI:WaitShowDialogue("Oh,[pause=10] really?[pause=0] We didn't know that.")
+												UI:WaitShowDialogue("But either way,[pause=10] we're allowed to be up here!")
+												UI:WaitShowDialogue("We just joined the guild earlier today!")
+												UI:WaitShowDialogue("We're exploring different rooms to say hello to everyone.") end)
+		TASK:JoinCoroutines({coro1, coro2})
 		GAME:WaitFrames(20)
 		
 		UI:SetSpeaker(STRINGS:Format("\\uE040"), true, snubbull.CurrentForm.Species, snubbull.CurrentForm.Form, snubbull.CurrentForm.Skin, snubbull.CurrentForm.Gender)
@@ -70,9 +73,9 @@ function guild_dining_room_ch_1.Snubbull_Action(chara, activator)
 		GROUND:CharSetEmote(snubbull, "angry", 0)
 		UI:WaitShowDialogue("If he's so hungry,[pause=10] he should just eat more at dinner![pause=0] I can't stand him sometimes!")
 		UI:WaitShowDialogue("Does he not like my meals or something!?")
-		GROUND:CharSetEmote(snubbull, "", 0)
 		GAME:WaitFrames(20)
-		
+
+		GROUND:CharSetEmote(snubbull, "", 0)		
 		UI:SetSpeakerEmotion("Sad")
 		UI:WaitShowDialogue("Well,[pause=10] whatever.[pause=0] No use getting too worked up about it...")
 		GAME:WaitFrames(40)
@@ -109,10 +112,12 @@ function guild_dining_room_ch_1.Snubbull_Action(chara, activator)
 		
 		UI:SetSpeaker(partner)
 		UI:SetSpeakerEmotion("Stunned")
-		GROUND:CharTurnToChar(hero, partner)
 		GROUND:CharSetEmote(partner, "sweating", 1)
-		UI:WaitShowDialogue("Err...[pause=0] Yeah,[pause=10] those do sound quite...[pause=0] appetizing...")
-		UI:WaitShowDialogue("(None of those sound any good...[pause=0] I don't even think I've heard of some of those berries before...)")
+		coro1 = TASK:BranchCoroutine(function() GAME:WaitFrames(10)
+												GROUND:CharTurnToCharAnimated(hero, partner, 4) end)
+		coro2 = TASK:BranchCoroutine(function() UI:WaitShowDialogue("Err...[pause=0] Yeah,[pause=10] those do sound quite...[pause=0] appetizing...")
+												UI:WaitShowDialogue("(None of those sound any good...[pause=0] I don't even think I've heard of some of those berries before...)") end)
+		TASK:JoinCoroutines({coro1, coro2})
 		GAME:WaitFrames(20)
 		
 		--hero knows things mechanics wise because the player does, but a player wouldn't actually know anything about how pokemon berries taste (besides basic ones maybe like pecha)
@@ -134,8 +139,10 @@ function guild_dining_room_ch_1.Snubbull_Action(chara, activator)
 		
 		UI:SetSpeaker(snubbull)
 		UI:SetSpeakerEmotion("Special0")
-		GROUND:CharTurnToChar(hero, snubbull)
-		UI:WaitShowDialogue("It's good to see you can recognize my talent as a chef. " .. STRINGS:Format("\\u266A"))
+		coro1 = TASK:BranchCoroutine(function() GAME:WaitFrames(10)
+												GROUND:CharTurnToCharAnimated(hero, snubbull, 4) end)
+		coro2 = TASK:BranchCoroutine(function() UI:WaitShowDialogue("It's good to see you can recognize my talent as a chef. " .. STRINGS:Format("\\u266A")) end)
+		TASK:JoinCoroutines({coro1, coro2})
 		GAME:WaitFrames(20)
 		
 		UI:SetSpeakerEmotion("Normal")
@@ -165,7 +172,7 @@ function guild_dining_room_ch_1.Snubbull_Action(chara, activator)
 		UI:SetSpeaker(snubbull)
 		UI:SetSpeakerEmotion("Special0")
 		UI:WaitShowDialogue("Tomorrow's meal won't be my best work because of the ingredients...")
-		UI:WaitShowDialogue("But I'm sure with my skill and talent you'll enjoy it nonetheless. " .. STRINGS:Format("\\u266A"))
+		UI:WaitShowDialogue("But I'm sure with my skill and talent you'll enjoy it nonetheless.")
 		UI:WaitShowDialogue("I'm looking forward to the day you get to enjoy a truly exquisite meal using the finest ingredients. " .. STRINGS:Format("\\u266A"))
 		SV.Chapter1.MetSnubbull = true
 		--every guildmate is talked to, signal player that they can go sleep now
@@ -182,8 +189,8 @@ function guild_dining_room_ch_1.Snubbull_Action(chara, activator)
 		end
 	else
 		GROUND:CharTurnToChar(snubbull, hero)
-		GeneralFunctions.StartConversation(snubbull, "Tomorrow's meal won't be my best work because of the ingredients...", "Happy")
-		UI:WaitShowDialogue("But I'm sure with my skill and talent you'll enjoy it nonetheless. " .. STRINGS:Format("\\u266A"))
+		GeneralFunctions.StartConversation(snubbull, "Tomorrow's meal won't be my best work because of the ingredients...", "Special0")
+		UI:WaitShowDialogue("But I'm sure with my skill and talent you'll enjoy it nonetheless.")
 		UI:WaitShowDialogue("I'm looking forward to the day you get to enjoy a truly exquisite meal using the finest ingredients. " .. STRINGS:Format("\\u266A"))
 	end
 	

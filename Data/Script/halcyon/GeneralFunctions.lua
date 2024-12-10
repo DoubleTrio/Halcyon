@@ -168,8 +168,8 @@ end
 
 
 function GeneralFunctions.ShakeHead(chara, turnframes, startLeft)
-	
-	if turnframes == nil then turnframes = 4 end
+	--Functionally identical to Explorer's CORO_HEAD_SHAKE_FUNC, but has an extra head turn from explorers.
+	if turnframes == nil then turnframes = 2 end
 	if startLeft == nil then startLeft = true end 
 	
 	initDir = chara.Direction
@@ -177,15 +177,23 @@ function GeneralFunctions.ShakeHead(chara, turnframes, startLeft)
 	local rightDir = GeneralFunctions.NumToDir(GeneralFunctions.DirToNum(chara.Direction) + 1)
 	if startLeft then
 		GROUND:CharAnimateTurnTo(chara, leftDir, turnframes)
+		GAME:WaitFrames(2)
 		GROUND:CharAnimateTurnTo(chara, rightDir, turnframes)
+		GAME:WaitFrames(2)
 		GROUND:CharAnimateTurnTo(chara, leftDir, turnframes)
+		GAME:WaitFrames(2)		
 		GROUND:CharAnimateTurnTo(chara, rightDir, turnframes)
+		GAME:WaitFrames(2)
 		GROUND:CharAnimateTurnTo(chara, initDir, turnframes)
 	else
 		GROUND:CharAnimateTurnTo(chara, rightDir, turnframes)
+		GAME:WaitFrames(2)
 		GROUND:CharAnimateTurnTo(chara, leftDir, turnframes)
+		GAME:WaitFrames(2)
 		GROUND:CharAnimateTurnTo(chara, rightDir, turnframes)
+		GAME:WaitFrames(2)	
 		GROUND:CharAnimateTurnTo(chara, leftDir, turnframes)
+		GAME:WaitFrames(2)
 		GROUND:CharAnimateTurnTo(chara, initDir, turnframes)
 	end
 	
@@ -230,21 +238,20 @@ function GeneralFunctions.LookAround(chara, rotations, turnframes, allDirections
 		for i = 1, rotations, 1 do
 			if turnLeft then
 				GROUND:CharAnimateTurn(chara, leftDir, turnframes, turnLeft)
-				GAME:WaitFrames(10)--pause
+				GAME:WaitFrames(15)--pause
 				turnLeft = false
 			else
 				GROUND:CharAnimateTurn(chara, rightDir, turnframes, turnLeft)
-				GAME:WaitFrames(10)--pause
+				GAME:WaitFrames(15)--pause
 				turnLeft = true
 			end
 		end
 	end
 	if enddir ~= Direction.None and enddir ~= dir then--if a direction to end on was specified and we aren't facing that way, turn there 
 		GROUND:CharAnimateTurnTo(chara, enddir, turnframes)
+		GAME:WaitFrames(15)
 	else GAME:WaitFrames(turnframes * 2)--wait for some time based off how long it could have taken to turn if we dont turn at the end 
 	end
-	GAME:WaitFrames(6)--Wait a short duration before ending
-
 end
 	
 --This function makes it easy to keep the camera in sync with a character moving
@@ -385,6 +392,63 @@ function GeneralFunctions.EmoteAndPause(chara, emote, sound, repetitions)
 	elseif emote == 'Notice' then --this one is the 3 lines
 		emt = "notice"
 		sfx = 'EVT_Emote_Exclaim'
+		pause = 20--this should be more like 20
+	elseif emote == 'Exclaim' then --this one is the !
+		emt = "exclaim"
+		sfx = 'EVT_Emote_Exclaim_2'
+		pause = 25--this should be like, 25? To cover the entirety of it. 30 to give extra time to it...
+	elseif emote == 'Glowing' then 
+		emt = "glowing"
+		sfx = 'EVT_Emote_Startled_2'
+		pause = 22--test this one - should be like 22?
+	elseif emote == 'Sweating' then
+		emt = "sweating"
+		sfx = 'EVT_Emote_Sweating'
+		pause = 40 --The actual length is 26, but 40 typically gives better pacing for this emote
+	elseif emote == 'Question' then
+		emt = "question"
+		sfx = 'EVT_Emote_Confused'
+		pause = 40--this is fine
+	elseif emote == 'Angry' then
+		emt = "angry"
+		sfx = 'EVT_Emote_Complain_2'
+		pause = 40 --Should be like 20ish for one repetition
+		if repetitions == 1 then repetitions = 2 end--Do it twice for default case; once is kinda short and weird looking.
+	elseif emote == 'Shock' then
+		emt = "shock"
+		sfx = 'EVT_Emote_Shock'
+		pause = 30--should be like 30?
+	else--sweatdrop
+		emt = "sweatdrop"
+		sfx = 'EVT_Emote_Sweatdrop'
+		pause = 50--should be 50
+	end
+	
+	GROUND:CharSetEmote(chara, emt, repetitions)
+	
+	if sound and sfx ~= 'null' then 
+		SOUND:PlayBattleSE(sfx)
+	end	
+	GAME:WaitFrames(pause)
+end
+
+--[[
+OLD TIMINGS
+--generic emote function with standardized SFX and pause duration. Shouldn't ALWAYS be used to emote, but is useful to cut down on lines...
+function GeneralFunctions.EmoteAndPause(chara, emote, sound, repetitions)
+	local sfx = 'null'
+	local emt = 'null'
+	local pause = 0
+	
+	if repetitions == nil then repetitions = 1 end
+	
+	if emote == 'Happy' then
+		emt = "happy"
+		sfx = "EVT_Emote_Startled_2"
+		pause = 20--this one is accurate
+	elseif emote == 'Notice' then --this one is the 3 lines
+		emt = "notice"
+		sfx = 'EVT_Emote_Exclaim'
 		pause = 30--this should be more like 20
 	elseif emote == 'Exclaim' then --this one is the !
 		emt = "exclaim"
@@ -424,6 +488,8 @@ function GeneralFunctions.EmoteAndPause(chara, emote, sound, repetitions)
 	end	
 	GAME:WaitFrames(pause)
 end
+]]--
+
 
 
 --Some serious spaghetti code being crafted here...
@@ -961,10 +1027,11 @@ function GeneralFunctions.Monologue(str)
 	UI:SetCenter(false)
 end 
 
+--TODO/NOTE: The hop functions currently don't wait a frame at the peak of the jump like EoS. Need Audino to address base function to fix. When fixed, they should look a bit better.
 function GeneralFunctions.Hop(chara, anim, height, duration, pause, sound)
-	anim = anim or 'None'
+	anim = anim or 'Walk'
 	height = height or 10
-	duration = duration or 10
+	duration = duration or height
 	if pause == nil then pause = true end
 	if sound == nil then sound = false end
 
@@ -983,9 +1050,9 @@ end
 
 --do two hops instead of just one
 function GeneralFunctions.DoubleHop(chara, anim, height, duration, pause, sound)
-	anim = anim or 'None'
-	height = height or 10
-	duration = duration or 10
+	anim = anim or 'Walk'
+	height = height or 6
+	duration = duration or height
 	if pause == nil then pause = true end
 	
 	if sound then
@@ -994,7 +1061,7 @@ function GeneralFunctions.DoubleHop(chara, anim, height, duration, pause, sound)
 	
 	local animId = RogueEssence.Content.GraphicsManager.GetAnimIndex(anim)
 	GROUND:CharSetAction(chara, RogueEssence.Ground.HopGroundAction(chara.Position, chara.Direction, animId, height, duration))
-	GAME:WaitFrames(duration)--need to pause no matter what here because only one hop will show otherwise
+	GAME:WaitFrames(duration + 2)--need to pause no matter what here because only one hop will show otherwise. Need to wait an extra 2 frames, so we can pause for 1 frame between jumps like EoS (the 2nd frame gets eaten up at the start of the jump i think)
 	GROUND:CharSetAction(chara, RogueEssence.Ground.HopGroundAction(chara.Position, chara.Direction, animId, height, duration))
 
 	if pause then --only pause on 2nd hop if pause needed
@@ -1571,8 +1638,7 @@ function GeneralFunctions.Complain(chara, emote)
 	if emote == nil then emote = false end 
 	
 	SOUND:PlayBattleSE('EVT_Emote_Complain_2')
-	GeneralFunctions.Hop(chara)
-	GeneralFunctions.Hop(chara)
+	GeneralFunctions.DoubleHop(chara)
 	if emote then GROUND:CharSetEmote(chara, "angry", 0) end 
 	
 end

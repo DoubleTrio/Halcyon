@@ -229,6 +229,9 @@ function DebugTools:OnUpgrade()
  if SV.ChapterProgression.CurrentStoryDungeon == nil then SV.ChapterProgression.CurrentStoryDungeon = "" end 
  if SV.ChapterProgression.UnlockedAssembly == nil then SV.ChapterProgression.UnlockedAssembly = false end 
  
+ --A flag that should have been included when chapter 2 was made, for flagging if you viewed the first wakeup scene with audino.
+ if SV.Chapter2.FinishedFirstWakeup == nil then SV.Chapter2.FinishedFirstWakeup = false end 
+ 
  --if this is a pre-chapter 3 save, need to initialize chapter 3 in the first place.
  if SV.Chapter3 == nil then SV.Chapter3 = {} end
  
