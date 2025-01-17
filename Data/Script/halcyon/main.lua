@@ -9,9 +9,9 @@
 --------------------------------------------------------------------------------------------------------------
 -- Service Packages
 --------------------------------------------------------------------------------------------------------------
-require 'halcyon.services.config_tools'
 require 'halcyon.services.debug_tools'
 require 'halcyon.services.menu_tools'
 require 'halcyon.services.upgrade_tools'
+require 'halcyon.services.config_tools'
 
 math.randomseed(os.time())
