@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.21.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Data.ZoneData, RogueEssence",
 "Name": {
@@ -9,6 +9,7 @@
 "Released": true,
 "Comment": "4th dungeon of the game.",
 "NoEXP": false,
+"ExpPercent": 100,
 "Level": -1,
 "LevelCap": false,
 "KeepSkills": false,
@@ -16,6 +17,7 @@
 "TeamSize": -1,
 "MoneyRestrict": false,
 "BagRestrict": -1,
+"KeepTreasure": false,
 "BagSize": -1,
 "Persistent": false,
 "Rescues": 1,
@@ -557,6 +559,7 @@
 "Max": 11
 },
 "AllowDeadEnd": false,
+"TraverseFloor": false,
 "Halls": {
 "Min": 6,
 "Max": 8
@@ -1490,6 +1493,7 @@
 "Max": 11
 },
 "AllowDeadEnd": false,
+"TraverseFloor": false,
 "Halls": {
 "Min": 6,
 "Max": 8
@@ -2423,6 +2427,7 @@
 "Max": 11
 },
 "AllowDeadEnd": false,
+"TraverseFloor": false,
 "Halls": {
 "Min": 4,
 "Max": 6
@@ -3356,6 +3361,7 @@
 "Max": 11
 },
 "AllowDeadEnd": false,
+"TraverseFloor": false,
 "Halls": {
 "Min": 4,
 "Max": 6
@@ -4289,6 +4295,7 @@
 "Max": 11
 },
 "AllowDeadEnd": false,
+"TraverseFloor": false,
 "Halls": {
 "Min": 4,
 "Max": 6
@@ -5222,6 +5229,7 @@
 "Max": 11
 },
 "AllowDeadEnd": false,
+"TraverseFloor": false,
 "Halls": {
 "Min": 4,
 "Max": 6
@@ -6155,6 +6163,7 @@
 "Max": 11
 },
 "AllowDeadEnd": false,
+"TraverseFloor": false,
 "Halls": {
 "Min": 4,
 "Max": 6
@@ -7088,6 +7097,7 @@
 "Max": 11
 },
 "AllowDeadEnd": false,
+"TraverseFloor": false,
 "Halls": {
 "Min": 4,
 "Max": 6
@@ -8316,150 +8326,6 @@
 ]
 },
 "Spawns": [
-{
-"Spawn": {
-"Spawn": {
-"BaseForm": {
-"Species": "flabebe",
-"Form": 0,
-"Skin": "",
-"Gender": -1
-},
-"Level": {
-"Min": 10,
-"Max": 12
-},
-"SpecifiedSkills": [
-"tackle",
-"vine_whip",
-"fairy_wind",
-"lucky_chant"
-],
-"Intrinsic": "",
-"Tactic": "wander_dumb_two_range",
-"SpawnConditions": [],
-"SpawnFeatures": [
-{
-"$type": "PMDC.LevelGen.MobSpawnWeak, PMDC"
-}
-]
-},
-"Role": 0
-},
-"Rate": 10,
-"Range": {
-"Min": 2,
-"Max": 3
-}
-},
-{
-"Spawn": {
-"Spawn": {
-"BaseForm": {
-"Species": "flabebe",
-"Form": 4,
-"Skin": "",
-"Gender": -1
-},
-"Level": {
-"Min": 10,
-"Max": 12
-},
-"SpecifiedSkills": [
-"tackle",
-"vine_whip",
-"fairy_wind",
-"lucky_chant"
-],
-"Intrinsic": "",
-"Tactic": "wander_dumb_two_range",
-"SpawnConditions": [],
-"SpawnFeatures": [
-{
-"$type": "PMDC.LevelGen.MobSpawnWeak, PMDC"
-}
-]
-},
-"Role": 0
-},
-"Rate": 10,
-"Range": {
-"Min": 3,
-"Max": 4
-}
-},
-{
-"Spawn": {
-"Spawn": {
-"BaseForm": {
-"Species": "flabebe",
-"Form": 1,
-"Skin": "",
-"Gender": -1
-},
-"Level": {
-"Min": 11,
-"Max": 13
-},
-"SpecifiedSkills": [
-"tackle",
-"vine_whip",
-"fairy_wind",
-"lucky_chant"
-],
-"Intrinsic": "",
-"Tactic": "wander_dumb_two_range",
-"SpawnConditions": [],
-"SpawnFeatures": [
-{
-"$type": "PMDC.LevelGen.MobSpawnWeak, PMDC"
-}
-]
-},
-"Role": 0
-},
-"Rate": 10,
-"Range": {
-"Min": 4,
-"Max": 5
-}
-},
-{
-"Spawn": {
-"Spawn": {
-"BaseForm": {
-"Species": "flabebe",
-"Form": 3,
-"Skin": "",
-"Gender": -1
-},
-"Level": {
-"Min": 11,
-"Max": 13
-},
-"SpecifiedSkills": [
-"tackle",
-"vine_whip",
-"fairy_wind",
-"lucky_chant"
-],
-"Intrinsic": "",
-"Tactic": "wander_dumb_two_range",
-"SpawnConditions": [],
-"SpawnFeatures": [
-{
-"$type": "PMDC.LevelGen.MobSpawnWeak, PMDC"
-}
-]
-},
-"Role": 0
-},
-"Rate": 10,
-"Range": {
-"Min": 5,
-"Max": 6
-}
-},
 {
 "Spawn": {
 "Spawn": {

@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.21.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Ground.GroundMap, RogueEssence",
 "TexSize": 1,
@@ -10411,7 +10411,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -10989,7 +10989,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -11567,7 +11567,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -12145,7 +12145,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -12723,7 +12723,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -13301,7 +13301,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -13879,7 +13879,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -14457,7 +14457,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -15035,7 +15035,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -15613,7 +15613,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -15624,7 +15624,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -16191,7 +16191,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -16202,7 +16202,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -16769,7 +16769,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -16780,7 +16780,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -17347,7 +17347,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -17358,7 +17358,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -17925,7 +17925,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -17936,7 +17936,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -18503,7 +18503,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -18514,7 +18514,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -19081,7 +19081,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -19092,7 +19092,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -19659,7 +19659,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -19670,7 +19670,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -20237,7 +20237,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -20248,7 +20248,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -20815,7 +20815,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -20826,7 +20826,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 1
+"Tags": 0
 },
 {
 "Bounds": {
@@ -21393,7 +21393,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -21971,7 +21971,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -22549,7 +22549,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -23127,7 +23127,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -23705,7 +23705,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -24283,7 +24283,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -24861,7 +24861,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -25439,7 +25439,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -26017,7 +26017,7 @@
 "Width": 8,
 "Height": 8
 },
-"Tags": 0
+"Tags": 1
 }
 ],
 [
@@ -201018,58 +201018,19 @@
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 46,
-"Y": 34
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 46,
-"Y": 35
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 46,
-"Y": 36
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
@@ -201803,58 +201764,19 @@
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 47,
-"Y": 34
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 47,
-"Y": 35
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 47,
-"Y": 36
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
@@ -202525,58 +202447,19 @@
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 48,
-"Y": 34
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 48,
-"Y": 35
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 48,
-"Y": 36
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
@@ -203279,39 +203162,13 @@
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 49,
-"Y": 35
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
 "AutoTileset": "",
 "Associates": [],
-"Layers": [
-{
-"Frames": [
-{
-"Sheet": "Vast_Steppe_Objects",
-"TexLoc": {
-"X": 49,
-"Y": 36
-}
-}
-],
-"FrameLength": 60
-}
-],
+"Layers": [],
 "NeighborCode": -1
 },
 {
@@ -249067,7 +248924,7 @@
 }
 ],
 "AssetName": "vast_steppe_entrance",
-"Music": "",
+"Music": "Sky Peak Prairie.ogg",
 "EdgeView": 1,
 "NoSwitching": false,
 "ViewCenter": null,
@@ -249091,14 +248948,14 @@
 "MapChars": [],
 "GroundObjects": [
 {
-"EntName": "Kangaskhan_Rock",
+"EntName": "Dungeon_Entrance",
 "Direction": 0,
 "EntEnabled": true,
 "EntOrder": 0,
-"triggerType": 0,
+"triggerType": 2,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
-"AnimIndex": "Kangaskhan_Rock",
+"AnimIndex": "",
 "FrameTime": 1,
 "StartFrame": -1,
 "EndFrame": -1,
@@ -249126,10 +248983,94 @@
 "Y": 0
 },
 "Collider": {
-"X": 144,
-"Y": 248,
-"Width": 32,
-"Height": 32
+"X": 208,
+"Y": 176,
+"Width": 96,
+"Height": 8
+}
+},
+{
+"EntName": "Supply_Bag",
+"Direction": 0,
+"EntEnabled": true,
+"EntOrder": 0,
+"triggerType": 0,
+"ObjectAnim": {
+"$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
+"AnimIndex": "Grassy_Bag",
+"FrameTime": 1,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": -1,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"Passable": false,
+"CurrentAnim": {
+"$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
+"AnimIndex": "",
+"FrameTime": 1,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": -1,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"AnimTime": {
+"Ticks": 0
+},
+"Cycles": 0,
+"DrawOffset": {
+"X": 0,
+"Y": 0
+},
+"Collider": {
+"X": 373,
+"Y": 272,
+"Width": 24,
+"Height": 16
+}
+},
+{
+"EntName": "Kangaskhan_Rock",
+"Direction": 0,
+"EntEnabled": true,
+"EntOrder": 0,
+"triggerType": 1,
+"ObjectAnim": {
+"$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
+"AnimIndex": "Kangaskhan_Rock",
+"FrameTime": 1,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": -1,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"Passable": false,
+"CurrentAnim": {
+"$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
+"AnimIndex": "",
+"FrameTime": 1,
+"StartFrame": -1,
+"EndFrame": -1,
+"AnimDir": -1,
+"Alpha": 255,
+"AnimFlip": 0
+},
+"AnimTime": {
+"Ticks": 0
+},
+"Cycles": 0,
+"DrawOffset": {
+"X": 4,
+"Y": 4
+},
+"Collider": {
+"X": 148,
+"Y": 252,
+"Width": 24,
+"Height": 24
 }
 }
 ],
@@ -249157,19 +249098,23 @@
 "BaseSkills": [
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -249214,6 +249159,182 @@
 "Collider": {
 "X": 232,
 "Y": 480,
+"Width": 16,
+"Height": 16
+}
+},
+{
+"NPCName": "Teammate2",
+"NPCChar": {
+"Nickname": "",
+"OriginalUUID": "",
+"OriginalTeam": "",
+"BaseForm": {
+"Species": "missingno",
+"Form": 0,
+"Skin": "normal",
+"Gender": 0
+},
+"Level": 0,
+"EXP": 0,
+"MaxHPBonus": 0,
+"AtkBonus": 0,
+"DefBonus": 0,
+"MAtkBonus": 0,
+"MDefBonus": 0,
+"SpeedBonus": 0,
+"BaseSkills": [
+{
+"SkillNum": "",
+"Charges": 0,
+"CanForget": true
+},
+{
+"SkillNum": "",
+"Charges": 0,
+"CanForget": true
+},
+{
+"SkillNum": "",
+"Charges": 0,
+"CanForget": true
+},
+{
+"SkillNum": "",
+"Charges": 0,
+"CanForget": true
+}
+],
+"BaseIntrinsics": [
+"none"
+],
+"Relearnables": {},
+"Discriminator": 0,
+"MetAt": "",
+"MetLoc": {
+"ID": "",
+"StructID": {
+"Segment": -1,
+"ID": -1
+},
+"EntryPoint": -1
+},
+"DefeatAt": "",
+"DefeatLoc": {
+"ID": "",
+"StructID": {
+"Segment": -1,
+"ID": -1
+},
+"EntryPoint": -1
+},
+"IsFounder": false,
+"IsPartner": false,
+"NameLocked": false,
+"IsFavorite": false,
+"Unrecruitable": false,
+"ActionEvents": [],
+"ScriptVars": null
+},
+"EntName": "TEAMMATE_2",
+"Direction": 5,
+"EntEnabled": true,
+"EntOrder": 0,
+"triggerType": 0,
+"EntityCallbacks": [
+0
+],
+"Collider": {
+"X": 176,
+"Y": 241,
+"Width": 16,
+"Height": 16
+}
+},
+{
+"NPCName": "Teammate3",
+"NPCChar": {
+"Nickname": "",
+"OriginalUUID": "",
+"OriginalTeam": "",
+"BaseForm": {
+"Species": "missingno",
+"Form": 0,
+"Skin": "normal",
+"Gender": 0
+},
+"Level": 0,
+"EXP": 0,
+"MaxHPBonus": 0,
+"AtkBonus": 0,
+"DefBonus": 0,
+"MAtkBonus": 0,
+"MDefBonus": 0,
+"SpeedBonus": 0,
+"BaseSkills": [
+{
+"SkillNum": "",
+"Charges": 0,
+"CanForget": true
+},
+{
+"SkillNum": "",
+"Charges": 0,
+"CanForget": true
+},
+{
+"SkillNum": "",
+"Charges": 0,
+"CanForget": true
+},
+{
+"SkillNum": "",
+"Charges": 0,
+"CanForget": true
+}
+],
+"BaseIntrinsics": [
+"none"
+],
+"Relearnables": {},
+"Discriminator": 0,
+"MetAt": "",
+"MetLoc": {
+"ID": "",
+"StructID": {
+"Segment": -1,
+"ID": -1
+},
+"EntryPoint": -1
+},
+"DefeatAt": "",
+"DefeatLoc": {
+"ID": "",
+"StructID": {
+"Segment": -1,
+"ID": -1
+},
+"EntryPoint": -1
+},
+"IsFounder": false,
+"IsPartner": false,
+"NameLocked": false,
+"IsFavorite": false,
+"Unrecruitable": false,
+"ActionEvents": [],
+"ScriptVars": null
+},
+"EntName": "TEAMMATE_3",
+"Direction": 1,
+"EntEnabled": true,
+"EntOrder": 0,
+"triggerType": 0,
+"EntityCallbacks": [
+0
+],
+"Collider": {
+"X": 199,
+"Y": 215,
 "Width": 16,
 "Height": 16
 }

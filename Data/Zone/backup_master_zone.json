@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.4.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Data.ZoneData, RogueEssence",
 "Name": {
@@ -13,12 +13,15 @@
 "Released": true,
 "Comment": "",
 "NoEXP": false,
+"ExpPercent": 100,
 "Level": -1,
 "LevelCap": false,
+"KeepSkills": false,
 "TeamRestrict": false,
 "TeamSize": -1,
 "MoneyRestrict": false,
 "BagRestrict": -1,
+"KeepTreasure": false,
 "BagSize": -1,
 "Persistent": false,
 "Rescues": 0,
@@ -92,7 +95,8 @@
 "MapID": "test_grounds"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -159,7 +163,8 @@
 "MapID": "base_camp"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -226,7 +231,8 @@
 "MapID": "base_camp_2"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -293,7 +299,8 @@
 "MapID": "forest_camp"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -360,7 +367,8 @@
 "MapID": "cliff_camp"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -427,7 +435,8 @@
 "MapID": "canyon_camp"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -494,7 +503,8 @@
 "MapID": "rest_stop"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -561,7 +571,8 @@
 "MapID": "final_stop"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -628,7 +639,8 @@
 "MapID": "guildmaster_summit"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -695,7 +707,8 @@
 "MapID": "guild_path"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -762,7 +775,8 @@
 "MapID": "guild_hut"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -829,7 +843,8 @@
 "MapID": "luminous_spring"
 }
 }
-]
+],
+"Comment": ""
 },
 {
 "$type": "RogueEssence.LevelGen.LoadGen, RogueEssence",
@@ -896,11 +911,13 @@
 "MapID": "post_office"
 }
 }
-]
+],
+"Comment": ""
 }
 ],
 "ZoneSteps": [],
-"IsRelevant": false
+"IsRelevant": false,
+"Comment": ""
 }
 ],
 "GroundMaps": [

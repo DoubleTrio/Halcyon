@@ -1,23 +1,23 @@
 ﻿{
-"Version": "0.7.15.1",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[RogueEssence.Data.EntrySummary, RogueEssence]], System.Private.CoreLib",
-"super_flee_stairs": {
+"flee_stairs": {
 "$type": "RogueEssence.Data.AIEntrySummary, RogueEssence",
 "Assignable": false,
 "Name": {
-"DefaultText": "Super Flee Stairs",
+"DefaultText": "Flee Stairs",
 "LocalTexts": {}
 },
 "Released": true,
 "Comment": "",
 "SortOrder": 0
 },
-"flee_stairs": {
+"super_flee_stairs": {
 "$type": "RogueEssence.Data.AIEntrySummary, RogueEssence",
 "Assignable": false,
 "Name": {
-"DefaultText": "Flee Stairs",
+"DefaultText": "Super Flee Stairs",
 "LocalTexts": {}
 },
 "Released": true,

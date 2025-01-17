@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.18.2",
+"Version": "0.8.6.0",
 "Object": {
 "$type": "RogueEssence.Data.ZoneData, RogueEssence",
 "Name": {
@@ -9,6 +9,7 @@
 "Released": true,
 "Comment": "In the fourth set of training mazes. Unlocked in Chapter 5.",
 "NoEXP": false,
+"ExpPercent": 125,
 "Level": 13,
 "LevelCap": false,
 "KeepSkills": false,
@@ -16,6 +17,7 @@
 "TeamSize": -1,
 "MoneyRestrict": false,
 "BagRestrict": -1,
+"KeepTreasure": false,
 "BagSize": -1,
 "Persistent": false,
 "Rescues": 0,
@@ -341,6 +343,7 @@
 "Connection": 1
 }
 ],
+"IncludeHalls": false,
 "Spawn": {
 "$type": "RogueEssence.LevelGen.TeamContextSpawner`1[[RogueEssence.LevelGen.MapGenContext, RogueEssence]], RogueEssence",
 "Amount": {
@@ -424,7 +427,8 @@
 }
 }
 }
-]
+],
+"Comment": ""
 },
 "FloorSpan": 5,
 "ZoneSteps": [
@@ -717,7 +721,8 @@
 "Spawns": []
 }
 ],
-"IsRelevant": false
+"IsRelevant": false,
+"Comment": ""
 }
 ],
 "GroundMaps": []

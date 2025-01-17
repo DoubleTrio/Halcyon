@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.4.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Ground.GroundMap, RogueEssence",
 "TexSize": 1,
@@ -145728,6 +145728,7 @@
 "EntName": "Right_Exit",
 "Direction": 0,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 2,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -145769,6 +145770,7 @@
 "EntName": "Food_Partner",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -145810,6 +145812,7 @@
 "EntName": "Food_Hero",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -145851,6 +145854,7 @@
 "EntName": "Food_Mareep",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -145892,6 +145896,7 @@
 "EntName": "Food_Cranidos",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -145933,6 +145938,7 @@
 "EntName": "Food_Girafarig",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -145974,6 +145980,7 @@
 "EntName": "Food_Breloom",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -146015,6 +146022,7 @@
 "EntName": "Food_Tropius",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ItemAnimData, RogueEssence",
@@ -146056,6 +146064,7 @@
 "EntName": "Food_Noctowl",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -146097,6 +146106,7 @@
 "EntName": "Food_Snubbull",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -146138,6 +146148,7 @@
 "EntName": "Food_Audino",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -146179,6 +146190,7 @@
 "EntName": "Food_Growlithe",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -146220,6 +146232,7 @@
 "EntName": "Food_Zigzagoon",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -146261,6 +146274,7 @@
 "EntName": "Food_Big",
 "Direction": 0,
 "EntEnabled": false,
+"EntOrder": 0,
 "triggerType": 0,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -146323,19 +146337,23 @@
 "BaseSkills": [
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -146372,6 +146390,7 @@
 "EntName": "TEAMMATE_1",
 "Direction": 2,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "EntityCallbacks": [
 0
@@ -146389,6 +146408,7 @@
 "EntName": "Main_Entrance_Marker",
 "Direction": 2,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 392,
@@ -146401,6 +146421,7 @@
 "EntName": "Tropius",
 "Direction": 2,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 287,
@@ -146413,6 +146434,7 @@
 "EntName": "Hero",
 "Direction": 0,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 164,
@@ -146425,6 +146447,7 @@
 "EntName": "Partner",
 "Direction": 0,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 140,
@@ -146437,6 +146460,7 @@
 "EntName": "Noctowl",
 "Direction": 4,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 260,
@@ -146449,6 +146473,7 @@
 "EntName": "Cranidos",
 "Direction": 0,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 212,
@@ -146461,6 +146486,7 @@
 "EntName": "Mareep",
 "Direction": 0,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 188,
@@ -146473,6 +146499,7 @@
 "EntName": "Breloom",
 "Direction": 0,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 260,
@@ -146485,6 +146512,7 @@
 "EntName": "Girafarig",
 "Direction": 0,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 236,
@@ -146497,6 +146525,7 @@
 "EntName": "Snubbull",
 "Direction": 4,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 236,
@@ -146509,6 +146538,7 @@
 "EntName": "Audino",
 "Direction": 4,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 212,
@@ -146521,6 +146551,7 @@
 "EntName": "Growlithe",
 "Direction": 4,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 188,
@@ -146533,6 +146564,7 @@
 "EntName": "Zigzagoon",
 "Direction": 4,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 164,

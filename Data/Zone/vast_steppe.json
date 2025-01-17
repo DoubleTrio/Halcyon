@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.22.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Data.ZoneData, RogueEssence",
 "Name": {
@@ -17,6 +17,7 @@
 "TeamSize": -1,
 "MoneyRestrict": false,
 "BagRestrict": -1,
+"KeepTreasure": false,
 "BagSize": -1,
 "Persistent": false,
 "Rescues": 0,
@@ -710,8 +711,8 @@
 "Spawn": {
 "$type": "RogueEssence.LevelGen.TeamContextSpawner`1[[RogueEssence.LevelGen.MapGenContext, RogueEssence]], RogueEssence",
 "Amount": {
-"Min": 5,
-"Max": 7
+"Min": 6,
+"Max": 8
 }
 },
 "Ally": false,
@@ -758,8 +759,8 @@
 },
 "AmountSpawner": {
 "$type": "RogueElements.RandRange, RogueElements",
-"Min": 2,
-"Max": 4
+"Min": 3,
+"Max": 5
 }
 }
 }
@@ -1482,8 +1483,8 @@
 "Spawn": {
 "$type": "RogueEssence.LevelGen.TeamContextSpawner`1[[RogueEssence.LevelGen.MapGenContext, RogueEssence]], RogueEssence",
 "Amount": {
-"Min": 6,
-"Max": 8
+"Min": 7,
+"Max": 9
 }
 },
 "Ally": false,
@@ -1530,8 +1531,8 @@
 },
 "AmountSpawner": {
 "$type": "RogueElements.RandRange, RogueElements",
-"Min": 2,
-"Max": 4
+"Min": 4,
+"Max": 6
 }
 }
 }
@@ -2204,6 +2205,35 @@
 }
 ]
 }
+},
+"Other": {
+"Spawns": [
+{
+"Spawn": {
+"ID": "machine_recall_box",
+"Cursed": false,
+"HiddenValue": "",
+"Amount": 0,
+"Price": 0
+},
+"Rate": 10,
+"Range": {
+"Min": 0,
+"Max": 14
+}
+}
+],
+"SpawnRates": {
+"nodes": [
+{
+"Item": 1,
+"Range": {
+"Min": 0,
+"Max": 14
+}
+}
+]
+}
 }
 }
 },
@@ -2545,7 +2575,7 @@
 },
 {
 "Spawn": 2,
-"Rate": 2,
+"Rate": 5,
 "Range": {
 "Min": 0,
 "Max": 14
@@ -2560,22 +2590,22 @@
 {
 "BaseForm": {
 "Species": "plusle",
-"Form": -1,
+"Form": 0,
 "Skin": "",
 "Gender": -1
 },
 "Level": {
-"Min": 13,
-"Max": 14
+"Min": 14,
+"Max": 15
 },
 "SpecifiedSkills": [
-"spark",
+"electro_ball",
 "helping_hand",
-"encore",
+"swift",
 "thunder_wave"
 ],
 "Intrinsic": "",
-"Tactic": "wander_dumb",
+"Tactic": "wander_dumb_two_range",
 "SpawnConditions": [],
 "SpawnFeatures": [
 {
@@ -2599,13 +2629,13 @@
 {
 "BaseForm": {
 "Species": "minun",
-"Form": -1,
+"Form": 0,
 "Skin": "",
 "Gender": -1
 },
 "Level": {
-"Min": 13,
-"Max": 14
+"Min": 14,
+"Max": 15
 },
 "SpecifiedSkills": [
 "spark",
@@ -2637,7 +2667,7 @@
 }
 ]
 },
-"Rate": 6,
+"Rate": 8,
 "Range": {
 "Min": 0,
 "Max": 14
@@ -3165,7 +3195,7 @@
 }
 ]
 },
-"Rate": 10,
+"Rate": 6,
 "Range": {
 "Min": 0,
 "Max": 7
@@ -3294,7 +3324,7 @@
 }
 ]
 },
-"Rate": 10,
+"Rate": 6,
 "Range": {
 "Min": 0,
 "Max": 7
@@ -3384,7 +3414,7 @@
 }
 ]
 },
-"Rate": 9,
+"Rate": 6,
 "Range": {
 "Min": 7,
 "Max": 14
@@ -3513,7 +3543,7 @@
 }
 ]
 },
-"Rate": 7,
+"Rate": 5,
 "Range": {
 "Min": 7,
 "Max": 14
@@ -3706,7 +3736,7 @@
 "horn_attack",
 "pursuit",
 "rage",
-"scary_face"
+"payback"
 ],
 "Intrinsic": "",
 "Tactic": "wander_dumb",
@@ -3745,7 +3775,7 @@
 "horn_attack",
 "pursuit",
 "rage",
-"scary_face"
+"payback"
 ],
 "Intrinsic": "",
 "Tactic": "wander_dumb",
@@ -3796,7 +3826,7 @@
 "horn_attack",
 "pursuit",
 "rage",
-"scary_face"
+"payback"
 ],
 "Intrinsic": "",
 "Tactic": "wander_dumb",
@@ -3834,7 +3864,7 @@
 "SpecifiedSkills": [
 "stomp",
 "milk_drink",
-"bide",
+"defense_curl",
 "growl"
 ],
 "Intrinsic": "",
@@ -3874,7 +3904,7 @@
 "horn_attack",
 "pursuit",
 "rage",
-"scary_face"
+"payback"
 ],
 "Intrinsic": "",
 "Tactic": "wander_dumb",
@@ -3925,7 +3955,7 @@
 "horn_attack",
 "pursuit",
 "rage",
-"scary_face"
+"payback"
 ],
 "Intrinsic": "",
 "Tactic": "wander_dumb",
@@ -3963,7 +3993,7 @@
 "SpecifiedSkills": [
 "stomp",
 "milk_drink",
-"bide",
+"defense_curl",
 "growl"
 ],
 "Intrinsic": "",
@@ -4589,6 +4619,21 @@
 "HiddenValue": "",
 "Amount": 4,
 "Price": 220,
+"TileLoc": {
+"X": 0,
+"Y": 0
+}
+},
+"Rate": 10
+},
+{
+"Spawn": {
+"IsMoney": false,
+"Cursed": false,
+"Value": "machine_recall_box",
+"HiddenValue": "",
+"Amount": 0,
+"Price": 600,
 "TileLoc": {
 "X": 0,
 "Y": 0

@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.22.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Data.MapStatusData, RogueEssence",
 "Name": {
@@ -33,7 +33,7 @@
 },
 "FadeIn": 0,
 "FadeOut": 0,
-"Layer": 2,
+"Layer": 4,
 "Color": "255, 255, 255, 255"
 },
 "DefaultHidden": true,

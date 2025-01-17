@@ -67,8 +67,9 @@ V0.5.0
 -Mido can now sell Flame and Toxic orbs.
 -Illuminant Riverbed has had its generation updated a bit to make it look more like a river is flowing through it. Thank you Touhou Project for the update!
 -Illuminant Riverbed now has you skipping across rocks to cross the river. Thank you Touhou Project for the update!
--Flabebe has been added to Apricorn Grove. It was always supposed to be there, I just forgot to add it before.
 -All Starters mod now has a wonderful UI for selecting your hero/partner created by MistressNebula!
+-All Starters can now be enabled alongside No Nicknames.
+	-Note: If you already have All Starters or No Nicknames installed in your mod folder, delete their folders and then reinstall with the new versions in the Halcyon Mods folder.
 -Added Quick seed. It temporarily boosts movement speed (as you would expect).
 -Metano Town Kecleon shop now sells Quick seeds, Slow Orbs, and Gravelerocks.
 -Some general item prices like seeds have been adjusted slightly. Adjusted the prices of TMs to better correlate to how good the TM is. Orbs have been scaled a bit differently, typically to be cheaper.
@@ -76,3 +77,26 @@ V0.5.0
 -Fixed a bug with Dion that caused him to not take the right number of sticks from you if the sticks were across multiple stacks and you had just enough sticks to make a Domi Blend.
 -Fixed a bug similar to the two above that occurs when the game would want to send a stackable item you've equipped to storage (for example, entering a dojo maze).
 -Fixed a bug where selling stackables to the Kecleon Shop would only remove 1 in the stack instead of deleting the entire stack properly. These stackable bugs were all caused by a PMDO update changing how the remove player bag/equipped item commands worked, so it's possible you weren't encountering them during your playthrough.
+-Reviver seeds no longer ask if you want to use them and are now automatically used instead.
+-Fixed bad sorting on items that were edited from base PMDO (typically to change their price). Let me know if any items still sort strangely.
+-Some dialogue regarding the player's strange feeling has been edited slightly to better illustrate how that feeling feels.
+-snorlax passerby has been changed to Makuhita.
+-Yamper now has Ball Fetch instead of Static as Ball Fetch now works properly.
+-Fixed a number of minor typos.
+-Updated the "Where would you like to explore?" dungeon choice menu. Resembles Sky's a bit more now, and is compatible with more recent PMDO versions.
+-Updated Gummis to better reflect new Vanilla PMDO behavior. Check Almotz's almanac for information! New behavior should allow for a more even distribution of stat boosts. They're a tad stronger at boosting than in base PMDO, however.
+-Updated Vitamins to reflect new Vanilla PMDO behavior. This means their boost is slightly stronger than before.
+-Update Ezalor's info blurb to better reflect that he can reteach you ANY move you've forgotten, not just level-up moves.
+-Cafe items can no longer be eaten by Pluck, Gluttony's stealing effect, Bug Bite, etc.
+-Some pre-existing scenes have been cleaned up a little in terms of choreography (how the characters move, turn, timings of these, etc.) to improve the scene's look.
+-Updated the description of the Synergy Scarves to be a bit more clear on their main effect.
+-Fixed Team Style having less HP than they should due to a PMDO update reducing the effectiveness of hidden EVs.
+-Replaced Stunky in Crooked Cavern with Purrloin. Avoids an issue with Stunky being a town mon, and also avoids an issue with aftermath breaking your items after defeating stunky to get your item back.
+-Partner's name now stays yellow instead of turning dark blue while alone in Relic Forest during the opening.
+-Improved partner following AI in the overworld.
+-Updated head shaking function to be more like Explorer's (the head shake has less turn frames, but does one more turn iteration than explorer's.)
+-Tuned up all cutscenes to improve the choreography a little bit here and there.
+-Removed a reference to the partner hatching from Chapter 1. 
+-Fixed a bug where Chapter 2's very first cutscene would play again if you saved the game and then quit without leaving the room to see the next cutscene.
+-Increased experience gain in dojo training mazes by 25% to make them better grind spots.
+-When the partner and an NPC overlap in the overworld, the NPC is now given priority when talking to the stack of them. This will help prevent talking to the partner when you mean to talk to an NPC.

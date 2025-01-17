@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.11.0",
+"Version": "0.8.0.0",
 "Object": {
 "$type": "RogueEssence.Data.AITactic, RogueEssence",
 "Name": {
@@ -13,7 +13,7 @@
 "Plans": [
 {
 "$type": "PMDC.Dungeon.FleeStairsPlan, PMDC",
-"stairIds": [
+"StairIds": [
 "stairs_back_down",
 "stairs_back_up",
 "stairs_exit_down",
@@ -21,25 +21,50 @@
 "stairs_go_up",
 "stairs_go_down"
 ],
-"IQ": 224
+"IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.AvoidFoesCornerPlan, PMDC",
-"IQ": 224
+"IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.AttackFoesPlan, PMDC",
 "AttackPattern": 2,
 "PositionPattern": 1,
-"IQ": 96
+"IQ": 96,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
-"IQ": 224
+"IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
-"IQ": 224
+"IQ": 224,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 }
 ]
 }
