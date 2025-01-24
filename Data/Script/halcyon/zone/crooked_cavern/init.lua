@@ -75,7 +75,7 @@ function crooked_cavern.ExitSegment(zone, result, rescue, segmentID, mapID)
 				UI:SetSpeaker(GAME:GetPlayerPartyMember(1))--set partner as speaker 
 				UI:SetSpeakerEmotion("Pain")
 				UI:WaitShowDialogue("Urf...[pause=0] This is harder than I expected...")
-				UI:WaitShowDialogue("We can't continue on like this...[pause=0] Let's call it a day.")
+				GeneralFunctions.DeathFadeOutDialogue(GAME:GetPlayerPartyMember(1), "We can't continue on like this...[pause=0] Let's call it a day.", "Pain")
 				SV.Chapter3.FailedCavern = true--mark that they died before the end so Team Style can taunt them for this.
 				GAME:WaitFrames(20)
 			end

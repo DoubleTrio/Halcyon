@@ -528,7 +528,7 @@ function guild_third_floor_lobby_ch_2.BeforeFirstDinner()
 	TASK:JoinCoroutines({coro1, coro2, coro3, coro4, coro5})
 	
 	GAME:WaitFrames(20)
-	UI:SetSpeakerEmotion("Happy")
+	UI:SetSpeakerEmotion("Special0")
 	UI:WaitShowDialogue("My latest work of art is ready for the public.[pause=0] Follow me for the viewing,[pause=10] if you would. " .. STRINGS:Format("\\u266A"))
 	
 	--partner and hero are confused

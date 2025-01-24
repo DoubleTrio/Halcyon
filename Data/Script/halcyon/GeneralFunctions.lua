@@ -1632,6 +1632,19 @@ function GeneralFunctions.StartPartnerYesNo(dialogue, emotion, heroTurn, default
 	return result
 end 
 
+--Used for the final textline that a character says when dying in a story relevant dungeon.
+--Displays the line, then fades out the textbox like in explorers once the box is cleared.
+--Have to use a bit of a hack to get it to look just right - But should look normal to the player.
+function GeneralFunctions.DeathFadeOutDialogue(chara, dialogue, emotion)
+	UI:SetSpeaker(chara)
+	UI:SetSpeakerEmotion(emotion)
+	UI:WaitShowDialogue(dialogue)
+	UI:SetAutoFinish(true)
+	UI:WaitShowTimedDialogue(string.gsub(dialogue, "%[pause=0%]", "") .. "[script=0]", 60, {function() return GAME:FadeOutFront(false, 60) end})--remove pause=0 to stop unneeded pauses
+	UI:SetAutoFinish(false)
+	GAME:FadeInFront(1)--Quickly undo the fade out on the text layer once the text is cleared - a regular fade out set up on top of this will still be in effect after clearing this
+end
+
 
 --character hops twice and makes angry noise 
 function GeneralFunctions.Complain(chara, emote)

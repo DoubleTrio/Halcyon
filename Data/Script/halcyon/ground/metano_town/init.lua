@@ -1143,7 +1143,16 @@ function metano_town.Musician_Action(obj, activator)
 	GeneralFunctions.StartConversation(chara, STRINGS:Format(STRINGS.MapStrings['Music_Intro']), 'Normal', false, false)
   end
 
-  UI:ShowMusicMenu({'MAIN_001'})
+
+  --Figure out list of songs to not display in music menu.
+  --For now, simply block Anima Core from showing up if the player hasn't gotten to the Anima Core cutscene yet.
+  local spoilers = {}
+  
+  if not SV.Chapter3.FinishedRootScene then 
+    table.insert(spoilers, 'Anima Core.ogg')
+  end
+  
+  UI:ShowMusicMenu(false, spoilers)
   UI:WaitForChoice()
   local result = UI:ChoiceResult()
   if result ~= nil then

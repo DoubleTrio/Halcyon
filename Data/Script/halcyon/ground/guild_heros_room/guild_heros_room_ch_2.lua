@@ -306,11 +306,11 @@ function guild_heros_room_ch_2.FirstNightBedtalk()
 	
 	UI:SetSpeaker(CharacterEssentials.GetCharacterName('Zigzagoon'), true, "", -1, "", RogueEssence.Data.Gender.Unknown)
 	UI:WaitShowDialogue("Yup![pause=0] See you all in the morning!")
-	GAME:WaitFrames(60)
+	GAME:WaitFrames(90)
 	
 	GAME:FadeIn(60)
-	GAME:WaitFrames(20)
 	SOUND:PlayBGM("Goodnight.ogg", true)
+	GAME:WaitFrames(20)
 	--GAME:WaitFrames(20)
 	
 	UI:SetSpeaker(partner:GetDisplayName(), true, "", -1, "", RogueEssence.Data.Gender.Unknown)

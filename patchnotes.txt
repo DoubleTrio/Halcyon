@@ -100,3 +100,4 @@ V0.5.0
 -Fixed a bug where Chapter 2's very first cutscene would play again if you saved the game and then quit without leaving the room to see the next cutscene.
 -Increased experience gain in dojo training mazes by 25% to make them better grind spots.
 -When the partner and an NPC overlap in the overworld, the NPC is now given priority when talking to the stack of them. This will help prevent talking to the partner when you mean to talk to an NPC.
+-Fixed a mistake where Katrine was male instead of female in Metano Town's overworld.

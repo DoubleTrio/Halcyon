@@ -56,7 +56,7 @@ function metano_cafe_ch_3.Initial_Girafarig_Breloom_Conversation(chara, activato
 	UI:SetSpeaker(girafarig)
 	UI:WaitShowDialogue("The three of us wanted to relax before we set out on our expedition.")
 	
-	GAME:WaitFrames(20)
+	GAME:WaitFrames(10)
 	GeneralFunctions.EmoteAndPause(partner, "Question", true)
 	UI:SetSpeaker(partner)
 	UI:SetSpeakerEmotion("Worried")

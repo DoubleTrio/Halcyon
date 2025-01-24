@@ -40,7 +40,7 @@
 },
 "Value": {
 "$type": "PMDC.LevelGen.MapDataStep`1[[RogueEssence.LevelGen.StairsMapGenContext, RogueEssence]], PMDC",
-"Music": "A07. Summit.ogg",
+"Music": "Summit.ogg",
 "TimeLimit": -1,
 "TileSight": 1,
 "CharSight": 1,

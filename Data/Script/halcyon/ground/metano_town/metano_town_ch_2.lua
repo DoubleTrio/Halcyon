@@ -562,12 +562,12 @@ function metano_town_ch_2.NumelTantrumCutscene()
 												  while not stopRunning do 
 													GeneralFunctions.RunInCircle(numel, 12, 2, false, false) end 
 													if not oddishStopped then GeneralFunctions.RunInCircle(numel, 12, 2, false, false) end --do an extra lap to prevent clipping
-													GeneralFunctions.EmoteAndPause(numel, "Exclaim", true) end)	
+													GeneralFunctions.EmoteAndPause(numel, "Exclaim", false) end)	
 	local coro3 = TASK:BranchCoroutine(function() while not stopRunning do 
 													GeneralFunctions.RunInCircle(oddish, 12, 2, false, false) end 
 													oddishStopped = true
 													GROUND:MoveInDirection(oddish, Direction.DownLeft, 12, false, 2) 
-													GeneralFunctions.EmoteAndPause(oddish, "Exclaim", false) end)	
+													GeneralFunctions.EmoteAndPause(oddish, "Exclaim", true) end)	
 	local coro4 = TASK:BranchCoroutine(function() GAME:MoveCamera(428, 464, GeneralFunctions.CalculateCameraFrames(GAME:GetCameraCenter().X, GAME:GetCameraCenter().Y, 428, 464, 3), false)
 												  GAME:WaitFrames(20)
 												  SOUND:PlayBGM('Heartwarming.ogg', false)
@@ -616,7 +616,7 @@ function metano_town_ch_2.NumelTantrumCutscene()
 	
 	GAME:WaitFrames(10)
 	UI:SetSpeaker(numel)
-	GeneralFunctions.ShakeHead(numel)
+	GeneralFunctions.Hop(numel)
 	UI:SetSpeakerEmotion("Normal")
 	UI:WaitShowDialogue("No momma,[pause=10] I've been playing with " .. oddish:GetDisplayName() .. " all day.")
 	
@@ -641,7 +641,7 @@ function metano_town_ch_2.NumelTantrumCutscene()
 	UI:WaitShowDialogue("Please don't make this difficult...")
 	
 	GAME:WaitFrames(10)
-	GeneralFunctions.DoubleHop(numel)
+	GeneralFunctions.Complain(numel)
 	UI:SetSpeaker(numel)
 	UI:SetSpeakerEmotion("Determined")
 	GROUND:CharSetEmote(numel, "happy", 0)
@@ -689,6 +689,7 @@ function metano_town_ch_2.NumelTantrumCutscene()
 	GAME:WaitFrames(20)
 	UI:SetSpeaker(numel)
 	UI:SetSpeakerEmotion("Angry")
+	GROUND:CharSetEmote(numel, "angry", 0)
 	UI:WaitShowDialogue("Not fair![pause=0] I'm sick of you telling me what to do all the time!")
 	UI:WaitShowDialogue("I wish I was grown up so I didn't have to listen to you anymore!")
 	
@@ -703,6 +704,7 @@ function metano_town_ch_2.NumelTantrumCutscene()
 	UI:WaitShowDialogue("Hmmph!")
 	
 	GAME:WaitFrames(10)
+	GROUND:CharSetEmote(numel, "", 0)
 	
 	coro1 = TASK:BranchCoroutine(function() GROUND:AnimateInDirection(camerupt, "Walk", Direction.Left, Direction.Right, 12, 1, 2) 
 											GeneralFunctions.FaceMovingCharacter(camerupt, numel, 4, Direction.DownLeft) end)
@@ -837,8 +839,8 @@ function metano_town_ch_2.Growlithe_Desk_Action(chara, activator)
 		GeneralFunctions.StartConversation(growlithe, "Hope your training went well,[pause=10] ruff!", "Happy")
 		UI:WaitShowDialogue("It's almost time for dinner,[pause=10] ruff![pause=0] Don't miss it or you'll go hungry!")
 	elseif not SV.Chapter2.EnteredRiver then 
-		GeneralFunctions.StartConversation(growlithe, CharacterEssentials.GetCharacterName("Camerupt") .. " passed by here earlier in a panic,[pause=10] ruff...[pause=0] I couldn't even stop her to ask what was wrong!", "Worried")
-		UI:WaitShowDialogue("It's rare to see townfolk worked up like that...[pause=0] I hope everything is OK,[pause=10] ruff...")
+		GeneralFunctions.StartConversation(growlithe, CharacterEssentials.GetCharacterName("Camerupt") .. " passed by here earlier in a panic,[pause=10] ruff...[pause=0]\nI couldn't even stop her to ask what was wrong!", "Worried")
+		UI:WaitShowDialogue("It's rare to see townfolk worked up like that...[pause=0]\nI hope everything is OK,[pause=10] ruff...")
 	else
 		GeneralFunctions.StartConversation(growlithe, "I found out about your mission to find " .. CharacterEssentials.GetCharacterName('Numel') ..".[br]His disappearance explains why " .. CharacterEssentials.GetCharacterName("Camerupt") .. " was so hysterical the other day,[pause=10] ruff.")
 		UI:SetSpeakerEmotion("Happy")
@@ -1057,11 +1059,12 @@ function metano_town_ch_2.Meditite_Action(chara, activator)
 		GeneralFunctions.StartConversation(meditite, "..........", "Normal", false, false)
 		UI:WaitShowDialogue("..........")
 		UI:WaitShowDialogue("...ZZZzzz...")
-		UI:ResetSpeaker()
-		SOUND:PlayBattleSE('EVT_Emote_Sweatdrop')
-		GROUND:CharSetEmote(CH('PLAYER'), "sweatdrop", 1)
 		GROUND:CharSetEmote(CH('Teammate1'), "sweatdrop", 1)
+		GeneralFunctions.EmoteAndPause(CH('PLAYER'), 'sweatdrop', true)
+		UI:ResetSpeaker(false)
+		UI:SetCenter(true)
 		UI:WaitShowDialogue("She appears to have fallen asleep while meditating.")
+		UI:SetCenter(false)
 	else --second day dialogue 
 		GeneralFunctions.StartConversation(meditite, "My mum's tryin' been to teach me" .. ' about "inner peace" and "meditation" and all that...')
 		UI:WaitShowDialogue("But think I don't that it's really fa' me...[pause=0] Just click it doesn't really...")
@@ -1115,7 +1118,7 @@ function metano_town_ch_2.Machamp_Luxray_Dialogue(chara)
 	UI:WaitShowDialogue("Hoo...[pause=0] I tell ya,[pause=10] that's gotta be real rough fer " .. CharacterEssentials.GetCharacterName('Camerupt') .. ".")
     TASK:JoinCoroutines({coro1})
 
-	UI:WaitShowDialogue("After...[pause=0] Well,[pause=10] y'know...")
+	UI:WaitShowDialogue("After...[pause=0] well,[pause=10] y'know...")
 	UI:WaitShowDialogue("And now she's havin' trouble with " .. CharacterEssentials.GetCharacterName('Numel') .. "...")
 	GAME:WaitFrames(20)
 	
@@ -1178,7 +1181,7 @@ end
 function metano_town_ch_2.Oddish_Action(chara, activator)
 	if not SV.Chapter2.FinishedFirstDay then-- first day dialogue 
 		GeneralFunctions.StartConversation(chara, "I wish " .. CharacterEssentials.GetCharacterName('Numel') .. " didn't have to go do his chores...", "Sad")
-		UI:WaitShowDialogue("He's had to do a lot of chores lately...[pause=0] We don't get to play as much as we used to...")
+		UI:WaitShowDialogue("He's had to do a lot of chores lately.[pause=0] We don't get to play as much as we used to...")
 	else 
 		GeneralFunctions.StartConversation(chara, "Where is " .. CharacterEssentials.GetCharacterName('Numel') .. " this morning?[pause=0] I thought he was going to play with us today!", "Sad", false)
 	end
@@ -1400,8 +1403,8 @@ end
 
 
 function metano_town_ch_2.Vileplume_Action(chara, activator)
-	GeneralFunctions.StartConversation(chara, CharacterEssentials.GetCharacterName("Numel") .. " has disappeared...[pause=0] Poor child...", "Sad")
-	UI:WaitShowDialogue("The world really is becoming a more dangerous place...[pause=0] What can we even do about that?")
+	GeneralFunctions.StartConversation(chara, CharacterEssentials.GetCharacterName("Numel") .. " has disappeared...[pause=0] Poor kid.", "Sad")
+	UI:WaitShowDialogue("The world really is becoming a more dangerous place...[pause=0] But what can we even do about it?")
 	GeneralFunctions.EndConversation(chara)
 end 
 

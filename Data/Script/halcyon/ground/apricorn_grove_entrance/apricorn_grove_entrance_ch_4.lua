@@ -42,7 +42,8 @@ function apricorn_grove_entrance_ch_4.FirstAttemptCutscene()
 	
 	GAME:WaitFrames(20)
 	UI:SetSpeaker(partner)
-	UI:WaitShowDialogue("This should be the forest that " .. CharacterEssentials.GetCharacterName("Tropius") .. " told us about.")
+	--UI:WaitShowDialogue("This should be the forest that " .. CharacterEssentials.GetCharacterName("Tropius") .. " told us about.")
+	UI:WaitShowDialogue("This should be the forest that the Guildmaster told us about.")
 	UI:WaitShowDialogue("The opening here must be the entrance to the mystery dungeon.")
 	
 	GAME:WaitFrames(10)

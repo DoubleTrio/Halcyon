@@ -6,6 +6,7 @@
 -- Commonly included lua functions and data
 require 'origin.common'
 require 'halcyon.PartnerEssentials'
+require 'halcyon.GeneralFunctions'
 require 'halcyon.mission_gen'
 
 
@@ -85,12 +86,12 @@ GAME:EnterDungeon("mount_windswept", 0, 0, 0, RogueEssence.Data.GameProgress.Dun
 end
 
 function testmap.FadingTextTest_Action(chara, activator)
-	local partner = CH('Teammate1')
-	UI:SetSpeaker(partner)
-	UI:SetSpeakerEmotion("Pain")
-	UI:WaitShowDialogue("We couldn't hack it...[pause=0][script=0][pause=60]", {function() return GAME:FadeOutFront(false, 60) end})
-	SOUND:PlaySE('Slugma Materialize')
-	GAME:FadeInFront(60)
+	GAME:FadeOut(false, 20)
+	GAME:WaitFrames(20)
+	
+	GeneralFunctions.DeathFadeOutDialogue(CH('Teammate1'), "We couldn't[pause=0] hack it...", "Pain")
+
+	GAME:FadeIn(20)
 
 end
 

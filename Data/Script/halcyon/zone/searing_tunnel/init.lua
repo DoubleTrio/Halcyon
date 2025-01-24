@@ -62,9 +62,7 @@ function searing_tunnel.ExitSegment(zone, result, rescue, segmentID, mapID)
 					--I use the components of the general function version of this so I can have the textbox pop up after the results screen
 					--this saves the game, so it must be called 2nd to last.
 					GAME:EndDungeonRun(result, "master_zone", -1, 47, 0, true, true)
-					UI:SetSpeaker(GAME:GetPlayerPartyMember(2))--set growlithe as speaker 
-					UI:SetSpeakerEmotion("Pain")
-					UI:WaitShowDialogue("Ruff...[pause=0] We got too reckless...")
+					GeneralFunctions.DeathFadeOutDialogue(GAME:GetPlayerPartyMember(2), "Ruff...[pause=0] We got too reckless...", "Pain")--set growlithe as speaker 
 					GAME:WaitFrames(20)
 					GAME:EnterZone("master_zone", -1, 47, 0)--Exit back to Searing Tunnel Entrance
 
@@ -115,9 +113,7 @@ function searing_tunnel.ExitSegment(zone, result, rescue, segmentID, mapID)
 				--I use the components of the general function version of this so I can have the textbox pop up after the results screen
 				--this saves the game, so it must be called 2nd to last.
 				GAME:EndDungeonRun(result, "master_zone", -1, 48, 0, true, true)
-				UI:SetSpeaker(GAME:GetPlayerPartyMember(2))--set growlithe as speaker 
-				UI:SetSpeakerEmotion("Pain")
-				UI:WaitShowDialogue("Ruff...[pause=0] We got too reckless...")
+				GeneralFunctions.DeathFadeOutDialogue(GAME:GetPlayerPartyMember(2), "Ruff...[pause=0] We got too reckless...", "Pain")--set growlithe as speaker 
 				GAME:WaitFrames(20)
 				GAME:EnterZone("master_zone", -1, 48, 0)--Exit back to Searing Tunnel Midpoint
 			else 
@@ -173,9 +169,7 @@ function searing_tunnel.ExitSegment(zone, result, rescue, segmentID, mapID)
 			SV.Chapter5.LostTunnel = true
 			SV.Chapter5.TunnelMidpointState = 'DeathArrival'
 			GAME:EndDungeonRun(result, "master_zone", -1, 48, 0, true, true)
-			UI:SetSpeaker(GAME:GetPlayerPartyMember(2))--set growlithe as speaker 
-			UI:SetSpeakerEmotion("Pain")
-			UI:WaitShowDialogue("Ruff...[pause=0] We got too reckless...")
+			GeneralFunctions.DeathFadeOutDialogue(GAME:GetPlayerPartyMember(2), "Ruff...[pause=0] We got too reckless...", "Pain")--set growlithe as speaker 
 			GAME:WaitFrames(20)
 			GAME:EnterZone("master_zone", -1, 48, 0)--Exit back to Searing Tunnel Midpoint
 		else--beat boss

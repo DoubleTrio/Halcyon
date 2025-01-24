@@ -37,8 +37,8 @@ function luminous_spring_ch_2.FindNumelCutscene()
 	GAME:WaitFrames(10)
 	
 	UI:SetSpeaker(partner)
-	UI:WaitShowDialogue("Hmm...[pause=10] We've made it pretty far...")
-	GAME:WaitFrames(20)
+	UI:WaitShowDialogue("Hmm...[pause=20] We've made it pretty far...")
+	GAME:WaitFrames(10)
 	
 	GROUND:CharTurnToCharAnimated(partner, hero, 4)
 	GROUND:CharTurnToCharAnimated(hero, partner, 4)
@@ -147,7 +147,7 @@ function luminous_spring_ch_2.FindNumelCutscene()
 	UI:WaitShowDialogue("I thought that if I was grown up she couldn't tell me what to do anymore.")
 	UI:WaitShowDialogue("So I snuck out of the house while she was sleeping and came here so I could evolve...[pause=0] But...")
 	GROUND:CharAnimateTurnTo(numel, Direction.Up, 4) 
-	GAME:WaitFrames(10)
+	--GAME:WaitFrames(10)
 	GeneralFunctions.Complain(numel, true)
 	UI:SetSpeakerEmotion("Angry")
 	UI:WaitShowDialogue("The stupid spring doesn't even work![pause=0] I did all this for nothing!")
@@ -178,7 +178,7 @@ function luminous_spring_ch_2.FindNumelCutscene()
 	
 	UI:SetSpeaker(numel)
 	UI:SetSpeakerEmotion("Worried")
-	UI:WaitShowDialogue("I guess you may as well give it a shot...")
+	UI:WaitShowDialogue("I guess you can give it a shot...")
 	
 	GAME:WaitFrames(20)
 	

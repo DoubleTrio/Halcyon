@@ -302,7 +302,7 @@ function SINGLE_CHAR_SCRIPT.OutlawFloor(owner, ownerChar, context, args)
 		local mission_num = args.Mission
 		local mission = SV.TakenBoard[mission_num]
 		outlaw.Nickname = RogueEssence.Dungeon.CharData.GetFullFormName( RogueEssence.Dungeon.MonsterID(mission.Target, 0, "normal", GeneralFunctions.NumToGender(mission.TargetGender)))
-		SOUND:PlayBGM("C07. Outlaw.ogg", true, 20)
+		SOUND:PlayBGM("Outlaw.ogg", true, 20)
 		UI:ResetSpeaker()
 		DUNGEON:CharTurnToChar(outlaw, GAME:GetPlayerPartyMember(0))
 		GeneralFunctions.TeamTurnTo(outlaw)

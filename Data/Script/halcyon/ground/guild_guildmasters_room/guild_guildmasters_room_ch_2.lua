@@ -86,7 +86,7 @@ function guild_guildmasters_room_ch_2.NoctowlTropiusScene()
 	UI:SetSpeaker(noctowl)
 	UI:WaitShowDialogue("Guildmaster.")
 	
-	GAME:WaitFrames(20)
+	GAME:WaitFrames(10)
 	GeneralFunctions.EmoteAndPause(tropius, "Notice", true)
 	GAME:WaitFrames(10)
 	
@@ -113,7 +113,7 @@ function guild_guildmasters_room_ch_2.NoctowlTropiusScene()
 	UI:SetSpeaker(noctowl)
 	UI:WaitShowDialogue("Indeed they are.[pause=0] However,[pause=10] their accomplishment today is not what I wanted to discuss.")
 	
-	GAME:WaitFrames(20)
+	GAME:WaitFrames(10)
 	GeneralFunctions.EmoteAndPause(tropius, "Question", true)
 	UI:SetSpeaker(tropius)
 	UI:SetSpeakerEmotion("Worried")

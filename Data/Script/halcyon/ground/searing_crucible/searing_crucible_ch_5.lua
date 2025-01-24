@@ -395,7 +395,7 @@ function searing_crucible_ch_5.FirstPreBossScene()
     local slugma_anim_right_4 = RogueEssence.Content.StaticAnim(materializeAnimRight, 1)
     
 
-    --A13. Threat.ogg
+    --Threat.ogg
     SOUND:PlayBGM('Rising Fear.ogg', true)
 
 	--4 sets of spawning
