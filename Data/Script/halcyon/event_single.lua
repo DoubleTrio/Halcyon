@@ -466,15 +466,16 @@ function SINGLE_CHAR_SCRIPT.OnMonsterHouseOutlawCheck(owner, ownerChar, context,
 end
 
 function SINGLE_CHAR_SCRIPT.SpawnOutlaw(owner, ownerChar, context, args) 
-	if context.User == GAME:GetPlayerPartyMember(0) then
-		local mission_num = args.Mission
-		local curr_mission = SV.TakenBoard[mission_num]
-		if curr_mission.Completion == COMMON.MISSION_INCOMPLETE then
-			local origin = _DATA.Save.ActiveTeam.Leader.CharLoc
-			local radius = 3
-			SpawnOutlaw(origin, radius, mission_num)
-		end
+	if context.User ~= nil then
+    return
 	end
+  local mission_num = args.Mission
+  local curr_mission = SV.TakenBoard[mission_num]
+  if curr_mission.Completion == COMMON.MISSION_INCOMPLETE then
+    local origin = _DATA.Save.ActiveTeam.Leader.CharLoc
+    local radius = 3
+    SpawnOutlaw(origin, radius, mission_num)
+  end
 end
 
 function SINGLE_CHAR_SCRIPT.OutlawCheck(owner, ownerChar, context, args)
