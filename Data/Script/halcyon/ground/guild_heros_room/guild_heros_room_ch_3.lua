@@ -70,7 +70,7 @@ function guild_heros_room_ch_3.PostOutlawBedtalkFirstHalf()
 
 	GAME:WaitFrames(20)
 	--GeneralFunctions.StopTremble(partner)
-	GeneralFunctions.ShakeHead(partner, 4)
+	GeneralFunctions.ShakeHead(partner)
 	GAME:WaitFrames(20)
 	UI:SetSpeaker(partner)
 	UI:SetSpeakerEmotion("Sad")

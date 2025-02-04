@@ -54,29 +54,29 @@ end
 
 --used for having apprentices leave towards the stairs
 function guild_third_floor_lobby_helper.ApprenticeLeave(chara)
-	GeneralFunctions.EightWayMove(chara, 544, 280, false, 1)
-	GeneralFunctions.EightWayMove(chara, 628, 200, false, 1)
+	GeneralFunctions.EightWayMove(chara, 544, 280, false, 1.2)
+	GeneralFunctions.EightWayMove(chara, 628, 200, false, 1.2)
 	GAME:GetCurrentGround():RemoveTempChar(chara)
 
 end
 
 --used for having apprentices leave towards the stairs
 function guild_third_floor_lobby_helper.ApprenticeLeaveBottom(chara)
-	GeneralFunctions.EightWayMove(chara, 552, 312, false, 1)
-	GeneralFunctions.EightWayMove(chara, 648, 208, false, 1)
+	GeneralFunctions.EightWayMove(chara, 552, 312, false, 1.2)
+	GeneralFunctions.EightWayMove(chara, 648, 208, false, 1.2)
 	GAME:GetCurrentGround():RemoveTempChar(chara)
 end
 
 --used for having apprentices leave towards the stairs - shorter to end cutscene faster
 function guild_third_floor_lobby_helper.ApprenticeLeaveFast(chara)
-	GeneralFunctions.EightWayMove(chara, 552, 280, false, 1)
+	GeneralFunctions.EightWayMove(chara, 552, 280, false, 1.2)
 	GAME:GetCurrentGround():RemoveTempChar(chara)
 
 end
 
 --used for having apprentices leave towards the stairs - shorter to end cutscene faster
 function guild_third_floor_lobby_helper.ApprenticeLeaveBottomFast(chara)
-	GeneralFunctions.EightWayMove(chara, 552, 312, false, 1)
+	GeneralFunctions.EightWayMove(chara, 552, 312, false, 1.2)
 	GAME:GetCurrentGround():RemoveTempChar(chara)
 
 end

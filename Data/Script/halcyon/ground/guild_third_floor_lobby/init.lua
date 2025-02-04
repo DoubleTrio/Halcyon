@@ -264,6 +264,7 @@ function guild_third_floor_lobby.MorningAddress(generic)
 	GROUND:CharEndAnim(hero)	
 	
 	--everyone leaves
+	--TODO? Make this look less robotic, but honestly can't figure out a good way to handle it that is quick and logical
 	GAME:WaitFrames(40)
 	local coro1 = TASK:BranchCoroutine(function() guild_third_floor_lobby_helper.ApprenticeLeave(growlithe) end)
 	local coro2 = TASK:BranchCoroutine(function() --GAME:WaitFrames(6) 

@@ -63,6 +63,7 @@ function guild_storage_hallway_ch_1.MeetAudino()
 	UI:SetSpeakerEmotion("Pain")
 	SOUND:StopBGM()
 	
+	--TODO: add animations for audino getting knocked to the ground as well if she ever gets animations for it.
 	--you two dopes run into each other
 	SOUND:PlayBattleSE('EVT_Tackle')
 	coro1 = TASK:BranchCoroutine(function() GROUND:AnimateInDirection(hero, "Pain", Direction.Left, Direction.Right, 4, 1, 4) 
@@ -85,7 +86,7 @@ function guild_storage_hallway_ch_1.MeetAudino()
 	GAME:WaitFrames(20)
 	
 	
-	GeneralFunctions.ShakeHead(audino, 4, true)
+	GeneralFunctions.ShakeHead(audino, nil, true)
 	GAME:WaitFrames(20)
 	GeneralFunctions.EmoteAndPause(audino, "Exclaim", true)
 	UI:SetSpeakerEmotion("Surprised")
@@ -162,7 +163,7 @@ function guild_storage_hallway_ch_1.MeetAudino()
 	UI:WaitShowDialogue("We just joined the guild a little while ago.")
 	GAME:WaitFrames(20)
 	
-	GROUND:EntTurn(audino, Direction.DownRight)
+	GROUND:CharAnimateTurnTo(audino, Direction.DownRight, 4)
 	UI:SetSpeaker(STRINGS:Format("\\uE040"), true, audino.CurrentForm.Species, audino.CurrentForm.Form, audino.CurrentForm.Skin, audino.CurrentForm.Gender)
 	UI:SetSpeakerEmotion("Worried")
 	UI:WaitShowDialogue("New guild members?[pause=0] That's more work to add to my chore list...")

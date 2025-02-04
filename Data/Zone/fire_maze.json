@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.8.0.0",
+"Version": "0.8.6.0",
 "Object": {
 "$type": "RogueEssence.Data.ZoneData, RogueEssence",
 "Name": {
@@ -9,7 +9,7 @@
 "Released": true,
 "Comment": "In the second set of training mazes. Unlocked in Chapter 3.",
 "NoEXP": false,
-"ExpPercent": 100,
+"ExpPercent": 125,
 "Level": 7,
 "LevelCap": false,
 "KeepSkills": false,

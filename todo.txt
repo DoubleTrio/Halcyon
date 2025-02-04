@@ -1,0 +1,5 @@
+-Make sure Audino fixes groundactionhop to have the waitframe at the peak of the jump.
+-Slower walking speed updates now that it's possible in ch5 guild scene and ch5 boss first encounter
+-Textbox fade outs on story deaths (audino must fix the current method for this)
+-Fix Anima Core song so that it has the same minor delay before kicking in as all other songs do.
+-Adjust music unlocking. Leave "innocent" songs unlocked by default, but custom or more serious songs can be unlocked later, when they play for the first time.

@@ -210,15 +210,15 @@ function guild_third_floor_lobby_ch_3.FirstMorningAddress()
 												  GAME:WaitFrames(30)
 												  GROUND:CharAnimateTurnTo(hero, Direction.UpRight, 4) end)
 	
-	local coro10 = TASK:BranchCoroutine(function() GROUND:MoveInDirection(mareep, Direction.Right, 64, false, 1)
+	local coro10 = TASK:BranchCoroutine(function() GROUND:MoveToPosition(mareep, mareep.Position.X + 64, mareep.Position.Y, false, 1.2)
 												   GeneralFunctions.EmoteAndPause(mareep, "Exclaim", true) end)
-	local coro11 = TASK:BranchCoroutine(function() GROUND:MoveInDirection(cranidos, Direction.Right, 80, false, 1)
+	local coro11 = TASK:BranchCoroutine(function() GROUND:MoveToPosition(cranidos, cranidos.Position.X + 80, cranidos.Position.Y, false, 1.2)
 												   GeneralFunctions.EmoteAndPause(cranidos, "Exclaim", false) end)
 
-	local coro12 = TASK:BranchCoroutine(function() GAME:WaitFrames(40)
+	local coro12 = TASK:BranchCoroutine(function() GAME:WaitFrames(30)
 												   GROUND:CharAnimateTurnTo(noctowl, Direction.Right, 4)
 												   GROUND:CharSetEmote(noctowl, "happy", 0)
-												   UI:WaitShowTimedDialogue(mareep:GetDisplayName() .. "![pause=20] " .. cranidos:GetDisplayName() .. "![pause=20] Could you both come here a moment?", 60) end)
+												   UI:WaitShowTimedDialogue(mareep:GetDisplayName() .. "![pause=15] " .. cranidos:GetDisplayName() .. "![pause=20] Could you both come here a moment?", 60) end)
 												   
 												
 	TASK:JoinCoroutines({coro1, coro2, coro3, coro4, coro5, coro6, coro7, coro8, coro9, coro10, coro11, coro12})
@@ -403,18 +403,18 @@ end
 
 --used to have apprentices path around shuca and ganlon
 function guild_third_floor_lobby_ch_3.ModifiedApprenticeLeave(chara)
-	GeneralFunctions.EightWayMove(chara, 504, 280, false, 1)
-	GeneralFunctions.EightWayMove(chara, 560, 256, false, 1)
-	GeneralFunctions.EightWayMove(chara, 628, 200, false, 1)
+	GeneralFunctions.EightWayMove(chara, 504, 280, false, 1.2)
+	GeneralFunctions.EightWayMove(chara, 560, 256, false, 1.2)
+	GeneralFunctions.EightWayMove(chara, 628, 200, false, 1.2)
 	GAME:GetCurrentGround():RemoveTempChar(chara)
 
 end
 
 --used to have apprentices path around shuca and ganlon
 function guild_third_floor_lobby_ch_3.ModifiedApprenticeLeaveBottom(chara)
-	GeneralFunctions.EightWayMove(chara, 520, 312, false, 1)
-	GeneralFunctions.EightWayMove(chara, 576, 336, false, 1)
-	GeneralFunctions.EightWayMove(chara, 644, 276, false, 1)
+	GeneralFunctions.EightWayMove(chara, 520, 312, false, 1.2)
+	GeneralFunctions.EightWayMove(chara, 576, 336, false, 1.2)
+	GeneralFunctions.EightWayMove(chara, 644, 276, false, 1.2)
 	GAME:GetCurrentGround():RemoveTempChar(chara)
 end
 

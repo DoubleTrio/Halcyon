@@ -364,7 +364,7 @@ function metano_town_ch_2.MarketIntro()
 	GAME:FadeIn(20)
 	
 	
-	GAME:WaitFrames(20)
+	GAME:WaitFrames(10)
 	GROUND:CharTurnToCharAnimated(partner, hero, 4)
 	GROUND:CharTurnToCharAnimated(hero, partner, 4)
 	UI:SetSpeaker(partner)
@@ -381,6 +381,7 @@ function metano_town_ch_2.MarketIntro()
 	
 	UI:SetSpeakerEmotion("Worried")
 	UI:WaitShowDialogue("Let's see,[pause=10] where to start...")
+	GAME:WaitFrames(10)
 	
 	GeneralFunctions.LookAround(partner, 4, 4, true, false, false, Direction.UpRight)
 	GAME:WaitFrames(10)
@@ -394,25 +395,26 @@ function metano_town_ch_2.MarketIntro()
 	UI:WaitShowDialogue("It's right over this way![pause=0] Follow me!")
 	
 	GAME:WaitFrames(20)
-	local coro1 = TASK:BranchCoroutine(function() GeneralFunctions.EightWayMove(partner, 984, 1208, false, 1)
+	local coro1 = TASK:BranchCoroutine(function() GROUND:CharAnimateTurnTo(partner, Direction.DownRight, 4)
+												  GeneralFunctions.EightWayMove(partner, 984, 1208, false, 1)
 												  GeneralFunctions.EightWayMove(partner, 1032, 1208, false, 1)
 												  GeneralFunctions.EightWayMove(partner, 1096, 1136, false, 1)
 												  GeneralFunctions.EightWayMove(partner, 1096, 944, false, 1)
 												  GeneralFunctions.EightWayMove(partner, 1152, 904, false, 1)
 												  GROUND:CharAnimateTurnTo(partner, Direction.Left, 4) end)
-	local coro2 = TASK:BranchCoroutine(function() GAME:WaitFrames(7)
+	local coro2 = TASK:BranchCoroutine(function() GAME:WaitFrames(15)
+												  GROUND:CharAnimateTurnTo(hero, Direction.DownRight, 4)
 												  GeneralFunctions.EightWayMove(hero, 984, 1208, false, 1)
 												  GeneralFunctions.EightWayMove(hero, 1032, 1208, false, 1)
 												  GeneralFunctions.EightWayMove(hero, 1096, 1136, false, 1)
 												  GeneralFunctions.EightWayMove(hero, 1096, 944, false, 1)
 												  GeneralFunctions.EightWayMove(hero, 1120, 904, false, 1)
 												  GROUND:CharAnimateTurnTo(hero, Direction.Right, 4) end)
-	local coro3 = TASK:BranchCoroutine(function() --GAME:WaitFrames(4)
+	local coro3 = TASK:BranchCoroutine(function() GAME:MoveCamera(936, 1160, 12, false)
 												  GAME:MoveCamera(992, 1216, 56, false)
-												  GAME:MoveCamera(1040, 1216, 48, false)
-												  GAME:MoveCamera(1048, 1208, 8, false)
-												  GAME:MoveCamera(1104, 1144, 64, false)
-												  GAME:MoveCamera(1104, 952, 192, false)
+												  GAME:MoveCamera(1040, 1216, 48, false)												  												  
+												  GAME:MoveCamera(1104, 1152, 64, false)
+												  GAME:MoveCamera(1104, 952, 200, false)
 												  GAME:MoveCamera(1128, 928, 24, false)
 												  GAME:MoveCamera(1128, 912, 16, false)
 												  GAME:MoveCamera(1144, 912, 16, false) end)
@@ -614,7 +616,7 @@ function metano_town_ch_2.NumelTantrumCutscene()
 	
 	GAME:WaitFrames(10)
 	UI:SetSpeaker(numel)
-	GeneralFunctions.Hop(numel)
+	GeneralFunctions.ShakeHead(numel)
 	UI:SetSpeakerEmotion("Normal")
 	UI:WaitShowDialogue("No momma,[pause=10] I've been playing with " .. oddish:GetDisplayName() .. " all day.")
 	
@@ -915,7 +917,7 @@ function metano_town_ch_2.Wooper_Siblings_Introduction(chara)
 	UI:WaitShowDialogue("Would you two STOP.")
 	--TASK:JoinCoroutines({coro1, coro2})
 	UI:WaitShowDialogue("We've been here for hours already trying to figure out what we're doing and now the day's almost over!")
-	UI:SetSpeakerEmotion("Worried")
+	UI:SetSpeakerEmotion("Determined")
 	UI:WaitShowDialogue("Can't you just pick something,[pause=10] PLEASE?")
 	GAME:WaitFrames(20)
 	
@@ -948,7 +950,7 @@ function metano_town_ch_2.Wooper_Siblings_Introduction(chara)
 	GAME:WaitFrames(20)
 	
 	UI:SetSpeaker(electrike)
-	UI:SetSpeakerEmotion('Pain')
+	UI:SetSpeakerEmotion('Worried')
 	GeneralFunctions.EmoteAndPause(electrike, "Sweatdrop", true)
     --coro1 = TASK:BranchCoroutine(function() GROUND:CharTurnToCharAnimated(partner, electrike, 4) end)
     --coro2 = TASK:BranchCoroutine(function() GROUND:CharTurnToCharAnimated(hero, electrike, 4) end)
@@ -1036,7 +1038,7 @@ function metano_town_ch_2.Electrike_Action(chara, activator)
 	local hero = CH('PLAYER')
 	local electrike = chara
 	if SV.Chapter2.WooperIntro then
-		GeneralFunctions.StartConversation(electrike, "Help.[pause=0] ME.", "Pain")
+		GeneralFunctions.StartConversation(electrike, "Help.[pause=0] Me.", "Worried")
 		GeneralFunctions.EndConversation(electrike)
 	else
 		metano_town_ch_2.Wooper_Siblings_Introduction(chara)
@@ -1159,8 +1161,8 @@ end
 	
 
 function metano_town_ch_2.Nidorina_Action(chara, activator)
-	GeneralFunctions.StartConversation(chara, "........Are you two in an adventuring team?")
-	UI:WaitShowDialogue("........Lame.")
+	GeneralFunctions.StartConversation(chara, "...[pause=30]...Are you two in an adventuring team?")
+	UI:WaitShowDialogue("...[pause=30]...Lame.")
 	GeneralFunctions.EndConversation(chara)
 end
 		
@@ -1315,7 +1317,7 @@ end
 
 function metano_town_ch_2.Ludicolo_Action(chara, activator)
 	GeneralFunctions.StartConversation(chara, "Yah![pause=0] This is the best spot in town to dance!", "Normal", true, false)
-	UI:WaitShowDialogue("There's lots of open space and " .. CharacterEssentials.GetCharacterName("Chatot") .. " by the tree there plays the best music![pause=0] I can't get enough of his tunes!")
+	UI:WaitShowDialogue("There's lots of open space,[pause=10] and " .. CharacterEssentials.GetCharacterName("Chatot") .. " by the tree there plays the best music![pause=0] I can't get enough of his tunes!")
 	GeneralFunctions.EndConversation(chara)
 end
 
@@ -1324,7 +1326,7 @@ function metano_town_ch_2.Mareep_Action(chara, activator)
 	GeneralFunctions.StartConversation(chara, "Hey you two![pause=0] Hope your first day was grea-a-a-t!", "Happy")
 	UI:SetSpeakerEmotion("Normal")
 	UI:WaitShowDialogue("Me and " .. CharacterEssentials.GetCharacterName("Cranidos") .. " are resting here after catching the day's ba-a-a-addies!")
-	UI:WaitShowDialogue("We're gonna head to the guild in a little bit though.[pause=0] See you at dinner!")
+	UI:WaitShowDialogue("We're gonna head to the guild in a little bit.[pause=0]\nSee you at dinner!")
 	GeneralFunctions.EndConversation(chara)
 end
 

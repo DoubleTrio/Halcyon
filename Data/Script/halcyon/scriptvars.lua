@@ -671,6 +671,7 @@ SV.Chapter1 =
 
 SV.Chapter2 = 
 {
+	FinishedFirstWakeup = false,--Viewed first wake up cutscene?
 	FirstMorningMeetingDone = false,--completed the first morning cutscene with the guild?
 	StartedTraining = false,--started the training at ledian dojo?
 	SkippedTutorial = false,--chose to do the training maze instead of the tutorial?

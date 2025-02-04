@@ -288,7 +288,7 @@ function luminous_spring_ch_2.FindNumelCutscene()
 	UI:SetSpeakerEmotion("Teary-Eyed")
 	UI:WaitShowDialogue("Oh...[pause=0] My poor momma...[pause=0] I probably made her so worried about me...")
 	GAME:WaitFrames(20)
-	--GeneralFunctions.ShakeHead(numel, 4, true)
+	--GeneralFunctions.ShakeHead(numel, nil, true)
 	
 	GAME:WaitFrames(20)
 	GeneralFunctions.Hop(numel)

@@ -113,7 +113,6 @@ function relic_forest_ch_1.PartnerFindsHeroCutscene()
 	GeneralFunctions.MoveCharAndCamera(partner, 292, 528, false, 1)
 	GAME:WaitFrames(20)
 	GeneralFunctions.LookAround(partner, 2, 4, false, false, false, Direction.Up)
-	GAME:WaitFrames(10)
 	
 	--celebrate that you made it through 
 	UI:SetSpeaker(partner)
@@ -175,9 +174,11 @@ function relic_forest_ch_1.PartnerFindsHeroCutscene()
 	--step in and out twice, facing forward the entire time
 	UI:WaitShowDialogue("Oh no,[pause=10] c'mon,[pause=10] please be okay!")
 	GROUND:MoveInDirection(partner, Direction.Left, 4, false, 2)
+	GAME:WaitFrames(1)
 	GROUND:AnimateInDirection(partner, "Walk", Direction.Left, Direction.Right, 4, 1, 2)
-	GAME:WaitFrames(10)
+	GAME:WaitFrames(6)
 	GROUND:MoveInDirection(partner, Direction.Left, 4, false, 2)
+	GAME:WaitFrames(1)
 	GROUND:AnimateInDirection(partner, "Walk", Direction.Left, Direction.Right, 4, 1, 2)
 	
 	--wakeup
@@ -195,7 +196,7 @@ function relic_forest_ch_1.PartnerFindsHeroCutscene()
 	GAME:WaitFrames(40)
 	GROUND:AnimateInDirection(partner, "Walk", Direction.Left, Direction.Right, 8, 1, 1)
 	
-	GeneralFunctions.LookAround(hero, 4, 4, true, true, false, Direction.Right)
+	GeneralFunctions.LookAround(hero, 4, 4, true, false, false, Direction.Right)
 	GAME:WaitFrames(40)
 	
 	--partner is relieved you arent dead
@@ -227,7 +228,7 @@ function relic_forest_ch_1.PartnerFindsHeroCutscene()
 	GAME:WaitFrames(20)
 	GROUND:CharSetEmote(hero, "question", 1)
 	SOUND:PlayBattleSE("EVT_Emote_Confused")
-	GAME:WaitFrames(40)
+	GAME:WaitFrames(60)
 	GeneralFunctions.LookAround(hero, 3, 4, false, false, false, Direction.Right)
 	GAME:WaitFrames(40)
 	GROUND:CharSetEmote(hero, "shock", 1)
@@ -255,7 +256,6 @@ function relic_forest_ch_1.PartnerFindsHeroCutscene()
 	GAME:WaitFrames(20)
 	
 	--human? this a joke?
-	GAME:WaitFrames(20)
 	GROUND:CharSetEmote(partner, "question", 1)
 	SOUND:PlayBattleSE("EVT_Emote_Confused")
 	UI:SetSpeaker(partner)
@@ -272,7 +272,8 @@ function relic_forest_ch_1.PartnerFindsHeroCutscene()
 	GROUND:CharSetEmote(hero, "exclaim", 1)
 	SOUND:PlayBattleSE("EVT_Emote_Exclaim_2")
 	GAME:WaitFrames(20)
-	GeneralFunctions.ShakeHead(hero, 4, true)
+	GeneralFunctions.ShakeHead(hero, nil, true)
+	GAME:WaitFrames(10)
 	
 	local zone = _DATA.DataIndices[RogueEssence.Data.DataManager.DataType.Zone]:Get("relic_forest")
 	UI:SetSpeakerEmotion("Worried")

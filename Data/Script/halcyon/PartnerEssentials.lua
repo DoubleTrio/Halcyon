@@ -50,6 +50,7 @@ function PartnerEssentials.InitializePartnerSpawn(dir, customPosition)
 
 	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
     partner.CollisionDisabled = true
+	partner.InteractOrder = 1--if partner and another NPC overlap, the partner is deprioritized and won't be spoken to, the other npc will
 	
 end
 
@@ -528,7 +529,7 @@ function PartnerEssentials.Chapter_2_Dialogue(partner)
 			UI:SetSpeakerEmotion("Worried")
 			UI:WaitShowDialogue("Whatever you do...[pause=0] Don't tell " .. CharacterEssentials.GetCharacterName("Relicanth") .. " we were in " .. zone:GetColoredName() .. ".")
 			UI:SetSpeakerEmotion("Pain")
-			UI:WaitShowDialogue("He will chew us out for hours if he knew.[pause=0] Believe me,[pause=10] I know from experience.")
+			UI:WaitShowDialogue("He'll chew us out for hours if he finds out.[pause=0] Believe me,[pause=10] I know from experience.")
 		else 
 			local zone = _DATA.DataIndices[RogueEssence.Data.DataManager.DataType.Zone]:Get("illuminant_riverbed")
 			UI:SetSpeakerEmotion("Worried")

@@ -634,8 +634,11 @@ function BATTLE_SCRIPT.SenseiInteract(owner, ownerChar, context, args)
 		UI:WaitShowDialogue("Wahtah![pause=0] Very well![pause=0] Allow me to reset this floor!")
 		GAME:WaitFrames(20)
 		UI:SetSpeakerEmotion("Determined")
+		--charging animation
+		DUNGEON:CharStartAnim(target, "Charge", true)
 		UI:WaitShowDialogue(".........")
 		GAME:WaitFrames(20)
+		DUNGEON:CharEndAnim(target)
 		UI:SetSpeakerEmotion("Shouting")
 		--setup flashes
 		local emitter = RogueEssence.Content.FlashEmitter()

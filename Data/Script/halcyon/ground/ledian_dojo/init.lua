@@ -325,7 +325,7 @@ function ledian_dojo.GenericTrainingSuccess()
 	local coro3 = TASK:BranchCoroutine(function() GAME:WaitFrames(10)
 												  GROUND:CharSetEmote(hero, "exclaim", 1) end)	
 	local coro4 = TASK:BranchCoroutine(function() GAME:WaitFrames(10)
-												  GeneralFunctions.Recoil(partner) end)
+												  GeneralFunctions.Recoil(partner, nil, nil, nil, nil, false) end)
 	TASK:JoinCoroutines({coro1, coro2, coro3, coro4})
 
 	GAME:WaitFrames(20)
