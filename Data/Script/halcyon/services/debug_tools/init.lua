@@ -9,7 +9,7 @@ require 'origin.common'
 require 'origin.services.baseservice'
 require 'halcyon.mission_gen'
 require 'origin.recruit_list'
-require 'halcyon.config'
+--require 'halcyon.config'
 
 --Declare class DebugTools
 local DebugTools = Class('DebugTools', BaseService)

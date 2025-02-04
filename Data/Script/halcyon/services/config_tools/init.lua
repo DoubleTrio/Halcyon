@@ -3,9 +3,9 @@
 
     This service deals with config related stuff.
 ]]--
-require 'common'
-require 'services.baseservice'
-require 'config'
+require 'origin.common'
+--require 'services.baseservice'
+--require 'halcyon.config'
 
 --Declare class ConfigTools
 local ConfigTools = Class('ConfigTools', BaseService)
@@ -62,6 +62,9 @@ function ConfigTools:LoadConfig()
 end
 
 function ConfigTools:SaveConfig()
+	--initialize settings SV if needed
+    if SV.Settings == nil then SV.Settings = {} end
+
     SV.Settings.Nicknames = 1
     if CONFIG.UseNicknames then SV.Settings.Nicknames = 0 end
     SV.Settings.Starters = 1
