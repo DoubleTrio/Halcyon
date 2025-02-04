@@ -14,8 +14,9 @@ end
 
 function ledian_dojo_ch_3.Gible_Action(chara, activator)
 	GeneralFunctions.StartConversation(chara, "The training mazes at the dojo are great for getting more fighting experience!")
-	UI:WaitShowDialogue("Sensei " .. CharacterEssentials.GetCharacterName("Ledian") .. " organized each of them carefully so her students could train optimally!")
-	UI:WaitShowDialogue("I've gotten a lot stronger ever since I started training here at the dojo with Sensei " .. CharacterEssentials.GetCharacterName("Ledian") .. " and her mazes!")
+	UI:WaitShowDialogue("Sensei " .. CharacterEssentials.GetCharacterName("Ledian") .. " organized each of them carefully so her students could train optimally.")
+	UI:WaitShowDialogue("As such,[pause=10] you can get stronger faster here than you can in regular mystery dungeons!")
+	UI:WaitShowDialogue("I know I've gotten a lot stronger ever since I started training here with Sensei " .. CharacterEssentials.GetCharacterName("Ledian") .. " and her mazes!")
 	GeneralFunctions.EndConversation(chara)
 end
 

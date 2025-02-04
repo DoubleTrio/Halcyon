@@ -349,7 +349,9 @@ function metano_town_ch_4.Mawile_Action(chara, activator)
 		UI:SetSpeakerEmotion("Inspired")
 		UI:WaitShowDialogue("...Woah,[pause=10] you managed to retrieve a huge Apricorn from the forest's center?")
 		UI:SetSpeakerEmotion("Joyous")
+		GROUND:CharSetEmote(chara, "glowing", 0)
 		UI:WaitShowDialogue("Seems to me like your adventure was a complete success then![pause=0] I knew you two could do it!")		
+		GROUND:CharSetEmote(chara, "", 0)
 	end
 	GeneralFunctions.EndConversation(chara)
 --[[
@@ -396,7 +398,7 @@ function metano_town_ch_4.Wooper_Boy_Action(chara, activator)
 		if not SV.Chapter4.WoopersMedititeConvo then
 			metano_town_ch_4.Meditite_Woopers_Dialogue(chara)	
 		else
-			GeneralFunctions.StartConversation(chara, "I'm gonna win at sumo wrestlers![pause=0] Nobody's gonna push me away!", "Happy", false) 
+			GeneralFunctions.StartConversation(chara, "I'm gonna win at sumo wrestlers![pause=0] Nobody's gonna shove me away!", "Happy", false) 
 			GeneralFunctions.EndConversation(chara)
 		end
 	end
@@ -443,7 +445,7 @@ function metano_town_ch_4.Meditite_Woopers_Dialogue(chara)
 	GAME:WaitFrames(20)
 	
 	UI:SetSpeaker(meditite)
-	UI:WaitShowDialogue("Ya want me ta' pick?[pause=0] Erm,[pause=10] think lemme...")
+	UI:WaitShowDialogue("Ya want me ta' pick?[pause=0] Umm,[pause=10] think lemme...")
 	GAME:WaitFrames(40)
 	UI:WaitShowDialogue("Sumo wrestlin' how about?[pause=0] Game it is where we shov' to try each other outta a ring!")
 	GAME:WaitFrames(20)
@@ -507,7 +509,7 @@ function metano_town_ch_4.Meditite_Action(chara, activator)
 		if not SV.Chapter4.WoopersMedititeConvo then
 			metano_town_ch_4.Meditite_Woopers_Dialogue(chara)	
 		else
-			GeneralFunctions.StartConversation(chara, "I cannae believe it...[pause=0] Understandin' other me kids...", "Normal", false) 
+			GeneralFunctions.StartConversation(chara, "I cannae believe it...[pause=0] Understandin' other me kids...", "Stunned", false) 
 			GeneralFunctions.EndConversation(chara)
 		end	
 	end
@@ -627,8 +629,13 @@ function metano_town_ch_4.Manectric_Action(chara, activator)
 	else
 		GeneralFunctions.StartConversation(chara, "I spoke more with the post office workers,[pause=10] and they agreed to take my letter to my friend!")
 		UI:WaitShowDialogue("They normally only handle rescue requests between adventuring teams...")
+		UI:SetSpeakerEmotion("Happy")
 		UI:WaitShowDialogue("...But they said they'd handle any mail between my friend and I!")
+		GAME:WaitFrames(30)
+		GeneralFunctions.EmoteAndPause(chara, "Exclaim", true)
+		UI:SetSpeakerEmotion("Surprised")
 		UI:WaitShowDialogue("...Wait a moment,[pause=10] you two are those wonderful adventurers that saved " .. CharacterEssentials.GetCharacterName("Numel") .. "!")
+		UI:SetSpeakerEmotion("Happy")
 		UI:WaitShowDialogue("The post office is perfect for great adventurers like you then![pause=0] I'm sure you'll find it useful!")
 		
 	end
@@ -882,8 +889,8 @@ function metano_town_ch_4.Nidorina_Gloom_Dialogue(chara, activator)
 	
 	UI:SetSpeaker(gloom)
 	UI:SetSpeakerEmotion("Worried")
-	UI:WaitShowDialogue("I don't think he would make things up.[pause=0] It's true you don't see much danger near town though...")
-	UI:WaitShowDialogue("That doesn't mean dangerous stuff isn't happening in other places of the world though!")
+	UI:WaitShowDialogue("I don't think he would make things up.[pause=0] It's true you don't see much danger near town...")
+	UI:WaitShowDialogue("But that doesn't mean dangerous stuff isn't happening in other places of the world!")
 	GAME:WaitFrames(20)
 	
 	UI:SetSpeaker(nidorina)
@@ -917,7 +924,7 @@ function metano_town_ch_4.Doduo_Action(chara, activator)
 		GeneralFunctions.StartConversation(chara, "We heard that the guild will soon be mounting an expedition somewhere to the north.")
 		UI:SetSpeakerEmotion("Stunned")
 		GROUND:CharSetEmote(chara, "sweating", 1)
-		UI:WaitShowDialogue("We've...[pause=30] Erm...[pause=30] Flown over that mountain range a few times,[pause=10] but never saw anything of note around there.")
+		UI:WaitShowDialogue("We've...[pause=30] erm...[pause=30] flown over that mountain range a few times,[pause=10] but never saw anything of note around there.")
 	end
 	GeneralFunctions.EndConversation(chara)
 end

@@ -31,14 +31,15 @@ function metano_cave_ch_4.Sunflora_Action(chara, activator)
 	else
 		GeneralFunctions.StartConversation(chara, "...Could you get this child out of here?", "Worried", true, false)
 		UI:SetSpeakerEmotion("Pain")
-		UI:WaitShowDialogue("I'd prefer to be alone,[pause=10] but she doesn't seem to understand...")
+		--UI:WaitShowDialogue("I'd prefer to be alone,[pause=10] but she doesn't seem to understand...")
+		UI:WaitShowDialogue("I've told her a hundred times to leave me in peace,[pause=10] but she's not getting it...")
 	end
 	GeneralFunctions.EndConversation(chara, false)
 end 
 
 function metano_cave_ch_4.Oddish_Action(chara, activator)
-	GeneralFunctions.StartConversation(chara, "Hi weird lady![pause=0] I hope you're doing OK in here![pause=0]\nI brought you some flowers to cheer you up!", "Happy", false)
-	UI:WaitShowDialogue("You should come outside and see my mom's garden sometime!")
-	UI:WaitShowDialogue("There's all kinds of pretty flowers I think would make you feel happy there!")
+	GeneralFunctions.StartConversation(chara, "Hi weird lady![pause=0] You must be lonely in here by yourself.[pause=0] That's OK though, I'll keep you company!", "Happy", false)
+	UI:WaitShowDialogue("You should come outside and see my mom's garden with me!")
+	UI:WaitShowDialogue("There's all kinds of pretty flowers that would make you feel happy there!")
 	GeneralFunctions.EndConversation(chara)
 end

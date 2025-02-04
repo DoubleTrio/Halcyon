@@ -158,7 +158,7 @@ end
 
 function metano_cafe_ch_3.Aggron_Action(chara, activator)
 	local item = RogueEssence.Dungeon.InvItem('cafe_cheri_bomb')
-	GeneralFunctions.StartConversation(chara, "Hey boss...[pause=0] I got this " .. item:GetDisplayName() .. " from " .. CharacterEssentials.GetCharacterName("Shuckle") .. "...", "Normal", false)
-	UI:WaitShowDialogue("He said not to drink it,[pause=10] since it's volatile...[pause=0] Maybe we could throw it instead of drinking it?")
+	GeneralFunctions.StartConversation(chara, "Hey boss,[pause=10] I got this " .. item:GetDisplayName() .. " from " .. CharacterEssentials.GetCharacterName("Shuckle") .. ".", "Normal", false)
+	UI:WaitShowDialogue("He said not to drink it,[pause=10] since it's volatile...[pause=0]\nMaybe we could throw it instead of drinking it?")
 	GeneralFunctions.EndConversation(chara)
 end

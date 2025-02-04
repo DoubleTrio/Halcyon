@@ -371,7 +371,7 @@ function guild_third_floor_lobby_ch_4.ExpeditionAnnouncementAddress()
 	UI:WaitShowDialogue("Anyways,[pause=10] onto why I wanted to talk with the both of you.")
 	UI:WaitShowDialogue("I wanted to congratulate you on the great work you've done so far!")
 	UI:WaitShowDialogue("I haven't seen such promise in a pair of new recruits before!")
-	UI:WaitShowDialogue("So,[pause=10] I'd like to put your skills to the test!")
+	UI:WaitShowDialogue("So,[pause=10] I'd like to put your skills to the test.")
 	
 	GAME:WaitFrames(10)
 	GeneralFunctions.EmoteAndPause(partner, "Question", true)

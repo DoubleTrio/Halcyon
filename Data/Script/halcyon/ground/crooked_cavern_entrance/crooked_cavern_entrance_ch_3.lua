@@ -151,7 +151,7 @@ function crooked_cavern_entrance_ch_3.LostToStyle()
 	GROUND:CharTurnToCharAnimated(hero, partner, 4)
 	
 	UI:SetSpeakerEmotion("Worried")
-	UI:WaitShowDialogue("Poor " .. CharacterEssentials.GetCharacterName("Sandile") .. "...[pause=0] They've probably still got him trapped at the end...")
+	UI:WaitShowDialogue("Poor " .. CharacterEssentials.GetCharacterName("Sandile") .. ".[pause=0] I bet they still got him trapped at the end...")
 	GAME:WaitFrames(20)
 	
 	UI:SetSpeakerEmotion("Determined")

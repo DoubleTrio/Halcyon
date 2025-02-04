@@ -393,7 +393,7 @@ function metano_cafe.Cafe_Action(obj, activator)
 					table.insert(items, 4, endurance_tonic)
 				end
 	
-				local menu = CreateFermentMenu:new(items, MapStrings)
+				local menu = CreateFermentMenu:new(items, STRINGS.MapStrings)
 				UI:SetCustomMenu(menu.menu)
 				UI:WaitForChoice()
 	

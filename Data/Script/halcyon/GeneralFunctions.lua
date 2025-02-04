@@ -1031,19 +1031,20 @@ end
 function GeneralFunctions.Hop(chara, anim, height, duration, pause, sound)
 	anim = anim or 'Walk'
 	height = height or 10
-	duration = duration or height
+	duration = duration or height + 1--one more duration than height makes the hop hang for a frame at the peak, like explorers.
 	if pause == nil then pause = true end
 	if sound == nil then sound = false end
 
 	local animId = RogueEssence.Content.GraphicsManager.GetAnimIndex(anim)
-	GROUND:CharSetAction(chara, RogueEssence.Ground.HopGroundAction(chara.Position, chara.Direction, animId, height, duration))
+	local hop_action = RogueEssence.Ground.HopGroundAction(chara.Position, chara.Direction, animId, height, duration)
+	GROUND:CharSetAction(chara, hop_action)
 	
 	if sound then
 		SOUND:PlayBattleSE("EVT_Emote_Startled")
 	end
 	
 	if pause then 
-		GAME:WaitFrames(duration)
+		GROUND:CharWaitAction(chara, hop_action)
 	end
 
 end
@@ -1071,20 +1072,20 @@ function GeneralFunctions.DoubleHop(chara, anim, height, duration, pause, sound)
 end
 
 
-
 function GeneralFunctions.Recoil(chara, anim, height, duration, sound, emote)
 
 	anim = anim or 'Hurt'
 	height = height or 10
-	duration = duration or 10
+	duration = duration or 11
 	if sound == nil then sound = true end
 	if emote == nil then emote = true end
 	
 	if emote then GROUND:CharSetEmote(chara, "shock", 1) end
 	if sound then SOUND:PlayBattleSE('EVT_Emote_Startled') end
 	local animId = RogueEssence.Content.GraphicsManager.GetAnimIndex(anim)
-	GROUND:CharSetAction(chara, RogueEssence.Ground.HopGroundAction(chara.Position, chara.Direction, animId, height, duration))
-	GAME:WaitFrames(duration)
+	local hop_action = RogueEssence.Ground.HopGroundAction(chara.Position, chara.Direction, animId, height, duration)
+	GROUND:CharSetAction(chara, hop_action)
+	GROUND:CharWaitAction(chara, hop_action)
 	if emote then GROUND:CharSetEmote(chara, "", 0) end
 	
 end

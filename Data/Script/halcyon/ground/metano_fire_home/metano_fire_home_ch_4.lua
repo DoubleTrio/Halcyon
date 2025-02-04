@@ -21,7 +21,7 @@ end
 
 function metano_fire_home_ch_4.Camerupt_Action(chara, activator)
 	GeneralFunctions.StartConversation(chara, "Now,[pause=10] " .. CH('Numel'):GetDisplayName() .. ",[pause=10] you need to have patience![pause=0] Lava Cakes take time to come out just right!", "Happy", false)
-	UI:WaitShowDialogue("You've earned one with all your hard work,[pause=10] you just have to wait a little while longer!")
+	UI:WaitShowDialogue("You've earned one with all your hard work,[pause=10] you just have to wait a little while more!")
 	GeneralFunctions.EndConversation(chara)
 end 
 
