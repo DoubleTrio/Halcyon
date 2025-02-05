@@ -19,15 +19,16 @@ function illuminant_riverbed.EnterSegment(zone, rescuing, segmentID, mapID)
 	end
 end
 
-function illuminant_riverbed.Rescued(zone, name, mail)
-  COMMON.Rescued(zone, name, mail)
+function illuminant_riverbed.Rescued(zone, mail)
+  COMMON.Rescued(zone, mail)
 end
+
 
 function illuminant_riverbed.ExitSegment(zone, result, rescue, segmentID, mapID)
 	GeneralFunctions.RestoreIdleAnim()
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine
   PrintInfo("=>> ExitSegment_illuminant_riverbed (Illuminant Riverbed) result "..tostring(result).." segment "..tostring(segmentID))
-	
+  	
 	--[[Different dungeon result typeS (cleared, died, etc)
 	       public enum ResultType
         {
@@ -41,7 +42,7 @@ function illuminant_riverbed.ExitSegment(zone, result, rescue, segmentID, mapID)
             Rescue
         }
 		]]--
-	GeneralFunctions.CheckAllowSetRescue() 
+		GeneralFunctions.CheckAllowSetRescue(zone) 
 	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
 
   if exited == true then
@@ -90,6 +91,5 @@ function illuminant_riverbed.ExitSegment(zone, result, rescue, segmentID, mapID)
 		end
 	end
 end
-	
 
 return illuminant_riverbed

@@ -46,6 +46,16 @@ function searing_tunnel.ExitSegment(zone, result, rescue, segmentID, mapID)
 	--I think even though it may be weird they just "disappear" upon exiting the segment, this approach is fine and best from a gameplay perspective.
 	COMMON.ExitDungeonMissionCheck(zone.ID, segmentID)
 
+	GeneralFunctions.CheckAllowSetRescue(zone.ID) 
+	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
+
+	-- TODO: Add rescue condition for Searing Tunnel and figure out what to do for the segments...
+	if exited == true then
+
+	elseif true then
+
+	end
+
 	if segmentID == 0 then --Searing Tunnel Exit Segment
 	  PrintInfo("=>> ExitSegment_searing_tunnel (Searing Tunnel) result "..tostring(result).." segment "..tostring(segmentID))
 

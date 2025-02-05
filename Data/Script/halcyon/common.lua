@@ -857,12 +857,46 @@ function COMMON.EndRescue(zone, result, rescue, segmentID)
   local zoneId = 'master_zone'
   local structureId = -1
   local mapId = 21
-  local entryId = 1
+  local entryId = 2
+  -- SV.partner.Spawn = 'Rescue_Spawn_Partner'
   GAME:EndDungeonRun(result, zoneId, structureId, mapId, entryId, true, true)
   SV.General.Rescue = result
   GAME:EnterZone(zoneId, structureId, mapId, entryId)
+  -- GAME:EnterGroundMap("post_office", "Rescue_Spawn", true)
 end
 
+
+function COMMON.Rescued(zone, name, mail)
+  if _DATA.CurrentReplay ~= nil then
+    SOUND:PlayBattleSE("EVT_Title_Intro")
+    GAME:FadeOut(true, 0)
+    GAME:FadeIn(20)
+    SOUND:PlayBGM("C05. Rescue.ogg", true)
+	_DUNGEON:LogMsg(STRINGS:FormatKey("MSG_RESCUED_BY", name))
+  else
+    local team = RogueEssence.Dungeon.ExplorerTeam()
+    team.Name = mail.RescuedBy
+    SOUND:PlayBattleSE("EVT_Title_Intro")
+    GAME:FadeOut(true, 0)
+    GAME:FadeIn(20)
+    SOUND:PlayBGM("C05. Rescue.ogg", true)
+    TASK:WaitTask(_MENU:SetDialogue(STRINGS:FormatKey("MSG_RESCUES_LEFT", _DATA.Save.RescuesLeft)))
+    GAME:WaitFrames(10)
+  end
+  
+  local player_count = GAME:GetPlayerPartyCount()
+  for i = 0, player_count - 1, 1 do 
+    local player = GAME:GetPlayerPartyMember(i)
+    if player:GetStatusEffect("critical_health") ~= nil then
+      TASK:WaitTask(player:RemoveStatusEffect("critical_health"))
+    end
+  end
+
+  local rescue_idx = "rescued"
+  local rescue_status = RogueEssence.Dungeon.MapStatus(rescue_idx)
+  rescue_status:LoadFromData()
+  TASK:WaitTask(_DUNGEON:AddMapStatus(rescue_status))
+end
 
 
 function COMMON.ExitDungeonMissionCheck(result, rescue, zoneId, segmentID)

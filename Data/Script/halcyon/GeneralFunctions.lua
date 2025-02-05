@@ -2135,10 +2135,10 @@ function GeneralFunctions.Kangashkhan_Rock_Interact(obj, activator)
 	
 end
 
-function GeneralFunctions.CheckAllowSetRescue() 
+function GeneralFunctions.CheckAllowSetRescue(zone) 
 	local should_rescue = false
 	-- TODO: Adjust conditions for setting rescues
-	if SV.ChapterProgression.Chapter >= 4 then
+	if SV.ChapterProgression.Chapter >= 3 and SV.Chapter3.DefeatedBoss and SV.ChapterProgression.CurrentStoryDungeon ~= zone then
 		should_rescue = true
 	end
 	GAME:SetRescueAllowed(should_rescue)

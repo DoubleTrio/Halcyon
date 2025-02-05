@@ -34,7 +34,9 @@ function vast_steppe.ExitSegment(zone, result, rescue, segmentID, mapID)
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine
   PrintInfo("=>> ExitSegment_vast_steppe (Vast Steppe) result "..tostring(result).." segment "..tostring(segmentID))
   
-	GAME:SetRescueAllowed(false)
+	GeneralFunctions.RestoreIdleAnim()
+	GeneralFunctions.CheckAllowSetRescue(zone.ID) 
+	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
 	--always clear the Thief flag when leaving the dungeon via any means. UpdateDailyFlags does take care of this, but that won't always be called when leaving this dungeon.
 	SV.adventure.Thief = false
 	
@@ -51,8 +53,10 @@ function vast_steppe.ExitSegment(zone, result, rescue, segmentID, mapID)
             Rescue
         }
 		]]--
-	COMMON.ExitDungeonMissionCheck(zone.ID, segmentID)
-	if SV.ChapterProgression.Chapter == 5 and result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
+
+	if exited == true then
+		--do nothing
+	elseif SV.ChapterProgression.Chapter == 5 and result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
 		GAME:WaitFrames(20)	
 		SV.Chapter5.LostSteppe = true--if escaped or died, they "lost" in the steppe and therefore they dallied somewhat in getting to the tunnel.
 		if result ~= RogueEssence.Data.GameProgress.ResultType.Escaped then--Died

@@ -2616,71 +2616,83 @@ function DungeonJobList:DrawMenu()
   --how many jobs have we populated so far
   local count = 0
   
+	if _DATA.Save.Rescue ~= nil and _DATA.Save.Rescue.Rescuing then
+		local floor =  MISSION_GEN.STAIR_TYPE[_DATA.Save.Rescue.SOS.Goal.ID] ..'[color=#00FFFF]' .. tostring(_DATA.Save.Rescue.SOS.Goal.StructID.ID + 1) .. "[color]F"
+		local objective = "Rescue " .. _DATA.Save.Rescue.SOS.TeamName .. "."
+		local icon = STRINGS:Format("\\uE10F")--open letter
+		self.menu.Elements:Add(RogueEssence.Menu.MenuText(icon, RogueElements.Loc(16, 24 + 14 * count)))
+		self.menu.Elements:Add(RogueEssence.Menu.MenuText(floor, RogueElements.Loc(28, 24 + 14 * count)))
+		self.menu.Elements:Add(RogueEssence.Menu.MenuText(objective, RogueElements.Loc(60, 24 + 14 * count)))
+		
+		count = count + 1
+  else
+
+
   --populate jobs that are in this dungeon
   for i = 1, 8, 1 do 
 	--stop populating if we hit a job that's empty
     if self.jobs[i].Client == "" then break end 
 	
 	--only look at jobs in the current dungeon that aren't suspended
-	if self.jobs[i].Zone == self.dungeon and self.jobs[i].Taken then 	
-		local floor =  MISSION_GEN.STAIR_TYPE[self.jobs[i].Zone] ..'[color=#00FFFF]' .. tostring(self.jobs[i].Floor) .. "[color]F"
-		local objective = ""
-		local icon = ""
-		local goal = self.jobs[i].Type
-		
-		local target = _DATA:GetMonster(self.jobs[i].Target):GetColoredName()
-	
-		local client = ""
-		if self.jobs[i].Client == "zhayn" then 
-			client = "[color=#00FFFF]Zhayn[color]"
-		else 
-			client = _DATA:GetMonster(self.jobs[i].Client):GetColoredName()
-		end
-		
-		local item = "" 
-		if self.jobs[i].Item ~= "" then
-			item = _DATA:GetItem(self.jobs[i].Item):GetColoredName()
-		end
-		
-		if goal == COMMON.MISSION_TYPE_RESCUE then
-			objective = "Rescue " .. target .. "."
-		elseif goal == COMMON.MISSION_TYPE_ESCORT then 
-			objective = "Escort " .. client .. " to " .. target .. "."
-		elseif goal == COMMON.MISSION_TYPE_OUTLAW then
-			objective = "Arrest " .. target .. "."
-		elseif goal == COMMON.MISSION_TYPE_EXPLORATION then
-			objective = "Explore with " .. client .. "."
-		elseif goal == COMMON.MISSION_TYPE_LOST_ITEM then 
-			objective = "Find " .. item .. " for " .. client .. "."
-		elseif goal == COMMON.MISSION_TYPE_OUTLAW_ITEM then
-			objective = "Reclaim " .. item .. " from " .. target .. "."
-		elseif goal == COMMON.MISSION_TYPE_OUTLAW_FLEE then
-			objective = "Arrest cowardly " .. target .. "."
-		elseif goal == COMMON.MISSION_TYPE_OUTLAW_MONSTER_HOUSE then
-			objective = "Arrest big boss " .. target .. "."
-		elseif goal == COMMON.MISSION_TYPE_DELIVERY then
-			objective = "Deliver " .. item .. " to " .. client .. "."
-		end
-		
-		
-		
-		if self.jobs[i].Completion == COMMON.MISSION_INCOMPLETE then 
-			icon = STRINGS:Format("\\uE10F")--open letter
-		else
-			icon = STRINGS:Format("\\uE10A")--check mark
-		end
+			if self.jobs[i].Zone == self.dungeon and self.jobs[i].Taken then 	
+				local floor =  MISSION_GEN.STAIR_TYPE[self.jobs[i].Zone] ..'[color=#00FFFF]' .. tostring(self.jobs[i].Floor) .. "[color]F"
+				local objective = ""
+				local icon = ""
+				local goal = self.jobs[i].Type
+				
+				local target = _DATA:GetMonster(self.jobs[i].Target):GetColoredName()
+			
+				local client = ""
+				if self.jobs[i].Client == "zhayn" then 
+					client = "[color=#00FFFF]Zhayn[color]"
+				else 
+					client = _DATA:GetMonster(self.jobs[i].Client):GetColoredName()
+				end
+				
+				local item = "" 
+				if self.jobs[i].Item ~= "" then
+					item = _DATA:GetItem(self.jobs[i].Item):GetColoredName()
+				end
+				
+				if goal == COMMON.MISSION_TYPE_RESCUE then
+					objective = "Rescue " .. target .. "."
+				elseif goal == COMMON.MISSION_TYPE_ESCORT then 
+					objective = "Escort " .. client .. " to " .. target .. "."
+				elseif goal == COMMON.MISSION_TYPE_OUTLAW then
+					objective = "Arrest " .. target .. "."
+				elseif goal == COMMON.MISSION_TYPE_EXPLORATION then
+					objective = "Explore with " .. client .. "."
+				elseif goal == COMMON.MISSION_TYPE_LOST_ITEM then 
+					objective = "Find " .. item .. " for " .. client .. "."
+				elseif goal == COMMON.MISSION_TYPE_OUTLAW_ITEM then
+					objective = "Reclaim " .. item .. " from " .. target .. "."
+				elseif goal == COMMON.MISSION_TYPE_OUTLAW_FLEE then
+					objective = "Arrest cowardly " .. target .. "."
+				elseif goal == COMMON.MISSION_TYPE_OUTLAW_MONSTER_HOUSE then
+					objective = "Arrest big boss " .. target .. "."
+				elseif goal == COMMON.MISSION_TYPE_DELIVERY then
+					objective = "Deliver " .. item .. " to " .. client .. "."
+				end
+				
+				
+				
+				if self.jobs[i].Completion == COMMON.MISSION_INCOMPLETE then 
+					icon = STRINGS:Format("\\uE10F")--open letter
+				else
+					icon = STRINGS:Format("\\uE10A")--check mark
+				end
 
-		
+				
 
-		
-		self.menu.Elements:Add(RogueEssence.Menu.MenuText(icon, RogueElements.Loc(16, 24 + 14 * count)))
-		self.menu.Elements:Add(RogueEssence.Menu.MenuText(floor, RogueElements.Loc(28, 24 + 14 * count)))
-		self.menu.Elements:Add(RogueEssence.Menu.MenuText(objective, RogueElements.Loc(60, 24 + 14 * count)))
-		
-		count = count + 1
+				
+				self.menu.Elements:Add(RogueEssence.Menu.MenuText(icon, RogueElements.Loc(16, 24 + 14 * count)))
+				self.menu.Elements:Add(RogueEssence.Menu.MenuText(floor, RogueElements.Loc(28, 24 + 14 * count)))
+				self.menu.Elements:Add(RogueEssence.Menu.MenuText(objective, RogueElements.Loc(60, 24 + 14 * count)))
+				
+				count = count + 1
+			end
+  	end
 	end
-
-  end
   
   --put a special message if no jobs dependent on story progression.
   local message = ""

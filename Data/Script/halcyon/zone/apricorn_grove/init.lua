@@ -54,7 +54,7 @@ function apricorn_grove.ExitSegment(zone, result, rescue, segmentID, mapID)
             Rescue
         }
 		]]--
-	GeneralFunctions.CheckAllowSetRescue() 
+	GeneralFunctions.CheckAllowSetRescue(zone.ID) 
 	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
 
 	if exited == true then
@@ -82,7 +82,10 @@ function apricorn_grove.ExitSegment(zone, result, rescue, segmentID, mapID)
 		GAME:EndDungeonRun(result, "master_zone", -1, exit_ground, 0, true, true)
 
 		if not SV.Chapter4.FinishedGrove and result ~= RogueEssence.Data.GameProgress.ResultType.Escaped then --team died before making it to the end for the first time. 
+			UI:SetSpeaker(GAME:GetPlayerPartyMember(1))--set partner as speaker 
+			UI:SetSpeakerEmotion("Pain")
 			GeneralFunctions.DeathFadeOutDialogue(GAME:GetPlayerPartyMember(1), "Urk![pause=0] That didn't go as planned...", "Pain")
+
 			GAME:WaitFrames(20)
 		end
 				

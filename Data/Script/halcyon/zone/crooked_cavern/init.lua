@@ -52,7 +52,7 @@ function crooked_cavern.ExitSegment(zone, result, rescue, segmentID, mapID)
 				Rescue
 			}
 			]]--
-		GeneralFunctions.CheckAllowSetRescue() 
+		GeneralFunctions.CheckAllowSetRescue(zone.ID) 
 		local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
 
 		if exited == true then

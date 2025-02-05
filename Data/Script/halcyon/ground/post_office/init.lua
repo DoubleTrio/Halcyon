@@ -48,8 +48,19 @@ function post_office.GameSave(map)
 end
 
 function post_office.PlotScripting()
-	GAME:FadeIn(20)
-	post_office.RescueMessage()
+
+	local rescue = SV.General.Rescue
+	if rescue ~= nil then
+		local hero = CH('PLAYER')
+		local partner = CH('Teammate1')
+		-- GROUND:TeleportTo(hero, MRKR('Rescue_Spawn').Position.X, MRKR('Rescue_Spawn').Position.Y, MRKR('Rescue_Spawn').Direction)
+		-- GROUND:TeleportTo(partner, MRKR('Rescue_Spawn_Partner').Position.X, MRKR('Rescue_Spawn_Partner').Position.Y, MRKR('Rescue_Spawn_Partner').Direction)
+		post_office.RescueMessage()
+		
+	else
+		GAME:FadeIn(20)
+	end
+	
 end
 
 function post_office.RescueMessage() 
@@ -57,9 +68,16 @@ function post_office.RescueMessage()
 
   if rescue ~= nil then
     local chara = CH('Rescue_Owner')
+		UI:SetSpeaker(chara)
+		-- local hero = CH('PLAYER')
+		-- local partner = CH('Teammate1')
+		-- print(MRKR('Rescue_Spawn'))
+		-- GROUND:TeleportTo(hero, MRKR('Rescue_Spawn').Position.X, MRKR('Rescue_Spawn').Position.Y, MRKR('Rescue_Spawn').Direction)
+		-- GROUND:TeleportTo(partner, MRKR('Rescue_Spawn_Partner').Position.X, MRKR('Rescue_Spawn_Partner').Position.Y, MRKR('Rescue_Spawn_Partner').Direction)
 
 	local result = SV.General.Rescue
 	SV.General.Rescue = nil
+	GAME:FadeIn(40)
 	if result == RogueEssence.Data.GameProgress.ResultType.Rescue then
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_001']))
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_003']))
@@ -91,8 +109,12 @@ end
 
 
 function post_office.Main_Desk_Action(obj, activator)
+
+	-- TODO: Add condition for when player is able to take on rescues?
+	-- SV.ChapterProgression.Chapter >= 3 and SV.Chapter3.DefeatedBoss
+
 	local chara = CH('Connect_Owner')
-	GeneralFunctions.StartConversation(chara, "Testing!")
+	GeneralFunctions.StartConversation(chara, "TODO: Determine when to allow rescues.")
 	local state = 0
   local repeated = false
   -- local chara = CH('Connect_Owner')
@@ -252,7 +274,7 @@ end
 
 function post_office.Side_Desk_Action(obj, activator)
 	local chara = CH('Rescue_Owner')
-	GeneralFunctions.StartConversation(chara, "We are still getting set up in here.[pause=0] Please come back again in a later version!")
+	GeneralFunctions.StartConversation(chara, "TODO: Determine when to allow rescues.")
 	local state = 0
   local sos = nil
   local repeated = false
