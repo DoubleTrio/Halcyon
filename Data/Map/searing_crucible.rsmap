@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.8.0.0",
+"Version": "0.8.8.0",
 "Object": {
 "$type": "RogueEssence.Dungeon.Map, RogueEssence",
 "Name": {
@@ -23,8 +23,8 @@
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
-"X": 11,
-"Y": 7
+"X": 13,
+"Y": 4
 },
 "serializationDir": 0,
 "ProxyName": "",
@@ -106,7 +106,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -127,7 +127,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 2,
 "StatusRange": 2,
-"SelfStatusRange": 2
+"SelfStatusRange": 2,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -136,7 +137,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -145,7 +147,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -154,7 +157,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -225,6 +229,7 @@
 "BaseIntrinsics": [
 "magma_armor"
 ],
+"FormIntrinsicSlot": 0,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -273,7 +278,7 @@
 "dead": false,
 "serializationLoc": {
 "X": 12,
-"Y": 8
+"Y": 0
 },
 "serializationDir": 0,
 "ProxyName": "",
@@ -355,7 +360,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -376,7 +381,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 1,
 "StatusRange": 1,
-"SelfStatusRange": 1
+"SelfStatusRange": 1,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -385,7 +391,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -394,7 +401,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -403,7 +411,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -474,6 +483,7 @@
 "BaseIntrinsics": [
 "flame_body"
 ],
+"FormIntrinsicSlot": 1,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -521,7 +531,7 @@
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
-"X": 13,
+"X": 18,
 "Y": 10
 },
 "serializationDir": 2,
@@ -604,7 +614,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -625,7 +635,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 1,
 "StatusRange": 1,
-"SelfStatusRange": 1
+"SelfStatusRange": 1,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -634,7 +645,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -643,7 +655,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -652,7 +665,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -723,6 +737,7 @@
 "BaseIntrinsics": [
 "magma_armor"
 ],
+"FormIntrinsicSlot": 0,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -770,7 +785,7 @@
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
-"X": 13,
+"X": 18,
 "Y": 11
 },
 "serializationDir": 2,
@@ -853,7 +868,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -874,7 +889,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 1,
 "StatusRange": 1,
-"SelfStatusRange": 1
+"SelfStatusRange": 1,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -883,7 +899,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -892,7 +909,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -901,7 +919,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -972,6 +991,7 @@
 "BaseIntrinsics": [
 "flame_body"
 ],
+"FormIntrinsicSlot": 1,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -1020,7 +1040,7 @@
 "dead": false,
 "serializationLoc": {
 "X": 12,
-"Y": 13
+"Y": 19
 },
 "serializationDir": 4,
 "ProxyName": "",
@@ -1102,7 +1122,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1123,7 +1143,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 1,
 "StatusRange": 1,
-"SelfStatusRange": 1
+"SelfStatusRange": 1,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -1132,7 +1153,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -1141,7 +1163,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -1150,7 +1173,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -1221,6 +1245,7 @@
 "BaseIntrinsics": [
 "magma_armor"
 ],
+"FormIntrinsicSlot": 0,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -1268,7 +1293,7 @@
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
-"X": 8,
+"X": 1,
 "Y": 11
 },
 "serializationDir": 6,
@@ -1351,7 +1376,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1372,7 +1397,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 1,
 "StatusRange": 1,
-"SelfStatusRange": 1
+"SelfStatusRange": 1,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -1381,7 +1407,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -1390,7 +1417,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -1399,7 +1427,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -1470,6 +1499,7 @@
 "BaseIntrinsics": [
 "magma_armor"
 ],
+"FormIntrinsicSlot": 0,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -1518,7 +1548,7 @@
 "dead": false,
 "serializationLoc": {
 "X": 9,
-"Y": 13
+"Y": 20
 },
 "serializationDir": 4,
 "ProxyName": "",
@@ -1600,7 +1630,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1621,7 +1651,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 1,
 "StatusRange": 1,
-"SelfStatusRange": 1
+"SelfStatusRange": 1,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -1630,7 +1661,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -1639,7 +1671,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -1648,7 +1681,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -1719,6 +1753,7 @@
 "BaseIntrinsics": [
 "flame_body"
 ],
+"FormIntrinsicSlot": 1,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -1766,7 +1801,7 @@
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
-"X": 8,
+"X": 1,
 "Y": 10
 },
 "serializationDir": 6,
@@ -1849,7 +1884,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -1870,7 +1905,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 1,
 "StatusRange": 1,
-"SelfStatusRange": 1
+"SelfStatusRange": 1,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -1879,7 +1915,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -1888,7 +1925,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -1897,7 +1935,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -1968,6 +2007,7 @@
 "BaseIntrinsics": [
 "magma_armor"
 ],
+"FormIntrinsicSlot": 0,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -2016,7 +2056,7 @@
 "dead": false,
 "serializationLoc": {
 "X": 9,
-"Y": 8
+"Y": 0
 },
 "serializationDir": 0,
 "ProxyName": "",
@@ -2098,7 +2138,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -2119,7 +2159,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 1,
 "StatusRange": 1,
-"SelfStatusRange": 1
+"SelfStatusRange": 1,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
@@ -2128,7 +2169,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
@@ -2137,7 +2179,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
@@ -2146,7 +2189,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -2217,6 +2261,7 @@
 "BaseIntrinsics": [
 "flame_body"
 ],
+"FormIntrinsicSlot": 1,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
