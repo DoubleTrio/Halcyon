@@ -5,7 +5,6 @@
 ]]--
 require 'origin.common'
 require 'origin.services.baseservice'
---require 'halcyon.config'
 
 --Declare class ConfigTools
 local ConfigTools = Class('ConfigTools', BaseService)
@@ -47,9 +46,15 @@ function ConfigTools:OnDeinit()
 end
 
 function ConfigTools:OnSaveLoad()
-    if not CONFIG then
-        self:LoadConfig()
-    else
+	--initialize settings SV if needed
+    if SV.Settings == nil then
+        SV.Settings = {
+            Starters = 0,
+            Nicknames = 0
+        }
+    end
+
+    if CONFIG then
         self:SaveConfig()
     end
 end
@@ -62,9 +67,6 @@ function ConfigTools:LoadConfig()
 end
 
 function ConfigTools:SaveConfig()
-	--initialize settings SV if needed
-    if SV.Settings == nil then SV.Settings = {} end
-
     SV.Settings.Nicknames = 1
     if CONFIG.UseNicknames then SV.Settings.Nicknames = 0 end
     SV.Settings.Starters = 1
@@ -73,21 +75,18 @@ end
 
 function ConfigTools:OnAddMenu(menu)
     -- only add page if the save data has not been loaded yet
-    if menu.HasLabel() and menu.Label == "SETTINGS_MENU" and not menu.InGame then
+    if menu:HasLabel() and menu.Label == "SETTINGS_MENU" and not menu.InGame then
+        self:LoadConfig()
         local page = menu:AddPage("halcyon", "Halcyon Settings")
         local options1 = {"Regular", "All"}
         local options2 = {"Yes", "No"}
         local save1 = function(setting) SV.Settings.Starters = setting.CurrentChoice end
-        local save2 = function(setting) SV.Settings.Starters = setting.CurrentChoice end
+        local save2 = function(setting) SV.Settings.Nicknames = setting.CurrentChoice end
         page.GlobalSaveAction = function() self.LoadConfig() end
 
         page:AddSetting("Starters", options1, SV.Settings.Starters, save1)
         page:AddSetting("Nicknames", options2, SV.Settings.Nicknames, save2)
     end
-end
-
-function ConfigTools:OnUpgrade()
-
 end
 
 ---Summary
@@ -96,7 +95,7 @@ function ConfigTools:Subscribe(med)
     med:Subscribe("ConfigTools", EngineServiceEvents.Init,               function() self.OnInit(self) end )
     med:Subscribe("ConfigTools", EngineServiceEvents.Deinit,             function() self.OnDeinit(self) end )
     med:Subscribe("ConfigTools", EngineServiceEvents.LoadSavedData,      function() self.OnSaveLoad(self) end )
-    med:Subscribe("ConfigTools", EngineServiceEvents.UpgradeSave,        function() self.OnUpgrade(self) end )
+    med:Subscribe("ConfigTools", EngineServiceEvents.AddMenu,            function(_, args) self.OnAddMenu(self, args[0]) end )
 end
 
 ---Summary
