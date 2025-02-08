@@ -31,13 +31,13 @@ If you're having trouble installing the game, or have any questions, comments, f
 ## Credits
 * **Palika** — mod author. scripting, writing, balancing, mapping, etc. (all non-engine work, except where other credit is given)  
 * **Audino** — for making the engine, adding features that I needed for the game. His work cannot be understated as without him this mod would not exist  
-* **Trio-** — Mission_gen in-dungeon scripting, other scripting features/enhancements/quality of lifes 
+* **Trio-** — Mission_gen in-dungeon scripting, in-dungeon player rescue scripting, other scripting features/enhancements/quality of lifes 
 
 ### Music credits:
 * Minemaker0430 - Anima Core theme
 
 ### Scripting credits:
-* MistressNebula - Recruitment Search integration for Halcyon, Custom Menu used for Cafe/Merchant Daily Specials. All starter's mod custom menu for picking player/partner.
+* MistressNebula - Recruitment Search integration for Halcyon, Custom Menu used for Cafe/Merchant Daily Specials. All starter's mod custom menu for picking player/partner. Integrating Halcyon Mods into settings menu.
 * Touhou Project - Dungeon Generation help. Illuminant Riverbed rocks / river extension work.
 
 ### Spriting credits:

@@ -5044,7 +5044,10 @@ As he is a volunteer, he won't be staying with you once you leave.
   <data name="MSG_PERSIM_BAND" xml:space="preserve">
     <value>{0} is protected from confusion!</value>
     <comment></comment>  </data>
-
+	
+  <data name="MSG_SEARING_CRUCIBLE_FIRE_POWER_UP" xml:space="preserve">
+    <value>{0}'s \uE087Fire-type attacks are boosted by the searing lava!</value>
+    <comment></comment>  </data>
 
 
 

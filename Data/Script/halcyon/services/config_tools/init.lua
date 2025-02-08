@@ -4,7 +4,7 @@
     This service deals with config related stuff.
 ]]--
 require 'origin.common'
---require 'services.baseservice'
+require 'origin.services.baseservice'
 --require 'halcyon.config'
 
 --Declare class ConfigTools

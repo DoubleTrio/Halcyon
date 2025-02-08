@@ -1352,8 +1352,9 @@ function SINGLE_CHAR_SCRIPT.ResolveRockFall(owner, ownerChar, context, args)
 			type_effectiveness = PMDC.Dungeon.PreTypeEvent.GetEffectivenessMult(type_effectiveness)
 
 
-			damage = math.floor(type_effectiveness * damage) / 4
-
+			damage = type_effectiveness * damage
+			damage = math.floor(damage / 4) 
+			
 			TASK:WaitTask(chara:InflictDamage(damage))
 			TASK:WaitTask(chara:AddStatusEffect(nil, flinch, true))
 		end		
@@ -1417,6 +1418,49 @@ function SINGLE_CHAR_SCRIPT.RockfallTemors(owner, ownerChar, context, args)
 	end
 
 end
+
+
+--For chip burn applied by boss fight lava.
+function SINGLE_CHAR_SCRIPT.LavaChipDamage(owner, ownerChar, context, args)
+	local chara = context.User
+	local type_effectiveness = PMDC.Dungeon.PreTypeEvent.CalculateTypeMatchup('fire', chara.Element1) + PMDC.Dungeon.PreTypeEvent.CalculateTypeMatchup('fire', chara.Element2)
+	type_effectiveness = PMDC.Dungeon.PreTypeEvent.GetEffectivenessMult(type_effectiveness)
+
+	--if character is a fire type or has fire immunity
+	if chara.Element1 == 'fire' or chara.Element2 == 'fire' or chara.Intrinsic == 'flash_fire' or chara.Intrinsic == 'well_baked_body' then
+		type_effectiveness = 0
+	end
+	
+	if chara.Intrinsic == 'heatproof' then
+		type_effectiveness = type_effectiveness / 4
+	end
+	
+	--local burn = RogueEssence.Dungeon.StatusEffect("burn")
+	--initialize status data before adding it to anything
+	--burn:LoadFromData()
+
+	--deal 1/16 max hp as damage, multiplied based on type effectiveness. Burn chara if they're not immune
+	local damage = chara.MaxHP / 16
+	damage = type_effectiveness * damage
+	damage = math.floor(damage / 4)--you need to divide by 4 again, as type effectiveness is 4 times the real value that gets used.
+
+	if damage > 0 then
+		local searingAnimData = RogueEssence.Content.AnimData("Weather_Ball_Fire_2", 3)
+		local searingAnim = RogueEssence.Content.StaticAnim(searingAnimData, 1)
+		searingAnim:SetupEmitted(RogueElements.Loc(24 * chara.CharLoc.X + 12, 24 * chara.CharLoc.Y + 12), 0, RogueElements.Dir8.None)
+	
+		_DUNGEON:LogMsg(STRINGS:Format("{0} is singed by the searing lava!", context.User:GetDisplayName(false)))
+		SOUND:PlayBattleSE('DUN_Ember_2')
+		DUNGEON:PlayVFXAnim(searingAnim, RogueEssence.Content.DrawLayer.Front)
+		TASK:WaitTask(chara:InflictDamage(damage))
+		--if chara:GetStatusEffect("burn") == nil
+		--	TASK:WaitTask(chara:AddStatusEffect(nil, burn, true))
+		--end
+	end
+end
+
+
+
 
 --For Ledian's speeches within the beginner lesson
 function SINGLE_CHAR_SCRIPT.BeginnerLessonSpeech(owner, ownerChar, context, args)

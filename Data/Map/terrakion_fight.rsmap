@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.8.1.0",
+"Version": "0.8.8.0",
 "Object": {
 "$type": "RogueEssence.Dungeon.Map, RogueEssence",
 "Name": {
@@ -27,14 +27,6 @@
 "Y": 3
 },
 "serializationDir": 0,
-"IsFounder": false,
-"IsPartner": false,
-"Nickname": "da boss :)",
-"ActionEvents": [],
-"Discriminator": 0,
-"MetAt": "",
-"MaxHPBonus": 252,
-"SpeedBonus": 0,
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -114,7 +106,7 @@
 "FullnessRemainder": 0,
 "MaxFullness": 100,
 "StatusEffects": {},
-"MustHitNext": false,
+"MissChain": 0,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -133,7 +125,8 @@
 "RestrictMobilityPassable": false,
 "AttackRange": 0,
 "StatusRange": 0,
-"SelfStatusRange": 0
+"SelfStatusRange": 0,
+"AbandonRangeOnHit": true
 }
 ]
 },
@@ -162,6 +155,7 @@
 "Assembly": false,
 "Index": -1
 },
+"Nickname": "da boss :)",
 "OriginalUUID": "",
 "OriginalTeam": "",
 "BaseForm": {
@@ -172,10 +166,12 @@
 },
 "Level": 20,
 "EXP": 0,
+"MaxHPBonus": 252,
 "AtkBonus": 0,
 "DefBonus": 0,
 "MAtkBonus": 0,
 "MDefBonus": 0,
+"SpeedBonus": 0,
 "BaseSkills": [
 {
 "SkillNum": "smack_down",
@@ -201,7 +197,10 @@
 "BaseIntrinsics": [
 "justified"
 ],
+"FormIntrinsicSlot": -1,
 "Relearnables": {},
+"Discriminator": 0,
+"MetAt": "",
 "MetLoc": {
 "ID": "",
 "StructID": {
@@ -219,9 +218,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
+"IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": true,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
