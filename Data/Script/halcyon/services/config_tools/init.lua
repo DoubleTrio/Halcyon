@@ -52,6 +52,8 @@ function ConfigTools:OnSaveLoad()
             Starters = 0,
             Nicknames = 0
         }
+    else
+        self:LoadConfig()
     end
 
     if CONFIG then
@@ -60,6 +62,13 @@ function ConfigTools:OnSaveLoad()
 end
 
 function ConfigTools:LoadConfig()
+    -- this should only be necessary in case of script reload
+    if SV.Settings == nil then
+        SV.Settings = {
+            Starters = 0,
+            Nicknames = 0
+        }
+    end
     CONFIG = {
         UseNicknames = (SV.Settings.Nicknames == 0),
         RegularStarters = (SV.Settings.Starters == 0)
