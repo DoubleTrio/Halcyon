@@ -28,10 +28,11 @@ SV.Services =
 -----------------------------------------------
 -- Settings Defaults
 -----------------------------------------------
-SV.Settings = {
-	Starters = 0,
-	Nicknames = 0
-}
+-- This needs to be nil to avoid PMDO's stray default loads
+--SV.Settings = {
+--	  Starters = 0,
+--    Nicknames = 0
+--}
 
 -----------------------------------------------
 -- General Defaults
