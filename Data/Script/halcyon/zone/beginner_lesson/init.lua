@@ -42,8 +42,8 @@ function beginner_lesson.Init(zone)
   PrintInfo("=>> Init_beginner_lesson")
 end
 
-function beginner_lesson.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function beginner_lesson.Rescued(zone, name, mail)
+	COMMON.Rescued(zone, name, mail)
 end
 
 

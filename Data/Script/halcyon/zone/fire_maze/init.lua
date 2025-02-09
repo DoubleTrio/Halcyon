@@ -10,10 +10,9 @@ function fire_maze.Init(zone)
   PrintInfo("=>> Init_fire_maze")
 end
 
-function fire_maze.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function fire_maze.Rescued(zone, name, mail)
+  COMMON.Rescued(zone, name, mail)
 end
-
 
 function fire_maze.ExitSegment(zone, result, rescue, segmentID, mapID)
   DEBUG.EnableDbgCoro() --Enable debugging this coroutine

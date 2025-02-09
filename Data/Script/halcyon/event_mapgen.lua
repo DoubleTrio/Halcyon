@@ -19,7 +19,6 @@ PresetPickerType = luanet.import_type('RogueElements.PresetPicker`1')
 MapItemType = luanet.import_type('RogueEssence.Dungeon.MapItem')
 
 function ZONE_GEN_SCRIPT.GenerateMissionFromSV(zoneContext, context, queue, seed, args)
-  SV.DestinationFloorNotified = false
   SV.MonsterHouseMessageNotified = false
   SV.OutlawDefeated = false
   SV.OutlawGoonsDefeated = false
@@ -37,6 +36,12 @@ function ZONE_GEN_SCRIPT.GenerateMissionFromSV(zoneContext, context, queue, seed
   local outlawFloor = false
   local escortDeathEvent = false
   local activeEffect = RogueEssence.Data.ActiveEffect()
+
+   
+  if _DATA.Save.Rescue ~= nil and _DATA.Save.Rescue.Rescuing then
+    return
+  end
+  
 
   for name, mission in pairs(SV.TakenBoard) do
     if mission.Taken and mission.Completion == COMMON.MISSION_INCOMPLETE and zoneContext.CurrentZone == mission.Zone and mission.BackReference ~= COMMON.FLEE_BACKREFERENCE then
@@ -202,7 +207,23 @@ function ZONE_GEN_SCRIPT.ReverseRelicForest(zoneContext, context, queue, seed, a
 end
 
 
+function ZONE_GEN_SCRIPT.SpawnRescueNote(zoneContext, context, queue, seed, args)
+  if _DATA.Save.Rescue == nil or not _DATA.Save.Rescue.Rescuing then
+    return
+  end
+  
+  if zoneContext.CurrentZone == _DATA.Save.Rescue.SOS.Goal.ID
+	  and zoneContext.CurrentSegment == _DATA.Save.Rescue.SOS.Goal.StructID.Segment and zoneContext.CurrentID == _DATA.Save.Rescue.SOS.Goal.StructID.ID then
 
+    -- add destination floor notification
+    local activeEffect = RogueEssence.Data.ActiveEffect()
+    activeEffect.OnMapStarts:Add(-6, RogueEssence.Dungeon.SingleCharScriptEvent("DestinationFloorMessage"))
+    local destNote = LUA_ENGINE:MakeGenericType( MapEffectStepType, { MapGenContextType }, { activeEffect })
+    local priority = RogueElements.Priority(-6)
+    queue:Enqueue(priority, destNote)
+	
+  end
+end
 
 --Halcyon custom map gen steps
  
