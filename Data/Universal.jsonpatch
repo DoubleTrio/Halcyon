@@ -1,20 +1,23 @@
 ﻿{
   "Version": [
     "0.0",
-    "0.8.5.0"
+    "0.8.7.0"
   ],
   "Object": {
     "ZoneSteps": {
       "_t": "a",
-      "_0": [
-        {
-          "$type": "RogueEssence.LevelGen.ScriptZoneStep, RogueEssence",
-          "Script": "SpawnMissionNpcFromSV",
-          "ArgTable": "{}"
-        },
-        0,
-        0
-      ]
+      "0": {
+        "Script": [
+          "SpawnRescueNote",
+          "SpawnMissionNpcFromSV"
+        ]
+      },
+      "1": {
+        "Script": [
+          "SpawnMissionNpcFromSV",
+          "SpawnRescueNote"
+        ]
+      }
     },
     "UniversalStates": {
       "_t": "a",
@@ -59,11 +62,9 @@
             ]
           },
           "Value": {
-            "$type": "PMDC.Dungeon.StealthEvoEvent, PMDC",
-            "CheckSpecies": [
-              "tandemaus"
-            ],
-            "PercentChance": 35
+            "$type": "RogueEssence.Dungeon.SingleCharScriptEvent, RogueEssence",
+            "Script": "UpdateEscort",
+            "ArgTable": "{}"
           }
         },
         0,

@@ -26,8 +26,8 @@ function crooked_cavern.EnterSegment(zone, rescuing, segmentID, mapID)
 	end
 end
 
-function crooked_cavern.Rescued(zone, mail)
-  COMMON.Rescued(zone, mail)
+function crooked_cavern.Rescued(zone, name, mail)
+  COMMON.Rescued(zone, name, mail)
 end
 
 
@@ -52,8 +52,12 @@ function crooked_cavern.ExitSegment(zone, result, rescue, segmentID, mapID)
 				Rescue
 			}
 			]]--
-		COMMON.ExitDungeonMissionCheck(zone.ID, segmentID)
-		if result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
+		GeneralFunctions.CheckAllowSetRescue(zone.ID) 
+		local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
+
+		if exited == true then
+			--do nothing
+		elseif result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
 
 			GAME:WaitFrames(20)
 			

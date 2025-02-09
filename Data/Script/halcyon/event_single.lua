@@ -122,39 +122,48 @@ end
 function SINGLE_CHAR_SCRIPT.DestinationFloor(owner, ownerChar, context, args)
 	local missionNum = args.Mission
 	local mission = SV.TakenBoard[missionNum]
-	if not SV.DestinationFloorNotified then
-		if mission.Type == COMMON.MISSION_TYPE_EXPLORATION then
-			UI:ResetSpeaker()
-			UI:WaitShowDialogue("Yes! You've reached the destination! " .. _DATA:GetMonster(mission.Client):GetColoredName().. " seems happy!")
-			local escort = COMMON.FindMissionEscort(missionNum)
-			if escort then
-				--Clear but remember minimap state
-				SV.TemporaryFlags.PriorMapSetting = _DUNGEON.ShowMap
-				_DUNGEON.ShowMap = _DUNGEON.MinimapState.None
-				GAME:WaitFrames(20)
-				SV.TemporaryFlags.MissionCompleted = true
-				mission.Completion = 1
-				UI:SetSpeaker(escort)
-				DUNGEON:CharTurnToChar(escort, GAME:GetPlayerPartyMember(0))
-				DUNGEON:CharTurnToChar(GAME:GetPlayerPartyMember(0), escort)
-				UI:WaitShowDialogue("Thank you for exploring this place with me!")
-
-				GAME:WaitFrames(30)		
-				--Set max team size to 4 as the guest is no longer "taking" up a party slot
-				RogueEssence.Dungeon.ExplorerTeam.MAX_TEAM_SLOTS = 4
-				TASK:WaitTask(_DUNGEON:ProcessBattleFX(escort, escort, _DATA.SendHomeFX))
-				_DUNGEON:RemoveChar(escort)
-				GAME:WaitFrames(50)
-				GeneralFunctions.AskMissionWarpOut()
-			end
-		else
-			SOUND:PlayFanfare("Fanfare/Note")
-			UI:ResetSpeaker()
-			UI:WaitShowDialogue("You've reached a destination floor!")
-		end
-		SV.DestinationFloorNotified = true
-		GAME:WaitFrames(10)
+	if context.User ~= nil then
+		return
 	end
+	if mission.Type == COMMON.MISSION_TYPE_EXPLORATION then
+		UI:ResetSpeaker()
+		UI:WaitShowDialogue("Yes! You've reached the destination! " .. _DATA:GetMonster(mission.Client):GetColoredName().. " seems happy!")
+		local escort = COMMON.FindMissionEscort(missionNum)
+		if escort then
+			--Clear but remember minimap state
+			SV.TemporaryFlags.PriorMapSetting = _DUNGEON.ShowMap
+			_DUNGEON.ShowMap = _DUNGEON.MinimapState.None
+			GAME:WaitFrames(20)
+			SV.TemporaryFlags.MissionCompleted = true
+			mission.Completion = 1
+			UI:SetSpeaker(escort)
+			DUNGEON:CharTurnToChar(escort, GAME:GetPlayerPartyMember(0))
+			DUNGEON:CharTurnToChar(GAME:GetPlayerPartyMember(0), escort)
+			UI:WaitShowDialogue("Thank you for exploring this place with me!")
+
+			GAME:WaitFrames(30)		
+			--Set max team size to 4 as the guest is no longer "taking" up a party slot
+			RogueEssence.Dungeon.ExplorerTeam.MAX_TEAM_SLOTS = 4
+			TASK:WaitTask(_DUNGEON:ProcessBattleFX(escort, escort, _DATA.SendHomeFX))
+			_DUNGEON:RemoveChar(escort)
+			GAME:WaitFrames(50)
+			GeneralFunctions.AskMissionWarpOut()
+ 		end
+	else
+		SOUND:PlayFanfare("Fanfare/Note")
+		UI:ResetSpeaker()
+		UI:WaitShowDialogue("You've reached a destination floor!")
+ 	end
+	GAME:WaitFrames(10)
+end
+
+function SINGLE_CHAR_SCRIPT.DestinationFloorMessage(owner, ownerChar, context, args)
+  if context.User ~= nil then
+    return
+  end
+  SOUND:PlayFanfare("Fanfare/Note")
+  UI:ResetSpeaker()
+  UI:WaitShowDialogue(STRINGS:Format(RogueEssence.StringKey("DLG_MISSION_DESTINATION"):ToLocal()))
 end
 
 function SpawnOutlaw(origin, radius, mission_num)
@@ -1520,6 +1529,7 @@ function SINGLE_CHAR_SCRIPT.CheckOngoingMissions(owner, ownerChar, context, args
 	local curr_zone = _ZONE.CurrentZoneID
 	local curr_segment = _ZONE.CurrentMapID.Segment
 	local curr_floor = GAME:GetCurrentFloor().ID + 1
+	
 	for _, mission in ipairs(SV.TakenBoard) do
 		if mission.BackReference ~= COMMON.FLEE_BACKREFERENCE and mission.Taken and mission.Completion == COMMON.MISSION_INCOMPLETE and curr_floor == mission.Floor and curr_zone == mission.Zone and curr_segment == mission.Segment then
 			UI:ResetSpeaker()
@@ -1531,6 +1541,38 @@ function SINGLE_CHAR_SCRIPT.CheckOngoingMissions(owner, ownerChar, context, args
 				context.TurnCancel.Cancel = true
 				break
 			end
+		end
+	end
+end
+
+function SINGLE_CHAR_SCRIPT.CheckOngoingMissions(owner, ownerChar, context, args)
+	local curr_zone = _ZONE.CurrentZoneID
+	local curr_segment = _ZONE.CurrentMapID.Segment
+	local curr_floor = GAME:GetCurrentFloor().ID + 1
+	local has_ongoing_mission = false
+	-- TODO: CHECK IF RESCUE IS ONGOING
+	-- print(tostring(_DATA.Save.Rescue))
+	if _DATA.Save.Rescue ~= nil and _DATA.Save.Rescue.Rescuing then
+		if curr_zone == _DATA.Save.Rescue.SOS.Goal.ID and curr_segment == _DATA.Save.Rescue.SOS.Goal.StructID.Segment and curr_floor - 1 == _DATA.Save.Rescue.SOS.Goal.StructID.ID then
+			has_ongoing_mission = true
+		end
+  else
+		for _, mission in ipairs(SV.TakenBoard) do
+			if mission.BackReference ~= COMMON.FLEE_BACKREFERENCE and mission.Taken and mission.Completion == COMMON.MISSION_INCOMPLETE and curr_floor == mission.Floor and curr_zone == mission.Zone and curr_segment == mission.Segment then
+				has_ongoing_mission = true
+				break
+			end
+		end
+	end
+
+	if has_ongoing_mission then
+		UI:ResetSpeaker()
+		UI:ChoiceMenuYesNo("You currently have an ongoing mission on this floor.\nDo you still want to proceed?", true)
+		UI:WaitForChoice()
+		local continue = UI:ChoiceResult()
+		if not continue then
+			context.CancelState.Cancel = true
+			context.TurnCancel.Cancel = true
 		end
 	end
 end

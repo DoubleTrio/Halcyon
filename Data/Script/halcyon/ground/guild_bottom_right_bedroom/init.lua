@@ -108,9 +108,9 @@ function AlmanacMenu:initialize(items)
   assert(self, "ExampleMenu:initialize(): Error, self is nil!")
   self.menu = RogueEssence.Menu.ScriptableMenu(24, 24, 196, 128, function(input) self:Update(input) end)
   self.cursor = RogueEssence.Menu.MenuCursor(self.menu)
-  self.menu.MenuElements:Add(self.cursor)
+  self.menu.Elements:Add(self.cursor)
   for i = 1, #items, 1 do 
-	self.menu.MenuElements:Add(RogueEssence.Menu.MenuText(items[i], RogueElements.Loc(16, 8 + 14 * (i-1))))
+	self.menu.Elements:Add(RogueEssence.Menu.MenuText(items[i], RogueElements.Loc(16, 8 + 14 * (i-1))))
   end
   self.total_items = #items
   self.current_item = 0

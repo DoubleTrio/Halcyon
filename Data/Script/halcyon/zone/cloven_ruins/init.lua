@@ -29,15 +29,22 @@ end
 ---cloven_ruins.ExitSegment(zone, result, rescue, segmentID, mapID)
 --Engine callback function
 function cloven_ruins.ExitSegment(zone, result, rescue, segmentID, mapID)
+  GeneralFunctions.RestoreIdleAnim()
+	GeneralFunctions.CheckAllowSetRescue(zone.ID) 
+	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
 
+	if exited == true then
+	--do nothing
+	elseif result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
 
+	else
+		
+	end
 end
-
 ---cloven_ruins.Rescued(zone, name, mail)
 --Engine callback function
 function cloven_ruins.Rescued(zone, name, mail)
-
-
+    COMMON.Rescued(zone, name, mail)
 end
 
 return cloven_ruins
