@@ -46,40 +46,24 @@ function ConfigTools:OnDeinit()
 end
 
 function ConfigTools:OnSaveLoad()
-	--initialize settings SV if needed
-    if SV.Settings == nil then
-        SV.Settings = {
-            Starters = 0,
-            Nicknames = 0
-        }
-    else
-        self:LoadConfig()
-    end
-
-    if CONFIG then
-        self:SaveConfig()
+    if CONFIG.Nicknames ~= nil or CONFIG.Starters ~= nil then
+        self:StoreConfig()
     end
 end
 
 function ConfigTools:LoadConfig()
-    -- this should only be necessary in case of script reload
-    if SV.Settings == nil then
-        SV.Settings = {
-            Starters = 0,
-            Nicknames = 0
-        }
-    end
-    CONFIG = {
-        UseNicknames = (SV.Settings.Nicknames == 0),
-        RegularStarters = (SV.Settings.Starters == 0)
-    }
+    CONFIG.Nicknames = CONFIG.UseNicknames()
+    CONFIG.Starters  = CONFIG.RegularStarters()
 end
 
-function ConfigTools:SaveConfig()
+function ConfigTools:StoreConfig()
+    SV.Settings = SV.Settings or {}
     SV.Settings.Nicknames = 1
-    if CONFIG.UseNicknames then SV.Settings.Nicknames = 0 end
+    if CONFIG.Nicknames then SV.Settings.Nicknames = 0 end
     SV.Settings.Starters = 1
-    if CONFIG.RegularStarters then SV.Settings.Starters = 0 end
+    if CONFIG.Starters then SV.Settings.Starters = 0 end
+    CONFIG.Nicknames = nil
+    CONFIG.Starters = nil
 end
 
 function ConfigTools:OnAddMenu(menu)

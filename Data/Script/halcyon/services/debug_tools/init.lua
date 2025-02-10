@@ -831,17 +831,6 @@ end
 		}
 	}
 	end
-    if SV.Settings == nil then
-        SV.Settings = {
-            Starters = 0,
-            Nicknames = 0
-        }
-            
-        CONFIG = {
-            UseNicknames = true,
-            RegularStarters = true
-        }
-    end
  
   PrintInfo("=>> Loaded version")
 end

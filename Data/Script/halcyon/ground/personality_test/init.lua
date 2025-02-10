@@ -107,7 +107,7 @@ function personality_test.CharacterSelect()
 	end
 
 	local species_list = {}
-	if CONFIG.RegularStarters then
+	if CONFIG.RegularStarters() then
 		GAME:WaitFrames(60)
 	else
 		--this will already take its sweet time so might as well not put a wait command here
@@ -145,7 +145,7 @@ function personality_test.CharacterSelect()
 
 	--If all starters is enabled, then run custom code that lets the player select any mon for player and partner.
 	--otherwise, use the standard starter selection script.
-	if CONFIG.RegularStarters then
+	if CONFIG.RegularStarters() then
 		--Hero data
 		local msg = "Your hero."
 		--[[local choices = {'Bulbasaur', 'Charmander', 'Squirtle', 'Pikachu', 'Vulpix', 'Vulpix-A', 'Meowth', 'Machop', 
