@@ -2137,9 +2137,9 @@ end
 
 function GeneralFunctions.CheckAllowSetRescue(zone) 
 	local should_rescue = false
-	-- TODO: Adjust conditions for setting rescues
-	if SV.ChapterProgression.Chapter >= 3 and SV.Chapter3.DefeatedBoss and SV.ChapterProgression.CurrentStoryDungeon ~= zone then
+	-- Conditions for asking for rescues - Allow asking for a rescue at any story progression (they are still blocked in Relic Forest and dojo dungeons)
+	--if SV.ChapterProgression.Chapter >= 3 and SV.Chapter3.DefeatedBoss and SV.ChapterProgression.CurrentStoryDungeon ~= zone then
 		should_rescue = true
-	end
+	--end
 	GAME:SetRescueAllowed(should_rescue)
 end 

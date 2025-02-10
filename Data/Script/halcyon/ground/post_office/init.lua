@@ -110,6 +110,7 @@ end
 
 function post_office.Main_Desk_Action(obj, activator)
 
+	--Only allow players the ability to go on rescues when they're bronze rank (They've started chapter 4)
 	-- TODO: Add condition for when player is able to take on rescues?
 	-- SV.ChapterProgression.Chapter >= 3 and SV.Chapter3.DefeatedBoss
 
