@@ -20,6 +20,7 @@ function searing_tunnel.Init(zone)
 end
 
 function searing_tunnel.EnterSegment(zone, rescuing, segmentID, mapID)
+	GeneralFunctions.CheckAllowSetRescue(zone.ID)
 	if rescuing ~= true then
 		COMMON.BeginDungeon(zone.ID, segmentID, mapID)
 	end
@@ -40,13 +41,10 @@ end
 function searing_tunnel.ExitSegment(zone, result, rescue, segmentID, mapID)
 	GeneralFunctions.RestoreIdleAnim()
 	DEBUG.EnableDbgCoro() --Enable debugging this coroutine
-    GAME:SetRescueAllowed(false)
 	--Below function removes escorts and job items for relevant jobs; run on all segments, escort really shouldn't follow you past the halfway point anyway.
 	--Base Sky behavior kicks you out of the dungeon if you have an escort instead of proceding to the next segment...
 	--I think even though it may be weird they just "disappear" upon exiting the segment, this approach is fine and best from a gameplay perspective.
-	COMMON.ExitDungeonMissionCheck(zone.ID, segmentID)
 
-	GeneralFunctions.CheckAllowSetRescue(zone.ID) 
 	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
 
 	-- TODO: Add rescue condition for Searing Tunnel and figure out what to do for the segments...
