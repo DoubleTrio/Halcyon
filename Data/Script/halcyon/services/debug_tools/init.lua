@@ -77,7 +77,7 @@ function DebugTools:OnNewGame()
 
 	  
 	  local mon_id = RogueEssence.Dungeon.MonsterID("turtwig", 0, "normal", Gender.Male)
-	  local p = _DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, mon_id, 100, "", 0)
+	  local p = _DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, mon_id, 10, "", 0)
 	  local tbl = LTBL(p)
 	  tbl.Importance = 'Hero'
 	  p.IsFounder = true
@@ -86,7 +86,7 @@ function DebugTools:OnNewGame()
 	  _DATA.Save.ActiveTeam.Players:Add(p)
 	  
 	  mon_id = RogueEssence.Dungeon.MonsterID("piplup", 0, "normal", Gender.Male)
-	  p = _DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, mon_id, 100, "", 0)
+	  p = _DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, mon_id, 10, "", 0)
 	  tbl = LTBL(p)
 	  tbl.Importance = 'Partner'
 	  p.IsFounder = true
@@ -124,13 +124,19 @@ function DebugTools:OnNewGame()
 	  mon_id = RogueEssence.Dungeon.MonsterID("zigzagoon", 0, "normal", Gender.Female)
 	  _DATA.Save.ActiveTeam.Players:Add(_DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, mon_id,100, "", 0))
 	  _DATA.Save.ActiveTeam.Players[3].Nickname = 'Almotz'
-	  _DATA.Save.ActiveTeam:SetRank("normal")
-	  _DATA.Save:UpdateTeamProfile(true)
+	 
+	    _DATA.Save.ActiveTeam:SetRank("normal")
+	    _DATA.Save:UpdateTeamProfile(true)
 	  
+	  --initialize config to prevent errors in debug saves
+	  CONFIG = {
+            UseNicknames = true,
+            RegularStarters = true
+        }
 
-		GAME:GivePlayerItem('seed_reviver')	  
-		GAME:GivePlayerItem('seed_reviver')	  
-		GAME:GivePlayerItem('seed_reviver')	  
+		--GAME:GivePlayerItem('seed_reviver')	  
+		--GAME:GivePlayerItem('seed_reviver')	  
+		--GAME:GivePlayerItem('seed_reviver')	  
 		
 		
 		local dungeon_keys = _DATA.DataIndices[RogueEssence.Data.DataManager.DataType.Zone]:GetOrderedKeys(false)

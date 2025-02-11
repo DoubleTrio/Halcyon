@@ -40,27 +40,24 @@ end
 function searing_tunnel.ExitSegment(zone, result, rescue, segmentID, mapID)
 	GeneralFunctions.RestoreIdleAnim()
 	DEBUG.EnableDbgCoro() --Enable debugging this coroutine
-    GAME:SetRescueAllowed(false)
 	--Below function removes escorts and job items for relevant jobs; run on all segments, escort really shouldn't follow you past the halfway point anyway.
 	--Base Sky behavior kicks you out of the dungeon if you have an escort instead of proceding to the next segment...
 	--I think even though it may be weird they just "disappear" upon exiting the segment, this approach is fine and best from a gameplay perspective.
-	COMMON.ExitDungeonMissionCheck(zone.ID, segmentID)
+	--COMMON.ExitDungeonMissionCheck(zone.ID, segmentID)
 
-	GeneralFunctions.CheckAllowSetRescue(zone.ID) 
-	local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
-
-	-- TODO: Add rescue condition for Searing Tunnel and figure out what to do for the segments...
-	if exited == true then
-
-	elseif true then
-
-	end
 
 	if segmentID == 0 then --Searing Tunnel Exit Segment
 	  PrintInfo("=>> ExitSegment_searing_tunnel (Searing Tunnel) result "..tostring(result).." segment "..tostring(segmentID))
+	  
+	  --Only allow rescues in the first segment.
+	  GeneralFunctions.CheckAllowSetRescue(zone.ID) 
+	  local exited = COMMON.ExitDungeonMissionCheck(result, rescue, zone.ID, segmentID)
+	  
+	  if exited == true then
+		--do nothing
 
-		--Died or Escaped
-		if result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
+	  --Died or Escaped
+      elseif result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
 			GAME:WaitFrames(20)
 			--clear the Thief flag when dying/escaping segment 0. Do not clear it when winning as they remember you until you leave the dungeon or until you die.
 			SV.adventure.Thief = false
@@ -108,7 +105,11 @@ function searing_tunnel.ExitSegment(zone, result, rescue, segmentID, mapID)
 		end 
 
 	elseif segmentID == 1 then --Searing Depths Exit Segment
-	  PrintInfo("=>> ExitSegment_searing_depths (Searing Depths) result "..tostring(result).." segment "..tostring(segmentID))
+		PrintInfo("=>> ExitSegment_searing_depths (Searing Depths) result "..tostring(result).." segment "..tostring(segmentID))
+	
+		--Disallow rescues for later half segments
+		GAME:SetRescueAllowed(false)
+		
 		--clear the Thief flag when exiting segment 1 in any way. Winning means you're done or are going to the boss (which you can only win or die in, both of which would clear the flag and the segment itself doesn't have kecs to get angry at you in so clearing here covers it)
 		--Dying or escaping means you either died (causing forgiveness) or left the dungeon (also causing forgiveness).
 		SV.adventure.Thief = false
@@ -170,7 +171,10 @@ function searing_tunnel.ExitSegment(zone, result, rescue, segmentID, mapID)
 	else--Searing Crucible Exit Segment
 	  PrintInfo("=>> ExitSegment_searing_crucible (Searing Crucible) result "..tostring(result).." segment "..tostring(segmentID))
 	  --This segment is only accessible during Chapter 5, for the boss fight.
-		
+	  
+	  --Disallow rescues for boss fight segments
+	  GAME:SetRescueAllowed(false)
+	 
 		--died to boss
 		if result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
 			SV.SearingTunnel.DiedPastCheckpoint = true

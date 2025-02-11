@@ -196,27 +196,45 @@ function apricorn_grove_entrance.ComeOutFront()
 		GAME:WaitFrames(20)
 		GAME:ContinueDungeon("apricorn_grove", 0, 0, 0, RogueEssence.Data.GameProgress.DungeonStakes.Risk, true, false)
 	else 
-		UI:WaitShowDialogue("OK,[pause=10] we'll call it a day and head back to the guild then.")
-		UI:WaitShowDialogue("C'mon.[pause=0] Let's head home!")
+		--Check if this was a rescue or not.
+		local rescue = _DATA.Save.Rescue ~= nil and _DATA.Save.Rescue.Rescuing--are we in a rescue?
+		
+		if rescue then
+			UI:WaitShowDialogue("OK,[pause=10] we'll call it here then and head back to the Pelipper Post Office.")
+			UI:WaitShowDialogue("C'mon.[pause=0] Let's head back!")
+		else
+			UI:WaitShowDialogue("OK,[pause=10] we'll call it a day and head back to the guild then.")
+			UI:WaitShowDialogue("C'mon.[pause=0] Let's head home!")
+		end
 		GAME:WaitFrames(40)
 		SOUND:FadeOutBGM(40)
 		GAME:FadeOut(false, 40)	
 		SV.ApricornGrove.InDungeon = false
 		GAME:CutsceneMode(false)
 		GAME:WaitFrames(90)
+		
+		
 
-		--set generic flags for generic end of day / start of next day.
-		SV.TemporaryFlags.Dinnertime = true 
-		SV.TemporaryFlags.Bedtime = true
-		SV.TemporaryFlags.MorningWakeup = true 
-		SV.TemporaryFlags.MorningAddress = true 
 
-		--Go to second floor if mission was done, else, dinner room
-		if SV.TemporaryFlags.MissionCompleted then
-			GeneralFunctions.EndDungeonRun(RogueEssence.Data.GameProgress.ResultType.Escaped, "master_zone", -1, 22, 0, true, true)
+		GeneralFunctions.CheckAllowSetRescue('apricorn_grove') 
+		local exited = COMMON.ExitDungeonMissionCheck(RogueEssence.Data.GameProgress.ResultType.Escaped, rescue, 'apricorn_grove', 0)
+		
+		if exited then 
+			--do nothing
 		else
-			GeneralFunctions.EndDungeonRun(RogueEssence.Data.GameProgress.ResultType.Escaped, "master_zone", -1, 6, 0, true, true)
-		end		
+			--set generic flags for generic end of day / start of next day.
+			SV.TemporaryFlags.Dinnertime = true 
+			SV.TemporaryFlags.Bedtime = true
+			SV.TemporaryFlags.MorningWakeup = true 
+			SV.TemporaryFlags.MorningAddress = true 
+
+			--Go to second floor if mission was done, else, dinner room
+			if SV.TemporaryFlags.MissionCompleted then
+				GeneralFunctions.EndDungeonRun(RogueEssence.Data.GameProgress.ResultType.Escaped, "master_zone", -1, 22, 0, true, true)
+			else
+				GeneralFunctions.EndDungeonRun(RogueEssence.Data.GameProgress.ResultType.Escaped, "master_zone", -1, 6, 0, true, true)
+			end		
+		end
 		
 	end
 end

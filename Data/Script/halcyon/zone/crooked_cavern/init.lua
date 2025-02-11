@@ -32,13 +32,10 @@ end
 
 
 function crooked_cavern.ExitSegment(zone, result, rescue, segmentID, mapID)
-	GeneralFunctions.RestoreIdleAnim()
+  GeneralFunctions.RestoreIdleAnim()
   if segmentID == 0 then--crooked cavern exit segment 
 	  DEBUG.EnableDbgCoro() --Enable debugging this coroutine
-	  PrintInfo("=>> ExitSegment_crooked_cavern (Crooked Cavern) result "..tostring(result).." segment "..tostring(segmentID))
-		
-	  GAME:SetRescueAllowed(false)
-		
+	  PrintInfo("=>> ExitSegment_crooked_cavern (Crooked Cavern) result "..tostring(result).." segment "..tostring(segmentID))	
 		--[[Different dungeon result typeS (cleared, died, etc)
 			   public enum ResultType
 			{
@@ -106,8 +103,8 @@ function crooked_cavern.ExitSegment(zone, result, rescue, segmentID, mapID)
 	else--crooked den exit segment 
 	  DEBUG.EnableDbgCoro() --Enable debugging this coroutine
 	  PrintInfo("=>> ExitSegment_crooked_den (Crooked Den) result "..tostring(result).." segment "..tostring(segmentID))
-
-		GAME:SetRescueAllowed(false)
+	  --Disallow rescues for boss fight segments
+	  GAME:SetRescueAllowed(false)
 		
 		--[[Different dungeon result typeS (cleared, died, etc)
 			   public enum ResultType

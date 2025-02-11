@@ -537,7 +537,7 @@
 "BagRestrict": -1,
 "KeepTreasure": false,
 "BagSize": -1,
-"Rescues": 0,
+"Rescues": 2,
 "CountedFloors": 13,
 "Rogue": 0,
 "Grounds": [
@@ -722,7 +722,7 @@
 "BagRestrict": -1,
 "KeepTreasure": false,
 "BagSize": -1,
-"Rescues": 0,
+"Rescues": 2,
 "CountedFloors": 15,
 "Rogue": 0,
 "Grounds": [
@@ -774,7 +774,7 @@
 "BagRestrict": -1,
 "KeepTreasure": false,
 "BagSize": -1,
-"Rescues": 0,
+"Rescues": 2,
 "CountedFloors": 14,
 "Rogue": 0,
 "Grounds": [

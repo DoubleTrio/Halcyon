@@ -64,33 +64,43 @@ function post_office.PlotScripting()
 end
 
 function post_office.RescueMessage() 
-	local rescue = SV.General.Rescue
-
+  local rescue = SV.General.Rescue
+  
   if rescue ~= nil then
     local chara = CH('Rescue_Owner')
-		UI:SetSpeaker(chara)
-		-- local hero = CH('PLAYER')
-		-- local partner = CH('Teammate1')
-		-- print(MRKR('Rescue_Spawn'))
-		-- GROUND:TeleportTo(hero, MRKR('Rescue_Spawn').Position.X, MRKR('Rescue_Spawn').Position.Y, MRKR('Rescue_Spawn').Direction)
-		-- GROUND:TeleportTo(partner, MRKR('Rescue_Spawn_Partner').Position.X, MRKR('Rescue_Spawn_Partner').Position.Y, MRKR('Rescue_Spawn_Partner').Direction)
-
+	UI:SetSpeaker(chara)
+	local hero = CH('PLAYER')
+	local partner = CH('Teammate1')
+	--print(MRKR('Rescue_Spawn'))
+	GAME:CutsceneMode(true)
+	AI:DisableCharacterAI(partner)
+	GROUND:TeleportTo(hero, MRKR('Rescue_Spawn').Position.X, MRKR('Rescue_Spawn').Position.Y, MRKR('Rescue_Spawn').Direction)
+	GROUND:TeleportTo(partner, MRKR('Rescue_Spawn_Partner').Position.X, MRKR('Rescue_Spawn_Partner').Position.Y, MRKR('Rescue_Spawn_Partner').Direction)
+	GAME:MoveCamera(232, 188, 1, false)
 	local result = SV.General.Rescue
 	SV.General.Rescue = nil
 	GAME:FadeIn(40)
 	if result == RogueEssence.Data.GameProgress.ResultType.Rescue then
+		GAME:WaitFrames(20)
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_001']))
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_003']))
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Success_004']))
 	elseif result == RogueEssence.Data.GameProgress.ResultType.Cleared or result == RogueEssence.Data.GameProgress.ResultType.Escaped then
+		GAME:WaitFrames(20)
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_001']))
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_002']))
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Miss_003']))
 	else
+		GAME:WaitFrames(10)
+		GeneralFunctions.EmoteAndPause(chara, "Sweating", true)
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Fail_001']))
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Return_Fail_002']))
 	end
-    GAME:WaitFrames(1)
+    GAME:WaitFrames(10)
+	GeneralFunctions.PanCamera()
+	AI:EnableCharacterAI(partner)
+	AI:SetCharacterAI(partner, "origin.ai.ground_partner", CH('PLAYER'), partner.Position)
+	GAME:CutsceneMode(false)
   end
 end
 --------------------------------------------------
@@ -110,16 +120,31 @@ end
 
 function post_office.Main_Desk_Action(obj, activator)
 
-	--Only allow players the ability to go on rescues when they're bronze rank (They've started chapter 4)
-	-- TODO: Add condition for when player is able to take on rescues?
-	-- SV.ChapterProgression.Chapter >= 3 and SV.Chapter3.DefeatedBoss
-
 	local chara = CH('Connect_Owner')
-	GeneralFunctions.StartConversation(chara, "TODO: Determine when to allow rescues.")
 	local state = 0
-  local repeated = false
-  -- local chara = CH('Connect_Owner')
-  UI:SetSpeaker(chara)
+    local repeated = false
+    UI:SetSpeaker(chara)
+  
+  	--Only allow players the ability to go on rescues when they're bronze rank (They've started chapter 4)
+    if SV.ChapterProgression.Chapter < 4 then
+		GeneralFunctions.StartConversation(chara, "Sorry,[pause=10] but only teams of [color=#FFA5FF]Bronze[color] rank or above may use the services here.")
+		state = -1
+	else
+		--Reimplement parts of StartConversation
+			local hero = CH('PLAYER')
+			local partner = CH('Teammate1')
+			chara.IsInteracting = true
+			partner.IsInteracting = true
+			SV.TemporaryFlags.OldDirection = chara.Direction
+			GROUND:CharSetAnim(partner, 'None', true)
+			GROUND:CharSetAnim(hero, 'None', true)
+			
+			GROUND:CharTurnToChar(hero, chara)
+			GROUND:CharTurnToChar(chara, hero)
+			local coro1 = TASK:BranchCoroutine(function() GROUND:CharTurnToCharAnimated(partner, chara, 4) end)
+	
+	end
+  
   
 	while state > -1 do
 		if state == 0 then
@@ -270,17 +295,39 @@ function post_office.Main_Desk_Action(obj, activator)
 			end
 		end
 	end
+	
+	--Catching the partner's turnto coroutine from the dialogue start
+	if coro1 ~= nil then TASK:JoinCoroutines({coro1}) end
+	
 	GeneralFunctions.EndConversation(chara)
 end 
 
 function post_office.Side_Desk_Action(obj, activator)
 	local chara = CH('Rescue_Owner')
-	GeneralFunctions.StartConversation(chara, "TODO: Determine when to allow rescues.")
 	local state = 0
-  local sos = nil
-  local repeated = false
-  local chara = CH('Rescue_Owner')
-  UI:SetSpeaker(chara)
+    local sos = nil
+    local repeated = false
+    UI:SetSpeaker(chara)
+	
+	--Only allow players the ability to go on rescues when they're bronze rank (They've started chapter 4)
+    if SV.ChapterProgression.Chapter < 4 then
+		GeneralFunctions.StartConversation(chara, "Sorry,[pause=10] but only teams of [color=#FFA5FF]Bronze[color] rank or above may use the services here.")
+		state = -1
+	else
+		--Reimplement parts of StartConversation
+			local hero = CH('PLAYER')
+			local partner = CH('Teammate1')
+			chara.IsInteracting = true
+			partner.IsInteracting = true
+			SV.TemporaryFlags.OldDirection = chara.Direction
+			GROUND:CharSetAnim(partner, 'None', true)
+			GROUND:CharSetAnim(hero, 'None', true)
+			
+			GROUND:CharTurnToChar(hero, chara)
+			GROUND:CharTurnToChar(chara, hero)
+			local coro1 = TASK:BranchCoroutine(function() GROUND:CharTurnToCharAnimated(partner, chara, 4) end)
+	
+	end
   
 	while state > -1 do
 		if state == 0 then
@@ -327,14 +374,23 @@ function post_office.Side_Desk_Action(obj, activator)
 				state = 0
 			end
 		elseif state == 2 then
-			local mail = RogueEssence.Data.DataManager.LoadRescueMail(sos);
+			local mail = RogueEssence.Data.DataManager.LoadRescueMail(sos)
+			--The player can only go on rescues for dungeons they have completed themselves.
 			local dungeon = _DATA.DataIndices[RogueEssence.Data.DataManager.DataType.Zone]:Get(mail.Goal.ID)
-			UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Rescue_Confirm'], dungeon:GetColoredName()), false)
-			UI:WaitForChoice()
-			local result = UI:ChoiceResult()
-			if result then
-				state = -1
+			if _DATA.Save:GetDungeonUnlock(mail.Goal.ID) == RogueEssence.Data.GameProgress.UnlockState.Completed then 
+				UI:ChoiceMenuYesNo(STRINGS:Format(STRINGS.MapStrings['Rescue_Confirm'], dungeon:GetColoredName()), false)
+				UI:WaitForChoice()
+				local result = UI:ChoiceResult()
+				if result then
+					state = -1
+				else
+					sos = nil
+					state = 1
+				end
 			else
+				UI:WaitShowDialogue("Sorry,[pause=10] but it seems you haven't fully explored " .. dungeon:GetColoredName() .. " yourself yet.")
+				UI:WaitShowDialogue("We can't allow you to go on a rescue in a place you haven't properly finished!")
+				UI:WaitShowDialogue("I apologize,[pause=10] but your friend will just have to wait until you've completed it.")
 				sos = nil
 				state = 1
 			end
@@ -373,10 +429,16 @@ function post_office.Side_Desk_Action(obj, activator)
 	
 	if sos ~= nil then
 		UI:WaitShowDialogue(STRINGS:Format(STRINGS.MapStrings['Rescue_Begin']))
-		GAME:FadeOut(false, 20)
+		SOUND:FadeOutBGM(60)
+		GAME:FadeOut(false, 60)
+		GAME:WaitFrames(20)
 		-- begin rescue mission
 		GAME:EnterRescue(sos)
 	end
+	
+	--Catching the partner's turnto coroutine from the dialogue start
+	if coro1 ~= nil then TASK:JoinCoroutines({coro1}) end
+	
 	GeneralFunctions.EndConversation(chara)
 end
 
