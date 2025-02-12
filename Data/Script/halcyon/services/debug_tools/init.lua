@@ -9,7 +9,6 @@ require 'origin.common'
 require 'origin.services.baseservice'
 require 'halcyon.mission_gen'
 require 'origin.recruit_list'
---require 'halcyon.config'
 
 --Declare class DebugTools
 local DebugTools = Class('DebugTools', BaseService)
@@ -127,12 +126,6 @@ function DebugTools:OnNewGame()
 	 
 	    _DATA.Save.ActiveTeam:SetRank("normal")
 	    _DATA.Save:UpdateTeamProfile(true)
-	  
-	  --initialize config to prevent errors in debug saves
-	  CONFIG = {
-            UseNicknames = true,
-            RegularStarters = true
-        }
 
 		--GAME:GivePlayerItem('seed_reviver')	  
 		--GAME:GivePlayerItem('seed_reviver')	  
