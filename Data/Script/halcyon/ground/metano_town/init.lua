@@ -26,7 +26,7 @@ function metano_town.Init(map)
 	GROUND:AddMapStatus("clouds_overhead")
 	
 	--Remove nicknames from characters if the nickname mod is enabled.
-	if CONFIG.UseNicknames then
+	if CONFIG.UseNicknames() then
 		metano_town.SetMerchantNicknames()
 	else 
 		metano_town.RemoveMerchantNicknames()

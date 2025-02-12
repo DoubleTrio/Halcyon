@@ -33,7 +33,7 @@ function guild_second_floor.Init(map)
 	PartnerEssentials.InitializePartnerSpawn()
 
 	--Remove nicknames from characters if the nickname mod is enabled.
-	if CONFIG.UseNicknames then
+	if CONFIG.UseNicknames() then
 		CH('Assembly_Owner').Data.Nickname = CharacterEssentials.GetCharacterName('Audino')
 	else 
 		CH('Assembly_Owner').Data.Nickname = 'Audino'

@@ -34,7 +34,7 @@ function ledian_dojo.Init(map)
 	GROUND:AddMapStatus("darkness")--darkness
 	
 	--Remove nicknames from characters if the nickname mod is enabled.
-	if CONFIG.UseNicknames then
+	if CONFIG.UseNicknames() then
 		CH('Sensei').Data.Nickname = CharacterEssentials.GetCharacterName('Ledian')
 		CH('Gible').Data.Nickname = CharacterEssentials.GetCharacterName('Gible')
 	else 

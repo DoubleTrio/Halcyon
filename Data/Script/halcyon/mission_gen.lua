@@ -2041,7 +2041,7 @@ function JobMenu:DrawJob()
 
   local client = self.client 
   --Don't show "Zhayn" if the nickname mod is enabled. Need to still save it internally as Zhayn though for other processes.
-  if not CONFIG.UseNicknames then
+  if not CONFIG.UseNicknames() then
 	client = string.gsub(client, "Zhayn", "Bisharp")
   end
   

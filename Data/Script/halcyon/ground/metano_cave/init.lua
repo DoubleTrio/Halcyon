@@ -41,7 +41,7 @@ function metano_cave.Init(map, time)
 	GROUND:AddMapStatus("darkness")--darkness
 	
 	--Remove nicknames from characters if the nickname mod is enabled.
-	if CONFIG.UseNicknames then
+	if CONFIG.UseNicknames() then
 		CH('Sunflora').Data.Nickname = CharacterEssentials.GetCharacterName('Sunflora')
 	else 
 		CH('Sunflora').Data.Nickname = 'Sunflora'

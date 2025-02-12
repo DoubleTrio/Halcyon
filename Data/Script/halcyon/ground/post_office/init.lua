@@ -19,7 +19,7 @@ function post_office.Init(map)
   end
   
 --Remove nicknames from characters if the nickname mod is enabled.
-  if CONFIG.UseNicknames then
+  if CONFIG.UseNicknames() then
 	CH('Connect_Owner').Data.Nickname = CharacterEssentials.GetCharacterName('Pelipper_Connect')
 	CH('Rescue_Owner').Data.Nickname = CharacterEssentials.GetCharacterName('Pelipper_Rescue')
   else 

@@ -6,7 +6,7 @@ end
 
 local function AdjustNickname(name, characters)
 	local nickname = characters[name].nickname
-	if not CONFIG.UseNicknames then
+	if not CONFIG.UseNicknames() then
 
 		-- Skip Crum
 		if nickname == "Crum" then
