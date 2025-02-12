@@ -2135,11 +2135,13 @@ function GeneralFunctions.Kangashkhan_Rock_Interact(obj, activator)
 	
 end
 
+--This function handles the logic for when a person is allowed to ask for a rescue (globally - can still fine tune for dungeons with the rescues allowed parameter)
+--If rescues, globally, need to be fine tuned to only be allowed in certain scenarios, place such logic here.
 function GeneralFunctions.CheckAllowSetRescue(zone) 
 	local should_rescue = false
-	-- TODO: Adjust conditions for setting rescues
-	if SV.ChapterProgression.Chapter >= 3 and SV.Chapter3.DefeatedBoss and SV.ChapterProgression.CurrentStoryDungeon ~= zone then
+	-- Conditions for asking for rescues - Allow asking for a rescue at any story progression (they are still blocked in Relic Forest and dojo dungeons)	
+	--if SV.ChapterProgression.Chapter >= 3 and SV.Chapter3.DefeatedBoss and SV.ChapterProgression.CurrentStoryDungeon ~= zone then
 		should_rescue = true
-	end
+	--end
 	GAME:SetRescueAllowed(should_rescue)
 end 

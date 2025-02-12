@@ -58,22 +58,7 @@
   <resheader name="writer">
     <value>System.Resources.NetStandard.ResXResourceWriter, System.Resources.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </resheader>
-  <data name="Connect_Option_Connect" xml:space="preserve">
-    <value>Conectar con un Amigo</value>
-  </data>
   <data name="Connect_Option_Friend_Rescue" xml:space="preserve">
     <value>Rescate Amigos</value>
-  </data>
-  <data name="Connect_Option_Friends" xml:space="preserve">
-    <value>Conectando con Amigos</value>
-  </data>
-  <data name="Connect_Option_Host" xml:space="preserve">
-    <value>Alojando un Servidor</value>
-  </data>
-  <data name="Connect_Option_P2P" xml:space="preserve">
-    <value>Conectando Peer-to-Peer</value>
-  </data>
-  <data name="Connect_Option_Server" xml:space="preserve">
-    <value>Configurar Sevidor</value>
   </data>
 </root>

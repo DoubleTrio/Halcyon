@@ -4,6 +4,7 @@
 ]]--
 
 require 'halcyon.menu.member_return'
+require 'halcyon.config'
 
 
 COMMON.MISSION_TYPE_RESCUE = 0

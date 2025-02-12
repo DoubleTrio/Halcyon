@@ -2041,7 +2041,7 @@ function JobMenu:DrawJob()
 
   local client = self.client 
   --Don't show "Zhayn" if the nickname mod is enabled. Need to still save it internally as Zhayn though for other processes.
-  if not CONFIG.UseNicknames then
+  if not CONFIG.UseNicknames() then
 	client = string.gsub(client, "Zhayn", "Bisharp")
   end
   
@@ -2618,7 +2618,7 @@ function DungeonJobList:DrawMenu()
   
 	if _DATA.Save.Rescue ~= nil and _DATA.Save.Rescue.Rescuing then
 		local floor =  MISSION_GEN.STAIR_TYPE[_DATA.Save.Rescue.SOS.Goal.ID] ..'[color=#00FFFF]' .. tostring(_DATA.Save.Rescue.SOS.Goal.StructID.ID + 1) .. "[color]F"
-		local objective = "Rescue " .. _DATA.Save.Rescue.SOS.TeamName .. "."
+		local objective = "Rescue [color=#FFA5FF]" .. _DATA.Save.Rescue.SOS.TeamName .. "[color]."
 		local icon = STRINGS:Format("\\uE10F")--open letter
 		self.menu.Elements:Add(RogueEssence.Menu.MenuText(icon, RogueElements.Loc(16, 24 + 14 * count)))
 		self.menu.Elements:Add(RogueEssence.Menu.MenuText(floor, RogueElements.Loc(28, 24 + 14 * count)))

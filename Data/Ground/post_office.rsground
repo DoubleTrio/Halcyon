@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.8.0.0",
+"Version": "0.8.8.0",
 "Object": {
 "$type": "RogueEssence.Ground.GroundMap, RogueEssence",
 "TexSize": 3,
@@ -21020,6 +21020,7 @@
 "EntName": "Connect_Owner",
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "serializationLoc": {
 "X": 168,
 "Y": 157
@@ -21071,6 +21072,7 @@
 "BaseIntrinsics": [
 "none"
 ],
+"FormIntrinsicSlot": -1,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -21116,6 +21118,7 @@
 "EntName": "Rescue_Owner",
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "serializationLoc": {
 "X": 224,
 "Y": 158
@@ -21167,6 +21170,7 @@
 "BaseIntrinsics": [
 "none"
 ],
+"FormIntrinsicSlot": -1,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -21212,6 +21216,7 @@
 "Direction": 0,
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "triggerType": 2,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -21254,6 +21259,7 @@
 "Direction": 0,
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "triggerType": 1,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -21296,6 +21302,7 @@
 "Direction": 0,
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "triggerType": 1,
 "ObjectAnim": {
 "$type": "RogueEssence.Content.ObjAnimData, RogueEssence",
@@ -21380,6 +21387,7 @@
 "BaseIntrinsics": [
 "none"
 ],
+"FormIntrinsicSlot": -1,
 "Relearnables": {},
 "Discriminator": 0,
 "MetAt": "",
@@ -21412,6 +21420,7 @@
 "Direction": 4,
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "triggerType": 0,
 "EntityCallbacks": [
 0
@@ -21430,10 +21439,11 @@
 "Direction": 4,
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 264,
-"Y": 234,
+"Y": 249,
 "Width": 16,
 "Height": 16
 }
@@ -21443,10 +21453,11 @@
 "Direction": 4,
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "triggerType": 0,
 "Collider": {
-"X": 263,
-"Y": 208,
+"X": 240,
+"Y": 264,
 "Width": 16,
 "Height": 16
 }
@@ -21456,10 +21467,39 @@
 "Direction": 4,
 "EntEnabled": true,
 "EntOrder": 0,
+"InteractOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 196,
 "Y": 272,
+"Width": 16,
+"Height": 16
+}
+},
+{
+"EntName": "Rescue_Spawn",
+"Direction": 4,
+"EntEnabled": true,
+"EntOrder": 0,
+"InteractOrder": 0,
+"triggerType": 0,
+"Collider": {
+"X": 212,
+"Y": 200,
+"Width": 16,
+"Height": 16
+}
+},
+{
+"EntName": "Rescue_Spawn_Partner",
+"Direction": 4,
+"EntEnabled": true,
+"EntOrder": 0,
+"InteractOrder": 0,
+"triggerType": 0,
+"Collider": {
+"X": 236,
+"Y": 200,
 "Width": 16,
 "Height": 16
 }

@@ -539,9 +539,9 @@ function PartnerEssentials.Chapter_2_Dialogue(partner)
 		end
 	elseif ground == 'post_office' then
 		UI:SetSpeakerEmotion("Worried")
-		UI:WaitShowDialogue("Looks like the post office isn't working right now...")
+		UI:WaitShowDialogue("Looks like our rank isn't high enough to use the post office yet...")
 		UI:SetSpeakerEmotion("Normal")
-		UI:WaitShowDialogue("Guess we'll have to come back another time.")
+		UI:WaitShowDialogue("Guess we'll have to come back when our rank is higher.")
 	elseif ground == 'metano_town' then
 		--metano town uses a series of touch objects to mark where the player/partner is on the map so the partner can comment on specific surroundings.
 		local location = SV.metano_town.Locale
@@ -581,7 +581,7 @@ function PartnerEssentials.Chapter_2_Dialogue(partner)
 			elseif location == 'Exploration' then
 				UI:WaitShowDialogue("This is the main exit out of town.[pause=0] For most of our future adventures,[pause=10] we would leave town this way.")
 			elseif location == 'Post' then
-				UI:WaitShowDialogue("That oddly shaped building over there is the Pelipper Post Office.[pause=0] We can send and receive mail there!")
+				UI:WaitShowDialogue("That oddly shaped building over there is the Pelipper Post Office.[pause=0] We can go on friend rescues there!")
 			elseif location == 'Well' then 
 				UI:WaitShowDialogue("The cliff is a common hangout spot.[pause=0] You can see all of Metano Town from up here!")
 				UI:WaitShowDialogue("The parents don't like their children playing up here though.")
@@ -867,9 +867,9 @@ function PartnerEssentials.Chapter_3_Dialogue(partner)
 		end
 	elseif ground == 'post_office' then
 		UI:SetSpeakerEmotion("Worried")
-		UI:WaitShowDialogue("Looks like the post office isn't working right now...")
+		UI:WaitShowDialogue("Looks like our rank isn't high enough to use the post office yet...")
 		UI:SetSpeakerEmotion("Normal")
-		UI:WaitShowDialogue("Guess we'll have to come back another time.")
+		UI:WaitShowDialogue("Guess we'll have to come back when our rank is higher.")
 	elseif ground == 'metano_cafe' then
 		if not SV.Chapter3.EncounteredBoss then 
 			UI:SetSpeakerEmotion("Inspired")
@@ -1131,10 +1131,11 @@ function PartnerEssentials.Chapter_4_Dialogue(partner)
 			end
 		end
 	elseif ground == 'post_office' then
-		UI:SetSpeakerEmotion("Worried")
-		UI:WaitShowDialogue("Looks like the post office isn't working right now...")
-		UI:SetSpeakerEmotion("Normal")
-		UI:WaitShowDialogue("Guess we'll have to come back another time.")
+		local current_rank = _DATA.Save.ActiveTeam.Rank
+		UI:WaitShowDialogue("Now that we're [color=#FFA5FF]" .. current_rank:gsub("^%l", string.upper) .. "[color] Rank,[pause=10] we're allowed to use the post office's services.")
+		UI:SetSpeakerEmotion("Happy")
+		UI:WaitShowDialogue("That means we can trade and rescue our friends whenever we want now!")
+		UI:WaitShowDialogue("Let's make use of this place whenever we can,[pause=10] " .. hero:GetDisplayName() .. "!")
 	elseif ground == 'metano_cafe' then
 		if not SV.Chapter4.FinishedGrove then 
 			local zone = _DATA.DataIndices[RogueEssence.Data.DataManager.DataType.Zone]:Get("apricorn_grove")
